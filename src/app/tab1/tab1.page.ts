@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-
+import SwiperCore from 'swiper';
+import { IonicSwiper } from '@ionic/angular';
+SwiperCore.use([IonicSwiper]);
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
