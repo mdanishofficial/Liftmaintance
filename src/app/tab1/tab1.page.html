@@ -2,29 +2,144 @@
 height: 40px;
 background-color: #0c1a37;
 ">
-
-  <ion-navbar class="navbar">
+<ion-navbar class="navbar">
+  
     <ion-title>
+     
       <ion-icon name="notifications-outline" style="font-size: 30px;
     margin-top: 5px;
     color: white;
     ">
       </ion-icon>
+      <div  class="ion-text-center">
+        <img src="../../assets/pexels-photo-69432.jpeg" style="height: 46px;width:70px;margin-top:-30px;">
+      </div>
     </ion-title>
   </ion-navbar> 
-  
+
 </ion-header>
-<ion-card class="lowercard1" style=" width: 300px;
-height: 180px;
-margin: 48px;
-margin-top: 15px;
+<ion-card class="topcard" style=" width: 300px;
+height: 145px;
+margin: 10px;
+margin-left: 8%;
+margin-top: 30px;
 border-radius: 15px;">
-  <img src="../../assets/pexels-photo-69432.jpeg" class="maintenanceSettings" />
+  <img src="../../assets/pexels-photo-69432.jpeg" class="img" style=" width: 300px;
+  height: 145px; position:fixed;border-radius: 15px;"/>
 </ion-card>
-<ion-card class="topCard" style=" width: 140px;
-height: 80px;
-margin: 48px;
-margin-top: 40px;
-border-radius: 30px;">
-  <img src="../../assets/pexels-photo-69432.jpeg" class="img" />
+<div style=" display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+flex-direction:row">
+  <!-- first card -->
+  <div class="row">
+    <div class="col">
+<ion-card class="lowercard1" style=" width: 115px;
+height: 100px;
+margin: 32px;
+margin-top: 150px;
+margin-bottom: 18px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+   <img src="../../assets/pexels-photo-69432.jpeg"/>
+    <div class="card-title" style="text-align: center;color: #455e76;font-weight: bold;">Installation</div>
 </ion-card>
+</div>
+<!-- second card -->
+<div class="col">
+  <ion-card class="lowercard1" style=" width: 115px;
+  height: 100px;
+  margin: 32px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  ">
+    <img src="../../assets/pexels-photo-69432.jpeg"/>
+      <div class="card-title" style="text-align: center;color: #455e76;font-weight: bold;">Malfunctions</div>
+  </ion-card>
+  
+</div>
+</div>
+<!-- third card -->
+<div class="row">
+  <div class="col">
+<ion-card class="lowercard1" style=" width: 115px;
+height: 100px;
+margin: 17px;
+margin-top: 150px;
+margin-left: 31px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+  <img src="../../assets/pexels-photo-69432.jpeg"/>
+    <div class="card-title" style="text-align: center;color: #455e76;font-weight: bold;">Maintenance</div>
+</ion-card>
+</div>
+<div class="col">
+<!-- forth card -->
+<ion-card class="lowercard1" style=" width: 115px;
+height: 100px;
+margin: 27px;
+margin-top: 0px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+  <img src="../../assets/pexels-photo-69432.jpeg"/>
+    <div class="card-title" style="text-align: center;color: #455e76;font-weight: bold;">Bills</div>
+</ion-card>
+  </div>
+</div>
+<!-- fifth card -->
+<div class="row">
+  <div class="col">
+<ion-card class="lowercard1" style=" width: 115px;
+height: 100px;
+margin-left: 10px;
+margin-bottom: 36px;
+margin-top: 0%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+  <img src="../../assets/pexels-photo-69432.jpeg"/>
+    <div class="card-title" style="text-align: center;color: #455e76;font-weight: bold;">Make Complain</div>
+</ion-card>
+</div>
+<div class="col">
+<!-- sixth card -->
+<ion-card class="lowercard1" style=" width: 115px;
+height: 100px;
+margin-top: -137px;
+margin-left: 191px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+">
+  <img src="../../assets/pexels-photo-69432.jpeg"/>
+    <div class="card-title" style="text-align: center;color: red;font-weight: bold;">Emergency</div>
+</ion-card>
+</div>
+</div>
+<!-- swiper.component.html -->
+
+<!-- <swiper>
+  <swiper-slide>Slide 1</swiper-slide>
+  <swiper-slide>Slide 3</swiper-slide>
+  <swiper-slide>Slide 3</swiper-slide>
+</swiper> -->
+<!-- <ion-content [scrollY]="false">
+  <swiper [config]="swiperConfig">
+    <ng-template swiperSlide>
+      <div class="slide-container">
+<img src="../../assets/pexels-photo-69432.jpeg" />
+ </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="slide-container">
+<img src="../../assets/pexels-photo-69432.jpeg" />
+ </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="slide-container">
+<img src="../../assets/pexels-photo-69432.jpeg" />
+ </div>
+    </ng-template>
+    <ng-template swiperSlide *ngFor="let slide of slides">
+      <div>Slide</div>
+    </ng-template>
+  </swiper>
+</ion-content> -->

@@ -13,8 +13,10 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';// slides.componen
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    // SwiperModule
   ],
   declarations: [Tab1Page]
 })
+
 export class Tab1PageModule {}
