@@ -1,17 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header style="
+height: 40px;
+background-color: #0c1a37;
+">
+<ion-navbar class="navbar">
     <ion-title>
-      Tab 3
+      <ion-icon name="notifications-outline" style="font-size: 30px;
+    margin-top: 5px;
+    color: white;
+    ">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/pexels-photo-69432.jpeg" style="height: 46px;width:70px;margin-top:-30px;">
+      </div>
     </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+  </ion-navbar> 
+ </ion-header>
+ <ion-scroll scrollY="true">
+ <h1 class="ion-text-center" style="  text-decoration: underline;color:#0c1a37 ; font-weight: bold;">Malfunction Report</h1>
+ <Text  class="ion-text-left" style="margin-left:1em;">
+   Sunday Date. 26/3/2019
+ </Text>
+ 
+ <ion-item>
+  <ion-avatar slot="start">
+    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </ion-avatar>
+  <ion-label>
+    <h2>Technician: Imran Barnawi</h2>
+    <div style="width:80%;float:left;">
+    <p>Maintenance Technician</p>
+      </div>
+ </ion-label>
+</ion-item>
+<div>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#0c1a37 ;font-weight: bold;">Malfunctions</h2>
+<br />
+<Text  class="ion-text-left" style="margin-left:1em;">
+  The Door Does Not Close
+ </Text>
+ <hr>
+<Text  class="ion-text-left" style="margin-left:1em;">
+  Too Loud in the Elevator
+</Text>
+<hr class="hr"/>
+<Text  class="ion-text-left" style="margin-left:1em;">
+  The Lights are not Working
+</Text>
+<hr class="hr"/>
+</div>
+<br />
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#0c1a37 ;font-weight: bold;">Fault Level</h2>
+<Text  class="ion-text-left" style="margin-left:1em;">
+ Very Dangerous
+</Text>
+</ion-scroll>
