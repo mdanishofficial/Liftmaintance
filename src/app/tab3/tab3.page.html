@@ -1,6 +1,15 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+</head>
 <ion-header style="
 height: 40px;
-background-color: #0c1a37;
+background-color: #3c5469;
 ">
 <ion-navbar class="navbar">
     <ion-title>
@@ -15,8 +24,10 @@ background-color: #0c1a37;
     </ion-title>
   </ion-navbar> 
  </ion-header>
- <ion-scroll scrollY="true">
- <h1 class="ion-text-center" style="  text-decoration: underline;color:#0c1a37 ; font-weight: bold;">Malfunction Report</h1>
+ <!-- <ion-scroll scrollY="true">
+</ion-scroll> -->
+<ion-content overflow-scroll="true">
+ <h1 class="ion-text-center" style="  text-decoration: underline;color:#3c5469 ; font-weight: bold;">Malfunction Report</h1>
  <Text  class="ion-text-left" style="margin-left:1em;">
    Sunday Date. 26/3/2019
  </Text>
@@ -30,30 +41,98 @@ background-color: #0c1a37;
     <div style="width:80%;float:left;">
     <p>Maintenance Technician</p>
       </div>
+      <div>
+        <ionic5-star-rating #rating
+        activeIcon = "star"
+        defaultIcon = "ios-star-outline"
+        activeColor = "#488aff" 
+        defaultColor = "#f4f4f4"
+        readonly="false"
+        rating="3"
+        fontSize = "32px"
+        (ratingChanged)="logRatingChange($event)"
+        style="margin-right: 2em;"
+        >
+    </ionic5-star-rating>
+      </div>
  </ion-label>
 </ion-item>
 <div>
-<h2 class="ion-text-left" style="margin-left:0.6em;color:#0c1a37 ;font-weight: bold;">Malfunctions</h2>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Malfunctions</h2>
 <br />
+<div style="flex-direction: row; ">
 <Text  class="ion-text-left" style="margin-left:1em;">
-  The Door Does Not Close
+  The Door Does Not Close &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.2em;"></ion-fab-button>
  </Text>
+</div>
  <hr>
 <Text  class="ion-text-left" style="margin-left:1em;">
-  Too Loud in the Elevator
+  Too Loud in the Elevator &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;"></ion-fab-button>
+
 </Text>
 <hr class="hr"/>
 <Text  class="ion-text-left" style="margin-left:1em;">
-  The Lights are not Working
+  The Lights are not Working &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;"></ion-fab-button>
+
 </Text>
 <hr class="hr"/>     
 </div>
-
-<br />
-
-
-<h2 class="ion-text-left" style="margin-left:0.6em;color:#0c1a37 ;font-weight: bold;">Fault Level</h2>
+<!-- <br /> -->
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Fault Level</h2>
 <Text  class="ion-text-left" style="margin-left:1em;">
- Very Dangerous
+ Very Dangerous &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.5em;"></ion-fab-button><br>
 </Text>
-</ion-scroll>
+<Text  class="ion-text-left" style="margin-left:0.3em;color: red;">
+ * This malfunction is considered very serious and
+</Text>
+<hr class="hr"/>
+<!-- <br> -->
+<div>
+  <h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Bill</h2>
+  <!-- <br /> -->
+  <Text  class="ion-text-left" style="margin-left:1em;">
+    Door Card &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">1200 riyals</text>
+   </Text>
+   <hr>
+  <Text  class="ion-text-left" style="margin-left:1em;">
+    Gallon &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">300 riyals</text>
+  </Text>
+  <hr class="hr"/>
+  <Text  class="ion-text-left" style="margin-left:1em;">
+    Door Fork &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">50 riyals</text>
+ </Text>
+  <hr class="hr"/>
+  <Text  class="ion-text-left" style="margin-left:1em;">
+    Lights &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">Complimentry</text>
+ </Text>
+  <hr class="hr"/>
+  <Text  class="ion-text-left" style="margin-left:1em;color: #610c14;font-weight: bold;">
+    Total
+  </Text>     
+  </div>
+  <br>
+  <div class="container">
+    <div class="vertical-center">
+  <ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;">I Will Provide parts</ion-button>
+</div>
+</div>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Status &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text style="font-size:0.6em;color: #8b8b8b;">Not Paid</text></h2>
+<hr class="hr"/>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Method</h2>
+<div class="container">
+  <div class="vertical-center">
+<ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;color:#3c5469">Credit Card</ion-button>
+</div>
+</div>
+<br>
+<hr class="hr"/>
+<br>
+<div class="container">
+  <div class="vertical-center">
+<ion-button expand="block"style="width: 270px;margin-left:3em; background:purple">Provided</ion-button>
+</div>
+</div>
+<br>
+<br>
+<br>
+</ion-content>

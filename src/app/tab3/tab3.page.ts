@@ -13,5 +13,8 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   constructor() {}
- 
+  logRatingChange(rating){
+    console.log("changed rating: ",rating);
+    // do your stuff
+}
 }
