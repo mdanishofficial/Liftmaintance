@@ -5,7 +5,23 @@
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-
+  <script type="module">
+   import { alertController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+    window.alertController = alertController;
+  </script>
+  <script>
+    const button = document.querySelector('.alert');
+    button.addEventListener('click', handleButtonClick);
+    async function handleButtonClick() {
+      console.log('inside an alert function')
+      const alert = await alertController.create({
+        header: 'Use this lightsaber?',
+        message: 'Do you agree to use this lightsaber to do good across the galaxy?',
+        buttons: ['Disagree', 'Agree']
+      });
+  await alert.present();
+    }
+  </script>
 </head>
 <ion-header style="
 height: 40px;
@@ -31,7 +47,7 @@ background-color: #3c5469;
  <Text  class="ion-text-left" style="margin-left:1em;">
    Sunday Date. 26/3/2019
  </Text>
- 
+ <ion-alert-controller></ion-alert-controller>
  <ion-item>
   <ion-avatar slot="start">
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
@@ -137,3 +153,7 @@ background-color: #3c5469;
 <br>
 <br>
 </ion-content>
+<ion-button expand="block" class="alert">Show Alert</ion-button>
+
+
+

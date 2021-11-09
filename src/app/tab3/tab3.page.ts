@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // slides.component.ts
 // import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-
+// import { AlertController } from '@ionic/angular';
 // install Swiper modules
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 @Component({
@@ -16,5 +16,6 @@ export class Tab3Page {
   logRatingChange(rating){
     console.log("changed rating: ",rating);
     // do your stuff
-}
+    }
+    
 }
