@@ -41,17 +41,18 @@ background-color: #3c5469;
     <div style="width:80%;float:left;">
     <p>Maintenance Technician</p>
       </div>
-      <div>
+      <div style="margin-right: 12em;">
         <ionic5-star-rating #rating
         activeIcon = "star"
         defaultIcon = "ios-star-outline"
-        activeColor = "#488aff" 
+        activeColor = "yellow" 
         defaultColor = "#f4f4f4"
         readonly="false"
         rating="3"
-        fontSize = "32px"
+        fontSize = "15px"
+        
         (ratingChanged)="logRatingChange($event)"
-        style="margin-right: 2em;"
+        
         >
     </ionic5-star-rating>
       </div>
@@ -62,17 +63,17 @@ background-color: #3c5469;
 <br />
 <div style="flex-direction: row; ">
 <Text  class="ion-text-left" style="margin-left:1em;">
-  The Door Does Not Close &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.2em;"></ion-fab-button>
+  The Door Does Not Close &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.2em;--background:#7b0006"></ion-fab-button>
  </Text>
 </div>
  <hr>
 <Text  class="ion-text-left" style="margin-left:1em;">
-  Too Loud in the Elevator &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;"></ion-fab-button>
+  Too Loud in the Elevator &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;--background:#ee7330"></ion-fab-button>
 
 </Text>
 <hr class="hr"/>
 <Text  class="ion-text-left" style="margin-left:1em;">
-  The Lights are not Working &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;"></ion-fab-button>
+  The Lights are not Working &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -1.3em;--background:#fac00f"></ion-fab-button>
 
 </Text>
 <hr class="hr"/>     
@@ -80,7 +81,7 @@ background-color: #3c5469;
 <!-- <br /> -->
 <h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Fault Level</h2>
 <Text  class="ion-text-left" style="margin-left:1em;">
- Very Dangerous &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.5em;"></ion-fab-button><br>
+ Very Dangerous &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.5em;--background:#7b0006"></ion-fab-button><br>
 </Text>
 <Text  class="ion-text-left" style="margin-left:0.3em;color: red;">
  * This malfunction is considered very serious and
@@ -91,23 +92,23 @@ background-color: #3c5469;
   <h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Bill</h2>
   <!-- <br /> -->
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Door Card &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">1200 riyals</text>
+    Door Card<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">1200 riyals</text>
    </Text>
    <hr>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Gallon &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">300 riyals</text>
+    Gallon<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">300 riyals</text>
   </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Door Fork &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">50 riyals</text>
+    Door Fork<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">50 riyals</text>
  </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Lights &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;">Complimentry</text>
+    Lights<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">Complimentry</text>
  </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;color: #610c14;font-weight: bold;">
-    Total
+    Total<text class="ion-text-right" style="font-size:0.8em;color: #610c14;float: right;">1550 including TA</text>
   </Text>     
   </div>
   <br>
@@ -129,7 +130,7 @@ background-color: #3c5469;
 <br>
 <div class="container">
   <div class="vertical-center">
-<ion-button expand="block"style="width: 270px;margin-left:3em; background:purple">Provided</ion-button>
+<ion-button expand="block"style="width: 270px;margin-left:3em; --background:#7b0006">Provided</ion-button>
 </div>
 </div>
 <br>
