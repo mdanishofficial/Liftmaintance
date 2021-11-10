@@ -1,0 +1,34 @@
+
+ .container{
+    margin: 1em;
+}
+.h1{
+    color: #194E78;
+    text-align: center;
+    font-size: 16pt;
+    font-family:'Roboto', sans-serif;
+}
+.label{
+    margin: 1em;
+}
+.checkbox-square{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   --border-width:2px;
+   --checkmark-width:32px;
+   --checkmark-color:#3880ff;
+   --background-checked:white;
+   --border-radius:2px
+}
+.provided-button{
+    --border-radius: 10px;
+    margin-top: 1.2em;
+    margin-left: 0.4em;
+    width: 8em;
+}
+.cancel-button{
+   --background:#6E6E6E;
+   --border-radius: 10px;
+   margin-top: 1.2em;
+    margin-left: 1.5em;
+    width: 8em;
+}

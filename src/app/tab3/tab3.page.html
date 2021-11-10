@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
   <script type="module">
@@ -21,7 +21,7 @@
       });
   await alert.present();
     }
-  </script>
+  </script> -->
 </head>
 <ion-header style="
 height: 40px;
@@ -42,7 +42,9 @@ background-color: #3c5469;
  </ion-header>
  <!-- <ion-scroll scrollY="true">
 </ion-scroll> -->
+
 <ion-content overflow-scroll="true">
+  <div class="container">
  <h1 class="ion-text-center" style="  text-decoration: underline;color:#3c5469 ; font-weight: bold;">Malfunction Report</h1>
  <Text  class="ion-text-left" style="margin-left:1em;">
    Sunday Date. 26/3/2019
@@ -54,22 +56,20 @@ background-color: #3c5469;
   </ion-avatar>
   <ion-label>
     <h2>Technician: Imran Barnawi</h2>
-    <div style="width:80%;float:left;">
+    <div class="title">
     <p>Maintenance Technician</p>
       </div>
-      <div style="margin-right: 12em;">
+      <div class="stars">
         <ionic5-star-rating #rating
         activeIcon = "star"
         defaultIcon = "ios-star-outline"
         activeColor = "yellow" 
         defaultColor = "#f4f4f4"
         readonly="false"
-        rating="3"
+        rating="5"
         fontSize = "15px"
-        
         (ratingChanged)="logRatingChange($event)"
-        
-        >
+         >
     </ionic5-star-rating>
       </div>
  </ion-label>
@@ -108,37 +108,37 @@ background-color: #3c5469;
   <h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Bill</h2>
   <!-- <br /> -->
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Door Card<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">1200 riyals</text>
+    Door Card<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;margin-right: 1em;">1200 riyals</text>
    </Text>
    <hr>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Gallon<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">300 riyals</text>
+    Gallon<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;margin-right: 1em;">300 riyals</text>
   </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Door Fork<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">50 riyals</text>
+    Door Fork<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;margin-right: 1em;"> riyals</text>
  </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;">
-    Lights<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;">Complimentry</text>
+    Lights<text class="ion-text-right" style="font-size:0.8em;color: #8b8b8b;float: right;margin-right: 1em;">Complimentry</text>
  </Text>
   <hr class="hr"/>
   <Text  class="ion-text-left" style="margin-left:1em;color: #610c14;font-weight: bold;">
-    Total<text class="ion-text-right" style="font-size:0.8em;color: #610c14;float: right;">1550 including TA</text>
+    Total<text class="ion-text-right" style="font-size:0.8em;color: #610c14;float: right;;margin-right: 1em;">1550 including TA</text>
   </Text>     
   </div>
   <br>
   <div class="container">
     <div class="vertical-center">
-  <ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;">I Will Provide parts</ion-button>
+  <ion-button color="light" expand="block"style="width: 270px;margin-left:3em;" (click)="presentAlertParts()">I Will Provide parts</ion-button>
 </div>
 </div>
-<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Status &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<text style="font-size:0.6em;color: #8b8b8b;">Not Paid</text></h2>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Status<text style="font-size:0.6em;color: #8b8b8b;float: right;margin-right: 1em;">Not Paid</text></h2>
 <hr class="hr"/>
 <h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Method</h2>
 <div class="container">
   <div class="vertical-center">
-<ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;color:#3c5469">Credit Card</ion-button>
+<ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;color:#3c5469" (click)="presentModalPayment()">Credit Card</ion-button>
 </div>
 </div>
 <br>
@@ -146,14 +146,15 @@ background-color: #3c5469;
 <br>
 <div class="container">
   <div class="vertical-center">
-<ion-button expand="block"style="width: 270px;margin-left:3em; --background:#7b0006">Provided</ion-button>
+<ion-button expand="block"style="width: 270px;margin-left:3em; --background:#7b0006" (click)="presentModalRatings()">Provided</ion-button>
 </div>
 </div>
 <br>
 <br>
 <br>
+</div>
 </ion-content>
-<ion-button expand="block" class="alert">Show Alert</ion-button>
+<!-- <ion-button expand="block" class="parts-button" (click)="presentAlertRadio()">Show Alert</ion-button> -->
 
 
 

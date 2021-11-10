@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="h1">Service Evaluation</h1>
+  <h1 class="thanksLine">Thank you or choosing Elevator We hope that you will like our services</h1>
+  <!-- <ion-item> -->
+    <ion-text class="text">
+      <h6>Choose the percentage of your satisfaction with our services provided to you</h6>
+    </ion-text>
+     <!-- </ion-item> -->
+     <div class="ion-text-center">
+      <ionic5-star-rating
+      activeIcon = "star"
+      defaultIcon = "ios-star-outline"
+      activeColor = "yellow" 
+      defaultColor = "#f4f4f4"
+      readonly="false"
+      rating="5"
+      fontSize = "35px"
+       (ratingChanged)="logRatingChange($event)"
+       >
+  </ionic5-star-rating>
+    </div>
+     <div class="ion-text-center">
+      <ion-button  class="send-button">Send</ion-button>
+      </div>
+    </div>
+  <ion-content>
+  </ion-content>
+  
