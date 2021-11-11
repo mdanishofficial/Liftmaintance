@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="736" viewBox="0 0 414 736">
+  <defs>
+    <filter id="Rectangle_22" x="128" y="486" width="149" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_79" x="96.8" y="402.801" width="60.02" height="58.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_79-2" x="136.522" y="402.801" width="60.02" height="58.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_79-3" x="176.939" y="402.801" width="60.02" height="58.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_79-4" x="216.661" y="402.801" width="60.02" height="58.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_79-5" x="256.383" y="402.801" width="60.02" height="58.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-6"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-6"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-popup_-_bank_2">
+      <rect width="414" height="736"/>
+    </clipPath>
+  </defs>
+  <g id="popup_-_bank_2" data-name="popup - bank – 2" clip-path="url(#clip-popup_-_bank_2)">
+    <rect id="bg-overlay" width="414" height="736" fill="rgba(0,0,0,0.54)"/>
+    <g id="box-overlay">
+      <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(48 178)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="318" height="418" rx="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="317" height="417" rx="26.5" fill="none"/>
+      </g>
+      <text id="Service_Evaluation" data-name="Service Evaluation" transform="translate(207 231)" fill="#194e78" font-size="24" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-99.404" y="0">Service Evaluation</tspan></text>
+      <g id="buttons" transform="translate(0 -66)">
+        <g id="btn-provided" transform="translate(73 52)">
+          <g transform="matrix(1, 0, 0, 1, -73, 14)" filter="url(#Rectangle_22)">
+            <rect id="Rectangle_22-2" data-name="Rectangle 22" width="131" height="42" rx="9" transform="translate(142 492)" fill="#194e78"/>
+          </g>
+          <text id="Send" transform="translate(117 533)" fill="#fff" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Send</tspan></text>
+        </g>
+      </g>
+    </g>
+    <text id="Thank_you_for_choosing_Elevator_We_hope_that_you_will_like_our_services" data-name="Thank you for choosing
+Elevator We hope that you will 
+like our services" transform="translate(207 280)" fill="#7a0001" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="-84.219" y="0">Thank you for choosing</tspan><tspan x="-109.082" y="21">Elevator We hope that you will </tspan><tspan x="-58.266" y="42">like our services</tspan></text>
+    <text id="Choose_the_percentage_of_your_satisfication_with_our_services_provided_to_you" data-name="Choose the percentage of your satisfication
+with our services provided to you" transform="translate(197 364)" fill="#6e6e6e" font-size="14" font-family="Roboto-Regular, Roboto"><tspan x="-135.287" y="0">Choose the percentage of your satisfication</tspan><tspan x="-102.04" y="19">with our services provided to you</tspan></text>
+    <g id="Group_7" data-name="Group 7" transform="translate(19.017 -4)">
+      <g id="star" transform="translate(87.983 414)">
+        <g transform="matrix(1, 0, 0, 1, -107, -410)" filter="url(#Path_79)">
+          <path id="Path_79-6" data-name="Path 79" d="M11.068,41.629c.3-1.326.579-2.585.864-3.844q.963-4.254,1.933-8.508a2.581,2.581,0,0,0-.879-2.71Q8.438,22.594,3.9,18.609c-.113-.1-.227-.2-.434-.375.533-.056.946-.1,1.36-.141q5.669-.514,11.338-1.028a2.555,2.555,0,0,0,2.224-1.716Q20.676,9.968,22.981,4.6c.1-.244.217-.486.36-.806.114.243.195.4.264.561,1.555,3.64,3.121,7.275,4.656,10.923a2.73,2.73,0,0,0,2.491,1.819c4.024.343,8.046.722,12.068,1.089.088.008.175.028.372.061-.215.2-.362.333-.513.467q-4.47,3.92-8.945,7.837a2.63,2.63,0,0,0-.9,2.785q1.378,6.011,2.73,12.027c.013.058.022.117.049.263-.2-.114-.349-.194-.493-.279-3.4-2.032-6.807-4.052-10.194-6.1a2.8,2.8,0,0,0-3.169.007c-3.4,2.062-6.82,4.089-10.232,6.129C11.4,41.448,11.263,41.519,11.068,41.629Z" transform="translate(103.53 406.21)" fill="#fff" stroke="#d5d5d5" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="star-2" data-name="star" transform="translate(127.705 414)">
+        <g transform="matrix(1, 0, 0, 1, -146.72, -410)" filter="url(#Path_79-2)">
+          <path id="Path_79-7" data-name="Path 79" d="M11.068,41.629c.3-1.326.579-2.585.864-3.844q.963-4.254,1.933-8.508a2.581,2.581,0,0,0-.879-2.71Q8.438,22.594,3.9,18.609c-.113-.1-.227-.2-.434-.375.533-.056.946-.1,1.36-.141q5.669-.514,11.338-1.028a2.555,2.555,0,0,0,2.224-1.716Q20.676,9.968,22.981,4.6c.1-.244.217-.486.36-.806.114.243.195.4.264.561,1.555,3.64,3.121,7.275,4.656,10.923a2.73,2.73,0,0,0,2.491,1.819c4.024.343,8.046.722,12.068,1.089.088.008.175.028.372.061-.215.2-.362.333-.513.467q-4.47,3.92-8.945,7.837a2.63,2.63,0,0,0-.9,2.785q1.378,6.011,2.73,12.027c.013.058.022.117.049.263-.2-.114-.349-.194-.493-.279-3.4-2.032-6.807-4.052-10.194-6.1a2.8,2.8,0,0,0-3.169.007c-3.4,2.062-6.82,4.089-10.232,6.129C11.4,41.448,11.263,41.519,11.068,41.629Z" transform="translate(143.25 406.21)" fill="#fff" stroke="#d5d5d5" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="star-3" data-name="star" transform="translate(168.122 414)">
+        <g transform="matrix(1, 0, 0, 1, -187.14, -410)" filter="url(#Path_79-3)">
+          <path id="Path_79-8" data-name="Path 79" d="M11.068,41.629c.3-1.326.579-2.585.864-3.844q.963-4.254,1.933-8.508a2.581,2.581,0,0,0-.879-2.71Q8.438,22.594,3.9,18.609c-.113-.1-.227-.2-.434-.375.533-.056.946-.1,1.36-.141q5.669-.514,11.338-1.028a2.555,2.555,0,0,0,2.224-1.716Q20.676,9.968,22.981,4.6c.1-.244.217-.486.36-.806.114.243.195.4.264.561,1.555,3.64,3.121,7.275,4.656,10.923a2.73,2.73,0,0,0,2.491,1.819c4.024.343,8.046.722,12.068,1.089.088.008.175.028.372.061-.215.2-.362.333-.513.467q-4.47,3.92-8.945,7.837a2.63,2.63,0,0,0-.9,2.785q1.378,6.011,2.73,12.027c.013.058.022.117.049.263-.2-.114-.349-.194-.493-.279-3.4-2.032-6.807-4.052-10.194-6.1a2.8,2.8,0,0,0-3.169.007c-3.4,2.062-6.82,4.089-10.232,6.129C11.4,41.448,11.263,41.519,11.068,41.629Z" transform="translate(183.67 406.21)" fill="#fff" stroke="#d5d5d5" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="star-4" data-name="star" transform="translate(207.844 414)">
+        <g transform="matrix(1, 0, 0, 1, -226.86, -410)" filter="url(#Path_79-4)">
+          <path id="Path_79-9" data-name="Path 79" d="M11.068,41.629c.3-1.326.579-2.585.864-3.844q.963-4.254,1.933-8.508a2.581,2.581,0,0,0-.879-2.71Q8.438,22.594,3.9,18.609c-.113-.1-.227-.2-.434-.375.533-.056.946-.1,1.36-.141q5.669-.514,11.338-1.028a2.555,2.555,0,0,0,2.224-1.716Q20.676,9.968,22.981,4.6c.1-.244.217-.486.36-.806.114.243.195.4.264.561,1.555,3.64,3.121,7.275,4.656,10.923a2.73,2.73,0,0,0,2.491,1.819c4.024.343,8.046.722,12.068,1.089.088.008.175.028.372.061-.215.2-.362.333-.513.467q-4.47,3.92-8.945,7.837a2.63,2.63,0,0,0-.9,2.785q1.378,6.011,2.73,12.027c.013.058.022.117.049.263-.2-.114-.349-.194-.493-.279-3.4-2.032-6.807-4.052-10.194-6.1a2.8,2.8,0,0,0-3.169.007c-3.4,2.062-6.82,4.089-10.232,6.129C11.4,41.448,11.263,41.519,11.068,41.629Z" transform="translate(223.39 406.21)" fill="#fff" stroke="#d5d5d5" stroke-width="1"/>
+        </g>
+      </g>
+      <g id="star-5" data-name="star" transform="translate(247.566 414)">
+        <g transform="matrix(1, 0, 0, 1, -266.58, -410)" filter="url(#Path_79-5)">
+          <path id="Path_79-10" data-name="Path 79" d="M11.068,41.629c.3-1.326.579-2.585.864-3.844q.963-4.254,1.933-8.508a2.581,2.581,0,0,0-.879-2.71Q8.438,22.594,3.9,18.609c-.113-.1-.227-.2-.434-.375.533-.056.946-.1,1.36-.141q5.669-.514,11.338-1.028a2.555,2.555,0,0,0,2.224-1.716Q20.676,9.968,22.981,4.6c.1-.244.217-.486.36-.806.114.243.195.4.264.561,1.555,3.64,3.121,7.275,4.656,10.923a2.73,2.73,0,0,0,2.491,1.819c4.024.343,8.046.722,12.068,1.089.088.008.175.028.372.061-.215.2-.362.333-.513.467q-4.47,3.92-8.945,7.837a2.63,2.63,0,0,0-.9,2.785q1.378,6.011,2.73,12.027c.013.058.022.117.049.263-.2-.114-.349-.194-.493-.279-3.4-2.032-6.807-4.052-10.194-6.1a2.8,2.8,0,0,0-3.169.007c-3.4,2.062-6.82,4.089-10.232,6.129C11.4,41.448,11.263,41.519,11.068,41.629Z" transform="translate(263.11 406.21)" fill="#fff" stroke="#d5d5d5" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

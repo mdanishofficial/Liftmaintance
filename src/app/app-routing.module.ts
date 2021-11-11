@@ -21,6 +21,22 @@ const routes: Routes = [
   {
     path: 'ratings-modal',
     loadChildren: () => import('./ratings-modal/ratings-modal.module').then( m => m.RatingsModalPageModule)
+  },
+  {
+    path: 'banktransfer-modal',
+    loadChildren: () => import('./banktransfer-modal/banktransfer-modal.module').then( m => m.BanktransferModalPageModule)
+  },
+  {
+    path: 'pos-modal',
+    loadChildren: () => import('./pos-modal/pos-modal.module').then( m => m.PosModalPageModule)
+  },
+  {
+    path: 'billpaid',
+    loadChildren: () => import('./billpaid/billpaid.module').then( m => m.BillpaidPageModule)
+  },
+  {
+    path: 'machine',
+    loadChildren: () => import('./machine/machine.module').then( m => m.MachinePageModule)
   }
 ];
 @NgModule({

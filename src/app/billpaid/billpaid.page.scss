@@ -1,0 +1,32 @@
+hr{
+    border-top: 1px solid #cacaca;
+    width: 330px;
+}
+.parts-button{
+    width: 200px;
+}
+.stars{
+    margin-left: 15em;
+}
+.title{
+    float: left;
+}
+.ion-card{
+    width: 10em;
+}
+::ng-deep .parts-class .modal-wrapper {
+    height: 21em!important;
+    --border-radius:10px;
+    margin: 1em;
+   }
+::ng-deep .payment-class .modal-wrapper{
+    height: 20em!important;
+    margin: 1em;
+    --border-radius:10px;
+}
+
+::ng-deep .ratings-class .modal-wrapper {
+    height: 20em!important;
+    margin: 1em;
+    --border-radius:10px;
+ }

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="414" height="736" viewBox="0 0 414 736">
+  <defs>
+    <filter id="Rectangle_19" x="69" y="325" width="51" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dx="-8" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_20" x="69" y="370" width="51" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dx="-8" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_21" x="69" y="415" width="51" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dx="-8" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.11"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_22" x="55" y="483" width="149" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_23" x="200" y="483" width="149" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dx="-5" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-5"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-popup-_provide">
+      <rect width="414" height="736"/>
+    </clipPath>
+  </defs>
+  <g id="popup-_provide" data-name="popup- provide" clip-path="url(#clip-popup-_provide)">
+    <rect id="bg-overlay" width="414" height="736" fill="rgba(0,0,0,0.54)"/>
+    <g id="box-overlay">
+      <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(48 178)" fill="#fff" stroke="#707070" stroke-width="1">
+        <rect width="318" height="396" rx="27" stroke="none"/>
+        <rect x="0.5" y="0.5" width="317" height="395" rx="26.5" fill="none"/>
+      </g>
+      <text id="Select_the_item_you_want_to_provide" data-name="Select the item you 
+want to provide" transform="translate(207 247)" fill="#194e78" font-size="24" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-106.688" y="0">Select the item you </tspan><tspan x="-82.781" y="32">want to provide</tspan></text>
+      <g id="doorCard">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_19)">
+          <g id="Rectangle_19-2" data-name="Rectangle 19" transform="translate(86 331)" fill="#fff" stroke="#f5f5f5" stroke-width="1">
+            <rect width="33" height="33" rx="7" stroke="none"/>
+            <rect x="0.5" y="0.5" width="32" height="32" rx="6.5" fill="none"/>
+          </g>
+        </g>
+        <text id="Door_Card" data-name="Door Card" transform="translate(175 353)" fill="#6e6e6e" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="-36.02" y="0">Door Card</tspan></text>
+      </g>
+      <g id="Gallon">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_20)">
+          <g id="Rectangle_20-2" data-name="Rectangle 20" transform="translate(86 376)" fill="#fff" stroke="#f5f5f5" stroke-width="1">
+            <rect width="33" height="33" rx="7" stroke="none"/>
+            <rect x="0.5" y="0.5" width="32" height="32" rx="6.5" fill="none"/>
+          </g>
+        </g>
+        <text id="Gallon-2" data-name="Gallon" transform="translate(139 398)" fill="#6e6e6e" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Gallon</tspan></text>
+      </g>
+      <g id="doorFork">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_21)">
+          <g id="Rectangle_21-2" data-name="Rectangle 21" transform="translate(86 421)" fill="#fff" stroke="#f5f5f5" stroke-width="1">
+            <rect width="33" height="33" rx="7" stroke="none"/>
+            <rect x="0.5" y="0.5" width="32" height="32" rx="6.5" fill="none"/>
+          </g>
+        </g>
+        <text id="Door_Fork" data-name="Door Fork" transform="translate(139 443)" fill="#6e6e6e" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Door Fork</tspan></text>
+      </g>
+      <g id="buttons" transform="translate(0 -17)">
+        <g id="btn-provided">
+          <g transform="matrix(1, 0, 0, 1, 0, 17)" filter="url(#Rectangle_22)">
+            <rect id="Rectangle_22-2" data-name="Rectangle 22" width="131" height="42" rx="9" transform="translate(69 489)" fill="#194e78"/>
+          </g>
+          <text id="Provided" transform="translate(103 533)" fill="#fff" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Provided</tspan></text>
+        </g>
+        <g id="btn-cancel">
+          <g transform="matrix(1, 0, 0, 1, 0, 17)" filter="url(#Rectangle_23)">
+            <rect id="Rectangle_23-2" data-name="Rectangle 23" width="131" height="42" rx="9" transform="translate(214 489)" fill="#6e6e6e"/>
+          </g>
+          <text id="Cancel" transform="translate(255 533)" fill="#fff" font-size="16" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Cancel</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
-  </head>
+
+</head>
 <ion-header style="
 height: 40px;
 background-color: #3c5469;
@@ -20,6 +21,8 @@ background-color: #3c5469;
     </ion-title>
   </ion-navbar> 
  </ion-header>
+ <!-- <ion-scroll scrollY="true">
+</ion-scroll> -->
 
 <ion-content overflow-scroll="true">
   <div class="container">
@@ -111,23 +114,20 @@ background-color: #3c5469;
   <ion-button color="light" expand="block"style="width: 270px;margin-left:3em;" (click)="presentAlertParts()">I Will Provide parts</ion-button>
 </div>
 </div>
-<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Status<text style="font-size:0.6em;color: #8b8b8b;float: right;margin-right: 1em;">Not Paid</text></h2>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Status<text style="    font-size: 0.5em;
+  margin-top: 0.8em;color: #8b8b8b;
+  float: right;
+  margin-right:1em;">The Payment was made</text></h2>
 <hr class="hr"/>
-<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Method</h2>
+<h2 class="ion-text-left" style="margin-left:0.6em;color:#3c5469 ;font-weight: bold;">Payment Method<text style="font-size:0.6em;color: #8b8b8b;float: right;margin-right: 1em;">Credit Card</text></h2>
 <div class="container">
-  <div class="vertical-center">
-<ion-button  color="light" expand="block"style="width: 270px;margin-left:3em;color:#3c5469" (click)="presentModalPayment()">Credit Card</ion-button>
-</div>
-</div>
+ </div>
 <br>
-<hr class="hr"/>
-<br>
-<div class="container">
-  <div class="vertical-center">
-<ion-button expand="block"style="width: 270px;margin-left:3em; --background:#7b0006" (click)="presentModalRatings()">Provided</ion-button>
-</div>
-</div>
-<br>
+<!-- <div class="ion-text-center"> -->
+  <ion-card class="ion-text-center" style="width: 15em; margin-left: 5em;">
+  <img src="../../assets/evaluation.svg">
+</ion-card>
+<!-- </div> -->
 <br>
 <br>
 </div>

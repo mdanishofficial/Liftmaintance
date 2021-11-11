@@ -1,17 +1,23 @@
 <div class="container">
   <h1 class="h1">Select the items you want to Provide</h1>
-  <ion-item>
-  <ion-checkbox class="checkbox-square"></ion-checkbox>
-  <ion-label class="label">Door Card</ion-label>
-  </ion-item>
-  <ion-item>
-  <ion-checkbox class="checkbox-square"></ion-checkbox>
-  <ion-label class="label">Gallon</ion-label>
-  </ion-item>
-  <ion-item>
-  <ion-checkbox class="checkbox-square"></ion-checkbox>
-  <ion-label class="label">Door Fork</ion-label>
-  </ion-item>
+  <ion-list>
+    <ion-radio-group value="radio">
+    <ion-item>
+        <ion-label>Credit Card</ion-label>
+        <ion-radio slot="start" value="creditcard" class="radio"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Bank Transfer</ion-label>
+        <ion-radio slot="start" value="banktransfer" class="radio"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>POS</ion-label>
+        <ion-radio slot="start" value="pos" class="radio"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
   <ion-row>
       <ion-col col-6> 
         <div>

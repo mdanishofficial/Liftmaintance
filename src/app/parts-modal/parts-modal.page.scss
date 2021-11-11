@@ -25,6 +25,10 @@
     margin-left: 0.4em;
     width: 8em;
 }
+.radio{
+    --border-radius:0px;
+    --inner-border-radius:0px;
+}
 .cancel-button{
    --background:#6E6E6E;
    --border-radius: 10px;
