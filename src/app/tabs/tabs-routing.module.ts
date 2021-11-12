@@ -27,6 +27,22 @@ const routes: Routes = [
     path: 'machine',
     loadChildren: () => import('../machine/machine.module').then(m => m.MachinePageModule)
   },
+  {
+    path: 'cabin',
+    loadChildren: () => import('../cabin/cabin.module').then(m => m.CabinPageModule)
+  },
+  {
+    path: 'raildoor',
+    loadChildren: () => import('../raildoor/raildoor.module').then(m => m.RaildoorPageModule)
+  },
+  {
+    path: 'controldelivery',
+    loadChildren: () => import('../controldelivery/controldelivery.module').then(m => m.ControldeliveryPageModule)
+  },
+  {
+    path: 'maintenancelist',
+    loadChildren: () => import('../maintenancelist/maintenancelist.module').then(m => m.MaintenancelistPageModule)
+  },
       {
         path: '',
         redirectTo: '/tabs/tab1',

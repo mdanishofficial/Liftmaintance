@@ -1,10 +1,7 @@
 .container{
-    margin-top: 1px;
+    margin: 1px;
    }
-.firstcol{
-float: left;
-}
-.h2{
+.h4{
     margin-left: 0.7em;
     color:#3c5469 ; font-weight: bold; float: left;
     margin-top: 0em;
@@ -12,18 +9,9 @@ float: left;
 h1{
     text-decoration: underline;color:#3c5469 ; font-weight: bold;
 }
-.secondcol{
-   float: right; 
-  }
-.textleft{
-    color:#6E6E6E;
-    float: left;
+.bell{
     margin-left: 1em;
-}
-.textright{
-    color:#6E6E6E;
-    float: right;
-    margin-right: 1em;
+    float: left;
 }
 hr {
     // border: 2px solid red !important;
@@ -34,12 +22,21 @@ hr {
     font-size: 2em !important;
     opacity: 1 !important;
     visibility: visible !important;
+    margin-top: 0.1em;
     // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  .machine{
-      width: 354px;
-      height: 164px;
-  }
+.label{
+    margin-left: 1em;
+    color: #6E6E6E !important;
+    
+}
+.checkbox{
+    margin-left: 1em;
+    --background-checked:#60D924;
+    --border-radius: 0px;
+    --size: 1em;
+    --checkmark-width:5px	
+}
   .back-button{
     --background:#6E6E6E;
     --border-radius: 7px;
