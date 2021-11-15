@@ -53,6 +53,22 @@ const routes: Routes = [
   {
     path: 'maintenancelist',
     loadChildren: () => import('./maintenancelist/maintenancelist.module').then( m => m.MaintenancelistPageModule)
+  },
+  {
+    path: 'malfunctionslist',
+    loadChildren: () => import('./malfunctionslist/malfunctionslist.module').then( m => m.MalfunctionslistPageModule)
+  },
+  {
+    path: 'currentmalfunctions',
+    loadChildren: () => import('./currentmalfunctions/currentmalfunctions.module').then( m => m.CurrentmalfunctionsPageModule)
+  },
+  {
+    path: 'solvedcomplain',
+    loadChildren: () => import('./solvedcomplain/solvedcomplain.module').then( m => m.SolvedcomplainPageModule)
+  },
+  {
+    path: 'pendingcomplain',
+    loadChildren: () => import('./pendingcomplain/pendingcomplain.module').then( m => m.PendingcomplainPageModule)
   }
 ];
 @NgModule({

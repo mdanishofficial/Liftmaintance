@@ -19,15 +19,15 @@ display: flex;
     background-color: #60D924; width: 35px;height: 56px;
 }
 .colordiv2{
-    background-color: #FABE11; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 56px;
 }
 .colordiv3{
-    background-color: #FABE11; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 56px;
 }
 .colordiv4{
-    background-color: #6E6E6E; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 56px;
 }
-.visit{
+.type{
     font-size: 18pt;
     font-family:'Roboto', sans-serif;
     color: #194E78;
@@ -50,3 +50,18 @@ margin-right: 0.7em;
 .textleft{
     float: left;
 }
+::ng-deep .solved-button{
+    width: 10em;
+    color: #FFFF;
+    --background:#194E78;
+    margin-right: -3em;
+    }
+   ::ng-deep .current-button{
+    //  margin-left: 0em;
+       --background:#F5F5F5;
+    color: #6E6E6E;
+      font-size: 15px;
+      text-align: center;
+      border-radius: 0px;
+      margin-left: -3em;
+   }

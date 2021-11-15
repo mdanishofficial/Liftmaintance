@@ -3,21 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
   </head>
-<ion-header style="
-height: 40px;
-background-color: #3c5469;
-">
-<ion-navbar class="navbar">
-    <ion-title>
-      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
-        height: 38px;width: 52px;">
-              </ion-icon>
-      <div class="ion-text-right">
-        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">     </div>
-    </ion-title>
-  </ion-navbar> 
- </ion-header>
-
+<ion-navbar>
+    <img src="../../assets/navbar.svg" >
+  </ion-navbar>
 <ion-content overflow-scroll="true">
   <div class="container">
  <h1 class="ion-text-center" style="  text-decoration: underline;color:#3c5469 ; font-weight: bold;">Malfunction Report</h1>
@@ -27,7 +15,7 @@ background-color: #3c5469;
  <ion-alert-controller></ion-alert-controller>
  <ion-item>
   <ion-avatar slot="start">
-    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    <img class="avatar" src="../../assets/avatar.svg">
   </ion-avatar>
   <ion-label>
     <h2>Technician: Imran Barnawi</h2>
@@ -54,8 +42,9 @@ background-color: #3c5469;
 <br />
 <div style="flex-direction: row; ">
 <Text  class="ion-text-left" style="margin-left:1em;">
-  The Door Does Not Close &nbsp; &nbsp;&nbsp;&nbsp; <ion-fab-button size="small" class="ion-text-right" style="margin-left: 21em; margin-top: -2.2em;--background:#7b0006"></ion-fab-button>
+  The Door Does Not Close &nbsp; &nbsp;&nbsp;&nbsp; <div class="ion-text-right" style="margin-left: 21em; margin-top: -2.2em;border-radius: 100%;background-color: aqua;height: 21px;width: 21px;"></div>
  </Text>
+ <div style="border-radius: 100%;background-color: aqua;height: 21px;width: 21px;"></div>
 </div>
  <hr>
 <Text  class="ion-text-left" style="margin-left:1em;">

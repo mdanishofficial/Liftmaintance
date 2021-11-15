@@ -1,9 +1,13 @@
 .container{
     margin-top: 1px;
    }
-.flex-container{
-display: flex;
+.flex-container0{
+justify-content: space-around;
+flex-direction: row;
 }
+.flex-container{
+    display: flex;
+    }
 .flex-container2{
  width: 100%;
  }
@@ -16,7 +20,7 @@ display: flex;
     text-decoration: underline;color:#3c5469 ; font-weight: bold;
 }
 .colordiv1{
-    background-color: #60D924; width: 35px;height: 56px;
+    background-color: #7A0001; width: 35px;height: 56px;
 }
 .colordiv2{
     background-color: #FABE11; width: 35px;height: 56px;
@@ -25,9 +29,9 @@ display: flex;
     background-color: #FABE11; width: 35px;height: 56px;
 }
 .colordiv4{
-    background-color: #6E6E6E; width: 35px;height: 56px;
+    background-color: #FF6932; width: 35px;height: 56px;
 }
-.visit{
+.type{
     font-size: 18pt;
     font-family:'Roboto', sans-serif;
     color: #194E78;
@@ -50,3 +54,21 @@ margin-right: 0.7em;
 .textleft{
     float: left;
 }
+.tabs{
+    width: 100%;
+}
+::ng-deep .solved-button{
+    width: 10em;
+    --background:#F5F5F5;
+    color: #6E6E6E;
+    margin-right: -3em;
+    }
+   ::ng-deep .current-button{
+    //  margin-left: 0em;
+    --background:#194E78;
+      color: #FFFFFF;
+      font-size: 15px;
+      text-align: center;
+      border-radius: 0px;
+      margin-left: -3em;
+   }
