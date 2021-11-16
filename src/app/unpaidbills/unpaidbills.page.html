@@ -1,0 +1,110 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header style="
+height: 40px;
+background-color: #3c5469;
+">
+  <ion-navbar class="navbar">
+    <ion-title>
+      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
+height: 38px;width: 52px;">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Bill List</h1>
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="unpaidbills">
+          <ion-button class="unpaid-button">Unpaid Bills</ion-button>
+        </ion-tab-button>
+        <ion-tab-button tab="paidbills">
+          <ion-button class="paid-button">Paid Bills</ion-button>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </div>
+    <ion-card class="card">
+      <div class="flex-container">
+       <div class="flex-container2">
+         <div>
+           <div>
+            <h6 class="billid">Bill # TD24153</h6>
+           </div>
+           <div>
+            <h6 class="billamount">350 Riyals</h6>
+          </div>
+         </div>
+         <div class="flex-container3">
+            <div class="parts">
+              <text>Type : Parts</text>
+            </div>
+            <div class="ion-text-center">
+              <text class="status">Status: <text class="emergency">This Month</text></text>
+            </div>
+            <div class="ion-text-right">
+              <text> Sunday 22-02-2020</text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card">
+      <div class="flex-container">
+       <div class="flex-container2">
+         <div>
+           <div>
+            <h6 class="billid">Bill # TH21145</h6>
+           </div>
+           <div>
+            <h6 class="billamount">650 Riyals</h6>
+          </div>
+         </div>
+         <div class="flex-container3">
+            <div class="parts">
+              <text>Type : Renew</text>
+            </div>
+            <div class="ion-text-center">
+              <text class="status">Status: <text class="emergency">This Month</text></text>
+            </div>
+            <div class="ion-text-right">
+              <text> Sunday 22-02-2020</text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card">
+      <div class="flex-container">
+       <div class="flex-container2">
+         <div>
+           <div>
+            <h6 class="billid">Bill # TH35622</h6>
+           </div>
+           <div>
+            <h6 class="billamount">1200 Riyals</h6>
+          </div>
+         </div>
+         <div class="flex-container3">
+            <div class="parts">
+              <text>Type : Installation</text>
+            </div>
+            <div class="ion-text-center">
+              <text class="status">Status: <text class="emergency">This Month</text></text>
+            </div>
+            <div class="ion-text-right">
+              <text> Sunday 22-02-2020</text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    </div>
+    </ion-content>

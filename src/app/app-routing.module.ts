@@ -69,7 +69,24 @@ const routes: Routes = [
   {
     path: 'pendingcomplain',
     loadChildren: () => import('./pendingcomplain/pendingcomplain.module').then( m => m.PendingcomplainPageModule)
-  }
+  },
+  {
+    path: 'solvedemergencycomplain',
+    loadChildren: () => import('./solvedemergencycomplain/solvedemergencycomplain.module').then( m => m.SolvedemergencycomplainPageModule)
+  },
+  {
+    path: 'pendingemergencycomplain',
+    loadChildren: () => import('./pendingemergencycomplain/pendingemergencycomplain.module').then( m => m.PendingemergencycomplainPageModule)
+  },
+  {
+    path: 'tabs/paidbills',
+    loadChildren: () => import('./paidbills/paidbills.module').then( m => m.PaidbillsPageModule)
+  },
+  {
+    path: 'tabs/unpaidbills',
+    loadChildren: () => import('./unpaidbills/unpaidbills.module').then( m => m.UnpaidbillsPageModule)
+  },
+ 
 ];
 @NgModule({
   imports: [

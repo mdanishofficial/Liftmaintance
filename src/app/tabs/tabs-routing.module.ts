@@ -51,10 +51,7 @@ const routes: Routes = [
     path: 'malfunctionslist/current',
     loadChildren: () => import('../currentmalfunctions/currentmalfunctions.module').then(m => m.CurrentmalfunctionsPageModule)
   },
-  // {
-  //   path: 'malfunctionslist/solved',
-  //   loadChildren: () => import('../malfunctionslist/malfunctionslist.module').then(m => m.MalfunctionslistPageModule)
-  // },
+
   {
     path: 'complain/solvedcomplain',
     loadChildren: () => import('../solvedcomplain/solvedcomplain.module').then(m => m.SolvedcomplainPageModule)
@@ -62,6 +59,14 @@ const routes: Routes = [
   {
     path: 'complain/pendingcomplain',
     loadChildren: () => import('../pendingcomplain/pendingcomplain.module').then(m => m.PendingcomplainPageModule)
+  },
+  {
+    path: 'complain/solvedemergencycomplain',
+    loadChildren: () => import('../solvedemergencycomplain/solvedemergencycomplain.module').then(m => m.SolvedemergencycomplainPageModule)
+  },
+  {
+    path: 'complain/pendingemergencycomplain',
+    loadChildren: () => import('../pendingemergencycomplain/pendingemergencycomplain.module').then(m => m.PendingemergencycomplainPageModule)
   },
       {
         path: '',

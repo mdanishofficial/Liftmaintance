@@ -1,27 +1,29 @@
 h1{
     text-decoration: underline;color:#3c5469 ; font-weight: bold;
 }
+.flex-container{
+    justify-content: center;
+}
 .solved-button{
     width: 10em;
-    --background:#F5F5F5;
-    color: #6E6E6E;
+    --background:#194E78;
+    color: #FFFFFF;
     margin-right: -3em;
     font-size: 12px;
     --background-activated:#194E78;
-    --color-activated:black;
+    --color-activated:#F5F5F5;
     }
 .pending-button{
     //  margin-left: 0em;
-    --background:#194E78;
-      color: #FFFFFF;
+    --background:#F5F5F5;
+    color: #6E6E6E;
+    --background-activated:#194E78;
+    --color-activated:#F5F5F5;
       font-size: 12px;
       text-align: center;
       border-radius: 0px;
       margin-left: -3em;
-      --background-activated:#194E78;
-    --color-activated:black;
    }
-   
    .rectangle {
     // width: 374px;
     // height: 175px;
@@ -29,7 +31,7 @@ h1{
     // margin-right: 5%;
     border-style: solid;
     border-width: 1px;
-    border-color:#AB0506;
+    border-color:#4F8B31;
     // text-align: center;
     margin-top: 5%;
     overflow: hidden;
@@ -46,7 +48,7 @@ h1{
     margin-bottom: 0em;
     color: #194E78;
     text-align: left;
-  }
+    }
   .date{
       color: #6E6E6E;
       font-family:'Roboto';
@@ -65,13 +67,26 @@ h1{
   .complain{
       float: left;
   }
+  .status{
+   font-family:'Roboto';
+        font-size: 20px;
+        margin-top: 0em;
+        margin-left: 0em;
+        margin-bottom: 0em;
+        color: #194E78;
+        text-align: left;
+       }
+  .emergency{
+color: #7A0001;
+display: inline-block
+  }
   .buttondiv{
     float: right;
   }
   .statusbutton{
     width: 91px;
       height: 37px;
-         --background:#AB0506;
+         --background:#4F8B31;
   }
   .newbutton{
       --background:#FF6932;
@@ -79,7 +94,7 @@ h1{
          bottom: 10%;
        width: 220px;
       height: 49px;
-      margin-top:12em
+      margin-top:8em
       }
       @media only screen and (max-height: 670px) {
         .newbutton{
@@ -88,7 +103,7 @@ h1{
                bottom: 10%;
              width: 220px;
             height: 49px;
-            margin-top:1em
+            margin-top:0em
             }
       }
       @media only screen and (min-height: 1000px) {
