@@ -68,6 +68,18 @@ const routes: Routes = [
     path: 'complain/pendingemergencycomplain',
     loadChildren: () => import('../pendingemergencycomplain/pendingemergencycomplain.module').then(m => m.PendingemergencycomplainPageModule)
   },
+  {
+    path: 'complain/newemergencycomplain',
+    loadChildren: () => import('../newemergencycomplain/newemergencycomplain.module').then(m => m.NewemergencycomplainPageModule)
+  },
+  {
+    path: 'bills/unpaidbills',
+    loadChildren: () => import('../unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
+  },
+  {
+    path: 'bills/paidbills',
+    loadChildren: () => import('../paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
+  },
       {
         path: '',
         redirectTo: '/tabs/tab1',
