@@ -90,9 +90,24 @@ const routes: Routes = [
     path: 'newemergencycomplain',
     loadChildren: () => import('./newemergencycomplain/newemergencycomplain.module').then( m => m.NewemergencycomplainPageModule)
   },
-
+  {
+    path: 'newpendingcomplain',
+    loadChildren: () => import('./newpendingcomplain/newpendingcomplain.module').then( m => m.NewpendingcomplainPageModule)
+  },
+  {
+    path: 'billdetails',
+    loadChildren: () => import('./billdetails/billdetails.module').then( m => m.BilldetailsPageModule)
+  },
+  {
+    path: 'visitdetails',
+    loadChildren: () => import('./visitdetails/visitdetails.module').then( m => m.VisitdetailsPageModule)
+  },
+  {
+    path: 'installation',
+    loadChildren: () => import('./installation/installation.module').then( m => m.InstallationPageModule)
+  },
  
-];
+ ];
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

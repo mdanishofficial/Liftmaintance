@@ -1,0 +1,88 @@
+h1{
+    text-decoration: underline;
+    color:#3c5469 ; 
+    font-weight: bold;
+}
+.flex-container{
+    justify-content: center;
+    display: flex;
+}
+.h3{
+    margin-left: 0.7em;
+    color:#3c5469 ;
+    // font-weight: bold; 
+    float: left;
+    margin-top: 0em;
+    font-size: 18px;
+}
+.card{
+    margin-top: -3em;
+   
+}
+.options{
+    color: #194E78;
+    font-size: 18px;
+   }
+.form-select-sm{
+    color: #6E6E6E;
+     height: 3em;
+    // font-weight: bold;
+   }
+ select{
+     width: auto;
+     color: #6E6E6E;
+ }
+ .cardinput{
+    padding-left: 1em;;
+    padding-top:0em;
+    height:3em;
+    font-size: 14px;
+    margin-top: -3em;
+    // margin-top: 0.4em
+   }
+   .textarea{
+    height: 3em;
+}
+.flex-container2{
+    width: 100%;
+    }
+       .flex-container3{
+           display: flex;
+        justify-content: space-between;
+        width: 100%;
+          }
+          .colordiv1{
+            background-color: #60D924; 
+            width: 35px;
+            height: 60px;
+        }
+        .colordiv4{
+            background-color: #E12121; 
+            width: 35px;
+            height: 60px;
+        }
+        .date{
+            font-size: 10pt;
+            margin-top: 0px;
+            font-family: "Roboto", sans-serif;
+            color: #6E6E6E;
+            margin-left: 0.7em;
+        }
+        .status{
+        margin-right: 0.7em;
+        }
+        .visit{
+            font-size: 15pt;
+            font-family:'Roboto', sans-serif;
+            color: #194E78;
+            margin-top: 0px;
+            margin-left: 0.2em;
+            padding-left: 0.3em;
+            padding-top: 0.3em;
+         }
+         .colorcard1{
+             margin-top: -3em;
+         }
+         .colorcard{
+            margin-top: 1em;
+        }

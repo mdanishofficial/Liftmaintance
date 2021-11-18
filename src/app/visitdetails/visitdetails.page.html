@@ -1,0 +1,64 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header style="
+height: 40px;
+background-color: #3c5469;">
+  <ion-navbar class="navbar">
+    <ion-title>
+      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
+height: 38px;width: 52px;">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;"></div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+<div class="container">
+  <h1 class="ion-text-center">Visit # 01</h1>
+  <ion-text class="date">Sunday,  3/26/2021 13:00</ion-text>
+  <br>
+  <br>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img class="avatar" src="../../assets/avatar.svg">
+    </ion-avatar>
+    <ion-label>
+      <h2>Technician: Imran Barnawi</h2>
+      <div class="title">
+      <p>Maintenance Technician</p>
+        </div>
+        <div class="stars">
+          <ionic5-star-rating #rating
+          activeIcon = "star"
+          defaultIcon = "ios-star-outline"
+          activeColor = "yellow" 
+          defaultColor = "#f4f4f4"
+          readonly="false"
+          rating="5"
+          fontSize = "15px"
+          (ratingChanged)="logRatingChange($event)"
+           >
+      </ionic5-star-rating>
+        </div>
+   </ion-label>
+  </ion-item>   
+  <br>
+  <br>
+  <h2 class="h2">Status</h2>
+  <br>
+ <div>
+    <div class="leftcol">
+      <ion-text class="date">Completed</ion-text>
+    </div>
+    <div class="rightcol">
+      <!-- <text class="textright">Unpaid</text> -->
+    </div>
+  </div>
+  <br>
+  <hr class="hr">
+</div>
+</ion-content>

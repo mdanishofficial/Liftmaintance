@@ -31,6 +31,7 @@
     "ionic-rating-component": "^1.2.1",
     "ionic4-star-rating": "^1.1.1",
     "ionic5-star-rating": "https://github.com/JeongJun-Lee/ionic5-star-rating/tarball/master",
+    "jquery": "^3.6.0",
     "ngx-swiper-wrapper": "^8.0.2",
     "rxjs": "~6.6.0",
     "swiper": "^6.8.4",

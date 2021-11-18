@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'installation',
+        loadChildren: () => import('../installation/installation.module').then(m => m.InstallationPageModule)
+      },
+      {
       path: 'billpaid',
       loadChildren: () => import('../billpaid/billpaid.module').then(m => m.BillpaidPageModule)
     },
@@ -73,12 +77,24 @@ const routes: Routes = [
     loadChildren: () => import('../newemergencycomplain/newemergencycomplain.module').then(m => m.NewemergencycomplainPageModule)
   },
   {
+    path: 'complain/newpendingcomplain',
+    loadChildren: () => import('../newpendingcomplain/newpendingcomplain.module').then(m => m.NewpendingcomplainPageModule)
+  },
+  {
     path: 'bills/unpaidbills',
     loadChildren: () => import('../unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
   },
   {
     path: 'bills/paidbills',
     loadChildren: () => import('../paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
+  },
+  {
+    path: 'bills/billdetails',
+    loadChildren: () => import('../billdetails/billdetails.module').then(m => m.BilldetailsPageModule)
+  },
+  {
+    path: 'visitdetails',
+    loadChildren: () => import('../visitdetails/visitdetails.module').then(m => m.VisitdetailsPageModule)
   },
       {
         path: '',
