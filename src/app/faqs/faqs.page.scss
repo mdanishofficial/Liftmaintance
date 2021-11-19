@@ -1,0 +1,27 @@
+.container{
+    margin-top: 1px;
+   }
+   h1{
+    text-decoration: underline;color:#3c5469 ; font-weight: bold;
+}
+   .solved-button{
+    width: 10em;
+    --background:#194E78;
+   
+    color: #FFFF;
+    margin-right: -3em;
+    font-size: 12px;
+    --background-activated:#194E78;
+    --color-activated:black;
+    }
+.pending-button{
+    //  margin-left: 0em;
+    --background:#F5F5F5;
+    color: #6E6E6E;
+      font-size: 12px;
+      text-align: center;
+      border-radius: 0px;
+      margin-left: -3em;
+      --background-activated:#194E78;
+    --color-activated:black;
+   }

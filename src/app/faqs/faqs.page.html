@@ -1,0 +1,60 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header style="
+height: 40px;
+background-color: #3c5469;
+">
+  <ion-navbar class="navbar">
+    <ion-title>
+      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
+height: 38px;width: 52px;">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Inquiries</h1>
+
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="faqs">
+          <ion-button class="solved-button">FAQ</ion-button>
+        </ion-tab-button>
+        <ion-tab-button tab="inquiries">
+          <ion-button class="pending-button">Inquiries</ion-button>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </div>
+  <a href="#" class="btn btn-link"  data-toggle="collapse" data-target="#showSpending">Know More</a>
+ <div class="collapse" id="showSpending">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus magnam eaque dolore hic laboriosam sequi quis soluta velit, ut dicta nesciunt quos! Totam laborum natus assumenda unde, hic sunt inventore.
+  </div>
+  <!-- // -->
+  <p>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Button with data-bs-target
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    </div>
+  </div>
+  <!-- // -->
+  <button mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
+    Toggle collapse
+  </button>
+  
+  <div class="" mdbCollapse #test>
+    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
+      keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+  </div>
+</div>
+</ion-content>

@@ -20,40 +20,32 @@ height: 38px;width: 52px;">
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
-    <h1 class="ion-text-center">Maintenance List</h1>
-<!--  -->
-<!-- <ion-card class="card">
-  <div class="flex-container">
-    <div style="float: left;">
-      <divclass="colordiv"></div>
+    <h1 class="ion-text-center">Inquiries</h1>
+
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+        <ion-tab-button tab="faqs">
+          <ion-button class="solved-button">FAQ</ion-button>
+        </ion-tab-button>
+        <ion-tab-button tab="inquiries">
+          <ion-button class="pending-button">Inquiries</ion-button>
+        </ion-tab-button>
+      </ion-tab-bar>
     </div>
-    <div class="flex-container2">
-      <h6 class="visit">Visit #00</h6>
-      <div class="flex-container3">
-        <div class="date">
-          <text>Sunday 22-02-2020</text>
-        </div>
-        <div class="status">
-          <text> Status : Completed</text>
-        </div>
-      </div>
-    </div>
-  </div>
-</ion-card> -->
-<!--  -->
+
     <ion-card class="card">
       <div class="flex-container">
         <div style="float: left;">
           <div class="colordiv1"></div>
         </div>
         <div class="flex-container2">
-          <h6 class="visit">Visit #01</h6>
+          <h6 class="visit">Inquiry Type A</h6>
           <div class="flex-container3">
             <div class="date">
               <text>Sunday 22-02-2020</text>
             </div>
             <div class="status">
-              <text> Status : Completed</text>
+              <text> Status : Done</text>
             </div>
           </div>
         </div>
@@ -65,13 +57,13 @@ height: 38px;width: 52px;">
           <div class="colordiv2"></div>
         </div>
         <div class="flex-container2">
-          <h6 class="visit">Visit #02</h6>
+          <h6 class="visit">Inquiry Type C</h6>
           <div class="flex-container3">
             <div class="date">
               <text>Sunday 22-02-2020</text>
             </div>
             <div class="status">
-              <text> Status : This Month</text>
+              <text> Status : Done</text>
             </div>
           </div>
         </div>
@@ -83,35 +75,20 @@ height: 38px;width: 52px;">
           <div class="colordiv3"></div>
         </div>
         <div class="flex-container2">
-          <h6 class="visit">Visit #03</h6>
+          <h6 class="visit">Inquiry Type C</h6>
           <div class="flex-container3">
             <div class="date">
               <text>Sunday 22-02-2020</text>
             </div>
             <div class="status">
-              <text> Status : This Month</text>
+              <text> Status : Waiting</text>
             </div>
           </div>
         </div>
       </div>
     </ion-card>
-    <ion-card class="card">
-      <div class="flex-container">
-        <div style="float: left;">
-          <div class="colordiv4"></div>
-        </div>
-        <div class="flex-container2">
-          <h6 class="visit">Visit #04</h6>
-          <div class="flex-container3">
-            <div class="date">
-              <text class="textleft">Sunday 22-02-2020</text>
-            </div>
-            <div class="status">
-              <text class="textright"> Status : Coming</text>
-            </div>
-          </div>
-        </div>
-      </div>
-    </ion-card>
+    <div class="ion-text-center">
+      <ion-button class="newbutton" shape="round">New Inquiry</ion-button>
+    </div>
   </div>
 </ion-content>

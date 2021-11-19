@@ -96,6 +96,20 @@ const routes: Routes = [
     path: 'visitdetails',
     loadChildren: () => import('../visitdetails/visitdetails.module').then(m => m.VisitdetailsPageModule)
   },
+  {
+    path: 'inquiries',
+    loadChildren: () => import('../inquiries/inquiries.module').then(m => m.InquiriesPageModule)
+  },
+  {
+    path: 'newinquiries',
+    loadChildren: () => import('../newinquiries/newinquiries.module').then(m => m.NewinquiriesPageModule)
+  },
+  {
+    path: 'faqs',
+    loadChildren: () => import('../faqs/faqs.module').then(m => m.FaqsPageModule)
+  },
+
+  
       {
         path: '',
         redirectTo: '/tabs/tab1',

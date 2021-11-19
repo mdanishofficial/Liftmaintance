@@ -106,6 +106,26 @@ const routes: Routes = [
     path: 'installation',
     loadChildren: () => import('./installation/installation.module').then( m => m.InstallationPageModule)
   },
+  {
+    path: 'updatepayment-modal',
+    loadChildren: () => import('./updatepayment-modal/updatepayment-modal.module').then( m => m.UpdatepaymentModalPageModule)
+  },
+  {
+    path: 'inquiries',
+    loadChildren: () => import('./inquiries/inquiries.module').then( m => m.InquiriesPageModule)
+  },
+  {
+    path: 'faqs',
+    loadChildren: () => import('./faqs/faqs.module').then( m => m.FaqsPageModule)
+  },
+  {
+    path: 'newinquiries',
+    loadChildren: () => import('./newinquiries/newinquiries.module').then( m => m.NewinquiriesPageModule)
+  },
+  {
+    path: 'sendinquiry-modal',
+    loadChildren: () => import('./sendinquiry-modal/sendinquiry-modal.module').then( m => m.SendinquiryModalPageModule)
+  },
  
  ];
 @NgModule({

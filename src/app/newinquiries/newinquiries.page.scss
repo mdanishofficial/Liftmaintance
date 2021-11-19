@@ -1,0 +1,110 @@
+h1{
+    text-decoration: underline;
+    color:#3c5469 ; 
+    font-weight: bold;
+}
+.flex-container{
+    justify-content: center;
+}
+.h3{
+    margin-left: 0.7em;
+    color:#3c5469 ;
+    // font-weight: bold; 
+    float: left;
+    margin-top: 0em;
+    font-size: 18px;
+}
+.card{
+    margin-top: -3em;
+   
+}
+.form-select-sm{
+    color: #6E6E6E;
+    // color:#3c5469 ; 
+    height: 3em;
+    // font-weight: bold;
+    // font-size: 15px;
+    font-family:'Roboto', sans-serif;
+ }
+ select{
+     width: auto;
+     color: #6E6E6E;
+ }
+//  .option{
+//     color:red ; 
+//  }
+ .cardinput{
+    padding-left: 1em;;
+    padding-top:0em;
+    height:10em;
+    font-size: 14px;
+    // word-wrap: break-word;
+    margin-top: 0.4em
+   }
+   .checkbox{
+margin-left: 1em;
+--background-checked:#7A0001 ;
+--border-radius:0em;
+--size:1em;
+   }
+//  select:focus{
+//     width: 16em;
+//  }
+.emergencydetails{
+    margin-left: 0.7em;
+    color:#7A0001 ;
+  font-size: 18px;
+  font-family:'Roboto', sans-serif;
+ }
+ .divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+}
+.textarea{
+    height: 12em;
+}
+.btn-primary{
+    background-color:#194E78;
+    // width:9em;
+    border-color:#194E78;
+}
+.btn-secondary{
+    background-color:#6E6E6E;
+    // width:9em;
+}
+.native-textarea{
+height: 12em;
+--placeholder-color:#bcbcbc;
+padding-top:1em;
+padding-right: 1em;
+border: 0;
+width: 100%;
+// width: 25em;
+}
+.options{
+    color: #194E78;
+    font-size: 18px;
+    font-family:'Roboto', sans-serif;
+   }
+   ::ng-deep .sendInquiry .modal-wrapper{
+    height: 20em!important;
+    margin: 1em;
+    --border-radius:10px;
+}
+@media only screen and (max-width: 320px) {
+    .btn-primary{
+    margin-left: 1.6em;
+  }
+    .btn-secondary{
+       margin-top: 1em;
+    }
+  }
+  @media only screen and (max-width: 280px) {
+    .btn-primary{
+    margin-left: 1.5em;
+  }
+    .btn-secondary{
+       margin-top: 1em;
+    }
+  }

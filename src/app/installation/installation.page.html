@@ -120,23 +120,40 @@ height: 38px;width: 52px;">
   <br>
   <br>
  <ion-card class="cardinput">
-<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-  <input placeholder="Select date" type="text" id="example" class="form-control">
-  <i class="fas fa-calendar input-prefix"></i>
-</div>
-</ion-card>
+  <!-- <ion-item> -->
+ <ion-datetime 
+    [pickerOptions]="customPickerOptions" 
+    placeholder="02-11-2021" 
+    displayFormat="DD-MMM-YYYY"
+    class="picker"
+    >
+  </ion-datetime>
+  <!-- </ion-item> -->
+  </ion-card>
 </div>
 <div>
   <h2 class="h3">End Date</h2>
   <br>
   <br>
   <br>
- <ion-card class="cardinput">
-<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
-  <input placeholder="Select date" type="text" id="example" class="form-control">
-  <i class="fas fa-calendar input-prefix"></i>
-</div>
-</ion-card>
+ <!-- <ion-card class="cardinput">
+  <section>
+    <ion-datetime placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+    <ion-icon name="calendar"></ion-icon>  
+  </section>
+
+  </ion-card> -->
+  <ion-card class="cardinput">
+    <!-- <ion-item> -->
+   <ion-datetime 
+      [pickerOptions]="customPickerOptions" 
+      placeholder="02-11-2021" 
+      displayFormat="DD-MMM-YYYY"
+      class="picker"
+      >
+    </ion-datetime>
+    <!-- </ion-item> -->
+    </ion-card>
 </div>
 <div>
   <h2 class="h3">Installation Stages</h2>
@@ -216,11 +233,12 @@ height: 38px;width: 52px;">
     </div>
   </ion-card>
 </div>
-<div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+<!-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true">
   <input placeholder="Select date" type="text" id="example" class="form-control">
   <label for="example">Try me...</label>
   <i class="fas fa-calendar input-prefix"></i>
-</div>
+</div> -->
+
 </div>
  </ion-content>
      <br>

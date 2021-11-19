@@ -1,0 +1,54 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header style="
+height: 40px;
+background-color: #3c5469;
+">
+  <ion-navbar class="navbar">
+    <ion-title>
+      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
+height: 38px;width: 52px;">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+      </div>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">New Inquiry</h1>
+    <div>
+      <h2 class="h3">Inquiry Type</h2>
+      <br>
+      <br>
+      <br>
+      <ion-card class="card">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);">Please Select Type</option>
+          <option value="electrical" class="options">Electrical</option>
+          <option value="mechanical" class="options">Mechanical</option>
+          <option value="other" class="options">Other Type</option>
+          <option value="someother" class="options">Some Other Type</option>
+        </select>
+     </ion-card>
+     <h2 class="h3">Details</h2>
+     <br>
+     <ion-card class="cardinput">
+        <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false"></textarea>
+   </ion-card>
+ </div>
+ <div class="ion-text-center">
+    <div class="flex-container">
+   <button type="button" class="btn btn-primary btn-lg" id="language" (click)="presentModalsendInquiry()">Send Inquiry</button>
+   <div class="divider"></div>
+<button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+ </div>
+</div>
+</div>
+  </ion-content>  
+ 

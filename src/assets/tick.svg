@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="139" height="139" viewBox="0 0 139 139">
+  <defs>
+    <filter id="Ellipse_8" x="0" y="0" width="139" height="139" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-opacity="0.271"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="checkbox_button" data-name="checkbox button" transform="translate(-138 -349)">
+    <g transform="matrix(1, 0, 0, 1, 138, 349)" filter="url(#Ellipse_8)">
+      <circle id="Ellipse_8-2" data-name="Ellipse 8" cx="54.5" cy="54.5" r="54.5" transform="translate(15 10)" fill="#60d924"/>
+    </g>
+    <path id="Path_108" data-name="Path 108" d="M0,29.107,20.188,49.3,44.332,0" transform="matrix(0.985, 0.174, -0.174, 0.985, 189.451, 385.378)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>
