@@ -1,6 +1,25 @@
 .container{
     margin-top: 1px;
    }
+   .header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+}
 .flex-container0{
 justify-content: space-around;
 flex-direction: row;
@@ -20,16 +39,16 @@ flex-direction: row;
     text-decoration: underline;color:#3c5469 ; font-weight: bold;
 }
 .colordiv1{
-    background-color: #7A0001; width: 35px;height: 56px;
+    background-color: #7A0001; width: 35px;height: 100%;
 }
 .colordiv2{
-    background-color: #FABE11; width: 35px;height: 56px;
+    background-color: #FABE11; width: 35px;height: 100%;
 }
 .colordiv3{
-    background-color: #FABE11; width: 35px;height: 56px;
+    background-color: #FABE11; width: 35px;height: 100%;
 }
 .colordiv4{
-    background-color: #FF6932; width: 35px;height: 56px;
+    background-color: #FF6932; width: 35px;height: 100%;
 }
 .type{
     font-size: 18pt;
@@ -57,23 +76,19 @@ margin-right: 0.7em;
 .tabs{
     width: 100%;
 }
-.solved-button{
-    width: 10em;
-    --background:#F5F5F5;
+.btn-primary{
+    width: 8em;
+    background-color: #F5F5F5;
     color: #6E6E6E;
-    margin-right: -3em;
-    font-size: 12px;
-    --background-activated:#194E78;
-    --color-activated:black;
-    }
-.current-button{
-    //  margin-left: 0em;
-    --background:#194E78;
-      color: #FFFFFF;
-      font-size: 12px;
-      text-align: center;
-      border-radius: 0px;
-      margin-left: -3em;
-      --background-activated:#194E78;
-    --color-activated:black;
-   }
+    border: #6E6E6E;
+  }
+  .btn-secondary{
+    width: 8em;
+  background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+  }

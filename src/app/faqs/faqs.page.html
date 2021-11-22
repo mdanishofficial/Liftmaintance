@@ -3,20 +3,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
 </head>
-<ion-header style="
-height: 40px;
-background-color: #3c5469;
-">
-  <ion-navbar class="navbar">
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
-height: 38px;width: 52px;">
+      <ion-icon src="../../assets/bell.svg" class="bell">
       </ion-icon>
       <div class="ion-text-right">
-        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+        <img src="../../assets/logo.svg" class="logo">
       </div>
     </ion-title>
-  </ion-navbar>
+  <!-- </ion-navbar> -->
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
@@ -24,37 +20,41 @@ height: 38px;width: 52px;">
 
     <div class="tabs">
       <ion-tab-bar slot="top">
-        <ion-tab-button tab="faqs">
-          <ion-button class="solved-button">FAQ</ion-button>
-        </ion-tab-button>
-        <ion-tab-button tab="inquiries">
-          <ion-button class="pending-button">Inquiries</ion-button>
-        </ion-tab-button>
+          <button type="button" class="btn btn-primary" id="solved-button"  (click)="faqs()" >FAQ</button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-secondary" id="pending-button"(click)="inquiries()" >Inquiries</button>
       </ion-tab-bar>
     </div>
-  <a href="#" class="btn btn-link"  data-toggle="collapse" data-target="#showSpending">Know More</a>
- <div class="collapse" id="showSpending">
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus magnam eaque dolore hic laboriosam sequi quis soluta velit, ut dicta nesciunt quos! Totam laborum natus assumenda unde, hic sunt inventore.
-  </div>
-  <!-- // -->
-  <p>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Button with data-bs-target
-    </button>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
-      Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-    </div>
-  </div>
-  <!-- // -->
-  <button mdbBtn color="primary" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
-    Toggle collapse
-  </button>
-  
-  <div class="" mdbCollapse #test>
-    <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
-      keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
-  </div>
+    <br>
+    <br>
+ <!-- <nz-collapse class="ant-collapse ant-collapse-icon-position-right"> -->
+  <!-- <nz-collapse>
+      <nz-collapse-panel
+        *ngFor="let panel of panels"
+        [nzHeader]="panel.name"
+        [nzActive]="panel.active"
+        [nzDisabled]="panel.disabled" >
+        <p style="margin:0; color:blue">
+          A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome
+          guest in many households across the world.
+        </p>
+      </nz-collapse-panel>
+    </nz-collapse> -->
+    <nz-collapse [nzBordered]="false" class="ant-collapse ant-collapse-icon-position-right ant-collapse-borderless">
+      <nz-collapse-panel
+        #p
+        *ngFor="let panel of panels; let isFirst = first"
+        [nzHeader]="panel.name"
+        [nzActive]="panel.active"
+        [ngStyle]="panel.customStyle"
+        [nzExpandedIcon]="!isFirst ? panel.icon || expandedIcon : undefined"
+      >
+        <p class="description">{{ panel.description }} </p>
+        <ng-template #expandedIcon let-active>
+          {{ active }}
+          <i nz-icon nzType="caret-right" class="ant-collapse-arrow" [nzRotate]="p.nzActive ? 90 : -90"></i>
+        </ng-template>
+      </nz-collapse-panel>
+    </nz-collapse>
 </div>
 </ion-content>

@@ -3,20 +3,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
 </head>
-<ion-header style="
-height: 40px;
-background-color: #3c5469;
-">
-  <ion-navbar class="navbar">
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
-height: 38px;width: 52px;">
+      <ion-icon src="../../assets/bell.svg" class="bell">
       </ion-icon>
       <div class="ion-text-right">
-        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+        <img src="../../assets/logo.svg" class="logo">
       </div>
     </ion-title>
-  </ion-navbar>
+  <!-- </ion-navbar> -->
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
@@ -27,13 +23,13 @@ height: 38px;width: 52px;">
       <br>
       <br>
       <ion-card class="card">
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-        <option disabled selected hidden style="color: rgb(87, 87, 90);">Please Select Type</option>
-        <option value="electrical" style="color: #3c5469 ;font-size: 18px;font-weight:bold">Electrical</option>
-        <option value="mechanical"style="color: #3c5469 ;font-size: 18px;font-weight:bold">Mechanical</option>
-        <option value="other"style="color: #3c5469 ;font-size: 18px;font-weight:bold">Other Type</option>
-        <option value="someother"style="color: #3c5469 ;font-size: 18px;font-weight:bold">Some Other Type</option>
-      </select>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);">Please Select Type</option>
+          <option value="electrical" class="options">Electrical</option>
+          <option value="mechanical" class="options">Mechanical</option>
+          <option value="other" class="options">Other Type</option>
+          <option value="someother" class="options">Some Other Type</option>
+        </select>
      </ion-card>
      <h2 class="h3">Details</h2>
      <br>
@@ -46,7 +42,8 @@ height: 38px;width: 52px;">
     <div class="flex-container">
    <button type="button" class="btn btn-primary btn-lg" id="language">Send Complain</button>
    <div class="divider"></div>
-<button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+   <ion-back-button type="button" defaultHref="/tabs/pendingcomplain" icon="none" class="btn btn-secondary btn-lg">Cancel</ion-back-button>
+
  </div>
 </div>
 </div>

@@ -1,3 +1,22 @@
+.header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+}
 hr{
     border-top: 1px solid #cacaca;
     width: 330px;
@@ -15,6 +34,88 @@ hr{
     height: 46px;
     width: 46px;
 }
+.h2{
+    margin-left: 0.7em;
+    color:#194E78 ; font-weight: bold; float: left;
+    margin-top: 0em;
+    font-size: 18px;
+    white-space: pre-line;
+    margin-bottom: 0em;
+}
+#payment{
+    margin-left: 0.7em;
+    color:#3c5469 ; font-weight: bold; float: left;
+    margin-top: 0em;
+    font-size: 18px;
+    // white-space: pre-line;
+    margin-bottom: 0em;
+}
+.leftcol{
+    float: left;
+    }
+    .rightcolbrown{
+        float: right;
+        margin-right: 1em;
+        border-radius: 100px;
+        height: 21px;
+        width: 21px;
+        background-color: #7A0001;
+    }
+    .rightcolorange{
+        float: right;
+        margin-right: 1em;
+        border-radius: 100px;
+        height: 21px;
+        width: 21px;
+        background-color: #FF6932;
+    }
+    
+    .rightcolyellow{
+        float: right;
+        margin-right: 1em;
+        border-radius: 100px;
+        height: 21px;
+        width: 21px;
+        background-color: #FABE11;
+    }
+    .rightcol{
+        float: right;
+        margin-right: 1em;
+        font-size: 16px;
+        color: #6E6E6E;
+      
+    }
+    #dangertext{
+        margin-left:0.3em;color: #7A0001;
+    }
+    .date{
+        font-size: 16px;
+        color: #6E6E6E;
+        margin-left: 1em;
+    }
+    .datedanger{
+        font-size: 16px;
+        color: #7A0001;
+        margin-left: 1em;
+       float: right;
+        margin-right: 1em;
+    }
+    .hr{
+        margin-top: 0em;
+        width: 99%;
+    }
+    .lightbutton{
+        width: 227px;
+       color: #194E78;
+        --background:#F9F9F9;
+        --background-activated: #194E78;
+    }
+    .dangerbutton{
+        width: 227px;
+        color: white;
+         --background:#7A0001;
+         --background-activated: #7A0001;
+    }
 
 ::ng-deep .parts-class .modal-wrapper {
     height: 21em!important;

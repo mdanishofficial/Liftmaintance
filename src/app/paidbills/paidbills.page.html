@@ -3,32 +3,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
 </head>
-<ion-header style="
-height: 40px;
-background-color: #3c5469;
-">
-  <ion-navbar class="navbar">
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
-height: 38px;width: 52px;">
+      <ion-icon src="../../assets/bell.svg" class="bell">
       </ion-icon>
       <div class="ion-text-right">
-        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+        <img src="../../assets/logo.svg" class="logo">
       </div>
     </ion-title>
-  </ion-navbar>
+  <!-- </ion-navbar> -->
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">Bill List</h1>
     <div class="tabs">
       <ion-tab-bar slot="top">
-        <ion-tab-button tab="bills/unpaidbills">
-          <ion-button class="unpaid-button">Unpaid Bills</ion-button>
-        </ion-tab-button>
-        <ion-tab-button tab="bills/paidbills">
-          <ion-button class="paid-button">Paid Bills</ion-button>
-        </ion-tab-button>
+          <button type="button" class="btn btn-primary" (click)="unpaid()" >Unpaid</button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-secondary" (click)="paid()">Paid</button>
       </ion-tab-bar>
     </div>
     <ion-card class="card">
@@ -57,7 +50,7 @@ height: 38px;width: 52px;">
       </div>
       <div class="flex-container" style="justify-content: space-evenly;">
         <div>
-          <ion-chip class="ion-chip-left">
+          <ion-chip class="ion-chip-left" (click)="presentModalUpdatePayment()">
             <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
             <ion-label>Update</ion-label>
           </ion-chip>

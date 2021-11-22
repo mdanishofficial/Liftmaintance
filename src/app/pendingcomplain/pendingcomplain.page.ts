@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-pendingcomplain',
   templateUrl: './pendingcomplain.page.html',
@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PendingcomplainPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  async solvedcomplain(){
+    this.router.navigateByUrl('/tabs/solvedcomplain');
+  }
+  async pendingcomplain(){
+    this.router.navigateByUrl('/tabs/pendingcomplain');
+  }
+  newcomplain(){
+    console.log('inside new emergency complain')
+    this.router.navigateByUrl('/newemergencycomplain');
+  }
 }

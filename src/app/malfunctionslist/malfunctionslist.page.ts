@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Routes } from '@angular/router';
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-malfunctionslist',
   templateUrl: './malfunctionslist.page.html',
@@ -7,9 +7,14 @@ import { Routes } from '@angular/router';
 })
 export class MalfunctionslistPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  async malfunctions(){
+    this.router.navigateByUrl('/tabs/malfunctionslist');
+  }
+  async currentmalfunctions(){
+    this.router.navigateByUrl('/tabs/currentmalfunctionslist');
+  }
 }

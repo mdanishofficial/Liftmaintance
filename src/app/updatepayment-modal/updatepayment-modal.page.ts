@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-updatepayment-modal',
   templateUrl: './updatepayment-modal.page.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatepaymentModalPage implements OnInit {
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
   }
-
+  dismiss() {
+    console.log('Modal Dismissed!!!!!!!!!!!!')
+     this.modalController.dismiss({
+       'dismissed': true
+     });
+   }
 }

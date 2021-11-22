@@ -1,6 +1,25 @@
 .container{
     margin-top: 1px;
    }
+   .header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+}
 .flex-container{
 display: flex;
 }
@@ -16,16 +35,16 @@ display: flex;
     text-decoration: underline;color:#3c5469 ; font-weight: bold;
 }
 .colordiv1{
-    background-color: #60D924; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 100%;
 }
 .colordiv2{
-    background-color: #60D924; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 100%;
 }
 .colordiv3{
-    background-color: #60D924; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 100%;
 }
 .colordiv4{
-    background-color: #60D924; width: 35px;height: 56px;
+    background-color: #60D924; width: 35px;height: 100%;
 }
 .type{
     font-size: 18pt;
@@ -50,23 +69,19 @@ margin-right: 0.7em;
 .textleft{
     float: left;
 }
-.solved-button{
-    width: 10em;
-    --background:#194E78;
-    color: #FFFFFF;
-    margin-right: -3em;
-    font-size: 12px;
-    --background-activated:#194E78;
-    --color-activated:#F5F5F5;
-    }
-.current-button{
-    //  margin-left: 0em;
-    --background:#F5F5F5;
+.btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .btn-secondary{
+    width: 8em;
+    background-color: #F5F5F5;
     color: #6E6E6E;
-    --background-activated:#194E78;
-    --color-activated:#F5F5F5;
-      font-size: 12px;
-      text-align: center;
-      border-radius: 0px;
-      margin-left: -3em;
-   }
+    border: #6E6E6E;
+  }
+  .divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+  }

@@ -1,6 +1,25 @@
 .container{
     margin-top: 1px;
    }
+   .header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+}
 .firstcol{
 float: left;
 }
@@ -66,7 +85,7 @@ hr {
 }
 .btn-secondary{
     background-color:#6E6E6E;
-    // width:9em;
+    width:4em;
 }
 .divider{
     width:3em;

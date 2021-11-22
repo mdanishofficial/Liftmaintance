@@ -1,4 +1,31 @@
 .flex-container{
     justify-content: center;
     display: flex;
+    margin-top: 1em;
+}
+.header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: relative ;
+    top: 0px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+    justify-content: center;
+}
+.ion-text-center{
+    margin-top: 1.5em;
+}
+.img{
+    margin: 0.1em;
 }

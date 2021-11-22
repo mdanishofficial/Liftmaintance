@@ -52,44 +52,44 @@ const routes: Routes = [
     loadChildren: () => import('../malfunctionslist/malfunctionslist.module').then(m => m.MalfunctionslistPageModule)
   },
   {
-    path: 'malfunctionslist/current',
+    path: 'currentmalfunctionslist',
     loadChildren: () => import('../currentmalfunctions/currentmalfunctions.module').then(m => m.CurrentmalfunctionsPageModule)
   },
 
   {
-    path: 'complain/solvedcomplain',
+    path: 'solvedcomplain',
     loadChildren: () => import('../solvedcomplain/solvedcomplain.module').then(m => m.SolvedcomplainPageModule)
   },
   {
-    path: 'complain/pendingcomplain',
+    path: 'pendingcomplain',
     loadChildren: () => import('../pendingcomplain/pendingcomplain.module').then(m => m.PendingcomplainPageModule)
   },
   {
-    path: 'complain/solvedemergencycomplain',
+    path: 'solvedemergencycomplain',
     loadChildren: () => import('../solvedemergencycomplain/solvedemergencycomplain.module').then(m => m.SolvedemergencycomplainPageModule)
   },
   {
-    path: 'complain/pendingemergencycomplain',
+    path: 'pendingemergencycomplain',
     loadChildren: () => import('../pendingemergencycomplain/pendingemergencycomplain.module').then(m => m.PendingemergencycomplainPageModule)
   },
   {
-    path: 'complain/newemergencycomplain',
+    path: 'newemergencycomplain',
     loadChildren: () => import('../newemergencycomplain/newemergencycomplain.module').then(m => m.NewemergencycomplainPageModule)
   },
   {
-    path: 'complain/newpendingcomplain',
+    path: 'newpendingcomplain',
     loadChildren: () => import('../newpendingcomplain/newpendingcomplain.module').then(m => m.NewpendingcomplainPageModule)
   },
   {
-    path: 'bills/unpaidbills',
+    path: 'unpaidbills',
     loadChildren: () => import('../unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
   },
   {
-    path: 'bills/paidbills',
+    path: 'paidbills',
     loadChildren: () => import('../paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
   },
   {
-    path: 'bills/billdetails',
+    path: 'billdetails',
     loadChildren: () => import('../billdetails/billdetails.module').then(m => m.BilldetailsPageModule)
   },
   {

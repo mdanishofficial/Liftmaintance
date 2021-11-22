@@ -3,21 +3,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select</title>
 </head>
-<ion-header style="
-height: 40px;
-background-color: #3c5469;
-">
-  <ion-navbar class="navbar">
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon name="notifications-outline" style="position: absolute;top: 2px;left: 5px;color: white;
-height: 38px;width: 52px;">
+      <ion-icon src="../../assets/bell.svg" class="bell">
       </ion-icon>
       <div class="ion-text-right">
-        <img src="../../assets/logo.svg" style="position: absolute;top: -16px;right: -5px;">
+        <img src="../../assets/logo.svg" class="logo">
       </div>
     </ion-title>
-  </ion-navbar>
+  <!-- </ion-navbar> -->
 </ion-header>
+<!-- <nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="../../assets/bell.svg" width="30" height="30" class="bell" alt="">
+  </a>
+  <form class="form-inline">
+    <img src="../../assets/logo.svg" class="logo" alt="">
+  </form>
+ </nav> -->
+ <!-- <div class="ion-text-right">
+
+ 
+ </div> -->
+ 
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">New Inquiry</h1>
@@ -46,7 +55,7 @@ height: 38px;width: 52px;">
     <div class="flex-container">
    <button type="button" class="btn btn-primary btn-lg" id="language" (click)="presentModalsendInquiry()">Send Inquiry</button>
    <div class="divider"></div>
-<button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+   <ion-back-button type="button" defaultHref="/tabs/inquiries" icon="none" class="btn btn-secondary btn-lg">Cancel</ion-back-button>
  </div>
 </div>
 </div>

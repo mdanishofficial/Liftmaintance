@@ -3,14 +3,37 @@ h1{
     color:#3c5469 ; 
     font-weight: bold;
 }
+// .navbar{
+// background-color: #194E78;
+// // position: absolute;
+// width: 100%;
+// }
+.header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+}
 .flex-container{
     justify-content: center;
 }
 .h3{
     margin-left: 0.7em;
     color:#3c5469 ;
-    // font-weight: bold; 
-    float: left;
+ float: left;
     margin-top: 0em;
     font-size: 18px;
 }
@@ -71,6 +94,7 @@ margin-left: 1em;
 }
 .btn-secondary{
     background-color:#6E6E6E;
+    width: 4em;
     // width:9em;
 }
 .native-textarea{

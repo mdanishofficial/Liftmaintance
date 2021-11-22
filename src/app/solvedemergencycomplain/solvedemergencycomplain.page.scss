@@ -1,29 +1,45 @@
+.header{
+  height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+  position: absolute ;
+  top: -11px;
+  right: 0px;
+  width: 66px;
+  height: 86px;
+}
 h1{
-    text-decoration: underline;color:#3c5469 ; font-weight: bold;
+    text-decoration: underline;color:#3c5469 ; font-weight: bold;margin-top: 1em;
 }
 .flex-container{
     justify-content: center;
 }
-.solved-button{
-    width: 10em;
-    --background:#194E78;
-    color: #FFFFFF;
-    margin-right: -3em;
-    font-size: 12px;
-    --background-activated:#194E78;
-    --color-activated:#F5F5F5;
-    }
-.pending-button{
-    //  margin-left: 0em;
-    --background:#F5F5F5;
-    color: #6E6E6E;
-    --background-activated:#194E78;
-    --color-activated:#F5F5F5;
-      font-size: 12px;
-      text-align: center;
-      border-radius: 0px;
-      margin-left: -3em;
-   }
+.btn-primary{
+  width: 8em;
+  background-color: #194E78;
+  border: #194E78;
+}
+.btn-secondary{
+  width: 8em;
+  background-color: #F5F5F5;
+  color: #6E6E6E;
+  border: #6E6E6E;
+ 
+}
+.divider{
+  width:3em;
+  height:auto;
+  display:inline-block;
+}
    .rectangle {
     // width: 374px;
     // height: 175px;

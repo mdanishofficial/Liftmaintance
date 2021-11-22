@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-currentmalfunctions',
   templateUrl: './currentmalfunctions.page.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CurrentmalfunctionsPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+  async malfunctions(){
+    this.router.navigateByUrl('/tabs/malfunctionslist');
+  }
+  async currentmalfunctions(){
+    this.router.navigateByUrl('/tabs/currentmalfunctionslist');
+  }
 }
