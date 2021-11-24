@@ -126,6 +126,46 @@ const routes: Routes = [
     path: 'sendinquiry-modal',
     loadChildren: () => import('./sendinquiry-modal/sendinquiry-modal.module').then( m => m.SendinquiryModalPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'maintenance-manager-maintenancelist',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenance-manager-maintenancelist/maintenance-manager-maintenancelist.module').then( m => m.MaintenanceManagerMaintenancelistPageModule)
+  },
+  {
+    path: 'maintenance-manager-currentmalfunctionslist',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenance-manager-currentmalfunctionslist/maintenance-manager-currentmalfunctionslist.module').then( m => m.MaintenanceManagerCurrentmalfunctionslistPageModule)
+  },
+  {
+    path: 'maintenance-manager-solvedmalfunctionslist',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenance-manager-solvedmalfunctionslist/maintenance-manager-solvedmalfunctionslist.module').then( m => m.MaintenanceManagerSolvedmalfunctionslistPageModule)
+  },
+  {
+    path: 'maintenancevisits',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenancevisits/maintenancevisits.module').then( m => m.MaintenancevisitsPageModule)
+  },
+  {
+    path: 'myclient',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/myclient/myclient.module').then( m => m.MyclientPageModule)
+  },
+  {
+    path: 'clientlisting',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/clientlisting/clientlisting.module').then( m => m.ClientlistingPageModule)
+  },
+  {
+    path: 'contracts',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/contracts/contracts.module').then( m => m.ContractsPageModule)
+  },
+  {
+    path: 'curmonthexpiring',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/curmonthexpiring/curmonthexpiring.module').then( m => m.CurmonthexpiringPageModule)
+  },
+  {
+    path: 'expired',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/expired/expired.module').then( m => m.ExpiredPageModule)
+  },
  
  ];
 @NgModule({

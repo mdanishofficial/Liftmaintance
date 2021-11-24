@@ -108,8 +108,47 @@ const routes: Routes = [
     path: 'faqs',
     loadChildren: () => import('../faqs/faqs.module').then(m => m.FaqsPageModule)
   },
-
-  
+// maintenance manager tabs
+  {
+    path: 'adminroles/maintenancemanager/menu',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/menu/menu.module').then(m => m.MenuPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenance-manager-maintenancelist',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenance-manager-maintenancelist/maintenance-manager-maintenancelist.module').then(m => m.MaintenanceManagerMaintenancelistPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenance-manager-currentmalfunctionslist',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenance-manager-currentmalfunctionslist/maintenance-manager-currentmalfunctionslist.module').then(m => m.MaintenanceManagerCurrentmalfunctionslistPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenance-manager-solvedmalfunctionslist',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenance-manager-solvedmalfunctionslist/maintenance-manager-solvedmalfunctionslist.module').then(m => m.MaintenanceManagerSolvedmalfunctionslistPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenancevisits',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisits/maintenancevisits.module').then(m => m.MaintenancevisitsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/myclient',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/myclient/myclient.module').then(m => m.MyclientPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/clientlisting',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/contracts',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/contracts/contracts.module').then(m => m.ContractsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/curmonthexpiring',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/curmonthexpiring/curmonthexpiring.module').then(m => m.CurmonthexpiringPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/expired',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/expired/expired.module').then(m => m.ExpiredPageModule)
+  },
       {
         path: '',
         redirectTo: '/tabs/tab1',

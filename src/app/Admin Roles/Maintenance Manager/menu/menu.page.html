@@ -1,0 +1,37 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-center">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="ion-text-center">
+   <img src="../../assets/cabin.svg" class="img" >
+</div>
+<div class="flex-container">
+<img src="../../assets/malfunctions.svg" (click)="malfunctions()"/>
+<img src="../../assets/maintenance visit.svg" (click)="maintenance()"/>
+ </div>
+ <div class="flex-container">
+  <img src="../../assets/myclient.svg" (click)="myclient()"/>
+ <img src="../../assets/bills.svg" (click)="bills()"/>
+
+ </div>
+ <div class="flex-container">
+  <img src="../../assets/complain.svg" (click)="complain()"/>
+  <img src="../../assets/myteam.svg" (click)="myteam()"/>
+  </div>
+ <div class="flex-container">
+ <img src="../../assets/emergencycomplain.horizontal.svg" (click)="emergencycomplain()"/>
+</div>
+</ion-content>

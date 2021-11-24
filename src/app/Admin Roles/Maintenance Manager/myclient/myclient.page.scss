@@ -1,0 +1,29 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  h1{
+      text-decoration: underline;color:#194E78 ; font-weight: bold;margin-top: 1em;
+  }
+ 
+  .flex-container{
+  justify-content: center;
+  }
+  .cards{
+      margin-top: 8em;
+  }

@@ -1,7 +1,26 @@
 h1{
     text-decoration: underline;
-    color:#3c5469 ; 
+    color:#194E78 ; 
     font-weight: bold;
+}
+.header{
+    height: 40px;
+background-color: #194E78;
+}
+.bell{
+margin-left: 0.5em;
+position: absolute;
+top: 5px;
+left: 0.5em;
+width: 24px;
+height: 30px;
+}
+.logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
 }
 .flex-container{
     justify-content: center;
@@ -9,7 +28,7 @@ h1{
 }
 .h3{
     margin-left: 0.7em;
-    color:#3c5469 ;
+    color:#194E78 ;
     // font-weight: bold; 
     float: left;
     margin-top: 0em;
