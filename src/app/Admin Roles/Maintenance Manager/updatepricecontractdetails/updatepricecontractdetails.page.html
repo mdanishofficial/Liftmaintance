@@ -1,0 +1,86 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+
+    <h1 class="ion-text-center">Contract Details</h1>
+    <div class="container">
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Lift Number : 6</h6>
+    <hr class="hr">
+    <h6 class="client">Previous Contract</h6>
+    <div class="details">
+      <div class="leftcol">
+        <text class="textleft">Start Date</text>
+      </div>
+      <div class="rightcol">
+        <text class="textright">10-10-2020</text>
+      </div>
+     </div>
+    <br>
+      <div class="details">
+      <div class="leftcol">
+        <text class="textleft">End Date</text>
+      </div>
+      <div class="rightcol">
+        <text class="textright">10-10-2022</text>
+      </div>
+     </div>
+     <br>
+     <div class="details">
+      <div class="leftcol">
+        <text class="textleft">Price</text>
+      </div>
+      <div class="rightcol">
+        <text class="textright">2400 Riyals</text>
+      </div>
+     </div> 
+     <br>
+     <hr class="hr">
+     <h6 class="client">New Contract</h6>
+     <div class="details">
+       <div class="leftcol">
+         <text class="textleft">Start Date</text>
+       </div>
+       <div class="rightcol">
+         <text class="textright">10-10-2020</text>
+       </div>
+      </div>
+     <br>
+       <div class="details">
+       <div class="leftcol">
+         <text class="textleft">End Date</text>
+       </div>
+       <div class="rightcol">
+         <text class="textright">10-10-2022</text>
+       </div>
+      </div>
+      <br>
+      <div class="details">
+       <div class="leftcol">
+         <text class="textleft">Price</text>
+       </div>
+       <div class="rightcol">
+         <text class="textright">2400 Riyals</text>
+       </div>
+      </div> 
+      <br>
+     <div class="ion-text-center">
+      <ion-button class="newbutton" (click)="updateprice()">Update Price</ion-button>
+    </div>
+    </div>
+    </ion-content>

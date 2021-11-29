@@ -166,6 +166,18 @@ const routes: Routes = [
     path: 'expired',
     loadChildren: () => import('./Admin Roles/Maintenance Manager/expired/expired.module').then( m => m.ExpiredPageModule)
   },
+  {
+    path: 'contractdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/contractdetails/contractdetails.module').then( m => m.ContractdetailsPageModule)
+  },
+  {
+    path: 'updatepricecontractdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then( m => m.UpdatepricecontractdetailsPageModule)
+  },
+  {
+    path: 'updateprice-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/updateprice-modal/updateprice-modal.module').then( m => m.UpdatepriceModalPageModule)
+  },
  
  ];
 @NgModule({

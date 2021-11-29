@@ -149,6 +149,14 @@ const routes: Routes = [
     path: 'adminroles/maintenancemanager/expired',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/expired/expired.module').then(m => m.ExpiredPageModule)
   },
+  {
+    path: 'adminroles/maintenancemanager/contractdetails',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/contractdetails/contractdetails.module').then(m => m.ContractdetailsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/updatepricecontractdetails',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then(m => m.UpdatepricecontractdetailsPageModule)
+  },
       {
         path: '',
         redirectTo: '/tabs/tab1',
