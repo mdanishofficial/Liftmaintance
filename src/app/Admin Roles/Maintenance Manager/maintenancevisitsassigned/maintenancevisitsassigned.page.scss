@@ -150,12 +150,6 @@ margin: 5px;
       padding-top: 0.5em;
     //   margin-top: 0.5em;
   }
-  .card-last{
-    --background:#FCFCFC;
-    padding: 1em;
-    padding-top: 0.5em;
-    border: 1px solid #FABE11;
-  }
   .searcbar-card{
 width: 13em;
 height: 3em;
@@ -214,19 +208,11 @@ height: 3em;
                 overflow: auto;
                 padding-left: 0px
               }
-              .tab-bar-months{
-                overflow: auto;
-                padding-left: 0px
-              }
-          }
+       }
           @media only screen and (max-width: 321px) {
             .tab-bar-visits{
                 overflow: auto;
                 padding-left: 100px
               }
-              .tab-bar-months{
-                overflow: auto;
-                padding-left: 371px
-              }
-          }
+         }
   

@@ -62,7 +62,7 @@
 
 }
 ::ng-deep .searchbar-input{
-    padding-left: 0em !important;
+  padding-left: 0em !important;
 }
   .btn-primary{
     width: 8em;
@@ -92,6 +92,26 @@
 select{
    width: 13em;
    color: #6E6E6E;
+}
+#maintenance_technician{
+    color: #6E6E6E;
+    height: 1.7em;
+    padding-top: 0em;
+    width: 10em;
+    margin-left: 0.4em;
+    margin-top: -0.1em;
+}
+.maintenance_technician{
+    color: #6E6E6E;
+    font-family:'Roboto';
+    font-size: 12px;
+    margin-top: 0em;
+    margin-left: 0em;
+    text-align: left;
+    display: inline-block;
+}
+.flex-container5{
+    display: flex;
 }
  .divider{
     width:3em;
@@ -125,6 +145,7 @@ margin: 5px;
         margin-left: 0em;
         text-align: left;
     }
+    
     .details{
       color: #6E6E6E;
       font-family:'Roboto';
@@ -148,13 +169,8 @@ margin: 5px;
       --background:#FCFCFC;
       padding: 1em;
       padding-top: 0.5em;
+      border: 2px solid #F0B8A3;
     //   margin-top: 0.5em;
-  }
-  .card-last{
-    --background:#FCFCFC;
-    padding: 1em;
-    padding-top: 0.5em;
-    border: 1px solid #FABE11;
   }
   .searcbar-card{
 width: 13em;
@@ -214,19 +230,19 @@ height: 3em;
                 overflow: auto;
                 padding-left: 0px
               }
-              .tab-bar-months{
-                overflow: auto;
-                padding-left: 0px
-              }
-          }
+       }
           @media only screen and (max-width: 321px) {
             .tab-bar-visits{
                 overflow: auto;
                 padding-left: 100px
               }
-              .tab-bar-months{
-                overflow: auto;
-                padding-left: 371px
-              }
-          }
+              #maintenance_technician{
+                color: #6E6E6E;
+                height: 1.7em;
+                padding-top: 0em;
+                width: 9em;
+                margin-left: 0.4em;
+                margin-top: -0.1em;
+            }
+         }
   

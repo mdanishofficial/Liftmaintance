@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Report</h1>
+    <div class="buttondiv"><ion-button class="editbutton" shape="round">Edit</ion-button></div>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Assigned Technician: Technician Name</h6>
+    <hr class="hr">
+    <h6 class="client">No of Stop : 04</h6>
+    <hr class="hr">
+    <h6 class="client">Location : Old City Road</h6>
+    <hr class="hr">
+    <h6 class="client">Notes</h6>
+    <ion-text class="date">How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell </ion-text>
+    <div class="ion-text-center">
+      <div class="flex-container">
+     <button type="button" class="btn btn-primary" id="language"(click)="sendreport()">Send Report to Client</button>
+     <div class="divider"></div>
+     <button type="button" class="btn btn-secondary" id="language"(click)="back()">Back</button>
+   </div>
+  </div> 
+  </div>
+    </ion-content>

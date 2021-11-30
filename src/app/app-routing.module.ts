@@ -178,6 +178,30 @@ const routes: Routes = [
     path: 'updateprice-modal',
     loadChildren: () => import('./Admin Roles/Maintenance Manager/updateprice-modal/updateprice-modal.module').then( m => m.UpdatepriceModalPageModule)
   },
+  {
+    path: 'maintenancevisitsassigned',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenancevisitsassigned/maintenancevisitsassigned.module').then( m => m.MaintenancevisitsassignedPageModule)
+  },
+  {
+    path: 'maintenancevisitsunassigned',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenancevisitsunassigned/maintenancevisitsunassigned.module').then( m => m.MaintenancevisitsunassignedPageModule)
+  },
+  {
+    path: 'maintenancevisitsnotvisits',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/maintenancevisitsnotvisits/maintenancevisitsnotvisits.module').then( m => m.MaintenancevisitsnotvisitsPageModule)
+  },
+  {
+    path: 'report',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/report/report.module').then( m => m.ReportPageModule)
+  },
+  {
+    path: 'respond',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/respond/respond.module').then( m => m.RespondPageModule)
+  },
+  {
+    path: 'clientinquiries',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/clientinquiries/clientinquiries.module').then( m => m.ClientinquiriesPageModule)
+  },
  
  ];
 @NgModule({

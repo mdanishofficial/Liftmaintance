@@ -1,0 +1,117 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Malfunctions Visits</h1>
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+          <button type="button" class="btn btn-secondary" (click)="daily()" >Daily Visit<sup><span class="badge badge-success">12</span></sup></button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-primary" (click)="monthly()">Monthly Visit<sup><span class="badge badge-success">17</span></sup></button>
+      </ion-tab-bar>
+    </div>
+     <div class="flex-container" scrollable>
+    <div class="tabs" scrollable>
+    <ion-tab-bar slot="top" class="tab-bar-visits">
+      <button type="button" class="btn btn-danger" *ngFor="let visit of visits;"(click)="setSelectedvisits(visit.id)" [ngClass]='visit.selected == true ?"selected":"notSelected"'>{{visit.title}}</button>
+  </ion-tab-bar>
+    <!-- </div>
+      </div>
+  </div> -->
+  <!-- <div class="tabs">
+    <ion-tab-bar slot="top">
+        <button type="button" class="btn btn-primary" (click)="daily()" >Daily Visit<sup><span class="badge badge-success">12</span></sup></button>
+    <div class="divider"></div>
+        <button type="button" class="btn btn-secondary" (click)="monthly()">Monthly Visit<sup><span class="badge badge-success">17</span></sup></button>
+    </ion-tab-bar>
+    <div class="divider"></div>
+    <button type="button" class="btn btn-secondary" (click)="monthly()">Monthly Visit<sup><span class="badge badge-success">17</span></sup></button>
+
+    <div class="divider"></div>
+    <button type="button" class="btn btn-secondary" (click)="monthly()">Monthly Visit<sup><span class="badge badge-success">17</span></sup></button>
+
+  </div> -->
+</div>
+<div class="flex-container3">
+<ion-card class="searcbar-card" >
+  <ion-searchbar class="searchbar" placeholder="Search..."></ion-searchbar>
+  <!-- <ion-searchbar _ngcontent-dcs-c145="" class="searchbar sc-ion-searchbar-ios-h sc-ion-searchbar-ios-s ios searchbar-left-aligned hydrated" role="search"><input class="searchbar-input sc-ion-searchbar-ios" style="padding-left: 0em;"></ion-searchbar> -->
+</ion-card>
+<ion-card class="select-card">
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+    <option disabled selected hidden style="color:   #DCDCDC;">Select City</option>
+    <option value="electrical" class="options">Electrical</option>
+    <option value="mechanical" class="options">Mechanical</option>
+    <option value="other" class="options">Other Type</option>
+    <option value="someother" class="options">Some Other Type</option>
+  </select>
+ </ion-card>
+</div>
+</div>
+    <div class="flex-container0">
+    <!-- <div class="rectangle"> -->
+      <ion-card class="card">
+      <div class="square">
+        <div>
+          <div class="complain"><h3 class="h3">Client : Shadab Khan</h3></div>
+          <div class="buttondiv"><ion-button class="statusbutton" shape="round">Update</ion-button></div>
+          <br>
+          <br>
+      </div>
+      <ion-text class="date">Sunday, 23-03-2020<br></ion-text>
+  <ion-text class="date">ID : 582<br></ion-text>
+  <ion-text class="date">Location : Old City Road<br></ion-text>
+  <div class="flex-container5">
+  <ion-text class="maintenance_technician">Maintenance Technician:</ion-text>
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="maintenance_technician">
+    <option disabled selected hidden style="color:   #DCDCDC;">Please Select</option>
+    <option value="electrical" class="options">ABC</option>
+    <option value="mechanical" class="options">ABC</option>
+    <option value="other" class="options">ABC</option>
+    <option value="someother" class="options">ABC</option>
+  </select>
+</div>
+  </div>
+<!-- </div> -->
+</ion-card>
+<ion-card class="card">
+  <div class="square">
+    <div>
+      <div class="complain"><h3 class="h3">Client : Asghar Ali</h3></div>
+      <div class="buttondiv"><ion-button class="statusbutton" shape="round">Update</ion-button></div>
+      <br>
+      <br>
+  </div>
+  <ion-text class="date">Sunday, 23-03-2020<br></ion-text>
+  <ion-text class="date">ID : 582<br></ion-text>
+  <ion-text class="date">Location : Old City Road<br></ion-text>
+  <div class="flex-container5">
+    <ion-text class="maintenance_technician">Maintenance Technician:</ion-text>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="maintenance_technician">
+      <option disabled selected hidden style="color:   #DCDCDC;">Please Select</option>
+      <option value="electrical" class="options">ABC</option>
+      <option value="mechanical" class="options">ABC</option>
+      <option value="other" class="options">ABC</option>
+      <option value="someother" class="options">ABC</option>
+    </select>
+  </div>
+</div>
+<!-- </div> -->
+</ion-card>
+ </div>
+</div>
+</ion-content>

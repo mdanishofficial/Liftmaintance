@@ -1,0 +1,39 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Respond to inqurires</h1>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Waqar Younis</h6>
+    <hr class="hr">
+    <h6 class="client">Inquiry</h6>
+    <ion-text class="date">How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell  </ion-text>
+<h6 class="client">Respond</h6>
+    <ion-card class="cardinput">
+    <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+    <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please input detail!"></textarea>
+</ion-card>
+<div class="ion-text-center">
+  <div class="flex-container">
+ <button type="button" class="btn btn-primary" id="language" (click)="presentModalsendInquiry()">Send Inquiry</button>
+ <div class="divider"></div>
+ <button type="button" class="btn btn-secondary" id="language" (click)="presentModalsendInquiry()">Back</button>
+ </div>
+ </div>
+  </div>
+    </ion-content>

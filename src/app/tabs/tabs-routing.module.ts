@@ -130,6 +130,18 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisits/maintenancevisits.module').then(m => m.MaintenancevisitsPageModule)
   },
   {
+    path: 'adminroles/maintenancemanager/maintenancevisitsassigned',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisitsassigned/maintenancevisitsassigned.module').then(m => m.MaintenancevisitsassignedPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenancevisitsunassigned',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisitsunassigned/maintenancevisitsunassigned.module').then(m => m.MaintenancevisitsunassignedPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/maintenancevisitsnotvisits',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisitsnotvisits/maintenancevisitsnotvisits.module').then(m => m.MaintenancevisitsnotvisitsPageModule)
+  },
+  {
     path: 'adminroles/maintenancemanager/myclient',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/myclient/myclient.module').then(m => m.MyclientPageModule)
   },
@@ -156,6 +168,18 @@ const routes: Routes = [
   {
     path: 'adminroles/maintenancemanager/updatepricecontractdetails',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then(m => m.UpdatepricecontractdetailsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/report',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/report/report.module').then(m => m.ReportPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/respond',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/respond/respond.module').then(m => m.RespondPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/clientinquiries',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/clientinquiries/clientinquiries.module').then(m => m.ClientinquiriesPageModule)
   },
       {
         path: '',
