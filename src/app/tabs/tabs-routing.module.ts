@@ -130,6 +130,10 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisits/maintenancevisits.module').then(m => m.MaintenancevisitsPageModule)
   },
   {
+    path: 'adminroles/maintenancemanager/datepicker-maintenance-visits',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/datepicker-maintenance-visits/datepicker-maintenance-visits.module').then(m => m.DatepickerMaintenanceVisitsPageModule)
+  },
+  {
     path: 'adminroles/maintenancemanager/maintenancevisitsassigned',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisitsassigned/maintenancevisitsassigned.module').then(m => m.MaintenancevisitsassignedPageModule)
   },
@@ -144,6 +148,14 @@ const routes: Routes = [
   {
     path: 'adminroles/maintenancemanager/myclient',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/myclient/myclient.module').then(m => m.MyclientPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/myteam-maintenance-technicians',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/myteam-maintenance-technicians/myteam-maintenance-technicians.module').then(m => m.MyteamMaintenanceTechniciansPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/myteam-repair-technicians',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/myteam-repair-technicians/myteam-repair-technicians.module').then(m => m.MyteamRepairTechniciansPageModule)
   },
   {
     path: 'adminroles/maintenancemanager/clientlisting',
@@ -180,6 +192,14 @@ const routes: Routes = [
   {
     path: 'adminroles/maintenancemanager/clientinquiries',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/clientinquiries/clientinquiries.module').then(m => m.ClientinquiriesPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/malfunctionsdetails',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/malfunctionsdetails/malfunctionsdetails.module').then(m => m.MalfunctionsdetailsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancemanager/solvedmalfunctionsdetails',
+    loadChildren: () => import('../Admin Roles/Maintenance Manager/solvedmalfunctionsdetails/solvedmalfunctionsdetails.module').then(m => m.SolvedmalfunctionsdetailsPageModule)
   },
       {
         path: '',

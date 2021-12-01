@@ -202,7 +202,26 @@ const routes: Routes = [
     path: 'clientinquiries',
     loadChildren: () => import('./Admin Roles/Maintenance Manager/clientinquiries/clientinquiries.module').then( m => m.ClientinquiriesPageModule)
   },
- 
+  {
+    path: 'malfunctionsdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/malfunctionsdetails/malfunctionsdetails.module').then( m => m.MalfunctionsdetailsPageModule)
+  },
+  {
+    path: 'solvedmalfunctionsdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/solvedmalfunctionsdetails/solvedmalfunctionsdetails.module').then( m => m.SolvedmalfunctionsdetailsPageModule)
+  },
+  {
+    path: 'myteam-maintenance-technicians',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/myteam-maintenance-technicians/myteam-maintenance-technicians.module').then( m => m.MyteamMaintenanceTechniciansPageModule)
+  },
+  {
+    path: 'myteam-repair-technicians',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/myteam-repair-technicians/myteam-repair-technicians.module').then( m => m.MyteamRepairTechniciansPageModule)
+  },
+  {
+    path: 'datepicker-maintenance-visits',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/datepicker-maintenance-visits/datepicker-maintenance-visits.module').then( m => m.DatepickerMaintenanceVisitsPageModule)
+  },
  ];
 @NgModule({
   imports: [

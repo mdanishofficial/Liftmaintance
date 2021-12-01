@@ -34,7 +34,7 @@
             "styles": ["src/theme/variables.scss", "src/global.scss",  "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
               "node_modules/ng-zorro-antd/resizable/style/index.min.css",
             "./node_modules/bootstrap/dist/css/bootstrap.min.css"
-            ],
+       ],
             "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.js"],
             "aot": false,
             "vendorChunk": true,

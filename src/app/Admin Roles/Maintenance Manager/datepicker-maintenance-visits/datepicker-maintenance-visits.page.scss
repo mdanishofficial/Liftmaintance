@@ -1,0 +1,233 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .flex-container0{
+      justify-content: center;
+  }
+  .flex-container{
+   overflow-x: scroll;
+  //  flex-wrap: nowrap;
+  overflow-y: hidden;
+  }
+  .flex-container3{
+    flex-direction: row;
+    display: flex;
+}
+.tab-bar-months{
+  overflow: auto;
+  padding-left: 371px
+}
+.selected{
+  background-color: #194E78;
+  border: #194E78;
+}
+.notSelected{
+  background-color:#F5F5F5;
+  border: #F5F5F5;
+  color: #6E6E6E;
+}
+.tab-bar-visits{
+  overflow: auto;
+  padding-left: 0px
+}
+.searchbar{
+  width: 13em;
+  height: 3em;
+  margin-top: 0em;
+  margin-left: 0em;
+  padding-left: 1em;
+  --border-radius: 0px;
+  --background: white;
+  --placeholder-color: #6E6E6E;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+
+}
+::ng-deep .searchbar-input{
+    padding-left: 0em !important;
+}
+  .btn-primary{
+    width: 8em;
+    background-color: #F5F5F5;
+    color: #6E6E6E;
+    border: #6E6E6E;
+  
+  }
+  .btn-secondary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+.tabs{
+  flex: 0 0 auto;
+
+}
+.options{
+  color: #194E78;
+  font-size: 18px;
+ }
+.form-select-sm{
+  color: #6E6E6E;
+   height: 3em;
+  // font-weight: bold;
+ }
+select{
+   width: 13em;
+   color: #6E6E6E;
+}
+ .divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+  }
+  .btn-success{
+margin: 5px;
+  }
+  .btn-danger{
+    margin: 5px;
+      }
+    .square{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .h3{
+      font-family:'Roboto';
+      font-size: 18px;
+      margin-top: 0.5em;
+      margin-left: 0em;
+      margin-bottom: 0em;
+      color: #194E78;
+      text-align: left;
+      }
+    .date{
+        color: #6E6E6E;
+        font-family:'Roboto';
+        font-size: 12px;
+        margin-top: 0em;
+        margin-left: 0em;
+        text-align: left;
+    }
+    .details{
+      color: #6E6E6E;
+      font-family:'Roboto';
+      font-size: 12px;
+      margin-top: 0em;
+      margin-left: 0em;
+    }
+    .complain{
+        float: left;
+    }
+    .status{
+     font-family:'Roboto';
+          font-size: 20px;
+          margin-top: 0em;
+          margin-left: 0em;
+          margin-bottom: 0em;
+          color: #194E78;
+          text-align: left;
+         }
+  .card{
+      --background:#FCFCFC;
+      padding: 1em;
+      padding-top: 0.5em;
+    //   margin-top: 0.5em;
+  }
+  .color-card{
+    --background:#FCFCFC;
+    border: 1px solid #FE9B77;
+    padding: 1em;
+    padding-top: 0.5em;
+  //   margin-top: 0.5em;
+}
+  .searcbar-card{
+width: 13em;
+height: 3em;
+  }
+  .select-card{
+    width: 13em;
+    height: 3em; 
+    margin-left: -0.5em;
+  }
+    .buttondiv{
+      float: right;
+    }
+    .statusbutton{
+      width: 91px;
+        height: 37px;
+           --background:#194E78;
+    }
+ 
+      .badge{
+        font-size: 0.75em;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        right: -21px;
+        color: #194E78;
+        border-radius: 100%;
+      }
+    .input-group{
+        width: 14em;
+        margin-top: -3em;
+        margin-bottom: -3em;
+    }
+    .form-control{
+border: 0;
+    }
+        @media only screen and (min-height: 1000px) {
+          .details{
+              color: #6E6E6E;
+              font-family:'Roboto';
+              font-size: 25px;
+              margin-top: 0em;
+              margin-left: 0em;
+            }
+            .date{
+              color: #6E6E6E;
+              font-family:'Roboto';
+              font-size: 25px;
+              margin-top: 0em;
+              margin-left: 0em;
+              text-align: left;
+          }
+          .h3{
+              font-family:'Roboto';
+              font-size: 30px;
+              margin-top: 0.5em;
+              margin-left: 0em;
+              margin-bottom: 0em;
+              color: #194E78;
+              text-align: left;
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            .tab-bar-visits{
+                overflow: auto;
+                padding-left: 0px
+              }
+       }
+          @media only screen and (max-width: 321px) {
+            .tab-bar-visits{
+                overflow: auto;
+                padding-left: 100px
+              }
+         }
+  

@@ -8,15 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 // import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,NzButtonModule,BrowserAnimationsModule
-   
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,NzButtonModule,BrowserAnimationsModule,
+ 
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   
  
 })
-export class AppModule {}
+export class AppModule {
+}

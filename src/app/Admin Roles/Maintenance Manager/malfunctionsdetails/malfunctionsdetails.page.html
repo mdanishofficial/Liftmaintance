@@ -1,0 +1,111 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Malfunction Details</h1>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Assigned Technician: Technician Name</h6>
+    <hr class="hr">
+    <h6 class="client">Lift number : 03</h6>
+    <hr class="hr">
+ <h6 class="client">Complain Notes</h6>
+    <ion-text class="date">How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell </ion-text>
+   
+    <h6 class="client">Malfunction Type</h6>
+    <div class="ion-text-center">
+      <ion-chip class="mechanical-chip">
+    <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
+    <ion-label class="itemcenter">Mechanical </ion-label>
+   <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
+      </ion-chip>
+  </div>
+  <hr class="hr">
+  <h6 class="client">Malfunction Level</h6>
+  <div class="ion-text-center">
+    <ion-chip class="normal-chip">
+  <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
+  <ion-label class="itemcenter">Normal </ion-label>
+ <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
+    </ion-chip>
+</div>
+<hr class="hr">
+<h6 class="client">Malfunction Status</h6>
+<div class="ion-text-center">
+  <ion-chip class="mechanical-chip">
+<!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
+<ion-label class="itemcenter">Mechanical </ion-label>
+<ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
+  </ion-chip>
+</div>
+<hr class="hr">
+<h6 class="client">Issue a Bill</h6>
+<div class="flex-container" style="justify-content: space-evenly;">
+  <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
+  <div class="ion-text-right">
+    <ion-chip class="ion-chip-right">
+      <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
+      <ion-label>Resend Receipt</ion-label>
+    </ion-chip>
+  </div>
+</div>
+<ion-text class="item">Item Name: Some Item Name</ion-text>
+<hr class="hr">
+<h6 class="client">Issue a Bill</h6>
+<div class="flex-container" style="justify-content: space-evenly;">
+  <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
+  <div class="ion-text-right">
+    <ion-chip class="ion-chip-right">
+      <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
+      <ion-label>Resend Receipt</ion-label>
+    </ion-chip>
+  </div>
+</div>
+<ion-text class="item">Item Name: Some Item Name</ion-text>
+<hr class="hr">
+<div class="ion-text-center">
+  <ion-button class="newbutton" shape="round" (click)="newcomplain()">New Bill</ion-button>
+</div>
+<h6 class="client">Payment</h6>
+<div class="flex-container" style="justify-content: space-evenly;">
+  <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
+  <div class="ion-text-right">
+    <ion-chip class="ion-chip-right">
+      <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
+      <ion-label>Update</ion-label>
+    </ion-chip>
+  </div>
+</div>
+<hr class="hr">
+<h6 class="client">Forward malfunction</h6>
+<div class="ion-text-center">
+  <ion-button class="newbutton" shape="round" (click)="newcomplain()">Forward</ion-button>
+</div>
+<hr class="hr">
+<br>
+<div class="ion-text-center">
+  <ion-text class="danger-text">*Malfunction Can not be closed till solved</ion-text>
+</div>
+<div class="ion-text-center">
+  <ion-button class="closedbutton" shape="round" (click)="newcomplain()">Closed</ion-button>
+</div>
+<br>
+<br>
+</div>
+</ion-content>

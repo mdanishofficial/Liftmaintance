@@ -1,0 +1,138 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  .container{
+      margin: 0.5em;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .buttondiv{
+    float: right;
+    margin-right: 2em;
+  }
+  .date{
+    font-size: 16px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+}
+.client{
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+    margin-top: 0.5em;
+    margin-left: -0.4em;
+ }
+.hr{
+    width: 94%;
+}
+.ion-icon{
+    color: white;
+    float: right;
+}
+.mechanical-chip{
+    display: flex;
+    justify-content: flex-start;   /* adjustment */
+    position: relative;            
+    width: 94%;
+    --background: #194E78;
+    height: 3em;
+    border-radius: 0.7em;
+   color: white;
+   margin-top: 1em;
+}
+.normal-chip{
+    display: flex;
+    justify-content: flex-start;   /* adjustment */
+    position: relative;            
+    width: 94%;
+    --background:#FABE11;
+    height: 3em;
+    border-radius: 0.7em;
+   color: white;
+   margin-top: 1em;
+}
+
+.itemcenter {
+    flex: 0 1 auto;
+    width: 150px;
+    height: 17px; 
+    position: absolute;             /* new */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+.itemright {
+    flex: 0 1 auto;
+    width: 30px;
+    height: 25px;
+    margin-left: auto;              /* new */
+  }
+  .bill{
+    font-size: 16px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+    font-weight: bold;
+    float: left;
+}
+.item{
+    font-size: 16px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+    font-weight: bold;
+    float: left;
+    margin-top: -1em;
+}
+.ion-chip-right{
+    --background:#194E78;
+    color: white;
+    border-radius: 0px;
+    padding: 1em;
+    font-size: 16px;
+}.newbutton{
+    --background:#FF6932;
+  //   position: fixed;
+       bottom: 10%;
+     width: 220px;
+    height: 49px;
+    margin-top:1em
+    }
+   .closedbutton{
+        --background:#6E6E6E;
+        //   position: fixed;
+             bottom: 10%;
+           width: 220px;
+          height: 49px;
+          margin-top:1em
+    }
+    .danger-text{
+color: #7A0001;
+    }
+@media only screen and (max-width: 321px) {
+    .item{
+        font-size: 16px;
+        color: #6E6E6E;
+        margin-left: -0.5em;
+        font-weight: bold;
+        float: left;
+        margin-top: 0.1em;
+    }
+}
