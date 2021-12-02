@@ -177,6 +177,14 @@ height: 3em;
         color: #194E78;
         border-radius: 100%;
       }
+      .input-group{
+        width: 14em;
+        margin-top: -3em;
+        margin-bottom: -3em;
+    }
+    .form-control{
+border: 0;
+    }
         @media only screen and (min-height: 1000px) {
           .details{
               color: #6E6E6E;

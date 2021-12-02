@@ -16,12 +16,12 @@ export class DatepickerMaintenanceVisitsPage implements OnInit {
     {
       id:0,
       title: "All Visits",
-      selected:false,
+      selected:true,
       } ,
       {
       id:1,
       title: "Assigned",
-      selected:true
+      selected:false
     },
     {
       id:2,

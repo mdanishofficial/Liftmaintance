@@ -1,0 +1,76 @@
+
+ .container{
+    margin-right: 1em;
+}
+.h1{
+    color: #194E78;
+    text-align: center;
+    font-size: 24px;
+    font-family:'Roboto', sans-serif;
+    margin-top: 1em;
+
+  }
+#text{
+    --placeholder-color: #6E6E6E;
+ font-size: 16px;
+}
+.form-select-sm{
+    color: #6E6E6E;
+     height: 3em;
+   }
+.options{
+    color: #194E78;
+    font-size: 18px;
+   }
+.buttons{
+    margin-top: 5em;
+    margin-left: -1em;
+}
+.btn-secondary{
+    width: 8em;
+    background-color:#6E6E6E;
+    color: white;
+    border: #6E6E6E;
+ }
+  .btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:1em;
+    height:auto;
+    display:inline-block;
+  }
+  #buttonsdiv{
+// margin-left: -1em;
+margin-top: 2em;
+  }
+  .card{
+margin-left: 2em;
+margin-right: 2em;
+height: 3em;
+  }
+  .card-detailed{
+    margin-left: 2em;
+    margin-right: 2em;
+    height: 10em;
+  }
+  .h6{
+    font-size: 18px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+    margin-left: 1.5em;
+ }
+ #textarea{
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    padding-top: 1em;
+     }
+     @media only screen and (max-width: 321px) {
+          #buttonsdiv{
+            // margin-left: 0em;
+            margin-top: 0em;
+              }
+     }

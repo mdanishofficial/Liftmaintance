@@ -1,0 +1,49 @@
+<!-- "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+"node_modules/ng-zorro-antd/resizable/style/index.min.css" -->
+<div class="container">
+  <h1 class="h1">Malfunction Type</h1>
+  <ion-list>
+    <ion-radio-group allow-empty-selection = "false" value="radio" (ionChange)="radioGroupChange($event)"
+    >
+    <ion-item>
+        <ion-label>Solved</ion-label>
+        <ion-radio slot="start" value="solved" class="radio" #solved></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Solved permanently</ion-label>
+        <ion-radio slot="start" value="permanently" class="radio" #permanently></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Need installation commitment</ion-label>
+        <ion-radio slot="start" value="installationcommitment" class="radio" #installationcommitment></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Not solved </ion-label>
+        <ion-radio slot="start" value="notsolved" class="radio" #notsolved></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Waiting for payment</ion-label>
+        <ion-radio slot="start" value="waitingpayment" class="radio" #waitingpayment></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Waiting for a part</ion-label>
+        <ion-radio slot="start" value="waitingpart" class="radio" #waitingpart></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Waiting for a part by client</ion-label>
+        <ion-radio slot="start" value="waitingpartbyclient" class="radio" #waitingpartbyclient></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+  <div class="ion-text-center">
+  <button type="button" class="btn btn-primary" (click)="update()">Update</button>
+  <div class="divider"></div>
+  <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
+</div>
+    </div>
+  <ion-content>
+  </ion-content>

@@ -30,7 +30,7 @@
    
     <h6 class="client">Malfunction Type</h6>
     <div class="ion-text-center">
-      <ion-chip class="mechanical-chip">
+      <ion-chip class="mechanical-chip" (click)="malfunctiontypemodal()">
     <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
     <ion-label class="itemcenter">Mechanical </ion-label>
    <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
@@ -39,7 +39,7 @@
   <hr class="hr">
   <h6 class="client">Malfunction Level</h6>
   <div class="ion-text-center">
-    <ion-chip class="normal-chip">
+    <ion-chip class="normal-chip"  (click)="malfunctionlevelmodal()">
   <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
   <ion-label class="itemcenter">Normal </ion-label>
  <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
@@ -48,9 +48,9 @@
 <hr class="hr">
 <h6 class="client">Malfunction Status</h6>
 <div class="ion-text-center">
-  <ion-chip class="mechanical-chip">
+  <ion-chip class="mechanical-chip" (click)="malfunctionstatusmodal()">
 <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
-<ion-label class="itemcenter">Mechanical </ion-label>
+<ion-label class="itemcenter">Not Solved </ion-label>
 <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
   </ion-chip>
 </div>
@@ -80,7 +80,7 @@
 <ion-text class="item">Item Name: Some Item Name</ion-text>
 <hr class="hr">
 <div class="ion-text-center">
-  <ion-button class="newbutton" shape="round" (click)="newcomplain()">New Bill</ion-button>
+  <ion-button class="newbutton" shape="round"  (click)="newbillmodal()">New Bill</ion-button>
 </div>
 <h6 class="client">Payment</h6>
 <div class="flex-container" style="justify-content: space-evenly;">
@@ -95,7 +95,7 @@
 <hr class="hr">
 <h6 class="client">Forward malfunction</h6>
 <div class="ion-text-center">
-  <ion-button class="newbutton" shape="round" (click)="newcomplain()">Forward</ion-button>
+  <ion-button class="newbutton" shape="round" (click)="uploadpaymentmodal()">Forward</ion-button>
 </div>
 <hr class="hr">
 <br>

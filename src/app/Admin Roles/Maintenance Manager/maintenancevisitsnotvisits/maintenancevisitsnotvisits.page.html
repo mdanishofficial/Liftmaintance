@@ -24,7 +24,21 @@
           <button type="button" class="btn btn-primary" (click)="monthly()">Monthly Visit<sup><span class="badge badge-success">17</span></sup></button>
       </ion-tab-bar>
     </div>
-    <nz-date-picker [nzSize]="small"></nz-date-picker>
+    <br>
+    <br>
+    <form class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <input class="form-control" placeholder="Sunday, 23-03-2020" id="datepickerinput"
+                 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <br>
+    <br>
      <div class="flex-container" scrollable>
     <div class="tabs" scrollable>
     <ion-tab-bar slot="top" class="tab-bar-visits">

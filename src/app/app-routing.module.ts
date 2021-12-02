@@ -222,6 +222,30 @@ const routes: Routes = [
     path: 'datepicker-maintenance-visits',
     loadChildren: () => import('./Admin Roles/Maintenance Manager/datepicker-maintenance-visits/datepicker-maintenance-visits.module').then( m => m.DatepickerMaintenanceVisitsPageModule)
   },
+  {
+    path: 'malfunction-type-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/malfunction-type-modal/malfunction-type-modal.module').then( m => m.MalfunctionTypeModalPageModule)
+  },
+  {
+    path: 'malfunction-level-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/malfunction-level-modal/malfunction-level-modal.module').then( m => m.MalfunctionLevelModalPageModule)
+  },
+  {
+    path: 'malfunction-status-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/malfunction-status-modal/malfunction-status-modal.module').then( m => m.MalfunctionStatusModalPageModule)
+  },
+  {
+    path: 'issuebillmodal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/issuebillmodal/issuebillmodal.module').then( m => m.IssuebillmodalPageModule)
+  },
+  {
+    path: 'uploadpayment-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/uploadpayment-modal/uploadpayment-modal.module').then( m => m.UploadpaymentModalPageModule)
+  },
+  {
+    path: 'forwardmalfunctions-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/forwardmalfunctions-modal/forwardmalfunctions-modal.module').then( m => m.ForwardmalfunctionsModalPageModule)
+  },
  ];
 @NgModule({
   imports: [
