@@ -1,0 +1,46 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Client Details</h1>
+    <br>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Lifts Number : 3522</h6>
+    <hr class="hr">
+    <h6 class="client">City : Abu Dhabi</h6>
+    <hr class="hr">
+    <h6 class="client">Location : Building # 4, Main Road</h6>
+    <hr class="hr">
+    <h6 class="client">Lat Long : Lan 53.3555 Long 12.335</h6>
+    <hr class="hr">
+    <h6 class="client">Number of lift stops : 7</h6>
+    <hr class="hr">
+    <h6 class="client">Notes</h6>
+    <ion-card class="card-detailed">
+      <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter notes"></textarea>
+  </ion-card>
+    <div class="ion-text-center">
+      <div class="flex-container">
+     <button type="button" class="btn btn-primary" id="language"(click)="todayreport()">Today Visit Report</button>
+     <div class="divider"></div>
+     <button type="button" class="btn btn-secondary" id="language"(click)="previousreport()">Previous Visit Report</button>
+   </div>
+  </div> 
+  </div>
+    </ion-content>

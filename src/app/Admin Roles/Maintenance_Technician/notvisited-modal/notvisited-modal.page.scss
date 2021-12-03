@@ -1,0 +1,110 @@
+.container{
+    margin: 1em;
+}
+h3{
+color:#194E78 ;
+// margin-bottom: -5em;
+}
+.flex-container{
+    justify-content: center;
+    width: 94%;
+      }
+.line{
+margin-bottom: -1em;
+}
+.label{
+    margin-left: 1em;
+    color: #6E6E6E !important;
+    
+}
+.checkbox{
+    margin-left: 1em;
+    --background-checked:#60D924;
+    --border-radius: 0px;
+    --size: 1em;
+    --checkmark-width:5px	
+}
+.client{
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+margin: 1em;
+margin-top: 0em;
+ }
+.card-detailed{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: -1em;
+    height: 6em;
+  }
+ #textarea{
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    padding-top: 1em;
+    padding-left: 1em;
+     }
+     #buttons{
+        margin-top: 1em;
+    }
+    .btn-primary{
+        background:#194E78;
+        border:#194E78;
+        border-radius: 10px;
+        margin-top: 0em;
+        // margin-left: 0.4em;
+        width: 131px;
+        height: 42px;
+    }
+    .btn-secondary{
+       background:#6E6E6E;
+       border:#6E6E6E;
+       border-radius: 10px;
+       margin-top: 0em;
+        margin-left: 0em;
+        width: 131px;
+        height: 42px;
+    }
+    .divider{
+        width:2em;
+        height:auto;
+        display:inline-block;
+      }
+      @media screen and (max-width: 320px) {
+        .flex-container{
+            justify-content: center;
+            width: 13em;
+              }
+        .divider{
+            width:0.1em;
+            height:auto;
+            display:inline-block;
+          }
+          .btn-primary{
+            background:#194E78;
+            border:#194E78;
+            border-radius: 10px;
+            margin-top: 0em;
+            margin-left:1em;
+            width: 100px;
+            height: 42px;
+        }
+        .btn-secondary{
+           background:#6E6E6E;
+           border:#6E6E6E;
+           border-radius: 10px;
+           margin-top: 0em;
+          width: 100px;
+            height: 42px;
+        }
+        #text{
+            --placeholder-color: #6E6E6E;
+            margin-top: 2em;
+            font-size: 16px;
+            margin-left: -0.3em;
+            border-radius: 2em;
+          border: 1px solid #6E6E6E;
+            text-align: center;
+        }
+      }
+

@@ -201,6 +201,56 @@ const routes: Routes = [
     path: 'adminroles/maintenancemanager/solvedmalfunctionsdetails',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/solvedmalfunctionsdetails/solvedmalfunctionsdetails.module').then(m => m.SolvedmalfunctionsdetailsPageModule)
   },
+  // Maintenance Technician
+  {
+    path: 'adminroles/maintenancetechnician/menu',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/menu/menu.module').then(m => m.MenuPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/todaysvisits',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/todaysvisits/todaysvisits.module').then(m => m.TodaysvisitsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/upcomingvisits',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/upcomingvisits/upcomingvisits.module').then(m => m.UpcomingvisitsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/previousvisits',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/previousvisits/previousvisits.module').then(m => m.PreviousvisitsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/clientdetails',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/clientdetails/clientdetails.module').then(m => m.ClientdetailsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/visitreport',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/visitreport/visitreport.module').then(m => m.VisitreportPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/previousreports',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/previousreports/previousreports.module').then(m => m.PreviousreportsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/liftdetail',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician/liftdetail/liftdetail.module').then(m => m.LiftdetailPageModule)
+  },
+  {
+    path: 'adminroles/maintenancetechnician/clientliftdetail',
+    loadChildren: () => import('../Admin Roles/Maintenance_Technician//clientliftdetails/clientliftdetails.module').then(m => m.ClientliftdetailsPageModule)
+  },
+  // Maintenance Repair Technician
+  {
+    path: 'adminroles/maintenancerepairtechnician/menu',
+    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/menu/menu.module').then(m => m.MenuPageModule)
+  },
+  {
+    path: 'adminroles/maintenancerepairtechnician/newmalfunctions',
+    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/newmalfunctions/newmalfunctions.module').then(m => m.NewmalfunctionsPageModule)
+  },
+  {
+    path: 'adminroles/maintenancerepairtechnician/completedmalfunctions',
+    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/completedmalfunctions/completedmalfunctions.module').then(m => m.CompletedmalfunctionsPageModule)
+  },
       {
         path: '',
         redirectTo: '/tabs/tab1',

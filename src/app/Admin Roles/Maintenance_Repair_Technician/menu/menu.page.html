@@ -1,0 +1,38 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-center">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="ion-text-center">
+   <img src="../../assets/cabin.svg" class="img" >
+</div>
+<div class="flex-container">
+  <!-- <div class="shadow p-3 mb-5 bg-white rounded"> -->
+  <!-- <div class="card text-center shadow p-3 mb-5 bg-white rounded" id="card">
+    <div class="card-body">
+      <h5 class="card-title">157</h5>
+      <h6 class="card-subtitle ">Total Malfunctions</h6>
+   </div>
+   </div> -->
+  <!-- </div> -->
+  <img src="../../assets/totalmalfunctions.svg" (click)="totalassignedvisits()"/>
+<img src="../../assets/solvedmalfunctions.svg" (click)="totalassignedvisits()"/>
+ </div>
+ <div class="flex-container">
+  <img src="../../assets/assignedmalfunctions.svg" (click)="assignedmalfunctions()"/>
+ <img src="../../assets/bills.svg" (click)="bills()"/>
+
+ </div>
+</ion-content>

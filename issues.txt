@@ -1,0 +1,2 @@
+swiper,installation input padding, tabs routing,back buttons,logo background white
+collapse,remove extra styles

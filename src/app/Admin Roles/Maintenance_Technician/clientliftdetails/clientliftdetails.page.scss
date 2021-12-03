@@ -1,0 +1,83 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .container{
+      margin-top: 2em;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  h1{
+      text-decoration: underline;color:#194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .client{
+    font-size: 18px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+   padding: 0.5em;
+//    padding-top: 2em;
+   padding-bottom: 0em;
+ }
+ .hr{
+     margin-top: 0em;
+ }
+ .details{
+    margin-top: 0.5em;
+}
+ .firstcol{
+    float: left;
+    }
+ .secondcol{
+    float: right; 
+   }
+ .textleft{
+     color:#6E6E6E;
+     float: left;
+     margin-left: 0.5em;
+ }
+ .textright{
+     color:#6E6E6E;
+     float: right;
+     margin-right: 1em;
+ }
+ .newbutton{
+    --background:whitesmoke;
+    width: 220px;
+    height: 49px;
+    margin-top:1em;
+    color: #194E78;
+    font-weight: bold;
+    }
+       .btn-secondary{
+        width: 8em;
+        background-color: #6E6E6E;
+        height: 3em;
+        color: white;
+        border: #6E6E6E;
+        margin-top: 1em;
+     }
+    @media only screen and (max-height: 670px) {
+      .newbutton{
+          --background:whitesmoke;
+        //   position: fixed;
+            //  bottom: 10%;
+           width: 220px;
+          height: 49px;
+          margin-top:1em;
+          color: #194E78;
+          font-weight: bold;
+          }
+    }

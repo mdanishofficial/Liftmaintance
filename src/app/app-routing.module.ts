@@ -246,6 +246,58 @@ const routes: Routes = [
     path: 'forwardmalfunctions-modal',
     loadChildren: () => import('./Admin Roles/Maintenance Manager/forwardmalfunctions-modal/forwardmalfunctions-modal.module').then( m => m.ForwardmalfunctionsModalPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'todaysvisits',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/todaysvisits/todaysvisits.module').then( m => m.TodaysvisitsPageModule)
+  },
+  {
+    path: 'upcomingvisits',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/upcomingvisits/upcomingvisits.module').then( m => m.UpcomingvisitsPageModule)
+  },
+  {
+    path: 'previousvisits',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/previousvisits/previousvisits.module').then( m => m.PreviousvisitsPageModule)
+  },
+  {
+    path: 'clientdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/clientdetails/clientdetails.module').then( m => m.ClientdetailsPageModule)
+  },
+  {
+    path: 'visitreport',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/visitreport/visitreport.module').then( m => m.VisitreportPageModule)
+  },
+  {
+    path: 'notvisited-modal',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/notvisited-modal/notvisited-modal.module').then( m => m.NotvisitedModalPageModule)
+  },
+  {
+    path: 'previousreports',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/previousreports/previousreports.module').then( m => m.PreviousreportsPageModule)
+  },
+  {
+    path: 'liftdetail',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/liftdetail/liftdetail.module').then( m => m.LiftdetailPageModule)
+  },
+  {
+    path: 'clientliftdetails',
+    loadChildren: () => import('./Admin Roles/Maintenance_Technician/clientliftdetails/clientliftdetails.module').then( m => m.ClientliftdetailsPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'newmalfunctions',
+    loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/newmalfunctions/newmalfunctions.module').then( m => m.NewmalfunctionsPageModule)
+  },
+  {
+    path: 'completedmalfunctions',
+    loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/completedmalfunctions/completedmalfunctions.module').then( m => m.CompletedmalfunctionsPageModule)
+  },
  ];
 @NgModule({
   imports: [

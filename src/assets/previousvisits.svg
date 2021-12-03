@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="100" viewBox="0 0 176 100">
+  <defs>
+    <filter id="Rectangle_14" x="0" y="0" width="176" height="100" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Bills_Box" data-name="Bills Box" transform="translate(6 5.312)">
+    <g transform="matrix(1, 0, 0, 1, -6, -5.31)" filter="url(#Rectangle_14)">
+      <g id="Rectangle_14-2" data-name="Rectangle 14" transform="translate(6 5)" fill="#fff" stroke="#d5d5d5" stroke-width="1">
+        <rect width="158" height="82" rx="7" stroke="none"/>
+        <rect x="0.5" y="0.5" width="157" height="81" rx="6.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Bills" transform="translate(61 6.475)">
+      <text id="Previous_visits" data-name="Previous visits" transform="translate(18 61.974)" fill="#194e78" font-size="14" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-46.231" y="0">Previous visits</tspan></text>
+      <text id="_139" data-name="139" transform="translate(18 34.213)" fill="#194e78" font-size="33" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-28.4" y="0">139</tspan></text>
+    </g>
+  </g>
+</svg>

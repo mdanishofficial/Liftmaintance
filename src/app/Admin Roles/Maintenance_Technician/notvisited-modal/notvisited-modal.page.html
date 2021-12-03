@@ -1,0 +1,32 @@
+<div class="container">
+<div class="flex-container">
+<h3 class="ion-text-center">Reasons for not performing maintenance</h3>
+  <div class="line">
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Motor Bore Check</ion-label>
+</div>
+<hr class="hr">
+   <div class="line">
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Door Type Auto</ion-label>
+</div>
+<hr class="hr">
+  <div class="line">
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Motor Oil Check</ion-label>
+</div>
+<hr class="hr">
+<h6 class="client">More Detail</h6>
+<ion-card class="card-detailed">
+  <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+  <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please input detail"></textarea>
+</ion-card>
+
+<div class="ion-text-center" id="buttons">
+  <button type="button" class="btn btn-primary">Send</button>
+  <div class="divider"></div>
+<button type="button" class="btn btn-secondary"(click)="dismiss()">Cancel</button>
+</div>
+</div>
+</div>
+ 

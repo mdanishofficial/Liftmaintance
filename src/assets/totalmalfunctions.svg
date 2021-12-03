@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176" height="99" viewBox="0 0 176 99">
+  <defs>
+    <filter id="Rectangle_11" x="0" y="0" width="176" height="99" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Malfunctions_Box" data-name="Malfunctions Box" transform="translate(6 5)">
+    <g transform="matrix(1, 0, 0, 1, -6, -5)" filter="url(#Rectangle_11)">
+      <g id="Rectangle_11-2" data-name="Rectangle 11" transform="translate(6 5)" fill="#fff" stroke="#d5d5d5" stroke-width="1">
+        <rect width="158" height="81" rx="7" stroke="none"/>
+        <rect x="0.5" y="0.5" width="157" height="80" rx="6.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Malfunctions" transform="translate(40 5.476)">
+      <text id="Total_Malfunctions" data-name="Total Malfunctions" transform="translate(39 61.974)" fill="#194e78" font-size="14" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-58.731" y="0">Total Malfunctions</tspan></text>
+      <text id="_157" data-name="157" transform="translate(39 34.524)" fill="#194e78" font-size="33" font-family="Roboto-Bold, Roboto" font-weight="700"><tspan x="-28.4" y="0">157</tspan></text>
+    </g>
+  </g>
+</svg>

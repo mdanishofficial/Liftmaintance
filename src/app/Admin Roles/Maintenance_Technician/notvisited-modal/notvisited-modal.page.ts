@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 @Component({
-  selector: 'app-updateprice-modal',
-  templateUrl: './updateprice-modal.page.html',
-  styleUrls: ['./updateprice-modal.page.scss'],
+  selector: 'app-notvisited-modal',
+  templateUrl: './notvisited-modal.page.html',
+  styleUrls: ['./notvisited-modal.page.scss'],
 })
-export class UpdatepriceModalPage implements OnInit {
+export class NotvisitedModalPage implements OnInit {
 
   constructor(public modalController: ModalController) { }
 

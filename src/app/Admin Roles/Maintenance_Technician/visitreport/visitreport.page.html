@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+<div class="container">
+  <br>
+<h1 class="ion-text-center">Visit Report</h1>
+<br>
+  <div>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Motor Bore Check</ion-label>
+</div>
+   <hr class="hr">
+   <div>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Door Type Auto</ion-label>
+</div>
+  <hr class="hr">
+  <div>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Motor Oil Check</ion-label>
+</div>
+  <hr class="hr">
+  <div>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">Tire Lubricant check</ion-label>
+</div>
+  <hr class="hr">
+  <div>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="label">End of trip check</ion-label>
+</div>
+ <hr class="hr">
+ <div>
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label class="label">Brake check</ion-label>
+</div>
+<hr class="hr">
+<div>
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label class="label">Check the ropes</ion-label>
+</div>
+<hr class="hr">
+<div>
+  <ion-checkbox class="checkbox"></ion-checkbox>
+  <ion-label class="label">Charcoal check</ion-label>
+</div>
+<hr class="hr">
+<h6 class="client">More Detail</h6>
+<ion-card class="card-detailed">
+  <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+  <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please input detail"></textarea>
+</ion-card>
+<div class="ion-text-center">
+  <div class="flex-container">
+ <button type="button" class="btn btn-primary" id="language"(click)="sendreport()">Send Report</button>
+ <div class="divider"></div>
+ <button type="button" class="btn btn-secondary" id="language"(click)="notvisited()">Not able perform visit </button>
+</div>
+</div> 
+</div>
+</ion-content>
