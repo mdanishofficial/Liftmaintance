@@ -1,0 +1,97 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Malfunction Details</h1>
+    <ion-text class="date">Sunday, 23-03-2020<br></ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Lifts Number : 6</h6>
+    <hr class="hr">
+    <h6 class="client">City : Dubai</h6>
+    <hr class="hr">
+    <h6 class="client">Address : World Trade Center Building</h6>
+    <hr class="hr">
+    <h6 class="client">Location</h6>
+    <ion-icon src="assets/eye.svg" class="eye"></ion-icon>
+  <ion-text class="date">Latitude: 33° 43' 17.33" N  Longitude: 33° 43' 17.33" N <br></ion-text>
+    <hr class="hr">
+    <h6 class="client">Number of lift stops : 06</h6>
+    <hr class="hr">
+    <h6 class="client">Malfunction type</h6>
+    <!-- <ion-card class="select-card"> -->
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
+        <option value="electrical" class="options">Electrical</option>
+        <option value="mechanical" class="options">Mechanical</option>
+        <option value="other" class="options">Other Type</option>
+        <option value="someother" class="options">Some Other Type</option>
+      </select>
+     <!-- </ion-card> -->
+    <h6 class="client">Complain Notes</h6>
+    <ion-text class="date">Orci varius natoque penatibus et magnis dis parturient<br></ion-text>
+    <hr class="hr">
+    <h6 class="client">Malfunction Level</h6>
+    <!-- <ion-card class="select-card"> -->
+      <div class="notIE">
+        <!-- <![endif]-->
+        <span class="fancyArrow"></span>
+        <select  class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option class="apple">Apples</option>
+          <option class="apple">Pineapples</option>
+          <option class="Chocklate" selected>Danger</option>
+          <option class="Pancakes">Pancakes</option>
+        </select>
+        <!--[if !IE]> -->
+      </div>
+     <!-- </ion-card> -->
+     <h6 class="client">Malfunction Notes</h6>
+    <ion-card class="card-detailed">
+      <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"></textarea>
+  </ion-card>
+  <h6 class="client">Malfunction Status</h6>
+  <!-- <ion-card class="select-card"> -->
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+      <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
+      <option value="electrical" class="options">Electrical</option>
+      <option value="mechanical" class="options">Mechanical</option>
+      <option value="other" class="options">Other Type</option>
+      <option value="someother" class="options">Some Other Type</option>
+    </select>
+    <h6 class="client">Malfunction Level</h6>
+   <!-- </ion-card> -->
+   <div class="square">
+   <ion-text class="price">1750 Riyals<br></ion-text>
+   <div class="ion-text-center">
+    <div class="flex-container">
+   <button type="button" class="btn btn-outline-primary btn-sm">Resend</button>
+   <div class="divider"></div>
+   <button type="button" class="btn btn-outline-primary btn-sm">Update</button>
+  </div> 
+</div>
+  <br>
+</div>
+    <div class="ion-text-center">
+      <div class="flex-container">
+     <button type="button" class="btn btn-primary" id="language"(click)="update()">Update</button>
+     <div class="divider"></div>
+     <button type="button" class="btn btn-secondary" id="language"(click)="back()">Back</button>
+   </div>
+  </div> 
+  </div>
+    </ion-content>

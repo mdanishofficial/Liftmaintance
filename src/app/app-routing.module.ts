@@ -298,6 +298,34 @@ const routes: Routes = [
     path: 'completedmalfunctions',
     loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/completedmalfunctions/completedmalfunctions.module').then( m => m.CompletedmalfunctionsPageModule)
   },
+  {
+    path: 'maintenance-malfunction-detail-update',
+    loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-update/maintenance-malfunction-detail-update.module').then( m => m.MaintenanceMalfunctionDetailUpdatePageModule)
+  },
+  {
+    path: 'maintenance-malfunction-detail-view',
+    loadChildren: () => import('./Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then( m => m.MaintenanceMalfunctionDetailViewPageModule)
+  },
+  {
+    path: 'installation-page',
+    loadChildren: () => import('./Admin Roles/Installation Manager/installation-page/installation-page.module').then( m => m.InstallationPagePageModule)
+  },
+  {
+    path: 'updatepayment-modal',
+    loadChildren: () => import('./Admin Roles/Installation Manager/updatepayment-modal/updatepayment-modal.module').then( m => m.UpdatepaymentModalPageModule)
+  },
+  {
+    path: 'installation-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/installation-stage/installation-stage.module').then( m => m.InstallationStagePageModule)
+  },
+  {
+    path: 'task-details',
+    loadChildren: () => import('./Admin Roles/Installation Technician/task-details/task-details.module').then( m => m.TaskDetailsPageModule)
+  },
+  {
+    path: 'map',
+    loadChildren: () => import('./Admin Roles/Installation Technician/map/map.module').then( m => m.MapPageModule)
+  },
  ];
 @NgModule({
   imports: [

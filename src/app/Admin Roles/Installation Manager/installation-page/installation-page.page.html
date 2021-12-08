@@ -1,0 +1,71 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Installation</h1>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Type of Building : Residential</h6>
+    <hr class="hr">
+    <h6 class="client">City : Dubai</h6>
+    <hr class="hr">
+  <h6 class="client">Location : World Trade Center Building</h6>
+  <h6 class="client">Number of Stops : 06</h6>
+  <hr class="hr">
+  <h6 class="client">Machine type : Chinese</h6>
+  <hr class="hr">
+  <h6 class="client">Door type : Automatic</h6>
+  <hr class="hr">
+<h6 class="client">Lift type : Passenger</h6>
+<hr class="hr">
+<h6 class="client">Installation Status</h6>
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
+  <option value="electrical" class="options">Progressing</option>
+  <option value="mechanical" class="options">Waiting for next stage payment</option>
+
+</select>
+<h6 class="client">Payment</h6>
+    <div class="ion-text-center">
+      <ion-chip class="update" (click)="update()">
+    <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
+    <ion-label class="itemcenter">Update</ion-label>
+   <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
+      </ion-chip>
+  </div>
+  <hr class="hr">
+<h6 class="client">Installation Stage Status</h6>
+<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+  <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
+  <option value="electrical" class="options">New</option>
+  <option value="mechanical" class="options">Mechanical</option>
+  <option value="other" class="options">Other Type</option>
+  <option value="someother" class="options">Some Other Type</option>
+</select>
+<div class="ion-text-center">
+  <ion-button class="newbutton" shape="round" (click)="startstage()">Start Stage</ion-button>
+</div>
+<br>
+<div class="ion-text-center">
+  <ion-button class="backbutton"(click)="newcomplain()">Back</ion-button>
+</div>
+<br>
+<br>
+</div>
+</ion-content>

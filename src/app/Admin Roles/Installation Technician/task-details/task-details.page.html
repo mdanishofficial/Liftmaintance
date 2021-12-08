@@ -1,0 +1,53 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Malfunction Details</h1>
+    <ion-text class="date">Sunday, 23-03-2020<br></ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <h6 class="client">Lifts Number : 6</h6>
+    <hr class="hr">
+    <h6 class="client">City : Dubai</h6>
+    <hr class="hr">
+    <h6 class="client">Address : World Trade Center Building</h6>
+    <hr class="hr">
+    <h6 class="client">Location</h6>
+    <ion-icon src="assets/eye.svg" class="eye" (click)="map()"></ion-icon>
+  <ion-text class="date">Latitude: 33° 43' 17.33" N  Longitude: 33° 43' 17.33" N <br></ion-text>
+    <hr class="hr">
+    <h6 class="client">Number of Stops : 06</h6>
+    <hr class="hr">
+  <h6 class="client">Type of building : Residential</h6>
+      <hr class="hr">
+      <h6 class="client">Engine type  : Chinese</h6>
+      <hr class="hr">
+      <h6 class="client">Door type   : Automatic</h6>
+      <hr class="hr">
+      <h6 class="client">Installation Level: Start</h6>
+      <hr class="hr">
+    <h6 class="client">Installation level detail</h6>
+   <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Installation level detail"></textarea>
+   <div class="ion-text-center">
+    <ion-button class="newbutton" shape="round" (click)="complete()">Complete Task</ion-button>
+  </div>
+  <br>
+  <div class="ion-text-center">
+    <ion-button class="backbutton"(click)="new()">Back</ion-button>
+  </div>
+  </div>
+    </ion-content>

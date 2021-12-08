@@ -251,7 +251,27 @@ const routes: Routes = [
     path: 'adminroles/maintenancerepairtechnician/completedmalfunctions',
     loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/completedmalfunctions/completedmalfunctions.module').then(m => m.CompletedmalfunctionsPageModule)
   },
-      {
+  {
+    path: 'adminroles/maintenancerepairtechnician/maintenance_malfunction_detail_update',
+    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-update/maintenance-malfunction-detail-update.module').then(m => m.MaintenanceMalfunctionDetailUpdatePageModule)
+  },
+  {
+    path: 'adminroles/maintenancerepairtechnician/maintenance_malfunction_detail_view',
+    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then(m => m.MaintenanceMalfunctionDetailViewPageModule)
+  },
+  {
+    path: 'adminroles/installationmanager/installation',
+    loadChildren: () => import('..//Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
+  },  
+  {
+    path: 'adminroles/installationmanager/installationstage',
+    loadChildren: () => import('..//Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
+  },  
+  {
+    path: 'adminroles/installationtechnician/taskdetails',
+    loadChildren: () => import('..//Admin Roles/Installation Technician/task-details/task-details.module').then(m => m.TaskDetailsPageModule)
+  },  
+  {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

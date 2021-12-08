@@ -1,0 +1,93 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Installation</h1>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <div class="background">
+    <div class="ion-text-center">
+      <ion-chip class="blockbutton" (click)="block()">
+    <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
+    <ion-label class="itemcenter">Stage First - Rail and Doors</ion-label>
+    </ion-chip>
+    </div>
+    <br>
+    <h6 class="name">Door Type</h6>
+ <ion-card class="card-detailed">
+      <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter door type"></textarea>
+  </ion-card>
+  <br>
+  <h6 class="name">Door Dimension</h6>
+  <ion-card class="card-detailed">
+       <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please enter Door Dimension"></textarea>
+   </ion-card>
+   <br>
+   <h6 class="name">Rail DimensionsType</h6>
+   <ion-card class="card-detailed">
+        <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter Rail DimensionsType"></textarea>
+    </ion-card>
+    <br>
+    <h6 class="name"> Door design</h6>
+    <ion-card class="card-detailed">
+         <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+         <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter  Door design"></textarea>
+     </ion-card>
+     <div class="flex-container">
+      <div class="flex-container0">
+      <h6 class="name"> Door design</h6>
+      <!-- <ion-card class="searcbar-card"> -->
+        <ion-searchbar class="searchbar" placeholder="Search..."></ion-searchbar>
+      <!-- </ion-card> -->
+    </div>
+    <div class="flex-container0">
+      <h6 class="name"> Door design</h6>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option disabled selected hidden style="color:   #DCDCDC;">Select City</option>
+          <option value="electrical" class="options">Electrical</option>
+          <option value="mechanical" class="options">Mechanical</option>
+          <option value="other" class="options">Other Type</option>
+          <option value="someother" class="options">Some Other Type</option>
+        </select>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+           <h6 class="name">More Information or Detail</h6>
+      <ion-card class="card-detailed">
+           <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter More Information or Detail"></textarea>
+       </ion-card>
+      <br>
+      <br>
+    </div>
+    </div>
+      <div class="ion-text-center">
+        <ion-button class="newbutton" shape="round" (click)="send()">Send</ion-button>
+      </div>
+      <br>
+      <div class="ion-text-center">
+        <ion-button class="backbutton"(click)="newcomplain()">Back</ion-button>
+      </div>
+  </div> 
+    </ion-content>

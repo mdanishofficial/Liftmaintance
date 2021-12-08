@@ -1,0 +1,97 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  .container{
+      margin-left: 0.5em;
+      margin-left: 0.5em;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .buttondiv{
+    float: right;
+    margin-right: 2em;
+  }
+  .editbutton{
+    width: 65px;
+    height: 25px;
+    --background: #194E78;
+  }
+  .date{
+    font-size: 12px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+}
+.price{
+    font-size: 12px;
+    color: #6E6E6E;
+    margin-left: 0.5em;
+}
+.client{
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+    margin-top: 0.5em;
+    margin-left: -0.4em;
+ }
+.hr{
+    width: 94%;
+}
+.flex-container{
+    margin-top: 1em;
+}
+.eye{
+float: right;
+height: 19px;
+width: 33px;
+margin-right: 0.5em;
+}
+.card-detailed{
+    margin-left: -0.5em;
+    margin-right: 0.5em;
+    height: 3em;
+  }
+ #textarea{
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    border: 1px solid #E2E2E2;
+    height: 2.4em;
+    margin-left: -0.5em;
+     }
+     .newbutton{
+        --background:#FF6932;
+      //   position: fixed;
+           bottom: 10%;
+         width: 220px;
+        height: 49px;
+        margin-top:1em
+        }
+       .backbutton{
+            --background:#6E6E6E;
+            //   position: fixed;
+                 bottom: 10%;
+               width: 155px;
+              height: 42px;
+        }
+.divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+}

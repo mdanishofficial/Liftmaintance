@@ -1,0 +1,145 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -11px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  .container{
+      margin-left: 0.5em;
+      margin-left: 0.5em;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .buttondiv{
+    float: right;
+    margin-right: 2em;
+  }
+  .editbutton{
+    width: 65px;
+    height: 25px;
+    --background: #194E78;
+  }
+  .date{
+    font-size: 12px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+}
+.price{
+    font-size: 12px;
+    color: #6E6E6E;
+    margin-left: 0.5em;
+}
+.client{
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    color: #194E78;
+    margin-top: 0.5em;
+    margin-left: -0.4em;
+ }
+.hr{
+    width: 94%;
+}
+.flex-container{
+    margin-top: 1em;
+}
+.eye{
+float: right;
+height: 19px;
+width: 33px;
+margin-right: 0.5em;
+}
+.card-detailed{
+    margin-left: -0.5em;
+    margin-right: 0.5em;
+    height: 3em;
+  }
+  .select-card{
+margin-left: 0em;
+  }
+ 
+ #textarea{
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    padding-top: 1em;
+    padding-left: 1em;
+     }
+  
+     .options{
+        color: #194E78;
+        font-size: 12px;
+       }
+       .rightcolbrown{
+        border-radius: 100px;
+        height: 21px;
+        width: 21px;
+        background-color: #7A0001;
+        display: inline-block;
+    }
+    // 
+    .notIE {
+        position: relative;
+     }
+      .notIE .fancyArrow {
+          content: '';
+          width: 13px;
+          height: 13px;
+          border-radius: 100%;
+          position: absolute;
+          box-sizing: content-box;
+          left: 90px;
+          top: 15px;
+          background: hsl(358,62%,52%);
+          z-index: 2;
+      }
+    // 
+       .form-select-sm{
+        color: #6E6E6E;
+         height: 3em;
+         width: -webkit-fill-available;
+         margin-left: -0.5em;
+         margin-right: 0.5em;
+       }
+      select{
+         width: 13em;
+         color: #6E6E6E;
+      }
+      .square{
+        margin-left: -0.5em;
+        margin-right: 1em;
+        border: 1px solid #EBEBEB;
+    }
+    .btn-outline-primary{
+border-radius: 10em;
+color: #194E78;
+border-color:#194E78 ;
+width: 6em;
+    }
+.btn-primary{
+    background-color:#194E78;
+    width:8em;
+    border-color:#194E78;
+}
+.btn-secondary{
+    background-color:#6E6E6E;
+    width:8em;
+}
+.divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+}

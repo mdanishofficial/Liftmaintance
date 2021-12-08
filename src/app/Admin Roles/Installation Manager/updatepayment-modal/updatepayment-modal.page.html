@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="flex-container">
+  <h1 class="h1">Renewal Price</h1>
+   <ion-card class="card">
+   <ion-input placeholder="Write Payment Price" class="price"></ion-input>
+  </ion-card>
+  <div class="ion-text-center">
+    <div class="ion-text-center" (click)="inputFile.click()" class="#attach-button">
+          <img src="../../assets/attach.svg" class="attach"/>
+    </div>
+    <input #inputFile id="input-file"  style="opacity:0" type="file" (change)="uploadFiles($event)"
+    multiple/>
+    </div>
+  <div class="ion-text-center" id="buttonsdiv">
+    <button type="button" class="btn btn-primary" (click)="update()">Update</button>
+    <div class="divider"></div>
+    <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
+  </div>
+</div>
+</div>
+  <ion-content>
+  </ion-content>
+  
