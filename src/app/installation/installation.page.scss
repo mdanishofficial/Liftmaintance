@@ -22,6 +22,10 @@ height: 30px;
     width: 66px;
     height: 86px;
 }
+.white{
+    width: 100%;
+    height: 2em;
+}
 .flex-container{
     justify-content: center;
     display: flex;
@@ -31,7 +35,7 @@ height: 30px;
     color:#194E78 ;
     // font-weight: bold; 
     float: left;
-    margin-top: 0em;
+    margin-top: 0.5em;
     font-size: 18px;
 }
 .card{
@@ -52,9 +56,12 @@ height: 30px;
     color: #194E78;
     font-size: 18px;
    }
+   
 .form-select-sm{
     color: #6E6E6E;
      height: 3em;
+     width: 97%;
+     border: 1px solid;
     // font-weight: bold;
    }
  select{
@@ -62,16 +69,24 @@ height: 30px;
      color: #6E6E6E;
  }
  .cardinput{
-    padding-left: 1em;;
-    padding-top:0em;
-    height:3em;
+    padding-left: 1em;
+    padding-top: 0em;
+    margin-left: 0em;
+    height: 3em;
     font-size: 14px;
-    margin-top: -3em;
-    // margin-top: 0.4em
+    margin-top: -2em;
+    border: 0.7px solid;
    }
    .textarea{
     height: 3em;
     margin: 0em;
+    --padding-start: 1em;
+    margin-top: -2em;
+    border: 0.7px solid grey;
+    font-size: 14px;
+    width: 97%;
+    color: grey;
+    --placeholder-color	:black;
 }
 .flex-container2{
     width: 100%;
