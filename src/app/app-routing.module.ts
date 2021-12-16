@@ -326,6 +326,10 @@ const routes: Routes = [
     path: 'map',
     loadChildren: () => import('./Admin Roles/Installation Technician/map/map.module').then( m => m.MapPageModule)
   },
+  {
+    path: 'installation-stages',
+    loadChildren: () => import('./installation-stages/installation-stages.module').then( m => m.InstallationStagesPageModule)
+  },
  ];
 @NgModule({
   imports: [

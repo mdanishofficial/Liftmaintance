@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'installation_stages',
+        loadChildren: () => import('../installation-stages/installation-stages-routing.module').then(m => m.InstallationStagesPageRoutingModule)
+      },
+      {
         path: 'installation',
         loadChildren: () => import('../installation/installation.module').then(m => m.InstallationPageModule)
       },

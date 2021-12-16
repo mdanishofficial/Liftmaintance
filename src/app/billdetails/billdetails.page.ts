@@ -23,4 +23,3 @@ export class BilldetailsPage implements OnInit {
       return await modal.present();
     }
   }
-

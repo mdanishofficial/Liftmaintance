@@ -12,9 +12,9 @@ SwiperCore.use([IonicSwiper]);
 })
 export class Tab1Page {
   constructor(private router: Router) { }
-  installation(){
+  installation_stages(){
     console.log('inside Installation')
-    this.router.navigateByUrl('tabs/installation');
+    this.router.navigateByUrl('tabs/installation_stages');
   }
   maintenance(){
     console.log('inside maintenance')

@@ -1,0 +1,102 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<div class="white"></div>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Installation</h1>
+    <div>
+      <h2 class="h3">Installation Stages</h2>
+      <br>
+      <br>
+      <ion-card class="colorcard1" *ngFor="let result of data">
+        <div class="flex-container">
+          <div style="float: left;">
+            <div class="colordiv1"></div>
+          </div>
+          <div class="flex-container2">
+            <h6 class="stage">{{result?.stage}}</h6>
+            <div class="flex-container3">
+              <div class="date">
+                <ion-text>{{result?.date}}</ion-text>
+              </div>
+              <div class="status">
+                <ion-text> Status : {{result?.status}}</ion-text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-card>
+      <!-- <ion-card class="colorcard">
+        <div class="flex-container">
+          <div style="float: left;">
+            <div class="colordiv1"></div>
+          </div>
+          <div class="flex-container2">
+            <h6 class="stage">Cab supply</h6>
+            <div class="flex-container3">
+              <div class="date">
+                <text>Thursday, 12-03-2020</text>
+              </div>
+              <div class="status">
+                <text> Status : done</text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-card>
+      <ion-card class="colorcard">
+        <div class="flex-container">
+          <div style="float: left;">
+            <div class="colordiv1"></div>
+          </div>
+          <div class="flex-container2">
+            <h6 class="stage">Machine supply</h6>
+            <div class="flex-container3">
+              <div class="date">
+                <text>Thursday, 12-03-2020</text>
+              </div>
+              <div class="status">
+                <text> Status : done</text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-card>
+      <ion-card class="colorcard">
+        <div class="flex-container">
+          <div style="float: left;">
+            <div class="colordiv4"></div>
+          </div>
+          <div class="flex-container2">
+            <h6 class="stage">Control delivery</h6>
+            <div class="flex-container3">
+              <div class="date">
+                <text>Thursday, 12-03-2020</text>
+              </div>
+              <div class="status">
+                <text>Status : Awaiting payment</text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-card> -->
+      <div class="ion-text-center">
+        <button type="button" class="btn btn-primary" (click)="installation()">Lift Detail</button>
+      </div>
+    </div>
+    </div>
+    </ion-content>
