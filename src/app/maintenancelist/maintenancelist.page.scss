@@ -47,11 +47,13 @@ display: flex;
     background-color: #6E6E6E; width: 35px;height: 100%;
 }
 .visit{
-    font-size: 18pt;
+    font-size: 15pt;
     font-family:'Roboto', sans-serif;
     color: #194E78;
     margin-top: 0px;
     margin-left: 0.2em;
+    padding-left: 0.3em;
+    padding-top: 0.3em;
  }
 .date{
     font-size: 10pt;
@@ -68,4 +70,7 @@ margin-right: 0.7em;
 }
 .textleft{
     float: left;
+}
+.btn-secondary{
+    width: 6em;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
+import { InstallationService } from '../../services/main.service';
 @Component({
   selector: 'app-controldelivery',
   templateUrl: './controldelivery.page.html',
@@ -7,9 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControldeliveryPage implements OnInit {
 
-  constructor() { }
-
+  constructor(private service: InstallationService, private router: Router) {
+    let payload = {
+      controldelivery_id: '1a5eec',
+    }
+    this.service.getcontroldelivery(payload).subscribe(res => {
+      this.controldelivery_data = res;
+   this.data[0].controldelivery_type=this.controldelivery_data[0].controldelivery_type
+   this.data[0].controldelivery_speed=this.controldelivery_data[0].controldelivery_speed
+   this.data[0].controldelivery_features=this.controldelivery_data[0].controldelivery_features
+   this.data[0].controldelivery_emergency_battery=this.controldelivery_data[0].controldelivery_emergency_battery
+   this.data[0].controldelivery_vvvf_speed_smoothing=this.controldelivery_data[0].controldelivery_vvvf_speed_smoothing
+   this.data[0].controldelivery_device=this.controldelivery_data[0].controldelivery_device
+   this.data[0].controldelivery_lightning_arrester=this.controldelivery_data[0].controldelivery_lightning_arrester
+   this.data[0].controldelivery_manufacture=this.controldelivery_data[0].controldelivery_manufacture
+   this.data[0].controldelivery_payloads=this.controldelivery_data[0].controldelivery_payloads
+  })
+  }
   ngOnInit() {
   }
-
+  controldelivery_data=[]
+  public data = [
+{
+  controldelivery_type:'Cabin_dimensions',
+  controldelivery_speed:'Cabin Shape',
+  controldelivery_features:'Cabin Roof',
+  controldelivery_emergency_battery:'Cabin Shape',
+  controldelivery_vvvf_speed_smoothing:'Cabin Roof',
+  controldelivery_device:'Cabin Shape',
+  controldelivery_lightning_arrester:'Cabin Roof',
+  controldelivery_manufacture:'Cabin Shape',
+  controldelivery_payloads:'Cabin Roof',
+}
+  ]
+  back() {
+  this.router.navigateByUrl('tabs/installation_stages');
+  }
 }

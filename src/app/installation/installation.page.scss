@@ -30,6 +30,9 @@ height: 30px;
     justify-content: center;
     display: flex;
 }
+.placeholder{
+    color: rgb(87, 87, 90);
+}
 .h3{
     margin-left: 0.7em;
     color:#194E78 ;
@@ -148,4 +151,23 @@ height: 30px;
            padding-right: 1em;
             // max-width: 300px;
             width: 100%;
+          }
+          .btn-secondary{
+            width: 8em;
+            background-color:#6E6E6E;
+            color: white;
+            border: #6E6E6E;
+         }
+          .btn-primary{
+            width: 8em;
+            background-color: #194E78;
+            border: #194E78;
+          }
+          .divider{
+            width:1em;
+            height:auto;
+            display:inline-block;
+          }
+          #buttonsdiv{
+              margin-top: 2em;
           }

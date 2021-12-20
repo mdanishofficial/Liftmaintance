@@ -16,78 +16,79 @@
 </ion-header>
 <ion-content overflow-scroll="true">
 <div class="container">
+  <br>
   <h1 class="ion-text-center">Control Delivery</h1>
   <div>
     <h2 class="h2">Basic Info</h2>
     <br>
     <br>
  </div>
+ <div *ngFor="let result of data">
   <div>
     <div class="leftcol">
-      <text class="textleft">Control Type</text>
+      <ion-text class="textleft">Control Type</ion-text>
     </div>
     <!-- <div class="rightcol"> -->
-      <text class="textright">Type B</text>
+      <ion-text class="textright">{{result.controldelivery_type}}</ion-text>
     <!-- </div> -->
    </div>
-   <br>
    <hr class="hr">
   <div>
     <div class="leftcol">
-      <text class="textleft">Control Speed</text>
+      <ion-text class="textleft">Control Speed</ion-text>
     </div>
     <!-- <div class="rightcol"> -->
-      <text class="textright">5</text>
+      <ion-text class="textright">{{result.controldelivery_speed}}</ion-text>
     <!-- </div> -->
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Features</text>
+    <ion-text class="textleft">Features</ion-text>
   </div>
   <!-- <div class="rightcol"> -->
-    <text class="textright">Lorem Ipsum</text>
+    <ion-text class="textright">{{result.controldelivery_features}}</ion-text>
   <!-- </div> -->
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Emergency Battery</text>
+    <ion-text class="textleft">Emergency Battery</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Yes</text>
+    <ion-text class="textright">{{result.controldelivery_emergency_battery}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Italian vvvf speed smoothing</text>
+    <ion-text class="textleft">Italian vvvf speed smoothing</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Type C</text>
+    <ion-text class="textright">{{result.controldelivery_vvvf_speed_smoothing}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Device</text>
+    <ion-text class="textleft">Device</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Device Name</text>
+    <ion-text class="textright">{{result.controldelivery_device}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Lightning Arrester</text>
+    <ion-text class="textleft">Lightning Arrester</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Lightning</text>
+    <ion-text class="textright">{{result.controldelivery_lightning_arrester}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Manufacture</text>
+    <ion-text class="textleft">Manufacture</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Manufacture Name</text>
+    <ion-text class="textright">{{result.controldelivery_manufacture}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Payload</text>
+    <ion-text class="textleft">Payload</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">750</text>
+    <ion-text class="textright">{{result.controldelivery_payloads}}</ion-text>
   </div>
   <hr class="hr">
   <h2 class="h2">Photo</h2>
@@ -97,9 +98,8 @@
   justify-content: center;">
 <img src="../../assets/controldelivery.svg" class="machine">
   </div>
-  <div class="flex-container" style="display: flex;
-  justify-content: center;">
-      <ion-back-button type="button" defaultHref="/tabs/tab1" icon="none" class="btn btn-secondary btn-lg">Cancel</ion-back-button>
-    </div>
+</div>
+<div class="ion-text-center">
+  <button type="button" class="btn btn-secondary" (click)="back()">Back</button>  </div>
 </div>
 </ion-content>

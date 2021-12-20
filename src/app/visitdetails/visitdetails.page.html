@@ -16,16 +16,19 @@
 </ion-header>
 <ion-content overflow-scroll="true">
 <div class="container">
-  <h1 class="ion-text-center">Visit # 01</h1>
-  <ion-text class="date">Sunday,  3/26/2021 13:00</ion-text>
   <br>
-  <br>
+ <h1 class="ion-text-center">Visit</h1>
+ <div>
+  <ion-text class="date">{{maintenance_data[0].maintenance_date}}</ion-text>
+</div>
   <ion-item>
     <ion-avatar slot="start">
       <img class="avatar" src="../../assets/avatar.svg">
     </ion-avatar>
     <ion-label>
-      <h2>Technician: Imran Barnawi</h2>
+      <div>
+      <h2>Technician: {{maintenance_data[0].technician_assigned}}</h2>
+    </div>
       <div class="title">
       <p>Maintenance Technician</p>
         </div>
@@ -49,13 +52,18 @@
   <h2 class="h2">Status</h2>
   <br>
  <div>
+  <div>
     <div class="leftcol">
-      <ion-text class="date">Completed</ion-text>
+      <ion-text class="date">{{maintenance_data[0].maintenance_status}}</ion-text>
+      </div>
     </div>
     <div class="rightcol">
     </div>
   </div>
   <br>
   <hr class="hr">
+  <div class="ion-text-center">
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+  </div>
 </div>
 </ion-content>

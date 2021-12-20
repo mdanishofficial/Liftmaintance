@@ -16,35 +16,37 @@
 </ion-header>
 <ion-content overflow-scroll="true">
 <div class="container">
+  <br>
   <h1 class="ion-text-center">Cabin</h1>
   <div>
     <h2 class="h2">Basic Info</h2>
     <br>
     <br>
  </div>
+ <div *ngFor="let result of data">
   <div>
     <div class="leftcol">
-      <text class="textleft">Cabin Dimensions</text>
+      <ion-text class="textleft">Cabin Dimensions</ion-text>
     </div>
     <div class="rightcol">
-      <text class="textright">Cabin Dimensions</text>
+      <ion-text class="textright">{{result?.cabin_dimensions}}</ion-text>
     </div>
    </div>
    <hr class="hr">
   <div>
     <div class="leftcol">
-      <text class="textleft">Cabin Shape</text>
+      <ion-text class="textleft">Cabin Shape</ion-text>
     </div>
     <div class="rightcol">
-      <text class="textright">Cabin Shape</text>
+      <ion-text class="textright">{{result?.cabin_shape}}</ion-text>
     </div>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Cabin Roof</text>
+    <ion-text class="textleft">Cabin Roof</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Cabin Roof</text>
+    <ion-text class="textright">{{result?.cabin_roof}}</ion-text>
   </div>
   <hr class="hr">
   <h2 class="h2">Photo</h2>
@@ -54,9 +56,9 @@
   justify-content: center;">
 <img src="../../assets/cabin.svg" class="machine">
   </div>
-  <div class="flex-container" style="display: flex;
-  justify-content: center;">
-    <ion-back-button type="button" defaultHref="/tabs/tab1" icon="none" class="btn btn-secondary btn-lg">Cancel</ion-back-button>
-    </div>
+</div>
+  <br>
+  <div class="ion-text-center">
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>  </div>
 </div>
 </ion-content>

@@ -23,43 +23,44 @@
     <br>
     <br>
  </div>
+ <div *ngFor="let result of data">
   <div>
     <div class="leftcol">
-      <text class="textleft">Machine Name</text>
+      <ion-text class="textleft">Machine Name</ion-text>
     </div>
     <div class="rightcol">
-      <text class="textright">Name</text>
+      <ion-text class="textright">{{result.machine_name}}</ion-text>
     </div>
    </div>
    <hr class="hr">
   <div>
     <div class="leftcol">
-      <text class="textleft">Manufacturer</text>
+      <ion-text class="textleft">Manufacturer</ion-text>
     </div>
     <div class="rightcol">
-      <text class="textright">Manufacturer Name</text>
+      <ion-text class="textright">{{result.machine_manufacture}}</ion-text>
     </div>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Payloads</text>
+    <ion-text class="textleft">Payloads</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">650</text>
+    <ion-text class="textright">{{result.machine_payloads}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Speed</text>
+    <ion-text class="textleft">Speed</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">03</text>
+    <ion-text class="textright">{{result.machine_speed}}</ion-text>
   </div>
   <hr class="hr">
   <div class="leftcol">
-    <text class="textleft">Machine Type</text>
+    <ion-text class="textleft">Machine Type</ion-text>
   </div>
   <div class="rightcol">
-    <text class="textright">Type C</text>
+    <ion-text class="textright">{{result.machine_type}}</ion-text>
   </div>
   <hr class="hr">
   <h2 class="h2">Photo</h2>
@@ -69,6 +70,7 @@
   justify-content: center;">
 <img src="../../assets/machine.svg" class="machine">
   </div>
+</div>
   <div class="flex-container" style="display: flex;
   justify-content: center;">
   <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
