@@ -17,6 +17,9 @@ height: 30px;
     width: 66px;
     height: 86px;
 }
+h1{
+    text-decoration: underline;color:#194E78 ; font-weight: bold;
+}
 hr{
     border-top: 1px solid #cacaca;
     width: 330px;
@@ -50,6 +53,11 @@ hr{
     // white-space: pre-line;
     margin-bottom: 0em;
 }
+.divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+  }
 .leftcol{
     float: left;
     }
@@ -104,12 +112,21 @@ hr{
         margin-top: 0em;
         width: 99%;
     }
-    .lightbutton{
-        width: 227px;
+    .btn-primary{
+        // width: 227px;
        color: #194E78;
-        --background:#F9F9F9;
-        --background-activated: #194E78;
-    }
+        background-color:whitesmoke;
+        border:whitesmoke;
+        font-weight: bold;
+       }
+       .btn-secondary{
+        background-color:#60D924;
+        border:#60D924;
+        font-weight: bold;
+       }
+       .btn-block{
+           width: 8em;
+       }
     .dangerbutton{
         width: 227px;
         color: white;

@@ -1,2 +1,2 @@
-swiper,installation input padding, tabs routing,back buttons,logo background white
-collapse,remove extra styles
+collapse,remove extra styles,colors change on statuses,installation page disable,
+upload image,navigate diferent card on different page

@@ -1,6 +1,6 @@
 
  .container{
-    margin: 1em;
+    margin-top: 1em;
 }
 .h1{
     color: #194E78;
@@ -9,19 +9,25 @@
     font-family:'Roboto', sans-serif;
     margin-top: 0em;
 }
-.provided-button{
-    --border-radius: 10px;
-    margin-top: 1.2em;
-    margin-left: 0.4em;
+.btn-secondary{
     width: 8em;
-}
-.cancel-button{
-   --background:#6E6E6E;
-   --border-radius: 10px;
-   margin-top: 1.2em;
-    margin-left: 0em;
+    background-color:#6E6E6E;
+    color: white;
+    border: #6E6E6E;
+ }
+  .btn-primary{
     width: 8em;
-}
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:1em;
+    height:auto;
+    display:inline-block;
+  }
+  #buttonsdiv{
+      margin-top: 1.7em;
+  }
 .codeinput{
     --item-height: 3.375em;
    width: 12em;

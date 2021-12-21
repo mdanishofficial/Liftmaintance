@@ -16,17 +16,19 @@
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
- <h1 class="ion-text-center" style="  text-decoration: underline;color:#194E78 ; font-weight: bold;">Malfunction Report</h1>
- <Text  class="ion-text-left" style="margin-left:1em;">
-   Sunday Date. 26/3/2019
- </Text>
+    <br>
+    <h1 class="ion-text-center">Malfunction Report</h1>
+    <div class="leftcol">
+      <ion-text class="date">Date: {{malfunction_data[0].malfunction_date}}</ion-text>
+    </div>
+    <br>
  <ion-alert-controller></ion-alert-controller>
  <ion-item>
   <ion-avatar slot="start">
     <img class="avatar" src="../../assets/avatar.svg">
   </ion-avatar>
   <ion-label>
-    <h2>Technician: Imran Barnawi</h2>
+    <h2>Technician: {{malfunction_data[0].technician_assigned}}</h2>
     <div class="title">
     <p>Maintenance Technician</p>
       </div>
@@ -83,7 +85,7 @@
    <br>
    <div>
      <div class="leftcol">
-       <ion-text class="date">The door does not Close</ion-text>
+       <ion-text class="date"> {{malfunction_data[0].malfunction_notes}}</ion-text>
      </div>
      <div class="rightcolbrown">
      </div>
@@ -146,7 +148,10 @@
   <br>     
   <br>
     <div class="ion-text-center">
-  <ion-button class="lightbutton" (click)="presentAlertParts()">I Will Provide parts</ion-button>
+      <button type="button" class="btn btn-primary" id="solved-button" (click)="presentAlertParts()">I will Provide Parts</button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-secondary" id="pending-button" (click)="presentModalRatings()">Provided Parts</button>
+  <!-- <ion-button class="lightbutton" (click)="presentAlertParts()">I Will Provide parts</ion-button> -->
 </div>
 <br>
 <div>
@@ -161,15 +166,13 @@
 <br>
 <br>
   <div class="ion-text-center">
-<ion-button class="lightbutton" (click)="presentModalPayment()">Credit Card</ion-button>
+<button class="btn btn-primary btn-lg btn-block" (click)="presentModalPayment()">Pay Now</button>
 </div>
 <br>
 <hr class="hr"/>
-<br>
-  <div class="ion-text-center">
-<ion-button class="dangerbutton" (click)="presentModalRatings()">Provided</ion-button>
-</div>
-<br>
+<!-- <div class="ion-text-center">
+  <ion-button class="dangerbutton" (click)="presentModalRatings()">Provided</ion-button>
+  </div> -->
 <br>
 <br>
 </div>

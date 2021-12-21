@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ModalPagePageRoutingModule } from './modal-page-routing.module';
+import { PaidbillsPageRoutingModule } from './paidbills-routing.module';
 
-import { ModalPagePage } from './modal-page.page';
+import { PaidbillsPage } from './paidbills.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ModalPagePageRoutingModule
+    PaidbillsPageRoutingModule
   ],
-  declarations: [ModalPagePage]
+  declarations: [PaidbillsPage]
 })
-export class ModalPagePageModule {}
+export class PaidbillsPageModule {}

@@ -3,10 +3,10 @@ import { RouterModule } from '@angular/router';
 import { NgModule,NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { detailed_current_malfunctionsPage } from './detailed_current_malfunctions.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { StarRatingModule } from 'ionic5-star-rating';
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { detailed_current_malfunctionsPageRoutingModule } from './detailed_current_malfunctions-routing.module';
 
 @NgModule({
   imports: [
@@ -15,10 +15,10 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     FormsModule,
     StarRatingModule,
     ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: '', component: Tab3Page }]),
-    Tab3PageRoutingModule,
+    RouterModule.forChild([{ path: '', component: detailed_current_malfunctionsPage }]),
+    detailed_current_malfunctionsPageRoutingModule,
   ],
-  declarations: [Tab3Page],
+  declarations: [detailed_current_malfunctionsPage],
   schemas:[NO_ERRORS_SCHEMA]
 })
-export class Tab3PageModule {}
+export class detailed_current_malfunctionsPageModule {}

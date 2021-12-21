@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Tab3Page } from './tab3.page';
+import { detailed_current_malfunctionsPage } from './detailed_current_malfunctions.page';
 // import { IonicRatingModule } from 'ionic-rating-component';
 
 const routes: Routes = [
   {
     path: '',
-    component: Tab3Page,
+    component: detailed_current_malfunctionsPage,
   }
 ];
 
@@ -14,7 +14,7 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class Tab3PageRoutingModule {
+export class detailed_current_malfunctionsPageRoutingModule {
   constructor(){}
   onRatingChange(rating){
     console.log('The evaluation was modified and now its value is: ',rating);

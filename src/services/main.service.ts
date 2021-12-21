@@ -63,4 +63,74 @@ export class InstallationService {
             return response;
               })
         )}
+        public getmalfunctions(data): Observable<any> {
+          const url = PCconfig.getPath() + '/malfunctions/getmalfunction';
+          // return this.http.post(url, data);
+          return this.http
+          .post(url, data)
+          .pipe(
+            map((response: any) => {
+              return response;
+                })
+          )}
+        public getsolvedmalfunctions(data): Observable<any> {
+          const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=Solved';
+          // return this.http.post(url, data);
+          return this.http
+          .post(url, data)
+          .pipe(
+            map((response: any) => {
+              return response;
+                })
+          )}
+          public getcurrentmalfunctions(data): Observable<any> {
+            const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=Unsolved';
+            // return this.http.post(url, data);
+            return this.http
+            .post(url, data)
+            .pipe(
+              map((response: any) => {
+                return response;
+                  })
+            )}
+            public addmalfunctionparts(data): Observable<any> {
+              const url = PCconfig.getPath() + '/malfunctions/addmalfunctionparts';
+              // return this.http.post(url, data);
+              return this.http
+              .put(url, data)
+              .pipe(
+                map((response: any) => {
+                  return response;
+                    })
+              )}
+              public updatebill(data): Observable<any> {
+                const url = PCconfig.getPath() + '/bills/updatebill';
+                // return this.http.post(url, data);
+                return this.http
+                .put(url, data)
+                .pipe(
+                  map((response: any) => {
+                    return response;
+                      })
+                )}
+                public getunpaidbills(data): Observable<any> {
+                  const url = PCconfig.getPath() + '/bills/getbill?status=Unpaid';
+                  // return this.http.post(url, data);
+                  return this.http
+                  .post(url, data)
+                  .pipe(
+                    map((response: any) => {
+                      return response;
+                        })
+                  )}
+                  public getpaidbills(data): Observable<any> {
+                    const url = PCconfig.getPath() + '/bills/getbill?status=Paid';
+                    // return this.http.post(url, data);
+                    return this.http
+                    .post(url, data)
+                    .pipe(
+                      map((response: any) => {
+                        return response;
+                          })
+                    )}
 }

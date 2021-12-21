@@ -1,6 +1,6 @@
 
  .container{
-     margin: 1em;
+     margin-top: 1em;
  }
  .h1{
      color: #194E78;
@@ -24,16 +24,22 @@
     --inner-border-radius:0px;
     border-color: chartreuse !important;
 }
- .provided-button{
-     --border-radius: 10px;
-     margin-top: 1.2em;
-     margin-left: 0.4em;
-     width: 8em;
+.btn-secondary{
+    width: 8em;
+    background-color:#6E6E6E;
+    color: white;
+    border: #6E6E6E;
  }
- .cancel-button{
-    --background:#6E6E6E;
-    --border-radius: 10px;
-    margin-top: 1.2em;
-     margin-left: 0em;
-     width: 8em;
- }
+  .btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:1em;
+    height:auto;
+    display:inline-block;
+  }
+  #buttonsdiv{
+      margin-top: 1.7em;
+  }

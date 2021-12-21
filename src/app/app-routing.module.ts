@@ -7,12 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'modal-page',
-    loadChildren: () => import('./modal-page/modal-page.module').then( m => m.ModalPagePageModule)
-  },
-  {
-    path: 'modal-page',
-    loadChildren: () => import('./modal-page/modal-page.module').then( m => m.ModalPagePageModule)
+    path: 'paynow_modal',
+    loadChildren: () => import('./paynow_modal/paynow-modal.module').then( m => m.paynow_modalPageModule)
   },
   {
     path: 'parts-modal',
@@ -329,6 +325,14 @@ const routes: Routes = [
   {
     path: 'installation-stages',
     loadChildren: () => import('./installation-stages/installation-stages.module').then( m => m.InstallationStagesPageModule)
+  },
+  {
+    path: 'unpaidbills',
+    loadChildren: () => import('./Admin Roles/Installation Manager/unpaidbills/unpaidbills.module').then( m => m.UnpaidbillsPageModule)
+  },
+  {
+    path: 'paidbills',
+    loadChildren: () => import('./Admin Roles/Installation Manager/paidbills/paidbills.module').then( m => m.PaidbillsPageModule)
   },
  ];
 @NgModule({

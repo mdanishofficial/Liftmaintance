@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-import { ModalPagePage } from '../modal-page/modal-page.page';
+import { paynow_modalPage } from '../paynow_modal/paynow-modal.page';
 import { PartsModalPage } from '../parts-modal/parts-modal.page';
 import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 @Component({
@@ -30,7 +30,7 @@ export class BillpaidPage implements OnInit {
     async presentModalPayment() {
       console.log('emod property is accessible')
       const modal = await this.modalController.create({
-        component: ModalPagePage ,
+        component: paynow_modalPage ,
         cssClass: 'payment-class'
       });
       return await modal.present();

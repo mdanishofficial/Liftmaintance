@@ -3,20 +3,37 @@ import { Component } from '@angular/core';
 // import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
-import { ModalPagePage } from '../modal-page/modal-page.page';
+import { paynow_modalPage } from '../paynow_modal/paynow-modal.page';
 import { PartsModalPage } from '../parts-modal/parts-modal.page';
+import { InstallationService } from '../../services/main.service';
 import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 // install Swiper modules
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss'],
+  selector: 'app-detailed_current_malfunctions',
+  templateUrl: 'detailed_current_malfunctions.page.html',
+  styleUrls: ['detailed_current_malfunctions.page.scss'],
   
 })
-export class Tab3Page {
+export class detailed_current_malfunctionsPage {
 
-  constructor(public alertController: AlertController,public modalController: ModalController) {}
+  constructor(private service: InstallationService,public alertController: AlertController,public modalController: ModalController) {
+    let payload = {
+      user_id: "123"
+    }
+    this.service.getmalfunctions(payload).subscribe(res => {
+     this.malfunction_data = res;
+        console.log(this.malfunction_data)
+       })
+  }
+  malfunction_data = [
+    {
+      malfunction_date:'2021-09-09',
+       },
+       {
+        technician_assigned:'Huzaifa'
+       }
+  ]
   logRatingChange(rating){
     console.log("changed rating: ",rating);
     // do your stuff
@@ -32,7 +49,7 @@ export class Tab3Page {
     async presentModalPayment() {
       console.log('emod property is accessible')
       const modal = await this.modalController.create({
-        component: ModalPagePage ,
+        component: paynow_modalPage ,
         cssClass: 'payment-class'
       });
       return await modal.present();

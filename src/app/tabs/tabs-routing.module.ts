@@ -16,8 +16,8 @@ const routes: Routes = [
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'detailed_current_malfunctions',
+        loadChildren: () => import('../detailed_current_malfunctions/detailed_current_malfunctions.module').then(m => m.detailed_current_malfunctionsPageModule)
       },
       {
         path: 'installation_stages',
@@ -265,15 +265,23 @@ const routes: Routes = [
   },
   {
     path: 'adminroles/installationmanager/installation',
-    loadChildren: () => import('..//Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
+    loadChildren: () => import('../Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
   },  
   {
     path: 'adminroles/installationmanager/installationstage',
-    loadChildren: () => import('..//Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
+    loadChildren: () => import('../Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
   },  
   {
+    path: 'adminroles/installationmanager/unpaidbills',
+    loadChildren: () => import('../Admin Roles/Installation Manager/unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
+  },  
+  {
+    path: 'adminroles/installationmanager/paidbills',
+    loadChildren: () => import('../Admin Roles/Installation Manager/paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
+  }, 
+  {
     path: 'adminroles/installationtechnician/taskdetails',
-    loadChildren: () => import('..//Admin Roles/Installation Technician/task-details/task-details.module').then(m => m.TaskDetailsPageModule)
+    loadChildren: () => import('../Admin Roles/Installation Technician/task-details/task-details.module').then(m => m.TaskDetailsPageModule)
   },  
   {
         path: '',

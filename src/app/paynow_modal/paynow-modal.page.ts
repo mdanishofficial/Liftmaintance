@@ -3,11 +3,11 @@ import { ModalController } from '@ionic/angular';
 import {BanktransferModalPage } from '../banktransfer-modal/banktransfer-modal.page';
 import {PosModalPage } from '../pos-modal/pos-modal.page';
 @Component({
-  selector: 'app-modal-page',
-  templateUrl: './modal-page.page.html',
-  styleUrls: ['./modal-page.page.scss'],
+  selector: 'app-paynow_modal',
+  templateUrl: './paynow_modal.page.html',
+  styleUrls: ['./paynow_modal.page.scss'],
 })
-export class ModalPagePage implements OnInit {
+export class paynow_modalPage implements OnInit {
 
   constructor(public modalController: ModalController) { }
 
@@ -39,6 +39,9 @@ export class ModalPagePage implements OnInit {
 async buttonClick(){
   if(this.radioValue=='banktransfer'){
     console.log('banktransfer property is accessible')
+    this.modalController.dismiss({
+      'dismissed': true
+    });
     const modal = await this.modalController.create({
       component: BanktransferModalPage ,
       cssClass: 'parts-class'
@@ -47,6 +50,9 @@ async buttonClick(){
   }
   if(this.radioValue=='pos'){
     console.log('pos property is accessible')
+    this.modalController.dismiss({
+      'dismissed': true
+    });
     const modal = await this.modalController.create({
       component: PosModalPage ,
       cssClass: 'parts-class'
