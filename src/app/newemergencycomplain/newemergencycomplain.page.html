@@ -24,8 +24,8 @@
       <br>
       <br>
       <ion-card class="card">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-          <option disabled selected hidden style="color: rgb(87, 87, 90);">Please Select Type</option>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="malfunction_type">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);"value=''>Please Select Type</option>
           <option value="electrical" class="options">Electrical</option>
           <option value="mechanical" class="options">Mechanical</option>
           <option value="other" class="options">Other Type</option>
@@ -36,17 +36,25 @@
      <br>
      <ion-card class="cardinput">
         <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
-        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false"  [(ngModel)]="complaindetail"></textarea>
    </ion-card>
  <ion-checkbox class="checkbox"></ion-checkbox>
     <ion-label class="emergencydetails">Emergency Detail</ion-label>
-  <ion-card class="cardinput">
-    <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false"></textarea>
- </ion-card>
+    <br>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
+    <ion-checkbox class="checkbox"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
    </div>
+   <br>
  <div class="ion-text-center">
     <div class="flex-container">
-   <button type="button" class="btn btn-primary btn-lg" id="language">Send Complain</button>
+   <button type="button" class="btn btn-primary btn-lg" id="language" (click)="send_complain()">Send Complain</button>
    <div class="divider"></div>
 <button type="button" class="btn btn-secondary btn-lg" (click)="back()">Back</button>
 <!-- <ion-header>

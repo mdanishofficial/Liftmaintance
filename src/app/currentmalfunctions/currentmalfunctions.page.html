@@ -25,6 +25,7 @@
           <button type="button" class="btn btn-secondary" id="pending-button"(click)="currentmalfunctions()" >Current Malfunctions</button>
       </ion-tab-bar>
     </div>
+    <br>
     <ion-card class="card" *ngFor="let result of malfunction_data let i=index" (click)="currentmalfunction_details()">
       <div class="flex-container">
         <div style="float: left;">
@@ -34,7 +35,7 @@
           <h6 class="type">Type: {{result?.malfunction_type}}</h6>
           <div class="flex-container3">
             <div class="date">
-              <ion-text> {{result?.malfunction_date}}</ion-text>
+              <ion-text> Date:{{result?.malfunction_date}}</ion-text>
             </div>
             <div class="status">
               <ion-text> Status : {{result?.malfunction_status}}</ion-text>

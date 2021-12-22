@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
+import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-paidbills',
   templateUrl: './paidbills.page.html',
@@ -9,8 +11,19 @@ import {Router} from "@angular/router";
 })
 export class PaidbillsPage implements OnInit {
 
-  constructor(public modalController: ModalController,private router: Router) { }
-
+  constructor(private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
+    let payload = {
+      user_id: "123"
+    }
+    this.service.getpaidbills(payload).subscribe(res => {
+     this.bill_data = res;
+  console.log(this.bill_data)
+    })
+  }
+  bill_data = []
   ngOnInit() {
   }
   async unpaid(){

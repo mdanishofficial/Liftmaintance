@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 import { MalfunctionTypeModalPageRoutingModule } from '../Admin Roles/Maintenance Manager/malfunction-type-modal/malfunction-type-modal-routing.module';
 @Component({
   selector: 'app-installation',
@@ -20,7 +21,11 @@ export class InstallationPage implements OnInit {
   elevatortype=''
   startdate=''
   enddate=''
-  constructor(private service: InstallationService,private router: Router){}
+  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/installation_stages');
+    });
+  }
   ngOnInit() {
   }
   back(){

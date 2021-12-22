@@ -6,6 +6,8 @@ import { AlertController } from '@ionic/angular';
 import { paynow_modalPage } from '../paynow_modal/paynow-modal.page';
 import { PartsModalPage } from '../parts-modal/parts-modal.page';
 import { InstallationService } from '../../services/main.service';
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 // install Swiper modules
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -17,7 +19,10 @@ import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 })
 export class detailed_current_malfunctionsPage {
 
-  constructor(private service: InstallationService,public alertController: AlertController,public modalController: ModalController) {
+  constructor(private platform: Platform,private service: InstallationService,public alertController: AlertController,public modalController: ModalController,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/currentmalfunctionslist');
+    });
     let payload = {
       user_id: "123"
     }

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import {BanktransferModalPage } from '../banktransfer-modal/banktransfer-modal.page';
 import {PosModalPage } from '../pos-modal/pos-modal.page';
+import { InstallationService } from '../../services/main.service';
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-paynow_modal',
   templateUrl: './paynow_modal.page.html',
@@ -9,7 +12,13 @@ import {PosModalPage } from '../pos-modal/pos-modal.page';
 })
 export class paynow_modalPage implements OnInit {
 
-  constructor(public modalController: ModalController) { }
+  constructor(private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.modalController.dismiss({
+        'dismissed': true
+      });
+    });
+   }
 
   ngOnInit() {
     

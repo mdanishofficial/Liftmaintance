@@ -22,13 +22,13 @@
     <ion-card class="card" *ngFor="let result of maintenance_data let i=index" (click)="technicianspage(i)">
       <div class="flex-container">
         <div style="float: left;">
-          <div class="colordiv1"></div>
+          <div [ngClass]='result?.maintenance_status == "Solved" ?"greendiv":"reddiv"'></div>
         </div>
         <div class="flex-container2">
           <h6 class="visit">Visit #{{i}}</h6>
           <div class="flex-container3">
             <div class="date">
-              <ion-text>{{result?.maintenance_date}}</ion-text>
+              <ion-text>Date:{{result?.maintenance_date}}</ion-text>
             </div>
             <div class="status">
               <ion-text> Status : {{result?.maintenance_status}}</ion-text>

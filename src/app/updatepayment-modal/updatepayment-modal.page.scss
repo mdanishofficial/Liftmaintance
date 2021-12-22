@@ -2,7 +2,6 @@
  .container{
     margin-top: 1em;
 }
-
 .h1{
     color: #194E78;
     text-align: center;
@@ -14,9 +13,7 @@
 }
 .text{
     --placeholder-color:#6E6E6E;
-    margin-top: 1em;
-    border: 2px solid #E2E2E2;
-    border-radius: 2em;
+    margin-top: 2em;
 }
 
 .attach-button{
@@ -26,32 +23,26 @@
 }
 .attach{
     align-items: center;
-    margin-top: 1em;
+    margin-top: 0em;
     height: 7em;
     width: 15em;
 }
-.btn-primary{
-    background-color:#194E78;
-    width:10em;
-    height: 3.4em;
-    border-color:#194E78;
-    margin-top: 0em;
-}
 .btn-secondary{
+    width: 8em;
     background-color:#6E6E6E;
-    width:10em;
-    height: 3.4em;
-    margin-top: 0em;
-}
-.divider{
-    width:3em;
+    color: white;
+    border: #6E6E6E;
+ }
+  .btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:1em;
     height:auto;
     display:inline-block;
-}
-
-.flex-container{
-    justify-content: center;
-    flex-direction: row;
-    display:flex;
-    align-content: space-between;
-}
+  }
+  #buttonsdiv{
+      margin-top: -1em;
+  }

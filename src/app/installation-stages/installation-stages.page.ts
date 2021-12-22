@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-installation-stages',
   templateUrl: './installation-stages.page.html',
@@ -8,7 +9,10 @@ import { InstallationService } from '../../services/main.service';
 })
 
 export class InstallationStagesPage implements OnInit {
-  constructor(private service: InstallationService, private router: Router) {
+  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
     // cabin_status
     let payload = {
       railanddoor_id: "a84edc",

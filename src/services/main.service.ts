@@ -114,7 +114,7 @@ export class InstallationService {
                       })
                 )}
                 public getunpaidbills(data): Observable<any> {
-                  const url = PCconfig.getPath() + '/bills/getbill?status=Unpaid';
+                  const url = PCconfig.getPath() + '/bills/getbill?status=unpaid';
                   // return this.http.post(url, data);
                   return this.http
                   .post(url, data)
@@ -124,7 +124,7 @@ export class InstallationService {
                         })
                   )}
                   public getpaidbills(data): Observable<any> {
-                    const url = PCconfig.getPath() + '/bills/getbill?status=Paid';
+                    const url = PCconfig.getPath() + '/bills/getbill?status=paid';
                     // return this.http.post(url, data);
                     return this.http
                     .post(url, data)
@@ -133,4 +133,34 @@ export class InstallationService {
                         return response;
                           })
                     )}
-}
+                    public getpendingcomplains(data): Observable<any> {
+                      const url = PCconfig.getPath() +  `/complains/getnormalcomplains?status=pending&complain_type=${data.complain_type}`;
+                      // return this.http.post(url, data);
+                      return this.http
+                      .post(url, data)
+                      .pipe(
+                        map((response: any) => {
+                          return response;
+                            })
+                      )}
+                      public getsolvedcomplains(data): Observable<any> {
+                        const url = PCconfig.getPath() +  `/complains/getnormalcomplains?status=solved&complain_type=${data.complain_type}`;
+                        // return this.http.post(url, data);
+                        return this.http
+                        .post(url, data)
+                        .pipe(
+                          map((response: any) => {
+                            return response;
+                              })
+                        )}
+                        public addcomplain(data): Observable<any> {
+                          const url = PCconfig.getPath() + '/complains/addcomplain';
+                          // return this.http.post(url, data);
+                          return this.http
+                          .post(url, data)
+                          .pipe(
+                            map((response: any) => {
+                              return response;
+                                })
+                          )}
+                          }

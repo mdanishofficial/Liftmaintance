@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { InstallationService } from '../../services/main.service';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-malfunctionslist',
   templateUrl: './malfunctionslist.page.html',
@@ -8,7 +9,10 @@ import { InstallationService } from '../../services/main.service';
 })
 export class MalfunctionslistPage implements OnInit {
 
-  constructor(private service: InstallationService, private router: Router) {
+  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
     let payload = {
       user_id: "123"
     }
