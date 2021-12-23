@@ -21,8 +21,10 @@ export class PendingcomplainPage implements OnInit {
      this.complain_data = res;
   console.log(this.complain_data)
     })
+   
   }
   complain_data
+  
 ngOnInit() {
   }
   async solvedcomplain(){
@@ -32,6 +34,6 @@ ngOnInit() {
     this.router.navigateByUrl('/tabs/pendingcomplain');
   }
   newcomplain(){
-    this.router.navigateByUrl('/newpendingcomplain');
+    this.router.navigateByUrl('/tabs/newpendingcomplain');
   }
 }

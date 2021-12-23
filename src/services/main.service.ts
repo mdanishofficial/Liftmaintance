@@ -13,6 +13,10 @@ export class InstallationService {
     const url = PCconfig.getPath() + '/installations/addinstallation';
     return this.http.post(url, data);
   }
+  public getinstallation(data): Observable<any> {
+    const url = PCconfig.getPath() + '/installations/getinstallation';
+    return this.http.post(url, data);
+  }
   public getrailanddoor(data): Observable<any> {
     const url = PCconfig.getPath() + '/railanddoors/getrailanddoor';
     // return this.http.post(url, data);
@@ -163,4 +167,14 @@ export class InstallationService {
                               return response;
                                 })
                           )}
+                          public getrating(data): Observable<any> {
+                            const url = PCconfig.getPath() + '/technicians/getrating';
+                            // return this.http.post(url, data);
+                            return this.http
+                            .post(url, data)
+                            .pipe(
+                              map((response: any) => {
+                                return response;
+                                  })
+                            )}
                           }

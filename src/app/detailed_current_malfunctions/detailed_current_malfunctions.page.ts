@@ -28,7 +28,11 @@ export class detailed_current_malfunctionsPage {
     }
     this.service.getmalfunctions(payload).subscribe(res => {
      this.malfunction_data = res;
-        console.log(this.malfunction_data)
+        // console.log(this.malfunction_data)
+       })
+       this.service.getrating(payload).subscribe(res => {
+        this.technician_data = res;
+     console.log(this.technician_data)
        })
   }
   malfunction_data = [
@@ -39,6 +43,7 @@ export class detailed_current_malfunctionsPage {
         technician_assigned:'Huzaifa'
        }
   ]
+  technician_data=[]
   logRatingChange(rating){
     console.log("changed rating: ",rating);
     // do your stuff

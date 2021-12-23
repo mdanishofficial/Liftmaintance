@@ -14,8 +14,9 @@
     </ion-title>
   <!-- </ion-navbar> -->
 </ion-header>
+<div class="white"></div>
 <ion-content overflow-scroll="true">
-<div class="ion-text-center">
+<!-- <div class="ion-text-center"> -->
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
 
     <div class="carousel-inner">
@@ -43,8 +44,96 @@
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div> -->
+<!-- </div> -->
+<div class="flex-container">
+  <div class="card"  (click)="installation_stages()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/installation.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Installation</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="maintenance()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/maintenance.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Maintenance</h6>
+    </div>
+    </div>
+  </div>
 </div>
 <div class="flex-container">
+  <div class="card" (click)="malfunctions()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets//malfunctions.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Malfunctions</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="bills()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/bills.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Bills</h6>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="flex-container">
+  <div class="card" (click)="complain()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/complain.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Complains</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="emergencycomplain()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/emergencycomplain.svg" alt="Card image cap">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title" id="emergencycomplaintext">Emergency Complains</h6>
+    </div>
+    </div>
+  </div>
+</div>
+  <!-- <div class="card" style="width:4em;">
+    <img class="card-img-top" src="../../assets/maintenance.svg" alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">Maintenance</p>
+    </div>
+  </div> -->
+ 
+ <!-- <div class="flex-container">
+  <img src="../../assets/malfunctions.svg" (click)="malfunctions()"/>
+ <img src="../../assets/bills.svg" (click)="bills()"/>
+ </div>
+ <div class="flex-container">
+  <img src="../../assets/complain.svg" (click)="complain()"/>
+ <img src="../../assets/emergencycomplain.svg" (click)="emergencycomplain()"/>
+</div> -->
+<!-- /////////////////////////////////////////// -->
+<!-- <div class="flex-container">
   <img src="../../assets/installation.svg" (click)="installation_stages()"/>
  <img src="../../assets/maintenance.svg" (click)="maintenance()"/>
  </div>
@@ -55,5 +144,5 @@
  <div class="flex-container">
   <img src="../../assets/complain.svg" (click)="complain()"/>
  <img src="../../assets/emergencycomplain.svg" (click)="emergencycomplain()"/>
-</div>
+</div> -->
 </ion-content>

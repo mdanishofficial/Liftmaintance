@@ -19,48 +19,36 @@
 <ion-content overflow-scroll="true">
   <div class="container">
     <!-- <br> -->
+    <div *ngFor="let result of installation_data">
     <div>
       <h2 class="h3">Number of Stops</h2>
       <!-- <ion-card class="card"> -->
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="stops">
-        <option value="">Please Select</option>
-        <option value="1" class="options">01</option>
-        <option value="2" class="options">02</option>
-        <option value="3" class="options">03</option>
-        <option value="4" class="options">04</option>
-        <option value="5" class="options">05</option>
-      </select>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="stops" disabled>
+       <option value='' class="options">{{result?.installation_stops}}</option>
+       </select>
       <!-- </ion-card> -->
     </div>
     <div>
       <h2 class="h3">Door Type</h2>
       <!-- <ion-card class="card"> -->
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="doortype">
-        <option value="">Please Select</option>
-        <option value="auto" class="options">Auto</option>
-        <option value="manual" class="options">Manual</option>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="doortype" disabled>
+      <option value='' class="options">{{result?.installation_doortype}}</option>
     </select>
       <!-- </ion-card> -->
     </div>
     <div>
       <h2 class="h3">Machine Type</h2>
       <!-- <ion-card class="card"> -->
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="machinetype">
-        <option value="">Please Select</option>
-        <option value="italian" class="options">Italian</option>
-        <option value="japanese" class="options">Japanese</option>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="machinetype" disabled>
+       <option value='' class="options">{{result?.installation_machinetype}}</option>
       </select>
       <!-- </ion-card> -->
     </div>
     <div>
       <h2 class="h3">The Speed</h2>
       <!-- <ion-card class="card"> -->
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="speed">
-        <option value="">Please Select</option>
-        <option value="1" class="options">1</option>
-        <option value="2" class="options">2</option>
-        <option value="3" class="options">3</option>
-        <option value="4" class="options">4</option>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="speed" disabled>
+        <option value='' class="options">{{result?.installation_speed}}</option>
       </select>
       <!-- </ion-card> -->
     </div>
@@ -70,16 +58,14 @@
       <br>
       <br>
       <!-- <ion-card class="cardinput"> -->
-      <ion-textarea placeholder="630" class="textarea" maxlength="4" [(ngModel)]="payloads"></ion-textarea>
+      <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.installation_payloads}}</ion-textarea>
       <!-- </ion-card> -->
     </div>
     <div>
       <h2 class="h3">Elevator Type</h2>
       <!-- <ion-card class="card"> -->
-      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="elevatortype" >
-        <option value="">Please Select</option>
-        <option value="passengers" class="options">Passengers</option>
-        <option value="freight" class="options">Freight</option>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="elevatortype" disabled >
+        <option value='' class="options">{{result?.installation_elevatortype}}</option>
       </select>
       <!-- </ion-card> -->
     </div>
@@ -89,27 +75,29 @@
       <br>
       <br>
       <!-- <ion-card class="cardinput"> -->
-      <ion-textarea placeholder="60" class="textarea" maxlength="2" [(ngModel)]="time"></ion-textarea>
+      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.installation_time}}</ion-textarea>
       <!-- </ion-card> -->
     </div>
     <div>
       <h2 class="h3">Start Date</h2>
       <br>
       <br>
-      <br>
-      <ion-card class="cardinput">
-        <!-- <ion-item> -->
-        <ion-datetime [pickerOptions]="customPickerOptions" placeholder="02-11-2021" displayFormat="DD-MMM-YYYY"
-          class="picker" [(ngModel)]="startdate">
+      <br> 
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{result?.installation_start_date}}</ion-textarea>
+ 
+      <!-- <ion-card class="cardinput">
+        <ion-datetime [pickerOptions]="customPickerOptions" placeholder="{{result?.installation_start_date}}" displayFormat="DD-MMM-YYYY"
+          class="picker" [(ngModel)]="startdate" disabled >
         </ion-datetime>
-        <!-- </ion-item> -->
-      </ion-card>
+      </ion-card> -->
     </div>
     <div>
       <h2 class="h3">End Date</h2>
       <br>
       <br>
       <br>
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{result?.installation_end_date}}</ion-textarea>
+ 
       <!-- <ion-card class="cardinput">
   <section>
     <ion-datetime placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
@@ -117,13 +105,11 @@
   </section>
 
   </ion-card> -->
-      <ion-card class="cardinput">
-        <!-- <ion-item> -->
-        <ion-datetime [pickerOptions]="customPickerOptions" placeholder="02-11-2021" displayFormat="DD-MMM-YYYY"
-          class="picker" [(ngModel)]="enddate">
+      <!-- <ion-card class="cardinput">
+      <ion-datetime [pickerOptions]="customPickerOptions" placeholder="{{result?.installation_end_date}}" displayFormat="DD-MMM-YYYY"
+          class="picker" [(ngModel)]="enddate" disabled>
         </ion-datetime>
-        <!-- </ion-item> -->
-      </ion-card>
+      </ion-card> -->
     </div>
     <div class="ion-text-center" id="buttonsdiv">
       <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
@@ -135,6 +121,7 @@
   <label for="example">Try me...</label>
   <i class="fas fa-calendar input-prefix"></i>
 </div> -->
+</div>
 </div>
   <br>
   <br>

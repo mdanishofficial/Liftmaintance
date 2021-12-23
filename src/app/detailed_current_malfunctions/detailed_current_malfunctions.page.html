@@ -39,8 +39,9 @@
         activeColor = "#C99F66" 
         defaultColor = "#f4f4f4"
         readonly="false"
-        rating="5"
+        rating="{{technician_data.technician_rating}}"
         fontSize = "15px"
+        disabled="true"
         (ratingChanged)="logRatingChange($event)"
          >
     </ionic5-star-rating>
