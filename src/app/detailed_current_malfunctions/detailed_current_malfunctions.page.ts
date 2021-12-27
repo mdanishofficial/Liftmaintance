@@ -8,6 +8,7 @@ import { PartsModalPage } from '../parts-modal/parts-modal.page';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 // install Swiper modules
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -24,8 +25,12 @@ export class detailed_current_malfunctionsPage {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/currentmalfunctionslist');
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
     let payload = {
-      user_id: "123"
+     user_id:decoded.user_id,
     }
     this.service.getmalfunctions(payload).subscribe(res => {
      this.malfunction_data = res;

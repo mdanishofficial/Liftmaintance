@@ -21,7 +21,7 @@ import jwt_decode from "jwt-decode";
   BrowserAnimationsModule,
   CommonModule,
   HttpClientModule,
-  ToastrModule.forRoot()
+  ToastrModule.forRoot(),
  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

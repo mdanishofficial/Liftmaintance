@@ -5,6 +5,7 @@ import { Platform } from '@ionic/angular';
 import { InstallationService } from '../../services/main.service';
 import { ModalController } from '@ionic/angular';
 import {formatDate} from '@angular/common';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-newinquiries',
   templateUrl: './newinquiries.page.html',
@@ -21,8 +22,13 @@ export class NewinquiriesPage implements OnInit {
   sendinquiry(){
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
+ 
     let payload={
-      user_id:'123',
+      user_id:decoded.user_id,
       inquiry_detail:this.inquirydetail,
       inquiry_type:this.inquiry_type,
       inquiry_date:date,

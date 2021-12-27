@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-updatepayment-modal',
   templateUrl: './updatepayment-modal.page.html',
@@ -20,10 +21,14 @@ export class UpdatepaymentModalPage implements OnInit {
    }
    postbill(){
     console.log(this.image)
-      let payload = {
-        user_id: "123",
-        bill_amount:this.amount
-      }
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
+    let payload = {
+     user_id:decoded.user_id,
+     bill_amount:this.amount
+    }
       this.service.updatebill(payload).subscribe(res => {
        console.log(res)
          })

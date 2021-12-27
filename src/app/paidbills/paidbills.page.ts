@@ -4,6 +4,7 @@ import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-mod
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-paidbills',
   templateUrl: './paidbills.page.html',
@@ -15,8 +16,12 @@ export class PaidbillsPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
     let payload = {
-      user_id: "123"
+     user_id:decoded.user_id,
     }
     this.service.getpaidbills(payload).subscribe(res => {
      this.bill_data = res;
