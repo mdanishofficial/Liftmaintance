@@ -177,4 +177,34 @@ export class InstallationService {
                                 return response;
                                   })
                             )}
-                          }
+                            public getinquiries(data): Observable<any> {
+                              const url = PCconfig.getPath() + '/inquiries/getinquiries';
+                              // return this.http.post(url, data);
+                              return this.http
+                              .post(url, data)
+                              .pipe(
+                                map((response: any) => {
+                                  return response;
+                                    })
+                              )}
+                              public addinquiry(data): Observable<any> {
+                                const url = PCconfig.getPath() + '/inquiries/addinquiry';
+                                // return this.http.post(url, data);
+                                return this.http
+                                .post(url, data)
+                                .pipe(
+                                  map((response: any) => {
+                                    return response;
+                                      })
+                                )}
+                                public getparts(data): Observable<any> {
+                                  const url = PCconfig.getPath() + '/bills/getparts';
+                                  // return this.http.post(url, data);
+                                  return this.http
+                                  .post(url, data)
+                                  .pipe(
+                                    map((response: any) => {
+                                      return response;
+                                        })
+                                  )}
+                         }

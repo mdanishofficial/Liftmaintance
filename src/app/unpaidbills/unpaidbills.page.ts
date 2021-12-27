@@ -30,4 +30,7 @@ export class UnpaidbillsPage implements OnInit {
   async paid(){
     this.router.navigateByUrl('/tabs/paidbills');
   }
+  billdetails(){
+    this.router.navigateByUrl('/tabs/billdetails');
+  }
 }

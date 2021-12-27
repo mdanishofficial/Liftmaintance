@@ -1,16 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { SendinquiryModalPage } from '../sendinquiry-modal/sendinquiry-modal.page';
-import { AlertController } from '@ionic/angular';
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
+import { InstallationService } from '../../services/main.service';
 import { ModalController } from '@ionic/angular';
+import {formatDate} from '@angular/common';
 @Component({
   selector: 'app-newinquiries',
   templateUrl: './newinquiries.page.html',
   styleUrls: ['./newinquiries.page.scss'],
 })
 export class NewinquiriesPage implements OnInit {
-
-  constructor(public alertController: AlertController,public modalController: ModalController) {}
-
+  inquirydetail=''
+  inquiry_type=''
+  constructor(private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/installation_stages');
+    });
+  }
+  sendinquiry(){
+    var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
+    console.log(date)
+    let payload={
+      user_id:'123',
+      inquiry_detail:this.inquirydetail,
+      inquiry_type:this.inquiry_type,
+      inquiry_date:date,
+      inquiry_status:'pending'
+          }
+         this.service.addinquiry(payload).subscribe(res => {
+          this.inquiry_data=res
+          console.log(this.inquiry_data)
+        })
+  }
+      
+  inquiry_data
   ngOnInit() {
   }
   async presentModalsendInquiry(){
@@ -21,5 +45,8 @@ export class NewinquiriesPage implements OnInit {
       cssClass: 'sendInquiry'
     });
     return await modal.present();
+  }
+  cancel(){
+    this.router.navigateByUrl('tabs/inquiries');
   }
 }

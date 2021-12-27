@@ -33,13 +33,21 @@ h1{
 .leftcol{
     float: left;
     }
-    .rightcol{
+    .greendiv{
         float: right;
         margin-right: 1em;
         border-radius: 100px;
         height: 21px;
         width: 21px;
         background-color: #60D924;
+    }
+    .reddiv{
+        float: right;
+        margin-right: 1em;
+        border-radius: 100px;
+        height: 21px;
+        width: 21px;
+        background-color: #7A0001;
     }
     .hr{
         margin-top: 0em;

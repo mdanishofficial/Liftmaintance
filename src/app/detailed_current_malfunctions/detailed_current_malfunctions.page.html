@@ -14,9 +14,9 @@
     </ion-title>
   <!-- </ion-navbar> -->
 </ion-header>
+<div class="white"></div>
 <ion-content overflow-scroll="true">
   <div class="container">
-    <br>
     <h1 class="ion-text-center">Malfunction Report</h1>
     <div class="leftcol">
       <ion-text class="date">Date: {{malfunction_data[0].malfunction_date}}</ion-text>
@@ -93,7 +93,7 @@
    </div>
    <br>
 <Text  class="ion-text-left" id="dangertext">
- * This malfunction is considered very serious and
+ * This malfunction is considered very serious
 </Text>
 <hr class="hr"/>
 <!-- <br> -->
@@ -101,49 +101,22 @@
    <h2 class="h2">Bill</h2>
    <br>
    <br>
-   <div>
+   <div *ngFor="let result of parts_data; let i = index;">
      <div class="leftcol">
-       <ion-text class="date">Door Card</ion-text>
+       <ion-text class="date">{{result.part_name}}</ion-text>
      </div>
      <div class="rightcol">
-       1200 riyals
+      {{result.part_price}}
      </div>
+     <hr class="hr"/>
    </div>
-   <hr class="hr"/>
-   <!-- <div> -->
-  <div>
-    <div class="leftcol">
-      <ion-text class="date">Gallon</ion-text>
-    </div>
-    <div class="rightcol">
-      300 riyals
-    </div>
-  </div>
-  <hr class="hr"/>
-  <div>
-    <div class="leftcol">
-      <ion-text class="date">Door Fork</ion-text>
-    </div>
-    <div class="rightcol">
-      50 riyals
-    </div>
-  </div>
-  <hr class="hr"/>
-  <div>
-    <div class="leftcol">
-      <ion-text class="date">Lights</ion-text>
-    </div>
-    <div class="rightcol">
-     Complimentry
-    </div>
-  </div>
-  <hr class="hr"/>
+  
   <div>
     <div class="leftcol">
       <ion-text class="datedanger">Total</ion-text>
     </div>
     <div class="datedanger">
-      1550 including TA
+     {{sum}}&nbsp;Riyals
     </div>
   </div>
   <br>     

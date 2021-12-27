@@ -40,7 +40,7 @@
           activeColor = "#C99F66" 
           defaultColor = "#f4f4f4"
           readonly="false"
-          rating="5"
+          rating="{{technician_data.technician_rating}}"
           fontSize = "15px"
           (ratingChanged)="logRatingChange($event)"
            >
@@ -58,7 +58,7 @@
       <ion-text class="date">{{maintenance_data[0].maintenance_status}}</ion-text>
       </div>
     </div>
-    <div class="rightcol">
+    <div [ngClass]='result?.maintenance_status == "Completed" ?"greendiv":"reddiv"'>
     </div>
   </div>
   <br>

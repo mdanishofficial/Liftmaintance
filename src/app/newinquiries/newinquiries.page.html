@@ -26,7 +26,7 @@
 
  
  </div> -->
- 
+ <div class="white"></div>
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">New Inquiry</h1>
@@ -36,8 +36,8 @@
       <br>
       <br>
       <ion-card class="card">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-          <option disabled selected hidden style="color: rgb(87, 87, 90);">Please Select Type</option>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="inquiry_type">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);" value="">Please Select Type</option>
           <option value="electrical" class="options">Electrical</option>
           <option value="mechanical" class="options">Mechanical</option>
           <option value="other" class="options">Other Type</option>
@@ -48,15 +48,15 @@
      <br>
      <ion-card class="cardinput">
         <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
-        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false" [(ngModel)]="inquirydetail"></textarea>
    </ion-card>
  </div>
- <div class="ion-text-center">
-    <div class="flex-container">
-   <button type="button" class="btn btn-primary btn-lg" id="language" (click)="presentModalsendInquiry()">Send Inquiry</button>
-   <div class="divider"></div>
-   <ion-back-button type="button" defaultHref="/tabs/inquiries" icon="none" class="btn btn-secondary btn-lg">Cancel</ion-back-button>
- </div>
+<div class="ion-text-center">
+  <div class="flex-container">
+ <button type="button" class="btn btn-primary btn-lg" id="language" (click)="sendinquiry()">Send Inquiry</button>
+ <div class="divider"></div>
+<button type="button" class="btn btn-secondary btn-lg" (click)="cancel()">Cancel</button>
+</div>
 </div>
 </div>
   </ion-content>  

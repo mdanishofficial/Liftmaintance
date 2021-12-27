@@ -20,6 +20,7 @@ import {RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 export class detailed_current_malfunctionsPage {
 
   constructor(private platform: Platform,private service: InstallationService,public alertController: AlertController,public modalController: ModalController,private router: Router) {
+   
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/currentmalfunctionslist');
     });
@@ -28,11 +29,21 @@ export class detailed_current_malfunctionsPage {
     }
     this.service.getmalfunctions(payload).subscribe(res => {
      this.malfunction_data = res;
-        // console.log(this.malfunction_data)
-       })
+          })
        this.service.getrating(payload).subscribe(res => {
         this.technician_data = res;
-     console.log(this.technician_data)
+       })
+       var price=[];
+      
+       this.service.getparts(payload).subscribe(res => {
+     for(var i=0;i<res.length;i++){
+       this.parts_data.push(res[i])
+price[i]=parseInt(this.parts_data[i].part_price)
+     }
+     for(var i=0;i<price.length;i++){
+       this.sum=this.sum+price[i]
+     }
+     console.log(this.sum)
        })
   }
   malfunction_data = [
@@ -44,6 +55,8 @@ export class detailed_current_malfunctionsPage {
        }
   ]
   technician_data=[]
+  parts_data=[]
+  sum=0;
   logRatingChange(rating){
     console.log("changed rating: ",rating);
     // do your stuff

@@ -22,6 +22,10 @@ export class VisitdetailsPage implements OnInit {
         console.log(this.maintenance_data)
       // }
          })
+         this.service.getrating(payload).subscribe(res => {
+          this.technician_data = res;
+       console.log(this.technician_data)
+         })
   }
   ngOnInit() {
   }
@@ -30,6 +34,11 @@ export class VisitdetailsPage implements OnInit {
       maintenance_date:'2021-09-09'
     }
   ]
+  technician_data
+  logRatingChange(rating){
+    console.log("changed rating: ",rating);
+    // do your stuff
+    }
   back() {
     this.router.navigateByUrl('tabs/maintenancelist');
     }

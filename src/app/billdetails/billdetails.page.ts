@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
-import { AlertController } from '@ionic/angular';
+import { InstallationService } from '../../services/main.service';
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 @Component({
   selector: 'app-billdetails',
@@ -9,8 +11,20 @@ import { ModalController } from '@ionic/angular';
 })
 export class BilldetailsPage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController) {}
+  constructor(private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/unpaidbills');
+    });
+          let payload={
+      user_id:'123'
+          }
+          this.service.getunpaidbills(payload).subscribe(res => {
+            this.bill_data = res;
+         console.log(this.bill_data)
+           })
 
+  }
+bill_data
   ngOnInit() {
   }
     async presentModalUpdatePayment(){
@@ -21,5 +35,8 @@ export class BilldetailsPage implements OnInit {
         cssClass: 'updatePayment'
       });
       return await modal.present();
+    }
+    back(){
+      this.router.navigateByUrl('tabs/unpaidbills');
     }
   }

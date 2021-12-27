@@ -27,6 +27,10 @@ height: 30px;
     width: 66px;
     height: 86px;
 }
+.white{
+    width: 100%;
+    height: 2em;
+}
 .flex-container{
     justify-content: center;
 }
@@ -79,13 +83,11 @@ margin-left: 1em;
   font-size: 18px;
   font-family:'Roboto', sans-serif;
  }
- .divider{
-    width:3em;
-    height:auto;
-    display:inline-block;
-}
 .textarea{
     height: 12em;
+}
+.flex-container{
+    margin-top: 1em;
 }
 .btn-primary{
     background-color:#194E78;
@@ -94,8 +96,12 @@ margin-left: 1em;
 }
 .btn-secondary{
     background-color:#6E6E6E;
-    width: 4em;
-    // width:9em;
+    // width:4em;
+}
+.divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
 }
 .native-textarea{
 height: 12em;

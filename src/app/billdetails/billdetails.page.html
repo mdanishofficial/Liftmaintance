@@ -14,24 +14,25 @@
     </ion-title>
   <!-- </ion-navbar> -->
 </ion-header>
+<div class="white"></div>
 <ion-content overflow-scroll="true">
 <div class="container">
-  <h1 class="ion-text-center">Bill # TD24153</h1>
-  <ion-text class="date">Sunday, 23-03-2020</ion-text>
+  <div *ngFor="let result of bill_data">
+  <h1 class="ion-text-center">Bill #{{result?.bill_id}}</h1>
+  <ion-text class="date">Date: {{result?.bill_date}}</ion-text>
   <br>
   <br>
     <h2 class="h2">Bill Details </h2>
     <br> 
     <!-- </div> -->
- <ion-text class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum mi ipsum. Quisque eget mattis mauris. Donec in elit velit.</ion-text>
- <br> 
+ <ion-text class="text">{{result?.bill_detail}}</ion-text> <br> 
  <br> 
  <div>
     <div class="leftcol">
       <h2 class="h2">Amount </h2>
     </div>
     <div class="rightcol">
-      <text class="textright1"></text>
+      <ion-text class="textright1">{{result?.bill_amount}}</ion-text>
     </div>
    </div>
    <hr class="hr">
@@ -40,7 +41,7 @@
       <h2 class="h2">Payment Status</h2>
     </div>
     <div class="rightcol">
-      <text class="textright2">Unpaid</text>
+      <ion-text class="textright2">{{result?.bill_status}}</ion-text>
     </div>
   </div>
   <hr class="hr">
@@ -48,17 +49,27 @@
     <h2 class="h2">Receipt Status</h2>
   </div>
   <div class="rightcol">
-    <text class="textright3">Waiting</text>
+    <ion-text class="textright3">{{result?.bill_receipt_status}}</ion-text>
   </div>
+
   <br>
   <br>
   <br>
-  <div class="ion-text-center">
+  <!-- <div class="ion-text-center">
     <div class="flex-container">
    <button type="button" class="btn btn-primary btn-lg" id="language"(click)="presentModalUpdatePayment()">Update Payment</button>
    <div class="divider"></div>
    <ion-back-button type="button" defaultHref="/tabs/paidbills" icon="none" class="btn btn-secondary btn-lg">Back</ion-back-button>
  </div>
+</div> -->
+<div class="ion-text-center">
+  <div class="flex-container">
+ <button type="button" class="btn btn-primary btn-lg" id="language" (click)="presentModalUpdatePayment()">Update Payment</button>
+ <div class="divider"></div>
+<button type="button" class="btn btn-secondary btn-lg" (click)="back()">Back</button>
 </div>
 </div>
+</div>
+</div>
+
 </ion-content>

@@ -25,7 +25,7 @@
           <button type="button" class="btn btn-secondary" (click)="paid()">Paid</button>
       </ion-tab-bar>
     </div>
-    <ion-card class="card" *ngFor="let result of bill_data let i=index">
+    <ion-card class="card" *ngFor="let result of bill_data let i=index" (click)="billdetails()">
       <div class="flex-container">
        <div class="flex-container2">
          <div>
