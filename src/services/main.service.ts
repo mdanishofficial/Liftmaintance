@@ -9,6 +9,10 @@ import { map } from 'rxjs/operators';
 export class InstallationService {
 
   constructor(private http: HttpClient) {}
+  public login(data): Observable<any> {
+    const url = PCconfig.getPath() + '/users/login';
+    return this.http.post(url, data);
+  }
   public addinstallation(data): Observable<any> {
     const url = PCconfig.getPath() + '/installations/addinstallation';
     return this.http.post(url, data);

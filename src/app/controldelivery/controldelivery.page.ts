@@ -10,7 +10,7 @@ export class ControldeliveryPage implements OnInit {
 
   constructor(private service: InstallationService, private router: Router) {
     let payload = {
-      controldelivery_id: '1a5eec',
+      user_id: '123',
     }
     this.service.getcontroldelivery(payload).subscribe(res => {
       this.controldelivery_data = res;

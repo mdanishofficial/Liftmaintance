@@ -334,6 +334,10 @@ const routes: Routes = [
     path: 'paidbills',
     loadChildren: () => import('./Admin Roles/Installation Manager/paidbills/paidbills.module').then( m => m.PaidbillsPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
  ];
 @NgModule({
   imports: [
