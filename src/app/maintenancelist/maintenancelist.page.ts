@@ -30,8 +30,9 @@ export class MaintenancelistPage implements OnInit {
   ngOnInit() {
   }
   maintenance_data = []
-  technicianspage(){
-    this.router.navigateByUrl('tabs/visitdetails');
+  technicianspage(id){
+    console.log(id)
+    this.router.navigateByUrl('tabs/visitdetails/'+id);
   }
   back() {
     this.router.navigateByUrl('tabs/tab1');

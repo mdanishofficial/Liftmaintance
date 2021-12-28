@@ -18,9 +18,11 @@
 <ion-content overflow-scroll="true">
 <div class="container">
   <!-- <br> -->
- <h1 class="ion-text-center">Visit</h1>
+  <!-- <div *ngFor="let result of maintenance_data let i=index"> -->
+<div>
+ <h1 class="ion-text-center">Visit#{{id}}</h1>
  <div>
-  <ion-text class="date">Date:  {{maintenance_data[0].maintenance_date}}</ion-text>
+  <ion-text class="date">Date:  {{maintenance_data[id].maintenance_date}}</ion-text>
 </div>
   <ion-item>
     <ion-avatar slot="start">
@@ -28,7 +30,7 @@
     </ion-avatar>
     <ion-label>
       <div>
-      <h2>Technician: {{maintenance_data[0].technician_assigned}}</h2>
+      <h2>Technician: {{maintenance_data[id].technician_assigned}}</h2>
     </div>
       <div class="title">
       <p>Maintenance Technician</p>
@@ -40,11 +42,12 @@
           activeColor = "#C99F66" 
           defaultColor = "#f4f4f4"
           readonly="false"
-          rating="{{technician_data.technician_rating}}"
+          rating="{{5}}"
           fontSize = "15px"
           (ratingChanged)="logRatingChange($event)"
            >
       </ionic5-star-rating>
+      <!-- rating="{{technician_data.technician_rating}}" -->
         </div>
    </ion-label>
   </ion-item>   
@@ -55,7 +58,7 @@
  <div>
   <div>
     <div class="leftcol">
-      <ion-text class="date">{{maintenance_data[0].maintenance_status}}</ion-text>
+      <ion-text class="date">{{maintenance_data[id].maintenance_status}}</ion-text>
       </div>
     </div>
     <div [ngClass]='result?.maintenance_status == "Completed" ?"greendiv":"reddiv"'>
@@ -63,8 +66,16 @@
   </div>
   <br>
   <hr class="hr">
+  <h6 class="h2">Notes</h6>
+  <br>
+  <ion-card class="card-detailed">
+    <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+  <ion-text id="textarea" placeholder="Please enter notes" disabled="true">{{maintenance_data[id].report_notes}}</ion-text>
+    <!-- <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter notes" disabled="true"></textarea> -->
+</ion-card>
   <div class="ion-text-center">
     <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+  </div>
   </div>
 </div>
 </ion-content>

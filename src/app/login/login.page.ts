@@ -17,6 +17,26 @@ password=''
     // this.platform.backButton.subscribeWithPriority(10, () => {
     //   this.router.navigateByUrl('tabs/installation_stages');
     // });
+    var decoded:any={}
+    try{
+      var retrievedtoken = localStorage.getItem('token') || ""
+      decoded = jwt_decode(retrievedtoken);
+      console.log(retrievedtoken)
+  
+      if(retrievedtoken=='' ){
+        console.log('User Not Logged In')
+      }
+      else{
+        console.log('User Logged In')
+        this.router.navigateByUrl('tabs/tab1');
+      }
+    }
+ catch{
+   console.log('Error');
+   this.router.navigateByUrl('tabs/login');
+ }
+    
+   
    }
    showToasterSuccess(){
     this.notifyService.showSuccess("Logged In Successfully !!", "")

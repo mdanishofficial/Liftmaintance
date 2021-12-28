@@ -74,6 +74,20 @@ h1{
 .stars{
     margin-left: 10em;
 }
+.card-detailed{
+    margin-left: 0em;
+    margin-right: 1em;
+    height: 8em;
+  }
+ #textarea{
+    height: 100%;
+    width: 100%;
+    border: 0px;
+    padding-top: 1em;
+    padding-left: 1em;
+    overflow: hidden;
+    overflow-y: auto;
+     }
 .title{
     float: left;
 }

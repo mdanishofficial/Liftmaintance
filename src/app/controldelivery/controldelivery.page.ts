@@ -28,6 +28,7 @@ export class ControldeliveryPage implements OnInit {
    this.data[0].controldelivery_lightning_arrester=this.controldelivery_data[0].controldelivery_lightning_arrester
    this.data[0].controldelivery_manufacture=this.controldelivery_data[0].controldelivery_manufacture
    this.data[0].controldelivery_payloads=this.controldelivery_data[0].controldelivery_payloads
+  console.log(res)
   })
   }
   ngOnInit() {

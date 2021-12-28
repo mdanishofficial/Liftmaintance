@@ -88,6 +88,7 @@ margin-left: 1em;
 }
 .textarea{
     height: 12em;
+ 
 }
 .btn-primary{
     background-color:#194E78;
@@ -96,7 +97,7 @@ margin-left: 1em;
 }
 .btn-secondary{
     background-color:#6E6E6E;
-    width:4em;
+    width:6em;
 }
 .native-textarea{
 height: 12em;
@@ -105,6 +106,7 @@ padding-top:1em;
 padding-right: 1em;
 border: 0;
 width: 100%;
+outline:none;
 // width: 25em;
 }
 @media only screen and (max-width: 320px) {

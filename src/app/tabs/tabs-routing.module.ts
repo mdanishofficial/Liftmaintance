@@ -101,7 +101,7 @@ const routes: Routes = [
     loadChildren: () => import('../billdetails/billdetails.module').then(m => m.BilldetailsPageModule)
   },
   {
-    path: 'visitdetails',
+    path: 'visitdetails/:id',
     loadChildren: () => import('../visitdetails/visitdetails.module').then(m => m.VisitdetailsPageModule)
   },
   {
@@ -289,14 +289,14 @@ const routes: Routes = [
   },  
   {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/login',
     pathMatch: 'full'
   }
 ];
