@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
-import { InstallationService } from '../../services/main.service';
+import { UpdatepaymentModalPage } from '../../../updatepayment-modal/updatepayment-modal.page';
+import { InstallationService } from '../../../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";

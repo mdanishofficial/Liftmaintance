@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import { InstallationService } from '../../services/main.service';
+import {Router} from "@angular/router"
+import { InstallationService } from '../../../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 @Component({
