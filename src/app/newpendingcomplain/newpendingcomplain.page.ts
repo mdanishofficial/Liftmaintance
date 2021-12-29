@@ -1,19 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
+import { NotificationService } from '../../services/notification.service'
 @Component({
   selector: 'app-newpendingcomplain',
   templateUrl: './newpendingcomplain.page.html',
   styleUrls: ['./newpendingcomplain.page.scss'],
 })
 export class NewpendingcomplainPage implements OnInit {
+  @Output() someEvent = new EventEmitter<string>();
+
   malfunction_type=''
   complaindetail
   
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/solvedcomplain');
     });
@@ -22,13 +25,19 @@ export class NewpendingcomplainPage implements OnInit {
   ngOnInit() {
    
   }
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Complain Added Successfully !!", "")
+}
+ 
+showToasterError(){
+    this.notifyService.showError("Error Sending Complain",'')
+}
   send_complain(){
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
-    console.log(decoded)
     let payload={
 malfunction_type:this.malfunction_type,
 complain_detail:this.complaindetail,
@@ -37,11 +46,20 @@ complain_status:'pending',
 complain_date:date,
 user_id:decoded.user_id,
   }
+  console.log(payload)
+  try{
     this.service.addcomplain(payload).subscribe(res => {
-     console.log(res)
-     })
+      console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa')
+      console.log(res)
+      this.showToasterSuccess();
+      })
+  }
+  catch{
+    console.log(' in catch')
+  }
+ 
   }
   back(){
-    this.router.navigateByUrl('tabs/solvedcomplain');
+    this.router.navigateByUrl('tabs/pendingcomplain');
   }
 }
