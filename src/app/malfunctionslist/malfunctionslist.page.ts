@@ -20,6 +20,7 @@ export class MalfunctionslistPage implements OnInit {
     console.log(decoded)
     let payload = {
      user_id:decoded.user_id,
+     malfunction_staus:'solved'
     }
     this.service.getsolvedmalfunctions(payload).subscribe(res => {
      this.malfunction_data = res;
@@ -37,6 +38,6 @@ export class MalfunctionslistPage implements OnInit {
     this.router.navigateByUrl('/tabs/currentmalfunctionslist');
   }
   malfunction_details(id){
-    this.router.navigateByUrl('detailed_current_malfunctions/'+id);
+    this.router.navigateByUrl('detailed_solved_malfunctions/'+id);
   }
 }

@@ -82,7 +82,7 @@ export class InstallationService {
                 })
           )}
         public getsolvedmalfunctions(data): Observable<any> {
-          const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=Solved';
+          const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=solved';
           // return this.http.post(url, data);
           return this.http
           .post(url, data)
@@ -92,7 +92,7 @@ export class InstallationService {
                 })
           )}
           public getcurrentmalfunctions(data): Observable<any> {
-            const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=Unsolved';
+            const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=unsolved';
             // return this.http.post(url, data);
             return this.http
             .post(url, data)

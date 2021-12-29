@@ -63,6 +63,10 @@ const routes: Routes = [
     loadChildren: () => import('./detailed_current_malfunctions/detailed_current_malfunctions.module').then( m => m.detailed_current_malfunctionsPageModule)
   },
   {
+    path: 'detailed_solved_malfunctions/:id',
+    loadChildren: () => import('./detailed-solved-malfunctions/detailed-solved-malfunctions.module').then( m => m.DetailedSolvedMalfunctionsPageModule)
+  },
+  {
     path: 'solvedcomplain',
     loadChildren: () => import('./solvedcomplain/solvedcomplain.module').then( m => m.SolvedcomplainPageModule)
   },
@@ -341,6 +345,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'detailed-solved-malfunctions',
+    loadChildren: () => import('./detailed-solved-malfunctions/detailed-solved-malfunctions.module').then( m => m.DetailedSolvedMalfunctionsPageModule)
   },
  ];
 @NgModule({

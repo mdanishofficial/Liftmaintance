@@ -26,7 +26,7 @@
       </ion-tab-bar>
     </div>
     <br>
-    <ion-card class="card" *ngFor="let result of malfunction_data let i=index" (click)="currentmalfunction_details()">
+    <ion-card class="card" *ngFor="let result of malfunction_data let i=index" (click)="currentmalfunction_details(i)">
       <div class="flex-container">
         <div style="float: left;">
           <div class="colordiv1"></div>

@@ -20,6 +20,7 @@ export class CurrentmalfunctionsPage implements OnInit {
     console.log(decoded)
     let payload = {
      user_id:decoded.user_id,
+     malfunction_staus:'unsolved'
     }
     this.service.getcurrentmalfunctions(payload).subscribe(res => {
      this.malfunction_data = res;
@@ -36,7 +37,7 @@ export class CurrentmalfunctionsPage implements OnInit {
   async currentmalfunctions(){
     this.router.navigateByUrl('/tabs/currentmalfunctionslist');
   }
-  async currentmalfunction_details(){
-    this.router.navigateByUrl('detailed_current_malfunctions');
+  async currentmalfunction_details(id){
+    this.router.navigateByUrl('detailed_current_malfunctions/'+id);
   }
   }

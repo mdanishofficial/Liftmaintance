@@ -24,6 +24,10 @@ const routes: Routes = [
         loadChildren: () => import('../detailed_current_malfunctions/detailed_current_malfunctions.module').then(m => m.detailed_current_malfunctionsPageModule)
       },
       {
+        path: 'detailed_solved_malfunctions',
+        loadChildren: () => import('../detailed-solved-malfunctions/detailed-solved-malfunctions.module').then(m => m.DetailedSolvedMalfunctionsPageModule)
+      },
+      {
         path: 'installation_stages',
         loadChildren: () => import('../installation-stages/installation-stages-routing.module').then(m => m.InstallationStagesPageRoutingModule)
       },
