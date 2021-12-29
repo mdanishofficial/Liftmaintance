@@ -12,9 +12,9 @@ export class NewmalfunctionsPage implements OnInit {
   ngOnInit() {
   }
   new(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancerepairtechnician/newmalfunctions');
+    this.router.navigateByUrl('tabs/adminroles/installationtechnician/newmalfunctions');
   }
 completed(){
-  this.router.navigateByUrl('tabs/adminroles/maintenancerepairtechnician/completedmalfunctions');
+  this.router.navigateByUrl('tabs/adminroles/installationtechnician/completedmalfunctions');
 }
 }

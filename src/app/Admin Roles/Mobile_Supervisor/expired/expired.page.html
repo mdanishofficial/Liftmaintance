@@ -19,11 +19,11 @@
     <h1 class="ion-text-center">Contract</h1>
     <div class="tabs">
       <ion-tab-bar slot="top">
-          <button type="button" class="btn btn-primary" (click)="contract()" >Contract</button>
+          <button type="button" class="btn btn-secondary" (click)="contract()" >Contract</button>
       <div class="divider"></div>
           <button type="button" class="btn btn-secondary" (click)="curmonth()">Cur Month Expiring</button>
           <div class="divider"></div>
-          <button type="button" class="btn btn-secondary" (click)="expired()">Expired</button>
+          <button type="button" class="btn btn-primary" (click)="expired()">Expired</button>
       </ion-tab-bar>
    </div>
    <div class="flex-container0">
@@ -44,8 +44,8 @@
           <h6 class="client">Client: Imtiaz Hamza</h6>
           <div class="flex-container3">
             <div class="date">
-              <text>Lifts Number : 6</text><br>
-              <text>Contract price : 2300 Riyals</text>
+              <ion-text>Lifts Number : 6</ion-text><br>
+              <ion-text>Contract price : 2300 Riyals</ion-text>
             </div>
             <div class="colordiv1">
               <ion-text class="enddate">Contract End Date :22-3-2010</ion-text>
@@ -60,8 +60,8 @@
           <h6 class="client">Client: Imtiaz Hamza</h6>
           <div class="flex-container3">
             <div class="date">
-              <text>Lifts Number : 6</text><br>
-              <text>Contract price : 2300 Riyals</text>
+              <ion-text>Lifts Number : 6</ion-text><br>
+              <ion-text>Contract price : 2300 Riyals</ion-text>
             </div>
             <div class="colordiv1">
               <ion-text class="enddate">Contract End Date :22-3-2010</ion-text>
@@ -70,8 +70,7 @@
         </div>
       </div>
     </ion-card>
-    <div class="flex-container" style="justify-content: center;">
-    <ion-back-button type="button" defaultHref="/tabs/pendingcomplain" icon="none" class="btn btn-success btn-lg">Back</ion-back-button>
-  </div>
+    <div class="ion-text-center">
+      <button type="button" class="btn btn-info" (click)="back()">Back</button>  </div>
     </div>
     </ion-content>

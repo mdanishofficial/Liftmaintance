@@ -17,9 +17,10 @@
 <div class="white"></div>
 <ion-content overflow-scroll="true">
   <div class="container">
-    <h1 class="ion-text-center">Malfunction Report</h1>
+    <div *ngIf="malfunction_data">
+    <h1 class="ion-text-center">Malfunction Report #{{id}}</h1>
     <div class="leftcol">
-      <ion-text class="date">Date: {{malfunction_data[0].malfunction_date}}</ion-text>
+      <ion-text class="date">Date: {{malfunction_data[id]?.malfunction_date}}</ion-text>
     </div>
     <br>
  <ion-alert-controller></ion-alert-controller>
@@ -28,7 +29,7 @@
     <img class="avatar" src="../../assets/avatar.svg">
   </ion-avatar>
   <ion-label>
-    <h2>Technician: {{malfunction_data[0].technician_assigned}}</h2>
+    <h2>Technician: {{malfunction_data[id]?.technician_assigned}}</h2>
     <div class="title">
     <p>Maintenance Technician</p>
       </div>
@@ -86,7 +87,7 @@
    <br>
    <div>
      <div class="leftcol">
-       <ion-text class="date"> {{malfunction_data[0].malfunction_notes}}</ion-text>
+       <ion-text class="date"> {{malfunction_data[id]?.malfunction_notes}}</ion-text>
      </div>
      <div class="rightcolbrown">
      </div>
@@ -103,10 +104,10 @@
    <br>
    <div *ngFor="let result of parts_data; let i = index;">
      <div class="leftcol">
-       <ion-text class="date">{{result.part_name}}</ion-text>
+       <ion-text class="date">{{result?.part_name}}</ion-text>
      </div>
      <div class="rightcol">
-      {{result.part_price}}
+      {{result?.part_price}}
      </div>
      <hr class="hr"/>
    </div>
@@ -133,7 +134,7 @@
     <ion-text class="h2">Payment Status</ion-text>
   </div>
   <div class="rightcol">
-    Not Paid
+    {{malfunction_data[id]?.bill_payment_status}}
   </div>
 </div><hr class="hr"/>
 <h2 class="ion-text-left" id="payment">Payment Method</h2>
@@ -149,6 +150,7 @@
   </div> -->
 <br>
 <br>
+</div>
 </div>
 </ion-content>
 

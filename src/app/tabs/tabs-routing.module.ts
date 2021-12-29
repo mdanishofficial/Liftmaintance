@@ -170,16 +170,16 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
   },
   {
-    path: 'adminroles/maintenancemanager/contracts',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/contracts/contracts.module').then(m => m.ContractsPageModule)
+    path: 'adminroles/Mobile_Supervisor/contracts',
+    loadChildren: () => import('../Admin Roles/Mobile_Supervisor/contracts/contracts.module').then(m => m.ContractsPageModule)
   },
   {
-    path: 'adminroles/maintenancemanager/curmonthexpiring',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/curmonthexpiring/curmonthexpiring.module').then(m => m.CurmonthexpiringPageModule)
+    path: 'adminroles/Mobile_Supervisor/curmonthexpiring',
+    loadChildren: () => import('../Admin Roles/Mobile_Supervisor/curmonthexpiring/curmonthexpiring.module').then(m => m.CurmonthexpiringPageModule)
   },
   {
-    path: 'adminroles/maintenancemanager/expired',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/expired/expired.module').then(m => m.ExpiredPageModule)
+    path: 'adminroles/Mobile_Supervisor/expired',
+    loadChildren: () => import('../Admin Roles/Mobile_Supervisor/expired/expired.module').then(m => m.ExpiredPageModule)
   },
   {
     path: 'adminroles/maintenancemanager/contractdetails',
@@ -252,20 +252,20 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/menu/menu.module').then(m => m.MenuPageModule)
   },
   {
-    path: 'adminroles/maintenancerepairtechnician/newmalfunctions',
-    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/newmalfunctions/newmalfunctions.module').then(m => m.NewmalfunctionsPageModule)
+    path: 'adminroles/installationtechnician/newmalfunctions',
+    loadChildren: () => import('../Admin Roles/Installation Technician/newmalfunctions/newmalfunctions.module').then(m => m.NewmalfunctionsPageModule)
   },
   {
-    path: 'adminroles/maintenancerepairtechnician/completedmalfunctions',
-    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/completedmalfunctions/completedmalfunctions.module').then(m => m.CompletedmalfunctionsPageModule)
+    path: 'adminroles/installationtechnician/completedmalfunctions',
+    loadChildren: () => import('../Admin Roles/Installation Technician/completedmalfunctions/completedmalfunctions.module').then(m => m.CompletedmalfunctionsPageModule)
   },
   {
-    path: 'adminroles/maintenancerepairtechnician/maintenance_malfunction_detail_update',
-    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-update/maintenance-malfunction-detail-update.module').then(m => m.MaintenanceMalfunctionDetailUpdatePageModule)
+    path: 'adminroles/installationtechnician/maintenance_malfunction_detail_update',
+    loadChildren: () => import('../Admin Roles/Installation Technician/maintenance-malfunction-detail-update/maintenance-malfunction-detail-update.module').then(m => m.MaintenanceMalfunctionDetailUpdatePageModule)
   },
   {
-    path: 'adminroles/maintenancerepairtechnician/maintenance_malfunction_detail_view',
-    loadChildren: () => import('../Admin Roles/Maintenance_Repair_Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then(m => m.MaintenanceMalfunctionDetailViewPageModule)
+    path: 'adminroles/installationtechnician/maintenance_malfunction_detail_view',
+    loadChildren: () => import('../Admin Roles/Installation Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then(m => m.MaintenanceMalfunctionDetailViewPageModule)
   },
   {
     path: 'adminroles/installationmanager/installation',

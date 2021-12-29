@@ -12,12 +12,12 @@ export class ExpiredPage implements OnInit {
   ngOnInit() {
   }
   contract(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancemanager/contracts');
+    this.router.navigateByUrl('tabs/adminroles/Mobile_Supervisor/contracts');
   }
   curmonth(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancemanager/curmonthexpiring');
+    this.router.navigateByUrl('tabs/adminroles/Mobile_Supervisor/curmonthexpiring');
   }
   expired(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancemanager/expired');
+    this.router.navigateByUrl('tabs/adminroles/Mobile_Supervisor/expired');
   }
 }

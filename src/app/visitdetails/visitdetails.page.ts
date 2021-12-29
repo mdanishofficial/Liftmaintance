@@ -25,23 +25,22 @@ export class VisitdetailsPage implements OnInit {
      user_id:decoded.user_id,
     }
     this.service.getmaintenance(payload).subscribe(res => {
-      // for(var i=0;i<res.length;i++){
-        this.maintenance_data = res;
-        // }
-        console.log(this.maintenance_data)
+     this.maintenance_data = res;
+    console.log(this.maintenance_data)
          })
-         this.service.getrating(payload).subscribe(res => {
-          this.technician_data = res;
-        })
-  }
+        //  this.service.getrating(payload).subscribe(res => {
+        //   this.technician_data = res;
+        // })
+    }
   ngOnInit() {
     this.sub = this.activatedRoute.params.subscribe(params => {
      this.id = params['id'];
+     console.log(this.id)
      });
      }
    sub
    id
-  maintenance_data = []
+  maintenance_data
   technician_data
   logRatingChange(rating){
     console.log("changed rating: ",rating);

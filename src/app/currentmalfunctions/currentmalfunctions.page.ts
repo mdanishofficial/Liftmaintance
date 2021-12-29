@@ -37,6 +37,6 @@ export class CurrentmalfunctionsPage implements OnInit {
     this.router.navigateByUrl('/tabs/currentmalfunctionslist');
   }
   async currentmalfunction_details(){
-    this.router.navigateByUrl('/tabs/detailed_current_malfunctions');
+    this.router.navigateByUrl('detailed_current_malfunctions');
   }
   }

@@ -19,10 +19,10 @@
 <div class="container">
   <!-- <br> -->
   <!-- <div *ngFor="let result of maintenance_data let i=index"> -->
-<div>
+<div *ngIf="maintenance_data">
  <h1 class="ion-text-center">Visit#{{id}}</h1>
  <div>
-  <ion-text class="date">Date:  {{maintenance_data[id].maintenance_date}}</ion-text>
+  <ion-text class="date">Date:  {{maintenance_data[id]?.maintenance_date}}</ion-text>
 </div>
   <ion-item>
     <ion-avatar slot="start">
@@ -30,7 +30,7 @@
     </ion-avatar>
     <ion-label>
       <div>
-      <h2>Technician: {{maintenance_data[id].technician_assigned}}</h2>
+      <h2>Technician: {{maintenance_data[id]?.technician_assigned}}</h2>
     </div>
       <div class="title">
       <p>Maintenance Technician</p>
@@ -58,7 +58,7 @@
  <div>
   <div>
     <div class="leftcol">
-      <ion-text class="date">{{maintenance_data[id].maintenance_status}}</ion-text>
+      <ion-text class="date">{{maintenance_data[id]?.maintenance_status}}</ion-text>
       </div>
     </div>
     <div [ngClass]='result?.maintenance_status == "Completed" ?"greendiv":"reddiv"'>
@@ -70,7 +70,7 @@
   <br>
   <ion-card class="card-detailed">
     <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
-  <ion-text id="textarea" placeholder="Please enter notes" disabled="true">{{maintenance_data[id].report_notes}}</ion-text>
+  <ion-text id="textarea" placeholder="Please enter notes" disabled="true">{{maintenance_data[id]?.report_notes}}</ion-text>
     <!-- <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter notes" disabled="true"></textarea> -->
 </ion-card>
   <div class="ion-text-center">

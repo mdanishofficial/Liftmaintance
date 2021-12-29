@@ -31,8 +31,7 @@ export class MaintenancelistPage implements OnInit {
   }
   maintenance_data = []
   technicianspage(id){
-    console.log(id)
-    this.router.navigateByUrl('tabs/visitdetails/'+id);
+     this.router.navigateByUrl('tabs/visitdetails/'+id);
   }
   back() {
     this.router.navigateByUrl('tabs/tab1');

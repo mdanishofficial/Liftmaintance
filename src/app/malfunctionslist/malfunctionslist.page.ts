@@ -28,11 +28,15 @@ export class MalfunctionslistPage implements OnInit {
   }
   ngOnInit() {
   }
+
   malfunction_data = []
   async malfunctions(){
     this.router.navigateByUrl('/tabs/malfunctionslist');
   }
   async currentmalfunctions(){
     this.router.navigateByUrl('/tabs/currentmalfunctionslist');
+  }
+  malfunction_details(id){
+    this.router.navigateByUrl('detailed_current_malfunctions/'+id);
   }
 }

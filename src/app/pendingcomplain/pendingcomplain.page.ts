@@ -40,6 +40,6 @@ ngOnInit() {
     this.router.navigateByUrl('/tabs/pendingcomplain');
   }
   newcomplain(){
-    this.router.navigateByUrl('/tabs/newpendingcomplain');
+    this.router.navigateByUrl('newpendingcomplain');
   }
 }

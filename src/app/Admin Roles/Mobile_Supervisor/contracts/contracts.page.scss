@@ -44,10 +44,10 @@
     display: flex;
 }
 .searchbar{
-    width: 13em;
+    width: 15em;
     height: 3em;
     margin-top: 0em;
-    margin-left: 0em;
+    margin-left: -1em;
     --border-radius: 0px;
     --background: white;
     --placeholder-color: #DCDCDC;
@@ -114,4 +114,10 @@ padding-left: 0.7em;
             width: 4em;
             background-color:#6E6E6E;
             border:#6E6E6E; ;
+        }
+        .btn-info{
+          width: 6em;
+          background-color:#6E6E6E;
+          border:#6E6E6E; 
+          color: white;
         }
