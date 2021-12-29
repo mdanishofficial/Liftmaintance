@@ -1,4 +1,4 @@
-import { Component, OnInit,Input, OnChanges } from '@angular/core';
+import { Component, OnInit,Input, OnChanges, SimpleChanges} from '@angular/core';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
@@ -33,21 +33,22 @@ export class PendingcomplainPage implements OnInit,OnChanges {
   
 ngOnInit() {
   }
-  ngOnChanges() {
-   var decoded:any={}
-    var retrievedtoken = localStorage.getItem('token')
-    decoded = jwt_decode(retrievedtoken);
-    console.log(decoded)
-    let payload = {
-     user_id:decoded.user_id,
-     complain_type:'normal'
-    }
+  ngOnChanges(changes:SimpleChanges) {
+    console.log(changes)
+  //  var decoded:any={}
+  //   var retrievedtoken = localStorage.getItem('token')
+  //   decoded = jwt_decode(retrievedtoken);
+  //   console.log(decoded)
+  //   let payload = {
+  //    user_id:decoded.user_id,
+  //    complain_type:'normal'
+  //   }
   
-    this.service.getpendingcomplains(payload).subscribe(res => {
-     this.complain_data = res;
-  console.log(this.complain_data)
-    })
-    console.log(this.refresh)
+  //   this.service.getpendingcomplains(payload).subscribe(res => {
+  //    this.complain_data = res;
+  // console.log(this.complain_data)
+  //   })
+  //   console.log(this.refresh)
   }
 
   async solvedcomplain(){
