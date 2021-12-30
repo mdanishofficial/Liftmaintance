@@ -35,6 +35,9 @@ export class UpdatepaymentModalPage implements OnInit {
     }
   ngOnInit() {
   }
+  uploadFiles(e){
+    console.log(e)
+  }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')
      this.modalController.dismiss({

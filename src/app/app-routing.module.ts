@@ -71,7 +71,7 @@ const routes: Routes = [
     loadChildren: () => import('./solvedcomplain/solvedcomplain.module').then( m => m.SolvedcomplainPageModule)
   },
   {
-    path: 'pendingcomplain',
+    path: 'pendingcomplain/:refresh',
     loadChildren: () => import('./pendingcomplain/pendingcomplain.module').then( m => m.PendingcomplainPageModule)
   },
   {
@@ -79,8 +79,8 @@ const routes: Routes = [
     loadChildren: () => import('./solvedemergencycomplain/solvedemergencycomplain.module').then( m => m.SolvedemergencycomplainPageModule)
   },
   {
-    path: 'pendingemergencycomplain',
-    loadChildren: () => import('./pendingemergencycomplain/pendingemergencycomplain.module').then( m => m.PendingemergencycomplainPageModule)
+    path: 'pendingemergencycomplain/:refresh',
+    loadChildren: () => import('./pendingemergencycomplain/pendingemergencycomplain.module').then( m => m.Pendingemergencycomplain)
   },
   {
     path: 'paidbills',

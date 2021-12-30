@@ -17,6 +17,7 @@
 <div class="white"></div>
 <ion-content overflow-scroll="true">
   <div class="container">
+    <!-- <app-newpendingcomplain (typeChanged)="onTypeEmitted($event)"></app-newpendingcomplain> -->
     <h1 class="ion-text-center">Complain</h1>
     <div class="tabs">
       <ion-tab-bar slot="top">
@@ -28,7 +29,7 @@
     <div class="flex-container" *ngFor="let result of complain_data let i=index">
       <div class="rectangle">
         <div class="square">
-        <h3 class="h3">Malfunction Type :{{result?.complain_type}}</h3>
+        <h3 class="h3">Malfunction Type :{{result?.malfunction_type}}</h3>
         <ion-text class="date">Date:{{result?.complain_date}}<br></ion-text>
         <h3 class="h3">Detail</h3>
         <ion-text class="details">{{result?.complain_detail}}   </ion-text> 

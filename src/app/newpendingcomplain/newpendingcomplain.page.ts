@@ -1,20 +1,19 @@
-import { Component, OnInit,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,Output,Input, EventEmitter } from '@angular/core';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../services/notification.service'
+import { ThisReceiver } from '@angular/compiler';
 @Component({
   selector: 'app-newpendingcomplain',
   templateUrl: './newpendingcomplain.page.html',
   styleUrls: ['./newpendingcomplain.page.scss'],
 })
 export class NewpendingcomplainPage implements OnInit {
-  @Output() someEvent = new EventEmitter<string>();
-
-  malfunction_type=''
-  complaindetail
+malfunction_type=''
+  complaindetail=''
   
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -23,16 +22,19 @@ export class NewpendingcomplainPage implements OnInit {
   }
 
   ngOnInit() {
-   
-  }
+   }
   showToasterSuccess(){
     this.notifyService.showSuccess("Complain Added Successfully !!", "")
 }
  
 showToasterError(){
-    this.notifyService.showError("Error Sending Complain",'')
+    this.notifyService.showError("Please Fill Out Both Fields",'')
 }
   send_complain(){
+    if(this.malfunction_type==''|| this.complaindetail==''){
+      this.showToasterError();
+    }
+    else{
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)
     var decoded:any={}
@@ -49,7 +51,6 @@ user_id:decoded.user_id,
   console.log(payload)
   try{
     this.service.addcomplain(payload).subscribe(res => {
-      console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaa')
       console.log(res)
       this.showToasterSuccess();
       })
@@ -57,9 +58,11 @@ user_id:decoded.user_id,
   catch{
     console.log(' in catch')
   }
- 
+}
+  // this.parentfunc.call_api()
   }
   back(){
-    this.router.navigateByUrl('tabs/pendingcomplain');
+    var refresh=true
+    this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);
   }
 }

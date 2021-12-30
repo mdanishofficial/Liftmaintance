@@ -3,6 +3,8 @@ import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import {ChangeDetectorRef} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-pendingemergencycomplain',
   templateUrl: './pendingemergencycomplain.page.html',
@@ -10,10 +12,28 @@ import jwt_decode from "jwt-decode";
 })
 export class PendingemergencycomplainPage implements OnInit {
 
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(public activatedRoute: ActivatedRoute,private cdr:ChangeDetectorRef,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
+    this.call_api()
+    }
+  complain_data
+
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
@@ -26,17 +46,15 @@ export class PendingemergencycomplainPage implements OnInit {
     this.service.getpendingcomplains(payload).subscribe(res => {
      this.complain_data = res;
   console.log(this.complain_data)
+ 
     })
-  }
-  complain_data
-
-  ngOnInit() {
   }
   async solved(){
     this.router.navigateByUrl('/tabs/solvedemergencycomplain');
   }
   async pending(){
-    this.router.navigateByUrl('/tabs/pendingemergencycomplain');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/pendingemergencycomplain/'+refresh);
   }
   newemergencycomplain(){
     console.log('inside new emergency complain')

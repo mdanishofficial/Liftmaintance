@@ -61,8 +61,7 @@
       <ion-text class="date">{{maintenance_data[id]?.maintenance_status}}</ion-text>
       </div>
     </div>
-    <div [ngClass]='result?.maintenance_status == "Completed" ?"greendiv":"reddiv"'>
-    </div>
+    <div [ngClass]='maintenance_data[id]?.maintenance_status == "Completed" ?"greendiv":"reddiv"'></div>
   </div>
   <br>
   <hr class="hr">

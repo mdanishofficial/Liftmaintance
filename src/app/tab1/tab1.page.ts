@@ -30,10 +30,12 @@ export class Tab1Page {
   }
   complain(){
     console.log('inside complain')
-    this.router.navigateByUrl('tabs/pendingcomplain');
+    var refresh=false
+    this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);
   }
   emergencycomplain(){
+    var refresh=false
     console.log('inside emergency complain')
-    this.router.navigateByUrl('tabs/pendingemergencycomplain');
+    this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
   }
 }

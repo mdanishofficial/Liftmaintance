@@ -1,40 +1,57 @@
-import { Component, OnInit,Input, OnChanges, SimpleChanges} from '@angular/core';
+import { Component, OnInit,Input,  Output, EventEmitter,SimpleChanges} from '@angular/core';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import {ChangeDetectorRef} from '@angular/core';
+import { NewpendingcomplainPage } from "../newpendingcomplain/newpendingcomplain.page";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-pendingcomplain',
   templateUrl: './pendingcomplain.page.html',
   styleUrls: ['./pendingcomplain.page.scss'],
 })
-export class PendingcomplainPage implements OnInit,OnChanges {
-  @Input() refresh
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+export class PendingcomplainPage implements OnInit {
+  @Input() ["parentfunc"]: NewpendingcomplainPage
+ constructor(public activatedRoute: ActivatedRoute,private cdr:ChangeDetectorRef,private platform: Platform,private service: InstallationService,private router: Router){
    this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
-    var decoded:any={}
-    var retrievedtoken = localStorage.getItem('token') || ""
-    decoded = jwt_decode(retrievedtoken);
-    console.log(decoded)
-    let payload = {
-     user_id:decoded.user_id,
-     complain_type:'normal'
-    }
-  
-    this.service.getpendingcomplains(payload).subscribe(res => {
-     this.complain_data = res;
-  console.log(this.complain_data)
-    })
-   
-  }
+    this.call_api();
+   }
   complain_data
   
 ngOnInit() {
-  }
-  ngOnChanges(changes:SimpleChanges) {
-    console.log(changes)
+  console.log('Inside Ng On INit')
+    this.sub = this.activatedRoute.params.subscribe(params => {
+      this.refresh = params['refresh'];
+      console.log(this.refresh)
+      if(this.refresh=='true'){
+        console.log('Refresh is True')
+        this.call_api()
+      }
+    });
+   }
+    sub
+    refresh
+ call_api(){
+  var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+  let payload = {
+     user_id:decoded.user_id,
+     complain_type:'normal'
+    }
+   this.service.getpendingcomplains(payload).subscribe(res => {
+    this.complain_data = res;
+  console.log(this.complain_data)
+ })
+ }
+ 
+
+  // ngOnChanges(changes:SimpleChanges) {
+  //   console.log('Inside ng on changes')
+  //   console.log(changes)
   //  var decoded:any={}
   //   var retrievedtoken = localStorage.getItem('token')
   //   decoded = jwt_decode(retrievedtoken);
@@ -43,19 +60,24 @@ ngOnInit() {
   //    user_id:decoded.user_id,
   //    complain_type:'normal'
   //   }
+  // }
+  ionViewWillEnter(){
+    console.log('inside component will enter')
+  }
   
   //   this.service.getpendingcomplains(payload).subscribe(res => {
   //    this.complain_data = res;
   // console.log(this.complain_data)
   //   })
   //   console.log(this.refresh)
-  }
+  // }
 
   async solvedcomplain(){
     this.router.navigateByUrl('/tabs/solvedcomplain');
   }
   async pendingcomplain(){
-    this.router.navigateByUrl('/tabs/pendingcomplain');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/pendingcomplain/'+refresh);
   }
   newcomplain(){
     this.router.navigateByUrl('newpendingcomplain');

@@ -34,7 +34,8 @@ export class SolvedcomplainPage implements OnInit {
     this.router.navigateByUrl('/tabs/solvedcomplain');
   }
   async pendingcomplain(){
-    this.router.navigateByUrl('/tabs/pendingcomplain');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/pendingcomplain/'+refresh);
   }
   newcomplain(){
     console.log('inside new emergency complain')

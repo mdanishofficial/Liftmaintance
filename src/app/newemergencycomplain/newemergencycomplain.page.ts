@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
+import { NotificationService } from '../../services/notification.service'
 @Component({
   selector: 'app-newemergencycomplain',
   templateUrl: './newemergencycomplain.page.html',
@@ -11,14 +12,25 @@ import jwt_decode from "jwt-decode";
 })
 export class NewemergencycomplainPage implements OnInit {
   malfunction_type=''
-  complaindetail
+  complaindetail=''
   
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/pendingemergencycomplain');
     });
   }
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Complain Added Successfully !!", "")
+}
+ 
+showToasterError(){
+    this.notifyService.showError("Please Fill Out Both The fields",'')
+}
   send_complain(){
+    if(this.malfunction_type==''|| this.complaindetail==''){
+      this.showToasterError();
+    }
+    else{
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)
     var decoded:any={}
@@ -34,13 +46,23 @@ complain_status:'pending',
 complain_date:date,
 user_id:decoded.user_id,
   }
+  try{
     this.service.addcomplain(payload).subscribe(res => {
-     console.log(res)
-     })
+      console.log(res)
+      this.showToasterSuccess();
+         })
+  }
+  catch{
+    console.log('Error')
+    this.showToasterError();
+  }
+}
+
   }
   ngOnInit() {
   }
   back(){
-    this.router.navigateByUrl('tabs/pendingemergencycomplain');
+    var refresh=true
+    this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
   }
 }

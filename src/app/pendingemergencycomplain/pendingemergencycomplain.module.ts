@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PendingemergencycomplainPageRoutingModule } from './pendingemergencycomplain-routing.module';
+import { PendingemergencycomplainRoutingModule } from './pendingemergencycomplain-routing.module';
 
 import { PendingemergencycomplainPage } from './pendingemergencycomplain.page';
 
@@ -13,8 +13,8 @@ import { PendingemergencycomplainPage } from './pendingemergencycomplain.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PendingemergencycomplainPageRoutingModule
+    PendingemergencycomplainRoutingModule
   ],
   declarations: [PendingemergencycomplainPage]
 })
-export class PendingemergencycomplainPageModule {}
+export class Pendingemergencycomplain {}
