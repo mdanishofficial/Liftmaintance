@@ -14,4 +14,10 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DetailedSolvedMalfunctionsPageRoutingModule {}
+export class DetailedSolvedMalfunctionsPageRoutingModule {
+  constructor(){}
+  onRatingChange(rating){
+    console.log('The evaluation was modified and now its value is: ',rating);
+    // do your stuff
+}
+}

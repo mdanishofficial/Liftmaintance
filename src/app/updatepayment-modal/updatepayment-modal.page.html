@@ -6,13 +6,17 @@
   <!-- <img src="../../assets/attach.svg" class="attach"/>
   <input type="file" name="photo" /> -->
   <!-- <ion-item> -->
+    <br>
     <div>
     <div class="ion-text-center" (click)="inputFile.click()" class="#194E78-button">
           <img src="../../assets/attach.svg" class="attach"/>
     </div>
-    <input #inputFile id="input-file"  style="opacity:0" type="file"  [(ngModel)]="image" (change)="uploadFiles($event)"
-    multiple accept="image/png, image/jpeg"/>
+    <input #inputFile id="input-file"  style="opacity:0" type="file" name="bill_receipt" (change)="uploadFiles($event)"
+    multiple accept="image/png, image/jpeg" enctype="multipart/form-data"/>
 <!-- </ion-item> -->
+    <div *ngIf="image"> 
+      {{image}}
+</div>
   <!-- </div> -->
 <!-- </div> -->
 <div class="ion-text-center" id="buttonsdiv">

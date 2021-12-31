@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { HttpClient } from '@angular/common/http';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-raildoor',
   templateUrl: './raildoor.page.html',
@@ -9,7 +10,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RaildoorPage implements OnInit {
   railanddoor_data=[]
-  constructor(private http: HttpClient, private service: InstallationService, private router: Router) {
+  constructor(private platform: Platform,private http: HttpClient, private service: InstallationService, private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/installation_stages');
+    });
     let payload = {
       railanddoor_id: "a84edc",
     }

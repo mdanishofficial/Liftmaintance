@@ -11,7 +11,7 @@ import jwt_decode from "jwt-decode";
 })
 export class UpdatepaymentModalPage implements OnInit {
   amount;
-  image
+  billdata:any={};
   constructor(private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
@@ -19,24 +19,33 @@ export class UpdatepaymentModalPage implements OnInit {
       });
     });
    }
+  
    postbill(){
-    console.log(this.image)
+    
+    // console.log(this.bill_receipt)
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
-    console.log(decoded)
-    let payload = {
-     user_id:decoded.user_id,
-     bill_amount:this.amount
-    }
-      this.service.updatebill(payload).subscribe(res => {
+    const formData = new FormData()
+    formData.append('bill_receipt', this.billdata.bill_receipt);
+    formData.append('user_id', decoded.user_id);
+    formData.append('bill_amount', this.amount);
+  // let payload = {
+    //  user_id:decoded.user_id,
+    //  bill_amount:this.amount
+    // }
+    console.log(formData)
+      this.service.updatebill(formData).subscribe(res => {
        console.log(res)
          })
     }
   ngOnInit() {
   }
   uploadFiles(e){
-    console.log(e)
+  const file = e.target.files[0];
+    this.billdata.bill_receipt = file;
+    console.log(this.billdata.bill_receipt);
+    console.log('An Image Uploaded')
   }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import jwt_decode from "jwt-decode";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-controldelivery',
   templateUrl: './controldelivery.page.html',
@@ -9,7 +10,10 @@ import jwt_decode from "jwt-decode";
 })
 export class ControldeliveryPage implements OnInit {
 
-  constructor(private service: InstallationService, private router: Router) {
+  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/installation_stages');
+    });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);

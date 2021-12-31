@@ -14,6 +14,8 @@
 .text{
     --placeholder-color:#6E6E6E;
     margin-top: 2em;
+    border: 1px solid gray;
+    border-radius: 4em;
 }
 
 .attach-button{
@@ -44,5 +46,5 @@
     display:inline-block;
   }
   #buttonsdiv{
-      margin-top: -1em;
+      margin-top: 1em;
   }
