@@ -44,7 +44,8 @@ export class InstallationPage implements OnInit {
   }
   installation_data=[]
   back(){
-    this.router.navigateByUrl('tabs/installation_stages');
+    var refresh=true
+    this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
 //   addinstallation() {
 // console.log(this.startdate)

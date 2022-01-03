@@ -15,10 +15,11 @@ export class NewemergencycomplainPage implements OnInit {
   complaindetail=''
   
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
+  
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/pendingemergencycomplain');
     });
-  }
+    }
   showToasterSuccess(){
     this.notifyService.showSuccess("Complain Added Successfully !!", "")
 }

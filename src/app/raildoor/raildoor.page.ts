@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { HttpClient } from '@angular/common/http';
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-raildoor',
   templateUrl: './raildoor.page.html',
@@ -12,13 +13,20 @@ export class RaildoorPage implements OnInit {
   railanddoor_data=[]
   constructor(private platform: Platform,private http: HttpClient, private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
+      var refresh=true
+      this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    // console.log(decoded)
     let payload = {
-      railanddoor_id: "a84edc",
+     user_id:decoded.user_id,
     }
+    console.log(payload)
     this.service.getrailanddoor(payload).subscribe(res => {
-      // console.log(res)
+      console.log(res)
+      console.log('res')
       this.railanddoor_data = res;
       console.log(this.railanddoor_data[0].door_dressing)
       this.form[0].isChecked = this.railanddoor_data[0].ten_meter_long_rail
@@ -48,6 +56,7 @@ ngOnInit() {
     { val: 'Doors Dressing', isChecked: false }
   ];
  back(){
-  this.router.navigateByUrl('tabs/installation_stages');
+  var refresh=true
+  this.router.navigateByUrl('tabs/installation_stages/'+refresh);
  }
 }

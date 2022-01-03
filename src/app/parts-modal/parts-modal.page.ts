@@ -17,6 +17,20 @@ export class PartsModalPage implements OnInit {
         'dismissed': true
       });
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    let payload = {
+      user_id:decoded.user_id,
+    }
+    this.service.getparts(payload).subscribe(res => {
+      this.parts_data = res;
+         console.log(this.parts_data)
+       })
+    for(var i=0;i<this.parts_data.length;i++){
+      this.form.push({val:this.parts_data[i].part_name,isChecked:this.parts_data[i].provided})
+    }
+    console.log('this.form')
    }
   radiovalue
 
@@ -41,10 +55,8 @@ if(this.form[i].isChecked==true){
 }
 }
 console.log(this.parts)
-   
-    let payload = {
-    
-     user_id:decoded.user_id,
+   let payload = {
+      user_id:decoded.user_id,
     }
     console.log(payload)
     this.service.addmalfunctionparts(payload).subscribe(res => {
@@ -56,13 +68,15 @@ console.log(this.parts)
       });
    }
    malfunction_data
+   parts_data
    parts=[]
    public form = [
-    { val: 'Door Card', isChecked: false },
-    { val: 'Gallon', isChecked: false },
-    { val: 'Door Fork', isChecked: false }
+    // { val: 'Door Card', isChecked: false },
+    // { val: 'Gallon', isChecked: false },
+    // { val: 'Door Fork', isChecked: false }
+];
 
-  ];
+  // form[0].isChecked=true
 
   }
 

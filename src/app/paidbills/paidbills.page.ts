@@ -5,6 +5,7 @@ import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-paidbills',
   templateUrl: './paidbills.page.html',
@@ -12,7 +13,24 @@ import jwt_decode from "jwt-decode";
 })
 export class PaidbillsPage implements OnInit {
 
-  constructor(private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) { 
+   this.call_api()
+  }
+  bill_data = []
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
@@ -28,14 +46,13 @@ export class PaidbillsPage implements OnInit {
   console.log(this.bill_data)
     })
   }
-  bill_data = []
-  ngOnInit() {
-  }
   async unpaid(){
-    this.router.navigateByUrl('/tabs/unpaidbills');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/unpaidbills/'+refresh);
   }
   async paid(){
-    this.router.navigateByUrl('/tabs/paidbills');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/paidbills/'+refresh);
   }
   async presentModalUpdatePayment(){
     
@@ -44,6 +61,9 @@ export class PaidbillsPage implements OnInit {
       component: UpdatepaymentModalPage ,
       cssClass: 'updatePayment'
     });
+    modal.onDidDismiss().then((data) => {
+      this.call_api()
+   });
     return await modal.present();
   }
 }

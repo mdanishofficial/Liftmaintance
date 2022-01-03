@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-maintenancelist',
   templateUrl: './maintenancelist.page.html',
@@ -10,7 +11,24 @@ import jwt_decode from "jwt-decode";
 })
 export class MaintenancelistPage implements OnInit {
 
-  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
+  this.call_api()
+  }
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  maintenance_data = []
+  call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
@@ -26,11 +44,7 @@ export class MaintenancelistPage implements OnInit {
       console.log(this.maintenance_data)
     })
   }
-
-  ngOnInit() {
-  }
-  maintenance_data = []
-  technicianspage(id){
+  visitdetails(id){
      this.router.navigateByUrl('tabs/visitdetails/'+id);
   }
   back() {

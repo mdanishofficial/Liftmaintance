@@ -13,20 +13,23 @@ SwiperCore.use([IonicSwiper]);
 export class Tab1Page {
   constructor(private router: Router) { }
   installation_stages(){
-    console.log('inside Installation')
-    this.router.navigateByUrl('tabs/installation_stages');
+var refresh=false    
+this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
   maintenance(){
+    var refresh=false  
     console.log('inside maintenance')
-    this.router.navigateByUrl('tabs/maintenancelist');
+    this.router.navigateByUrl('tabs/maintenancelist/'+refresh);
   }
   malfunctions(){
+    var refresh=false  
     console.log('inside malfunctions')
-    this.router.navigateByUrl('tabs/malfunctionslist');
+    this.router.navigateByUrl('tabs/malfunctionslist/'+refresh);
   }
   bills(){
+    var refresh=false  
     console.log('inside bills')
-    this.router.navigateByUrl('tabs/unpaidbills');
+    this.router.navigateByUrl('tabs/unpaidbills/'+refresh);
   }
   complain(){
     console.log('inside complain')

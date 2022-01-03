@@ -3,6 +3,10 @@
     display: flex;
     margin-top: 2em;
 }
+.flex-container0{
+    justify-content: center;
+    display: flex;
+}
 .header{
     height: 40px;
 background-color: #194E78;
@@ -48,6 +52,7 @@ margin: 0.1em;
 }
 .card-title{
     margin-top: -1.8em;
+    font-size: 16px;
     color: #194E78;
     font-weight: bold;
 }

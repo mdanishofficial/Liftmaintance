@@ -24,7 +24,8 @@ export class detailed_current_malfunctionsPage implements OnInit {
   constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, public alertController: AlertController, public modalController: ModalController, private router: Router) {
 
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/currentmalfunctionslist');
+      var refresh=true
+      this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
     });
     var decoded: any = {}
     var retrievedtoken = localStorage.getItem('token') || ""

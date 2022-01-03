@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-cabin',
   templateUrl: './cabin.page.html',
@@ -11,10 +12,15 @@ export class CabinPage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
+      var refresh=true
+      this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
     let payload = {
-    cabin_id: '642766',
+     user_id:decoded.user_id,
     }
     this.service.getcabin(payload).subscribe(res => {
       this.cab_data = res;
@@ -34,7 +40,8 @@ export class CabinPage implements OnInit {
 }
   ]
   back() {
-  this.router.navigateByUrl('tabs/installation_stages');
+    var refresh=true
+  this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
   
 }

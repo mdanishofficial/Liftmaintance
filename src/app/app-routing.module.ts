@@ -47,15 +47,15 @@ const routes: Routes = [
     loadChildren: () => import('./controldelivery/controldelivery.module').then( m => m.ControldeliveryPageModule)
   },
   {
-    path: 'maintenancelist',
+    path: 'maintenancelist/:refresh',
     loadChildren: () => import('./maintenancelist/maintenancelist.module').then( m => m.MaintenancelistPageModule)
   },
   {
-    path: 'malfunctionslist',
+    path: 'malfunctionslist/:refresh',
     loadChildren: () => import('./malfunctionslist/malfunctionslist.module').then( m => m.MalfunctionslistPageModule)
   },
   {
-    path: 'currentmalfunctions',
+    path: 'currentmalfunctions/:refresh',
     loadChildren: () => import('./currentmalfunctions/currentmalfunctions.module').then( m => m.CurrentmalfunctionsPageModule)
   },
   {
@@ -99,7 +99,7 @@ const routes: Routes = [
     loadChildren: () => import('./newpendingcomplain/newpendingcomplain.module').then( m => m.NewpendingcomplainPageModule)
   },
   {
-    path: 'billdetails',
+    path: 'billdetails/:id',
     loadChildren: () => import('./billdetails/billdetails.module').then( m => m.BilldetailsPageModule)
   },
   {
@@ -331,7 +331,7 @@ const routes: Routes = [
     loadChildren: () => import('./Admin Roles/Installation Technician/map/map.module').then( m => m.MapPageModule)
   },
   {
-    path: 'installation-stages',
+    path: 'installation-stages/:refresh',
     loadChildren: () => import('./installation-stages/installation-stages.module').then( m => m.InstallationStagesPageModule)
   },
   {

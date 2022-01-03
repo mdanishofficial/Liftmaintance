@@ -20,7 +20,7 @@
     <!-- <br> -->
     <h1 class="ion-text-center">Maintenance List</h1>
 <br>
-    <ion-card class="card" *ngFor="let result of maintenance_data let i=index" (click)="technicianspage(i)">
+    <ion-card class="card" *ngFor="let result of maintenance_data let i=index" (click)="visitdetails(i)">
       <div class="flex-container">
         <div style="float: left;">
           <div [ngClass]='result?.maintenance_status == "completed" ?"greendiv":result?.maintenance_status == "this month"? "graydiv":"yellowdiv"'></div>

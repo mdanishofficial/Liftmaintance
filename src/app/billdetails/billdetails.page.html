@@ -17,22 +17,22 @@
 <div class="white"></div>
 <ion-content overflow-scroll="true">
 <div class="container">
-  <div *ngFor="let result of bill_data">
-  <h1 class="ion-text-center">Bill #{{result?.bill_id}}</h1>
-  <ion-text class="date">Date: {{result?.bill_date}}</ion-text>
+  <div *ngIf="bill_data">
+  <h1 class="ion-text-center">Bill #{{bill_data[id]?.bill_id}}</h1>
+  <ion-text class="date">Date: {{bill_data[id]?.bill_date}}</ion-text>
   <br>
   <br>
     <h2 class="h2">Bill Details </h2>
     <br> 
     <!-- </div> -->
- <ion-text class="text">{{result?.bill_detail}}</ion-text> <br> 
+ <ion-text class="text">{{bill_data[id]?.bill_detail}}</ion-text> <br> 
  <br> 
  <div>
     <div class="leftcol">
       <h2 class="h2">Amount </h2>
     </div>
     <div class="rightcol">
-      <ion-text class="textright1">{{result?.bill_amount}}</ion-text>
+      <ion-text class="textright1">{{bill_data[id]?.bill_amount}}</ion-text>
     </div>
    </div>
    <hr class="hr">
@@ -41,7 +41,7 @@
       <h2 class="h2">Payment Status</h2>
     </div>
     <div class="rightcol">
-      <ion-text class="textright2">{{result?.bill_status}}</ion-text>
+      <ion-text class="textright2">{{bill_data[id]?.bill_status}}</ion-text>
     </div>
   </div>
   <hr class="hr">
@@ -49,7 +49,7 @@
     <h2 class="h2">Receipt Status</h2>
   </div>
   <div class="rightcol">
-    <ion-text class="textright3">{{result?.bill_receipt_status}}</ion-text>
+    <ion-text class="textright3">{{bill_data[id]?.bill_receipt_status}}</ion-text>
   </div>
 
   <br>

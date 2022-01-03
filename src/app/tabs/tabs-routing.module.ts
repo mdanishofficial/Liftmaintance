@@ -28,7 +28,7 @@ const routes: Routes = [
         loadChildren: () => import('../detailed-solved-malfunctions/detailed-solved-malfunctions.module').then(m => m.DetailedSolvedMalfunctionsPageModule)
       },
       {
-        path: 'installation_stages',
+        path: 'installation_stages/:refresh',
         loadChildren: () => import('../installation-stages/installation-stages-routing.module').then(m => m.InstallationStagesPageRoutingModule)
       },
       {
@@ -56,15 +56,15 @@ const routes: Routes = [
     loadChildren: () => import('../controldelivery/controldelivery.module').then(m => m.ControldeliveryPageModule)
   },
   {
-    path: 'maintenancelist',
+    path: 'maintenancelist/:refresh',
     loadChildren: () => import('../maintenancelist/maintenancelist.module').then(m => m.MaintenancelistPageModule)
   },
   {
-    path: 'malfunctionslist',
+    path: 'malfunctionslist/:refresh',
     loadChildren: () => import('../malfunctionslist/malfunctionslist.module').then(m => m.MalfunctionslistPageModule)
   },
   {
-    path: 'currentmalfunctionslist',
+    path: 'currentmalfunctionslist/:refresh',
     loadChildren: () => import('../currentmalfunctions/currentmalfunctions.module').then(m => m.CurrentmalfunctionsPageModule)
   },
 
@@ -93,11 +93,11 @@ const routes: Routes = [
     loadChildren: () => import('../newpendingcomplain/newpendingcomplain.module').then(m => m.NewpendingcomplainPageModule)
   },
   {
-    path: 'unpaidbills',
+    path: 'unpaidbills/:refresh',
     loadChildren: () => import('../unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
   },
   {
-    path: 'paidbills',
+    path: 'paidbills/:refresh',
     loadChildren: () => import('../paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
   },
   {
@@ -293,7 +293,7 @@ const routes: Routes = [
   },  
   {
         path: '',
-        redirectTo: '/tabs/login',
+        redirectTo: '/login',
         pathMatch: 'full'
       }
     ]

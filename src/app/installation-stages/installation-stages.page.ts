@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-installation-stages',
   templateUrl: './installation-stages.page.html',
@@ -10,7 +11,23 @@ import jwt_decode from "jwt-decode";
 })
 
 export class InstallationStagesPage implements OnInit {
-  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
+    this.call_api();
+   }
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
@@ -20,10 +37,10 @@ export class InstallationStagesPage implements OnInit {
    // cabin_status
     let payload = {
       user_id:decoded.user_id,
-      railanddoor_id: "a84edc",
-      cabin_id: '642766',
-      machine_id: '4852e1',
-      controldelivery_id: "1a5eec",
+      // railanddoor_id: "a84edc",
+      // cabin_id: '642766',
+      // machine_id: '4852e1',
+      // controldelivery_id: "1a5eec",
     }
     this.service.getrailanddoor(payload).subscribe(res => {
       console.log(res)
@@ -39,8 +56,7 @@ export class InstallationStagesPage implements OnInit {
       this.controldelivery_data = res;
     })
   }
-  ngOnInit() {
-  }
+ 
   railanddoor(){
     this.router.navigateByUrl('raildoor');
   }

@@ -33,7 +33,7 @@ password=''
     }
  catch{
    console.log('Error');
-   this.router.navigateByUrl('tabs/login');
+   this.router.navigateByUrl('login');
  }
     
    

@@ -12,7 +12,8 @@ export class ControldeliveryPage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
+      var refresh=true
+      this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -52,6 +53,7 @@ export class ControldeliveryPage implements OnInit {
 }
   ]
   back() {
-  this.router.navigateByUrl('tabs/installation_stages');
+    var refresh=true
+    this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
 }

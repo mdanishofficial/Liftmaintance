@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-currentmalfunctions',
   templateUrl: './currentmalfunctions.page.html',
@@ -10,7 +11,23 @@ import jwt_decode from "jwt-decode";
 })
 export class CurrentmalfunctionsPage implements OnInit {
 
-  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
+this.call_api()
+  }
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
@@ -27,15 +44,14 @@ export class CurrentmalfunctionsPage implements OnInit {
   console.log(this.malfunction_data)
     })
   }
-  
-  ngOnInit() {
-  }
   malfunction_data = []
   async malfunctions(){
-    this.router.navigateByUrl('/tabs/malfunctionslist');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/malfunctionslist/'+refresh);
   }
   async currentmalfunctions(){
-    this.router.navigateByUrl('/tabs/currentmalfunctionslist');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/currentmalfunctionslist/'+refresh);
   }
   async currentmalfunction_details(id){
     this.router.navigateByUrl('detailed_current_malfunctions/'+id);

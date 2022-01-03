@@ -16,7 +16,11 @@ export class UpdatepaymentModalPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
-      });
+      }).then((data) => {
+        console.log('In Modaaaaaal')
+       var refresh = true // Here's your selected user!
+       this.router.navigateByUrl('tabs/paidbills/'+refresh);
+   });;
     });
    }
   
@@ -49,8 +53,13 @@ export class UpdatepaymentModalPage implements OnInit {
   }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')
-     this.modalController.dismiss({
-       'dismissed': true
-     });
+    // let data={'dismissed': true,refresh:true}
+    var refresh=true
+     this.modalController.dismiss(refresh)
+  //    .then((data) => {
+  //      console.log('In Modaaaaaal')
+  //     var refresh = true // Here's your selected user!
+  //     this.router.navigateByUrl('tabs/paidbills/'+refresh);
+  // });
    }
 }

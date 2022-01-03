@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-machine',
   templateUrl: './machine.page.html',
@@ -11,10 +12,15 @@ export class MachinePage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
+      var refresh=true
+      this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     });
+    var decoded:any={}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    console.log(decoded)
     let payload = {
-      machine_id: '4852e1',
+     user_id:decoded.user_id,
     }
     this.service.getmachine(payload).subscribe(res => {
       this.machine_data = res;
@@ -39,7 +45,8 @@ export class MachinePage implements OnInit {
 }
   ]
   back() {
-  this.router.navigateByUrl('tabs/installation_stages');
+    var refresh=true
+    this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
 
 }

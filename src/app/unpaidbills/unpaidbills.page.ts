@@ -30,12 +30,14 @@ export class UnpaidbillsPage implements OnInit {
   ngOnInit() {
   }
   async unpaid(){
-    this.router.navigateByUrl('/tabs/unpaidbills');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/unpaidbills/'+refresh);
   }
   async paid(){
-    this.router.navigateByUrl('/tabs/paidbills');
+    var refresh=false
+    this.router.navigateByUrl('/tabs/paidbills/'+refresh);
   }
-  billdetails(){
-    this.router.navigateByUrl('/billdetails');
+  billdetails(id){
+    this.router.navigateByUrl('/billdetails/'+id);
   }
 }

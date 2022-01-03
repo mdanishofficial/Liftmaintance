@@ -16,7 +16,8 @@ export class VisitdetailsPage implements OnInit {
  
   constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/maintenancelist');
+      var refresh=true
+      this.router.navigateByUrl('tabs/maintenancelist/'+refresh);
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -47,6 +48,7 @@ export class VisitdetailsPage implements OnInit {
     // do your stuff
     }
   back() {
-    this.router.navigateByUrl('tabs/maintenancelist');
-    }
+    var refresh=true
+    this.router.navigateByUrl('tabs/maintenancelist/'+refresh);
+   }
 }

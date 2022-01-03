@@ -18,9 +18,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailedSolvedMalfunctionsPage implements OnInit {
   constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, public alertController: AlertController, public modalController: ModalController, private router: Router) {
-
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/currentmalfunctionslist');
+      var refresh=true
+      this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
     });
     var decoded: any = {}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -36,7 +36,6 @@ export class DetailedSolvedMalfunctionsPage implements OnInit {
       this.technician_data = res;
     })
     var price = [];
-
     this.service.getparts(payload).subscribe(res => {
       for (var i = 0; i < res.length; i++) {
         this.parts_data.push(res[i])
