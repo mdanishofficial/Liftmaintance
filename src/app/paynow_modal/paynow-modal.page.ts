@@ -58,15 +58,19 @@ async buttonClick(){
     return await modal.present();
   }
   if(this.radioValue=='pos'){
-    console.log('pos property is accessible')
-    this.modalController.dismiss({
-      'dismissed': true
-    });
-    const modal = await this.modalController.create({
-      component: PosModalPage ,
-      cssClass: 'parts-class'
-    });
-    return await modal.present();
+    // console.log('pos property is accessible')
+    // this.modalController.dismiss({
+    //   'dismissed': true
+    // });
+    // const modal = await this.modalController.create({
+    //   component: PosModalPage ,
+    //   cssClass: 'parts-class'
+    // });
+    // return await modal.present();
+    this.modalController.dismiss()
+  }
+  else{
+    this.modalController.dismiss()
   }
 }
     // if(e.detail.value=='credic'){

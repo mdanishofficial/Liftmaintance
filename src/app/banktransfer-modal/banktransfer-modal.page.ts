@@ -35,6 +35,7 @@ console.log(e)
     this.service.updatebill(payload).subscribe(res => {
      console.log(res)
        })
+       this.modalController.dismiss()
   }
 ngOnInit() {
   }

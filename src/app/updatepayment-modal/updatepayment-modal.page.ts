@@ -42,7 +42,9 @@ export class UpdatepaymentModalPage implements OnInit {
       this.service.updatebill(formData).subscribe(res => {
        console.log(res)
          })
-    }
+         var refresh=true
+         this.modalController.dismiss(refresh)
+        }
   ngOnInit() {
   }
   uploadFiles(e){
