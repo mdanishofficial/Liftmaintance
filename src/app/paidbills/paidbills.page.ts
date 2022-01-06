@@ -24,7 +24,7 @@ export class PaidbillsPage implements OnInit {
         console.log(this.refresh)
         if(this.refresh=='true'){
           console.log('Refresh is True')
-          this.call_api()
+          // this.call_api()
         }
       });
      }

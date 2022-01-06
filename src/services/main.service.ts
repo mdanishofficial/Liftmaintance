@@ -3,6 +3,7 @@ import { PCconfig } from './pc.config';
 import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -91,6 +92,26 @@ export class InstallationService {
               return response;
                 })
           )}
+          public getmalfunctiondangerlevelsolved(data): Observable<any> {
+            const url = PCconfig.getPath() + '/malfunctions/getmalfunctiondangerlevel?status=solved';
+            // return this.http.post(url, data);
+            return this.http
+            .post(url, data)
+            .pipe(
+              map((response: any) => {
+                return response;
+                  })
+            )}
+            public getmalfunctiondangerlevelunsolved(data): Observable<any> {
+              const url = PCconfig.getPath() + '/malfunctions/getmalfunctiondangerlevel?status=unsolved';
+              // return this.http.post(url, data);
+              return this.http
+              .post(url, data)
+              .pipe(
+                map((response: any) => {
+                  return response;
+                    })
+              )}
           public getcurrentmalfunctions(data): Observable<any> {
             const url = PCconfig.getPath() + '/malfunctions/getmalfunction?status=unsolved';
             // return this.http.post(url, data);
@@ -211,4 +232,22 @@ export class InstallationService {
                                       return response;
                                         })
                                   )}
+                                  public updateparts(data): Observable<any> {
+                                    const url = PCconfig.getPath() + '/bills/updateparts';
+                                    // return this.http.post(url, data);
+                                    return this.http
+                                    .put(url, data)
+                                    .pipe(
+                                      map((response: any) => {
+                                        return response;
+                                          })
+                                    )}
+                                    private _listeners=new Subject<any>();
+                                    listen():Observable<any>{
+                                      return this._listeners.asObservable();
+                                    }
+                                    filter(filterBy:String){
+                                     this._listeners.next(filterBy)
+                                    }
+
                          }

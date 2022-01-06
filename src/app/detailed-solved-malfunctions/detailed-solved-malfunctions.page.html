@@ -54,16 +54,19 @@
   <h2 class="h2">Malfunctions</h2>
   <br>
   <br>
-  <div>
+  <div *ngIf="malfunction_danger_level">
+  <div *ngFor="let result of malfunction_danger_level; let i = index;">
     <div class="leftcol">
-      <ion-text class="date">The door does not Close</ion-text>
+      <ion-text class="date">{{result?.level}}</ion-text>
     </div>
-    <div class="rightcolbrown">
+    <div [ngClass]='result?.danger == "red" ?"rightcolbrown":result?.danger == "orange"? "rightcolorange":"rightcolyellow"'>
     </div>
+    <br>
+    <hr class="hr">
   </div>
-  <br>
-  <hr class="hr">
-  <div>
+  </div>
+ 
+  <!-- <div>
     <div class="leftcol">
       <ion-text class="date">Too Loud in the Elevator</ion-text>
     </div>
@@ -78,21 +81,25 @@
     </div>
     <div class="rightcolyellow">
     </div>
-  </div>
+  </div> -->
   <br>
    </div>
    <br> 
    <h2 class="h2">Malfunctions</h2>
    <br>
    <br>
-   <div>
-     <div class="leftcol">
-       <ion-text class="date"> {{malfunction_data[id]?.malfunction_notes}}</ion-text>
+     <div *ngFor="let result of malfunction_danger_level; let i = index;">
+   <div *ngIf='result?.danger=="red"'>
+   <div class="leftcol">
+       <ion-text class="date"> {{result?.level}}</ion-text>
      </div>
-     <div class="rightcolbrown">
-     </div>
+      <div class="rightcolbrown">
+      </div>
+      <br>
+      <hr class="hr"/>
    </div>
-   <br>
+   </div>
+   
 <Text  class="ion-text-left" id="dangertext">
  * This malfunction is considered very serious
 </Text>
@@ -102,6 +109,7 @@
    <h2 class="h2">Bill</h2>
    <br>
    <br>
+   <div *ngIf="parts_data">
    <div *ngFor="let result of parts_data; let i = index;">
      <div class="leftcol">
        <ion-text class="date">{{result?.part_name}}</ion-text>
@@ -111,7 +119,7 @@
      </div>
      <hr class="hr"/>
    </div>
-  
+  </div>
   <div>
     <div class="leftcol">
       <ion-text class="datedanger">Total</ion-text>

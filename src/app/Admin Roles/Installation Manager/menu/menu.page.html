@@ -1,0 +1,137 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+      <ion-icon src="../../assets/bell.svg" class="bell">
+      </ion-icon>
+      <div class="ion-text-center">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<div class="white"></div>
+<ion-content overflow-scroll="true">
+<!-- <div class="ion-text-center"> -->
+  <div class="flex-container0">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/cabin.svg" class="d-block w-100" alt="...">
+       </div>
+      <div class="carousel-item">
+        <img src="assets/cabin.svg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/cabin.svg" class="d-block w-100" alt="...">
+       </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+      <span class="visually-hidden">Next</span>
+    </button>
+   </div>
+  </div>
+        <!-- <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div> -->
+<!-- </div> -->
+<div class="flex-container">
+  <div class="card"  (click)="installation_stages()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/installation.svg" alt="Installation">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Installation</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="maintenance()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/maintenance.svg" alt="Maintenance">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Maintenance</h6>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="flex-container">
+  <div class="card" (click)="malfunctions()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/malfunctions.svg" alt="Malfunctions">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Malfunctions</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="bills()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/bills.svg" alt="Bills">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Bills</h6>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="flex-container">
+  <div class="card" (click)="complain()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/complain.svg" alt="Complains">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title">Complains</h6>
+    </div>
+    </div>
+  </div>
+  &nbsp;
+  &nbsp;
+  <div class="card" (click)="emergencycomplain()">
+    <div class="ion-text-center">
+    <img class="card-img-top" src="../../assets/emergencycomplain.svg" alt="Emergency Complains">
+  </div>
+    <div class="card-body">
+      <div class="ion-text-center">
+      <h6 class="card-title" id="emergencycomplaintext">Emergency Complains</h6>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="flex-container1">
+    <div class="emergencycard" (click)="complain()">
+      <div class="ion-text-center">
+      <img class="card-img-top" src="../../assets/emergencycomplain.svg" alt="Complains">
+      <h6 class="card-title">Complains</h6>
+    </div>
+      <!-- <div class="card-body">
+        <div class="ion-text-center"> -->
+       
+      <!-- </div>
+      </div> -->
+    </div>
+    &nbsp;
+    &nbsp;
+  </div>
+</ion-content>

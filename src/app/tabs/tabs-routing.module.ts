@@ -272,6 +272,10 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Installation Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then(m => m.MaintenanceMalfunctionDetailViewPageModule)
   },
   {
+    path: 'adminroles/installationmanager/menu',
+    loadChildren: () => import('../Admin Roles/Installation Manager/menu/menu.module').then(m => m.MenuPageModule)
+  },  
+  {
     path: 'adminroles/installationmanager/installation',
     loadChildren: () => import('../Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
   },  

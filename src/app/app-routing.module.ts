@@ -350,6 +350,10 @@ const routes: Routes = [
     path: 'detailed-solved-malfunctions',
     loadChildren: () => import('./detailed-solved-malfunctions/detailed-solved-malfunctions.module').then( m => m.DetailedSolvedMalfunctionsPageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./Admin Roles/Installation Manager/menu/menu.module').then( m => m.MenuPageModule)
+  },
  ];
 @NgModule({
   imports: [

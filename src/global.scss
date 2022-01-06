@@ -28,6 +28,12 @@
 // @import "~@swiper/scss/navigation";
 // @import "~@swiper/scss/pagination";
 // $alert-min-width:500px;
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/Roboto//Roboto-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 ion-searchbar ion-icon {
     right: 16px !important;
     left: auto !important;

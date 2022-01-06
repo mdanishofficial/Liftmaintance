@@ -15,7 +15,11 @@ export class PartsModalPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
-      });
+      }).then((data) => {
+        console.log('In Modaaaaaal')
+       var refresh = true // Here's your selected user!
+       this.router.navigateByUrl('detailed_current_malfunctions'+refresh);
+   });;
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -23,13 +27,15 @@ export class PartsModalPage implements OnInit {
     let payload = {
       user_id:decoded.user_id,
     }
+
     this.service.getparts(payload).subscribe(res => {
       this.parts_data = res;
          console.log(this.parts_data)
+         for(var i=0;i<this.parts_data.length;i++){
+          this.form.push({part_name:this.parts_data[i].part_name,isChecked:this.parts_data[i].provided})
+        }
        })
-    for(var i=0;i<this.parts_data.length;i++){
-      this.form.push({val:this.parts_data[i].part_name,isChecked:this.parts_data[i].provided})
-    }
+  
     console.log('this.form')
    }
   radiovalue
@@ -57,15 +63,17 @@ if(this.form[i].isChecked==true){
 console.log(this.parts)
    let payload = {
       user_id:decoded.user_id,
+      provided_parts:this.parts
     }
     console.log(payload)
-    this.service.addmalfunctionparts(payload).subscribe(res => {
+    this.service.updateparts(payload).subscribe(res => {
      this.malfunction_data = res;
         console.log(this.malfunction_data)
       })
       this.modalController.dismiss({
         'dismissed': true
       });
+      this.service.filter('Dismiss')
    }
    malfunction_data
    parts_data

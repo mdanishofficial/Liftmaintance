@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
+import {paynow_modalPage} from '../paynow_modal/paynow-modal.page';
 import { InstallationService } from '../../services/main.service';
 import { Router } from "@angular/router";
 import { Platform } from '@ionic/angular';
@@ -44,7 +44,7 @@ export class BilldetailsPage implements OnInit {
 
     console.log('emod property is accessible')
     const modal = await this.modalController.create({
-      component: UpdatepaymentModalPage,
+      component: paynow_modalPage,
       cssClass: 'updatePayment'
     });
     return await modal.present();

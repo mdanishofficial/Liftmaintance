@@ -1,3 +1,4 @@
+<ion-content overflow-scroll="true">
 <div class="container">
   <h1 class="h1">Select the items you want to Provide</h1>
   <ion-list>
@@ -29,7 +30,7 @@
   <ion-checkbox slot="start"></ion-checkbox>
 </ion-item> -->
 <ion-item *ngFor="let entry of form">
-  <ion-label>{{entry.val}}</ion-label>
+  <ion-label>{{entry.part_name}}</ion-label>
   <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
 </ion-item>
 
@@ -41,6 +42,5 @@
     <button type="button" class="btn btn-primary" (click)="addparts()">Provided</button>
   </div>
     </div>
-  <ion-content>
   </ion-content>
   
