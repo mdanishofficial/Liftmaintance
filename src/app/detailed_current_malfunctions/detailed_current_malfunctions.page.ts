@@ -38,16 +38,26 @@ this.call_api()
       this.id = params['id'];
       console.log(this.id)
     });
+    this.refreshsub = this.activatedRoute.params.subscribe(params => {
+      this.refresh = params['refresh'];
+      console.log(this.refresh)
+      if(this.refresh=='true'){
+        console.log('Refresh is True')
+        this.call_api()
+      }
+    });
   }
+  refreshsub
   sub
   id
+  refresh
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes)
     console.log('changes')
   }
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      var refresh=true
+      var refresh=false
       this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
     });
     var decoded: any = {}

@@ -16,8 +16,9 @@ malfunction_type=''
   complaindetail=''
   
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
+   var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/solvedcomplain');
+      this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);
     });
   }
 
