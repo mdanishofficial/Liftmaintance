@@ -22,7 +22,11 @@ import { ActivatedRoute } from '@angular/router';
 export class detailed_current_malfunctionsPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, public alertController: AlertController, public modalController: ModalController, private router: Router) {
-this.call_api()
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      var refresh=true
+      this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+    });
+    this.call_api()
 //     this.service.listen().subscribe((m:any)=>{
 //   console.log(m)
 //   // this.call_api()
@@ -57,7 +61,7 @@ this.call_api()
   }
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      var refresh=false
+      var refresh=true
       this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
     });
     var decoded: any = {}
@@ -109,6 +113,10 @@ this.call_api()
       cssClass: 'parts-class'
     });
     modal.onDidDismiss().then((data) => {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+        var refresh=true
+        this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+      });
      var price = [];
       // this.call_api()
       this.parts_data=[]
@@ -143,6 +151,12 @@ this.call_api()
     const modal = await this.modalController.create({
       component: paynow_modalPage,
       cssClass: 'payment-class'
+    });
+    modal.onDidDismiss().then((data) => {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+        var refresh=true
+        this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+      });
     });
     return await modal.present();
   }

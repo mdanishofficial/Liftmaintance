@@ -69,7 +69,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'solvedcomplain',
+    path: 'solvedcomplain/:refresh',
     loadChildren: () => import('../solvedcomplain/solvedcomplain.module').then(m => m.SolvedcomplainPageModule)
   },
   {
@@ -77,7 +77,7 @@ const routes: Routes = [
     loadChildren: () => import('../pendingcomplain/pendingcomplain.module').then(m => m.PendingcomplainPageModule)
   },
   {
-    path: 'solvedemergencycomplain',
+    path: 'solvedemergencycomplain/:refresh',
     loadChildren: () => import('../solvedemergencycomplain/solvedemergencycomplain.module').then(m => m.SolvedemergencycomplainPageModule)
   },
   {

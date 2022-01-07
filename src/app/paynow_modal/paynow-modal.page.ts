@@ -16,7 +16,11 @@ export class paynow_modalPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
-      });
+      }).then((data) => {
+        console.log('In Modaaaaaal')
+       var refresh = true // Here's your selected user!
+       this.router.navigateByUrl('detailed_current_malfunctions'+refresh);
+   });
     });
    }
 
@@ -54,6 +58,12 @@ async buttonClick(){
     const modal = await this.modalController.create({
       component: BanktransferModalPage ,
       cssClass: 'parts-class'
+    });
+    modal.onDidDismiss().then((data) => {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+        var refresh=true
+        this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+      });
     });
     return await modal.present();
   }

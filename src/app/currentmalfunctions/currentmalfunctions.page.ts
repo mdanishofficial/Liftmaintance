@@ -12,7 +12,10 @@ import { ActivatedRoute } from '@angular/router';
 export class CurrentmalfunctionsPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
-this.call_api()
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
+    this.call_api()
   }
   ngOnInit() {
     console.log('Inside Ng On INit')
@@ -50,7 +53,7 @@ this.call_api()
     this.router.navigateByUrl('/tabs/malfunctionslist/'+refresh);
   }
   async currentmalfunctions(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/currentmalfunctionslist/'+refresh);
   }
   async currentmalfunction_details(id){

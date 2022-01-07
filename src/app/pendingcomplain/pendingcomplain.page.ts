@@ -73,10 +73,11 @@ ngOnInit() {
   // }
 
   async solvedcomplain(){
-    this.router.navigateByUrl('/tabs/solvedcomplain');
+    var refresh=true
+    this.router.navigateByUrl('/tabs/solvedcomplain/'+refresh);
   }
   async pendingcomplain(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/pendingcomplain/'+refresh);
   }
   newcomplain(){

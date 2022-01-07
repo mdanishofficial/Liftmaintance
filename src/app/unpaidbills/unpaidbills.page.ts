@@ -14,6 +14,15 @@ export class UnpaidbillsPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
+    this.call_api()
+  }
+  bill_data = []
+  ngOnInit() {
+  }
+  call_api(){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
@@ -26,15 +35,12 @@ export class UnpaidbillsPage implements OnInit {
   console.log(this.bill_data)
     })
   }
-  bill_data = []
-  ngOnInit() {
-  }
   async unpaid(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/unpaidbills/'+refresh);
   }
   async paid(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/paidbills/'+refresh);
   }
   billdetails(id){

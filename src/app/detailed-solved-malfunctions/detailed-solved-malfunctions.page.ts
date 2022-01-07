@@ -18,6 +18,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailedSolvedMalfunctionsPage implements OnInit {
   constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, public alertController: AlertController, public modalController: ModalController, private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      var refresh=true
+      this.router.navigateByUrl('tabs/malfunctionslist/'+refresh);
+    });
     this.call_api()
   }
   ngOnInit() {
@@ -40,7 +44,7 @@ export class DetailedSolvedMalfunctionsPage implements OnInit {
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       var refresh=true
-      this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+      this.router.navigateByUrl('tabs/malfunctionslist/'+refresh);
     });
     var decoded: any = {}
     var retrievedtoken = localStorage.getItem('token') || ""

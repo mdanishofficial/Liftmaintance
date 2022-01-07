@@ -19,7 +19,7 @@ export class PartsModalPage implements OnInit {
         console.log('In Modaaaaaal')
        var refresh = true // Here's your selected user!
        this.router.navigateByUrl('detailed_current_malfunctions'+refresh);
-   });;
+   });
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

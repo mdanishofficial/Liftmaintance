@@ -50,10 +50,11 @@ export class PendingemergencycomplainPage implements OnInit {
     })
   }
   async solved(){
-    this.router.navigateByUrl('/tabs/solvedemergencycomplain');
+    var refresh=true
+    this.router.navigateByUrl('/tabs/solvedemergencycomplain/'+refresh);
   }
   async pending(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/pendingemergencycomplain/'+refresh);
   }
   newemergencycomplain(){

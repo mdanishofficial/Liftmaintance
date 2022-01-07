@@ -16,7 +16,11 @@ export class BanktransferModalPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
-      });
+      }).then((data) => {
+        console.log('In Modaaaaaal')
+       var refresh = true // Here's your selected user!
+       this.router.navigateByUrl('detailed_current_malfunctions'+refresh);
+   });
     });
    }
   uploadFiles(e){

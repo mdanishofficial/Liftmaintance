@@ -15,7 +15,7 @@ export class BilldetailsPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, private router: Router, public modalController: ModalController) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      var refresh = false
+      var refresh = true
       this.router.navigateByUrl('tabs/unpaidbills/' + refresh);
     });
     var decoded: any = {}
@@ -50,7 +50,7 @@ export class BilldetailsPage implements OnInit {
     return await modal.present();
   }
   back() {
-    var refresh = false
+    var refresh = true
     this.router.navigateByUrl('tabs/unpaidbills/' + refresh);
   }
 }

@@ -15,10 +15,10 @@ export class NewemergencycomplainPage implements OnInit {
   complaindetail=''
   
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
-    var refresh=true
-    // this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
+     // this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/pendingemergencycomplain'+refresh);
+      var refresh=true
+      this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
     });
     }
   showToasterSuccess(){
@@ -62,6 +62,10 @@ user_id:decoded.user_id,
 
   }
   ngOnInit() {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      var refresh=true
+      this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
+    });
   }
   back(){
     var refresh=true

@@ -3,6 +3,7 @@ import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-solvedcomplain',
   templateUrl: './solvedcomplain.page.html',
@@ -10,7 +11,27 @@ import jwt_decode from "jwt-decode";
 })
 export class SolvedcomplainPage implements OnInit {
 
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService,private router: Router){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/tab1');
+    });
+    this.call_api()
+  }
+  complain_data
+  ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/tab1');
     });
@@ -27,18 +48,16 @@ export class SolvedcomplainPage implements OnInit {
   console.log(this.complain_data)
     })
   }
-  complain_data
-  ngOnInit() {
-  }
   async solvedcomplain(){
-    this.router.navigateByUrl('/tabs/solvedcomplain');
+    var refresh=true
+    this.router.navigateByUrl('/tabs/solvedcomplain/'+refresh);
   }
   async pendingcomplain(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('/tabs/pendingcomplain/'+refresh);
   }
   newcomplain(){
     console.log('inside new emergency complain')
-    this.router.navigateByUrl('/tabs/newpendingcomplain');
+    this.router.navigateByUrl('/newpendingcomplain');
   }
 }
