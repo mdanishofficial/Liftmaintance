@@ -40,6 +40,9 @@ export class BilldetailsPage implements OnInit {
   }
   sub
   id
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   async presentModalUpdatePayment() {
 
     console.log('emod property is accessible')

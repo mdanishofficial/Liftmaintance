@@ -9,7 +9,12 @@ export class TabsPage {
 
   constructor(private router: Router) {}
   home(){
-    this.router.navigateByUrl('tabs/tab1');
+    this.router.navigateByUrl('menu-tabs/tab1');
   }
-  
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
+  profile(){
+    this.router.navigateByUrl('tabs/profile');
+  }
 }

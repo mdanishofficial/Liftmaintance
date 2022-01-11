@@ -19,6 +19,9 @@ export class NewinquiriesPage implements OnInit {
       this.router.navigateByUrl('tabs/installation_stages');
     });
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   sendinquiry(){
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)

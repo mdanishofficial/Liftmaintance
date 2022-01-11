@@ -12,7 +12,7 @@ export class UnpaidbillsPage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     this.call_api()
   }
@@ -21,7 +21,7 @@ export class UnpaidbillsPage implements OnInit {
   }
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -45,5 +45,8 @@ export class UnpaidbillsPage implements OnInit {
   }
   billdetails(id){
     this.router.navigateByUrl('/billdetails/'+id);
+  }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
   }
 }

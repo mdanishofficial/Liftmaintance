@@ -62,6 +62,9 @@ user_id:decoded.user_id,
 }
   // this.parentfunc.call_api()
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back(){
     var refresh=true
     this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);

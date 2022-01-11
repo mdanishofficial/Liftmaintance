@@ -120,6 +120,26 @@ const routes: Routes = [
     path: 'faqs',
     loadChildren: () => import('../faqs/faqs.module').then(m => m.FaqsPageModule)
   },
+  {
+    path: 'notifications',
+    loadChildren: () => import('../notifications/notifications.module').then(m => m.NotificationsPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('../settings/settings.module').then(m => m.SettingsPageModule)
+  },
+  {
+    path: 'contact_us',
+    loadChildren: () => import('../contact-us/contact-us.module').then(m => m.ContactUsPageModule)
+  },
+  {
+    path: 'language',
+    loadChildren: () => import('../language/language.module').then(m => m.LanguagePageModule)
+  },
 // maintenance manager tabs
   {
     path: 'adminroles/maintenancemanager/menu',
@@ -271,6 +291,7 @@ const routes: Routes = [
     path: 'adminroles/installationtechnician/maintenance_malfunction_detail_view',
     loadChildren: () => import('../Admin Roles/Installation Technician/maintenance-malfunction-detail-view/maintenance-malfunction-detail-view.module').then(m => m.MaintenanceMalfunctionDetailViewPageModule)
   },
+  //installation manager tab
   {
     path: 'adminroles/installationmanager/menu',
     loadChildren: () => import('../Admin Roles/Installation Manager/menu/menu.module').then(m => m.MenuPageModule)

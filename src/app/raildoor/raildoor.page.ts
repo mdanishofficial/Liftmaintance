@@ -55,6 +55,9 @@ ngOnInit() {
     { val: 'Doors all round'},
     { val: 'Doors Dressing', isChecked: false }
   ];
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
  back(){
   var refresh=true
   this.router.navigateByUrl('tabs/installation_stages/'+refresh);

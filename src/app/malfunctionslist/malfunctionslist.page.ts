@@ -29,7 +29,7 @@ export class MalfunctionslistPage implements OnInit {
       refresh
 call_api(){
   this.platform.backButton.subscribeWithPriority(10, () => {
-    this.router.navigateByUrl('tabs/tab1');
+    this.router.navigateByUrl('menu-tabs/tab1');
   });
   var decoded:any={}
   var retrievedtoken = localStorage.getItem('token') || ""
@@ -55,5 +55,8 @@ console.log(this.malfunction_data)
   }
   malfunction_details(id){
     this.router.navigateByUrl('detailed_solved_malfunctions/'+id);
+  }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
   }
 }

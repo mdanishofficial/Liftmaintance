@@ -39,6 +39,9 @@ export class CabinPage implements OnInit {
   cabin_roof:'Cabin Roof'
 }
   ]
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back() {
     var refresh=true
   this.router.navigateByUrl('tabs/installation_stages/'+refresh);

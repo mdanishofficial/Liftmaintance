@@ -1,0 +1,72 @@
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+</ion-header> -->
+<br>
+<h1 class="ion-text-center">Profile</h1>
+<div class="white"></div>
+<ion-content overflow-scroll="true">
+  <div class="container">
+     <h6 class="client">Client:{{client_name}}</h6>
+    <hr class="hr">
+    <h6 class="client">Contact Number :{{contact}}</h6>
+    <hr class="hr">
+    <h6 class="client">City : {{city}}</h6>
+    <hr class="hr">
+    <h6 class="client">Location GPS</h6>
+    <!-- <ion-icon src="assets/eye.svg" class="eye"></ion-icon> -->
+    <hr class="hr">
+    <h6 class="client">Building Type : {{building_type}}</h6>
+    <hr class="hr">
+    <h6 class="client">Number of Lifts : {{no_of_lifts}}</h6>
+    <div *ngFor="let result of lifts;let i=index">
+    <ion-text class="date">Code:{{lifts[i].code}} Type:{{lifts[i].Lift_Type}} Door Type:{{lifts[i].Door_Type}} Total Stops:{{lifts[i].Total_Stops}} <br></ion-text>
+  </div>
+    <hr class="hr">
+    <h6 class="client">Building Photo</h6>
+  <!-- <br>
+  <br> -->
+ <div class="flex-container" style="display: flex;
+  justify-content: center;margin-left: -1em;">
+<img src="../../assets/cabin.svg" class="machine">
+  </div>
+  <h6 class="client">Maintenance Start Date:{{maintenance_start_date}}</h6>
+  <hr class="hr">
+  <h6 class="client">Maintenance End Date:{{maintenance_end_date}}</h6>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Completed Maintenance Visit : </h6>
+  <ion-icon src="assets/eye.svg" class="icon"></ion-icon>
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Uncompleted Maintenance Visit</h6>
+  <ion-icon src="assets/eye.svg" class="icon"></ion-icon>
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Unpaid Bills</h6>
+  <ion-icon src="assets/eye.svg" class="icon"></ion-icon>
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Download Contract File</h6>
+  <ion-icon src="assets/eye.svg" class="icon"></ion-icon>
+</div>
+  <br>
+  <div class="flex-container0">
+  <h6 class="logout">Logout</h6>
+  <ion-icon src="assets/eye.svg" class="icon"></ion-icon>
+  </div>
+</div>
+    </ion-content>

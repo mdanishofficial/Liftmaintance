@@ -44,6 +44,9 @@ export class MachinePage implements OnInit {
 
 }
   ]
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back() {
     var refresh=true
     this.router.navigateByUrl('tabs/installation_stages/'+refresh);

@@ -52,6 +52,9 @@ export class ControldeliveryPage implements OnInit {
   controldelivery_payloads:'Cabin Roof',
 }
   ]
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back() {
     var refresh=true
     this.router.navigateByUrl('tabs/installation_stages/'+refresh);

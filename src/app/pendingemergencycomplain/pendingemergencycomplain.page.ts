@@ -14,7 +14,7 @@ export class PendingemergencycomplainPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute,private cdr:ChangeDetectorRef,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     this.call_api()
     }
@@ -33,6 +33,9 @@ export class PendingemergencycomplainPage implements OnInit {
      }
       sub
       refresh
+      notifications(){
+        this.router.navigateByUrl('tabs/notifications');
+      }
   call_api(){
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

@@ -1,8 +1,6 @@
-<ion-content overflow-scroll="true">
 <div class="container">
   <h1 class="h1">Select the items you want to Provide</h1>
-  <ion-list>
-    <ion-radio-group [(ngModel)]="radiovalue">
+  
     <!-- <ion-item>
         <ion-label>Door Card</ion-label>
         <ion-radio slot="start" value="door_card" class="radio"></ion-radio>
@@ -29,18 +27,19 @@
     <ion-label>Door Fork</ion-label>
   <ion-checkbox slot="start"></ion-checkbox>
 </ion-item> -->
+<ion-content overflow-scroll="true" class="content">
+  <!-- <ion-list> -->
+    <ion-radio-group [(ngModel)]="radiovalue">
 <ion-item *ngFor="let entry of form">
   <ion-label>{{entry.part_name}}</ion-label>
   <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
 </ion-item>
-
-    </ion-radio-group>
-  </ion-list>
+  </ion-radio-group>
+  <!-- </ion-list> -->
+</ion-content>
   <div class="ion-text-center" id="buttonsdiv">
     <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
     <div class="divider"></div>
     <button type="button" class="btn btn-primary" (click)="addparts()">Provided</button>
   </div>
-    </div>
-  </ion-content>
-  
+    </div>  

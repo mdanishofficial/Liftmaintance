@@ -13,7 +13,7 @@ export class SolvedcomplainPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     this.call_api()
   }
@@ -33,7 +33,7 @@ export class SolvedcomplainPage implements OnInit {
       refresh
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -59,5 +59,8 @@ export class SolvedcomplainPage implements OnInit {
   newcomplain(){
     console.log('inside new emergency complain')
     this.router.navigateByUrl('/newpendingcomplain');
+  }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
   }
 }

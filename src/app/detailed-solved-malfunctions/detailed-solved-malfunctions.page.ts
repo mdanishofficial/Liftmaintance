@@ -78,6 +78,9 @@ export class DetailedSolvedMalfunctionsPage implements OnInit {
       console.log(this.sum)
     })
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   // async presentAlertParts() {
   //   console.log('emod property is accessible')
   //   const modal = await this.modalController.create({

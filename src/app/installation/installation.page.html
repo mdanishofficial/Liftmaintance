@@ -6,7 +6,7 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
   <ion-title>
-    <ion-icon src="../../assets/bell.svg" class="bell">
+   <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
     </ion-icon>
     <div class="ion-text-right">
       <img src="../../assets/logo.svg" class="logo">
@@ -103,7 +103,6 @@
     <ion-datetime placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
     <ion-icon name="calendar"></ion-icon>  
   </section>
-
   </ion-card> -->
       <!-- <ion-card class="cardinput">
       <ion-datetime [pickerOptions]="customPickerOptions" placeholder="{{result?.installation_end_date}}" displayFormat="DD-MMM-YYYY"

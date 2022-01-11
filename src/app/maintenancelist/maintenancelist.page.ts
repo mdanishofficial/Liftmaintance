@@ -30,7 +30,7 @@ export class MaintenancelistPage implements OnInit {
   maintenance_data = []
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -47,7 +47,10 @@ export class MaintenancelistPage implements OnInit {
   visitdetails(id){
      this.router.navigateByUrl('tabs/visitdetails/'+id);
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back() {
-    this.router.navigateByUrl('tabs/tab1');
+    this.router.navigateByUrl('menu-tabs/tab1');
     }
 }

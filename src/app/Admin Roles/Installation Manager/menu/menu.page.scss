@@ -50,6 +50,11 @@ margin: 0.1em;
     height: 43px;
     margin-top: -1.3em;
 }
+#emergencyimage{
+    width: 31px;
+    height: 31px;
+    margin-top: -1.6em;
+}
 .card-title{
     margin-top: -1.8em;
     font-size: 16px;
@@ -58,15 +63,21 @@ margin: 0.1em;
 }
 #emergencycomplaintext{
 color: #7A0001;
-margin-top: -2.7em;
+margin-top: -1.2em;
+margin-left: 0.2em;
 }
 .flex-container1{
 justify-content: center;
 display: flex;
 margin-top: 2em;
 }
-.emergencycard{
+#emergencycard{
     width: 265px;
     height: 46px;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+.flex-container2{
+    margin-top: 1.5em;
+    justify-content: center;
+    display: flex;
 }

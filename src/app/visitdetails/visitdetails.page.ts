@@ -47,6 +47,9 @@ export class VisitdetailsPage implements OnInit {
     console.log("changed rating: ",rating);
     // do your stuff
     }
+    notifications(){
+      this.router.navigateByUrl('tabs/notifications');
+    }
   back() {
     var refresh=true
     this.router.navigateByUrl('tabs/maintenancelist/'+refresh);

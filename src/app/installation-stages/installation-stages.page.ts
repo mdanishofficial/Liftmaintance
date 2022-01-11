@@ -29,7 +29,7 @@ export class InstallationStagesPage implements OnInit {
       refresh
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -71,6 +71,9 @@ export class InstallationStagesPage implements OnInit {
   }
   installation() {
   this.router.navigateByUrl('installation');
+  }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
   }
   
   railanddoor_data;

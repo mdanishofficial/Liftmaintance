@@ -64,4 +64,7 @@ export class UpdatepaymentModalPage implements OnInit {
   //     this.router.navigateByUrl('tabs/paidbills/'+refresh);
   // });
    }
+   notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
 }

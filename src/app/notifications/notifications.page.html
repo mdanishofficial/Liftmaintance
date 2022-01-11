@@ -1,0 +1,84 @@
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <!-- <br> -->
+    <h1 class="ion-text-center">Notifications</h1>
+<br>
+    <ion-card class="card" *ngFor="let result of notifications_data let i=index" (click)="visitdetails(i)">
+      <div class="flex-container">
+        <div style="float: left;">
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">{{result?.notification_title}}</h6>
+          <div class="detail">
+            <ion-text>{{result?.notification_detail}}</ion-text>
+          </div>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sender:{{result?.notification_sender}}</ion-text>
+            </div>
+            <div class="status">
+              <ion-text>{{result?.notification_date}}</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <!-- <ion-card class="card">
+      <div class="flex-container">
+        <div style="float: left;">
+          <div class="colordiv2"></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Visit #02</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sunday 22-02-2020</ion-text>
+            </div>
+            <div class="status">
+              <ion-text> Status : This Month</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card">
+      <div class="flex-container">
+        <div style="float: left;">
+          <div class="colordiv3"></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Visit #03</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sunday 22-02-2020</ion-text>
+            </div>
+            <div class="status">
+              <ion-text> Status : This Month</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card">
+      <div class="flex-container">
+        <div style="float: left;">
+          <div class="colordiv4"></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Visit #04</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text class="textleft">Sunday 22-02-2020</ion-text>
+            </div>
+            <div class="status">
+              <ion-text class="textright"> Status : Coming</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card> -->
+    <div class="ion-text-center">
+      <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+    </div>
+  </div>
+</ion-content>

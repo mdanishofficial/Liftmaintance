@@ -106,6 +106,9 @@ export class detailed_current_malfunctionsPage implements OnInit {
     console.log("changed rating: ", rating);
     // do your stuff
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   async presentAlertParts() {
     console.log('emod property is accessible')
     const modal = await this.modalController.create({

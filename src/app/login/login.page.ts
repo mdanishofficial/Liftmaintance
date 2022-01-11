@@ -28,7 +28,7 @@ password=''
       }
       else{
         console.log('User Logged In')
-        this.router.navigateByUrl('tabs/tab1');
+        this.router.navigateByUrl('menu-tabs/tab1');
       }
     }
  catch{
@@ -57,7 +57,7 @@ login(){
       localStorage.setItem('token', res.token);
       var decoded:any={}
       decoded = jwt_decode(res.token);
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('top-tabs/tab1');
       this.showToasterSuccess();
     }
        },(err)=>{

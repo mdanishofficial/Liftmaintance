@@ -6,7 +6,7 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon src="../../assets/bell.svg" class="bell">
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
       </ion-icon>
       <div class="ion-text-right">
         <img src="../../assets/logo.svg" class="logo">
@@ -21,7 +21,7 @@
       <ion-tab-bar slot="top">
           <button type="button" class="btn btn-primary" (click)="today()" >Today</button>
       <div class="divider"></div>
-          <button  tab="tabs/tab1" type="button" class="btn btn-secondary" (click)="upcoming()">Upcoming</button>
+          <button  tab="menu-tabs/tab1" type="button" class="btn btn-secondary" (click)="upcoming()">Upcoming</button>
           <div class="divider"></div>
           <button type="button" class="btn btn-secondary" (click)="previous()">Previous</button>
       </ion-tab-bar>

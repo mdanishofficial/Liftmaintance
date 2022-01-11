@@ -6,7 +6,7 @@
 <ion-header class="header">
   <!-- <ion-navbar class="navbar"> -->
     <ion-title>
-      <ion-icon src="../../assets/bell.svg" class="bell">
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
       </ion-icon>
       <div class="ion-text-center">
         <img src="../../assets/logo.svg" class="logo">
@@ -50,7 +50,7 @@
 <div class="flex-container">
   <div class="card"  (click)="installation_stages()">
     <div class="ion-text-center">
-    <img class="card-img-top" src="../../assets/installation.svg" alt="Installation">
+    <img class="card-img-top" src="../../assets/installation_manager_installation.svg" alt="Installation">
   </div>
     <div class="card-body">
       <div class="ion-text-center">
@@ -62,7 +62,7 @@
   &nbsp;
   <div class="card" (click)="maintenance()">
     <div class="ion-text-center">
-    <img class="card-img-top" src="../../assets/maintenance.svg" alt="Maintenance">
+    <img class="card-img-top" src="../../assets/manager_maintenance.svg" alt="Maintenance">
   </div>
     <div class="card-body">
       <div class="ion-text-center">
@@ -74,11 +74,11 @@
 <div class="flex-container">
   <div class="card" (click)="malfunctions()">
     <div class="ion-text-center">
-    <img class="card-img-top" src="../../assets/malfunctions.svg" alt="Malfunctions">
+    <img class="card-img-top" src="../../assets/manager_myclient.svg" alt="Malfunctions">
   </div>
     <div class="card-body">
       <div class="ion-text-center">
-      <h6 class="card-title">Malfunctions</h6>
+      <h6 class="card-title">My Client</h6>
     </div>
     </div>
   </div>
@@ -110,20 +110,20 @@
   &nbsp;
   <div class="card" (click)="emergencycomplain()">
     <div class="ion-text-center">
-    <img class="card-img-top" src="../../assets/emergencycomplain.svg" alt="Emergency Complains">
+    <img class="card-img-top" src="../../assets/manager_myteam.svg" alt="Emergency Complains">
   </div>
     <div class="card-body">
       <div class="ion-text-center">
+      <h6 class="card-title">My Team</h6>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="flex-container2">
+    <div class="card" id="emergencycard" (click)="complain()">
+      <div class="flex-container1">
+     <img class="card-img-top" id="emergencyimage" src="../../assets/emergencycomplain.svg" alt="Complains">
       <h6 class="card-title" id="emergencycomplaintext">Emergency Complains</h6>
-    </div>
-    </div>
-  </div>
-  </div>
-  <div class="flex-container1">
-    <div class="emergencycard" (click)="complain()">
-      <div class="ion-text-center">
-      <img class="card-img-top" src="../../assets/emergencycomplain.svg" alt="Complains">
-      <h6 class="card-title">Complains</h6>
     </div>
       <!-- <div class="card-body">
         <div class="ion-text-center"> -->
@@ -131,7 +131,7 @@
       <!-- </div>
       </div> -->
     </div>
-    &nbsp;
-    &nbsp;
+    <!-- &nbsp;
+    &nbsp; -->
   </div>
 </ion-content>

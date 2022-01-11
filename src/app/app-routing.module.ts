@@ -7,6 +7,22 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
+    path: '',
+    loadChildren: () => import('./installation-manager-tabs/installation-manager-tabs.module').then(m => m.InstallationManagerTabsPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./menu-tabs/menu-tabs.module').then(m => m.MenuTabsPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./top-tabs/top-tabs.module').then(m => m.TopTabsPageModule)
+  },
+  {
+    path: 'tab1',
+    loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+  },
+  {
     path: 'paynow_modal',
     loadChildren: () => import('./paynow_modal/paynow-modal.module').then( m => m.paynow_modalPageModule)
   },
@@ -353,6 +369,50 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./Admin Roles/Installation Manager/menu/menu.module').then( m => m.MenuPageModule)
+  },
+  // {
+  //   path: 'tabs',
+  //   loadChildren: () => import('./Admin Roles/Installation Manager/tabs/tabs.module').then( m => m.TabsPageModule)
+  // },
+  {
+    path: 'installation-manager-tabs',
+    loadChildren: () => import('./installation-manager-tabs/installation-manager-tabs.module').then( m => m.InstallationManagerTabsPageModule)
+  },
+  {
+    path: 'currentmalfunctionslist',
+    loadChildren: () => import('./Admin Roles/Installation Manager/currentmalfunctionslist/currentmalfunctionslist.module').then( m => m.CurrentmalfunctionslistPageModule)
+  },
+  {
+    path: 'solvedmalfunctionslist',
+    loadChildren: () => import('./Admin Roles/Installation Manager/solvedmalfunctionslist/solvedmalfunctionslist.module').then( m => m.SolvedmalfunctionslistPageModule)
+  },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'menu-tabs',
+    loadChildren: () => import('./menu-tabs/menu-tabs.module').then( m => m.MenuTabsPageModule)
+  },
+  {
+    path: 'top-tabs',
+    loadChildren: () => import('./top-tabs/top-tabs.module').then( m => m.TopTabsPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'contact-us',
+    loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
+  },
+  {
+    path: 'language',
+    loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
   },
  ];
 @NgModule({

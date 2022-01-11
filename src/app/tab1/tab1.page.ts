@@ -41,4 +41,7 @@ this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     console.log('inside emergency complain')
     this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
 }

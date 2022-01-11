@@ -14,7 +14,7 @@ export class PaidbillsPage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) { 
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

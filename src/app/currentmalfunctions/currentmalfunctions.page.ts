@@ -13,7 +13,7 @@ export class CurrentmalfunctionsPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     this.call_api()
   }
@@ -32,7 +32,7 @@ export class CurrentmalfunctionsPage implements OnInit {
       refresh
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -58,5 +58,8 @@ export class CurrentmalfunctionsPage implements OnInit {
   }
   async currentmalfunction_details(id){
     this.router.navigateByUrl('detailed_current_malfunctions/'+id);
+  }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
   }
   }

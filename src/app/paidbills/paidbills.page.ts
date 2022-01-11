@@ -30,9 +30,12 @@ export class PaidbillsPage implements OnInit {
      }
       sub
       refresh
+      notifications(){
+        this.router.navigateByUrl('tabs/notifications');
+      }
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/tab1');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

@@ -18,10 +18,14 @@ height: 30px;
 }
 .logo{
   position: absolute ;
-  top: -11px;
+  top: -4px;
   right: 0px;
   width: 66px;
   height: 86px;
+}
+.white{
+  width: 100%;
+  height: 5em;
 }
 .btn-primary{
   width: 8em;
@@ -45,5 +49,17 @@ height: 30px;
     color: #6E6E6E;
     margin-left: -1em;
     margin-right: -1em;;
+  }
+  .accordion-button{
+    background-color: #F5F5F5;
+    color: #6E6E6E;
+    height: 40px;
+  }
+  .accordion-item{
+margin-top: 0.5em;
+  }
+  .accordion-collapse{
+    background-color: #F5F5F5;
+    color: #6E6E6E;
   }
  

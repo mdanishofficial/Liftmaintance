@@ -30,6 +30,9 @@ export class InquiriesPage implements OnInit {
         inquiry_data;
   ngOnInit() {
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   async inquiries(){
     this.router.navigateByUrl('/tabs/inquiries');
   }

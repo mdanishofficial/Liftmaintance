@@ -12,6 +12,9 @@ export class FaqsPage implements OnInit {
 
   ngOnInit() {
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   async inquiries(){
     this.router.navigateByUrl('/tabs/inquiries');
   }

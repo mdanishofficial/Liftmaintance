@@ -1,0 +1,152 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -4px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .flex-container{
+      justify-content: center;
+  }
+  .btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  
+  
+  }
+  .btn-secondary{
+    width: 8em;
+    background-color: #F5F5F5;
+    color: #6E6E6E;
+    border: #6E6E6E;
+  }
+  .divider{
+    width:3em;
+    height:auto;
+    display:inline-block;
+  }
+    .square{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .h3{
+      font-family:'Roboto';
+      font-size: 18px;
+      margin-top: 0.5em;
+      margin-left: 0em;
+      margin-bottom: 0em;
+      color: #194E78;
+      text-align: left;
+      }
+    .date{
+        color: #6E6E6E;
+        font-family:'Roboto';
+        font-size: 12px;
+        margin-top: 0em;
+        margin-left: 0em;
+        text-align: left;
+    }
+    .details{
+      color: #6E6E6E;
+      font-family:'Roboto';
+      font-size: 12px;
+      margin-top: 0em;
+      margin-left: 0em;
+    }
+    .complain{
+        float: left;
+    }
+    .status{
+     font-family:'Roboto';
+          font-size: 20px;
+          margin-top: 0em;
+          margin-left: 0em;
+          margin-bottom: 0em;
+          color: #194E78;
+          text-align: left;
+         }
+  .card{
+      --background:#FCFCFC;
+      padding: 1em;
+      padding-top: 0.5em;
+    //   margin-top: 0.5em;
+  }
+    .buttondiv{
+      float: right;
+    }
+    .statusbutton1{
+      width: 91px;
+        height: 37px;
+           --background:#7A0001;
+    }
+    .statusbutton2{
+        width: 91px;
+          height: 37px;
+             --background:#FF6932;
+      }
+      .statusbutton3{
+        width: 91px;
+          height: 37px;
+             --background:#FABE11;
+      }
+    .newbutton{
+        --background:#FF6932;
+      //   position: fixed;
+           bottom: 10%;
+         width: 220px;
+        height: 49px;
+        margin-top:8em
+        }
+        @media only screen and (max-height: 670px) {
+          .newbutton{
+              --background:#FF6932;
+            //   position: fixed;
+                 bottom: 10%;
+               width: 220px;
+              height: 49px;
+              margin-top:0em
+              }
+        }
+        @media only screen and (min-height: 1000px) {
+          .details{
+              color: #6E6E6E;
+              font-family:'Roboto';
+              font-size: 25px;
+              margin-top: 0em;
+              margin-left: 0em;
+            }
+            .date{
+              color: #6E6E6E;
+              font-family:'Roboto';
+              font-size: 25px;
+              margin-top: 0em;
+              margin-left: 0em;
+              text-align: left;
+          }
+          .h3{
+              font-family:'Roboto';
+              font-size: 30px;
+              margin-top: 0.5em;
+              margin-left: 0em;
+              margin-bottom: 0em;
+              color: #194E78;
+              text-align: left;
+            }
+        }
+  

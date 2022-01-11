@@ -67,6 +67,9 @@ user_id:decoded.user_id,
       this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
     });
   }
+  notifications(){
+    this.router.navigateByUrl('tabs/notifications');
+  }
   back(){
     var refresh=true
     this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
