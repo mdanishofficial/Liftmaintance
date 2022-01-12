@@ -414,6 +414,10 @@ const routes: Routes = [
     path: 'language',
     loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
   },
+  {
+    path: 'contract-details',
+    loadChildren: () => import('./contract-details/contract-details.module').then( m => m.ContractDetailsPageModule)
+  },
  ];
 @NgModule({
   imports: [

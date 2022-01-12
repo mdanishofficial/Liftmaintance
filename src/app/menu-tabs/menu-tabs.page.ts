@@ -15,7 +15,18 @@ export class MenuTabsPage implements OnInit {
     this.router.navigateByUrl('tabs/notifications');
   }
   profile(){
-    console.log('Navigating towards Tab Page')
-    this.router.navigateByUrl('tabs/profile');
+     this.router.navigateByUrl('tabs/profile');
   }
+  language(){
+    this.router.navigateByUrl('tabs/language');
+ }
+ settings(){
+  this.router.navigateByUrl('tabs/settings');
+}
+inquiries(){
+  this.router.navigateByUrl('tabs/inquiries');
+}
+home(){
+  this.router.navigateByUrl('menu-tabs/home');
+}
 }

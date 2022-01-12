@@ -252,6 +252,16 @@ export class InstallationService {
                                           return response;
                                             })
                                       )}
+                                      public getcontract(data): Observable<any> {
+                                        const url = PCconfig.getPath() + '/contracts/getcontract';
+                                        // return this.http.post(url, data);
+                                        return this.http
+                                        .post(url, data)
+                                        .pipe(
+                                          map((response: any) => {
+                                            return response;
+                                              })
+                                        )}
                                     private _listeners=new Subject<any>();
                                     listen():Observable<any>{
                                       return this._listeners.asObservable();

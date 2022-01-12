@@ -1,0 +1,127 @@
+<div class="white"></div>
+<h1 class="ion-text-center">Contract Detail</h1>
+<ion-content overflow-scroll="true">
+  <div class="container">
+  <div *ngFor="let result of contract_data">
+      <div>
+        <h2 class="h3">Client Name</h2>
+        <br>
+        <br>
+        <br>
+        <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.client_name}}</ion-textarea>
+       </div>
+    <div>
+      <h2 class="h3">Client Id</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.user_id}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Client City</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.client_city}}</ion-textarea>
+      </div>
+    <div>
+      <h2 class="h3">Street Address</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.client_street}}</ion-textarea>
+     </div>
+    <div>
+      <h2 class="h3">District Name</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.client_district}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Location</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="4" [(ngModel)]="payloads" disabled readonly>{{result?.client_location}}</ion-textarea>
+   </div>
+    <div>
+      <h2 class="h3">Client Email</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.client_email}}</ion-textarea>
+     </div>
+    <div>
+      <h2 class="h3">Client Phone Number</h2>
+      <br>
+      <br>
+      <br> 
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{result?.client_phoneno}}</ion-textarea>
+  </div>
+    <div>
+      <h2 class="h3">Contract Period</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.contract_period}}</ion-textarea>
+   </div>
+    <div>
+      <h2 class="h3">Contract Start Date</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.contract_start_date}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Contract End Date</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.contract_end_date}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Additional Free Contract Date Till</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.additional_free_contract_date_til}}</ion-textarea>
+   </div>
+    <div>
+      <h2 class="h3">Scheduled Maintenance Monthly</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.scheduled_maintenance_monthly}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Contract Price</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{result?.contract_price}}</ion-textarea>
+</div>
+    <div>
+      <h2 class="h3">Number of Lifts</h2>
+      <br>
+      <br>
+      <br>
+     <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.no_of_lifts}}</ion-textarea>
+    </div>
+    <br>
+    <ion-list>
+      <div *ngFor="let entry of form">
+        <ion-checkbox slot="start" class="checkbox" [(ngModel)]="entry.isChecked"></ion-checkbox>
+        <ion-label class="label">{{entry.val}}</ion-label>
+      </div>
+    </ion-list>
+</div>
+<div class="flex-container">
+  <ion-button class="newbutton" shape="round" (click)="startapp()">Start Using App</ion-button>
+  <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+</div>
+</div>
+  <br>
+  <br>
+  <br>
+</ion-content>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-faqs',
   templateUrl: './faqs.page.html',
@@ -8,7 +9,11 @@ import {Router} from "@angular/router";
 })
 export class FaqsPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('menu-tabs/tab1');
+     });
+  }
 
   ngOnInit() {
   }

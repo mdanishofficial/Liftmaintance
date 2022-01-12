@@ -57,7 +57,7 @@ login(){
       localStorage.setItem('token', res.token);
       var decoded:any={}
       decoded = jwt_decode(res.token);
-      this.router.navigateByUrl('top-tabs/tab1');
+      this.router.navigateByUrl('tabs/contract_details');
       this.showToasterSuccess();
     }
        },(err)=>{

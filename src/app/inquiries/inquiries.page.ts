@@ -13,7 +13,7 @@ export class InquiriesPage implements OnInit {
   constructor(private platform: Platform,private service: InstallationService,private router: Router){
     console.log('In Constructor')
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
+      this.router.navigateByUrl('menu-tabs/tab1');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

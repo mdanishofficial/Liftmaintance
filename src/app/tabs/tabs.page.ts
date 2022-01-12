@@ -8,13 +8,22 @@ import { Router } from "@angular/router";
 export class TabsPage {
 
   constructor(private router: Router) {}
-  home(){
-    this.router.navigateByUrl('menu-tabs/tab1');
-  }
   notifications(){
     this.router.navigateByUrl('tabs/notifications');
   }
   profile(){
-    this.router.navigateByUrl('tabs/profile');
+     this.router.navigateByUrl('tabs/profile');
   }
+  language(){
+    this.router.navigateByUrl('tabs/language');
+ }
+ settings(){
+  this.router.navigateByUrl('tabs/settings');
+}
+inquiries(){
+  this.router.navigateByUrl('tabs/inquiries');
+}
+home(){
+  this.router.navigateByUrl('menu-tabs/tab1');
+}
 }

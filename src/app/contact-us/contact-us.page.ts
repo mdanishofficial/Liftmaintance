@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-contact-us',
   templateUrl: './contact-us.page.html',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactUsPage implements OnInit {
 
-  constructor() { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('tabs/settings');
+     });
+  }
 
   ngOnInit() {
   }

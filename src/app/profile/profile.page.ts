@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -7,7 +8,11 @@ import { Router } from "@angular/router";
 })
 export class ProfilePage implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('menu-tabs/tab1');
+     });
+  }
 
   ngOnInit() {
   }
