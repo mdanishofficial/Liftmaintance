@@ -110,11 +110,17 @@
     </div>
     <br>
     <ion-list>
-      <div *ngFor="let entry of form">
+      <ion-item *ngFor="let entry of form">
         <ion-checkbox slot="start" class="checkbox" [(ngModel)]="entry.isChecked"></ion-checkbox>
+         <ion-label class="label">{{entry.val}}</ion-label>
+        </ion-item>
+     </ion-list>
+     <!-- <ion-list>
+      <ion-item *ngFor="let entry of form">
         <ion-label class="label">{{entry.val}}</ion-label>
-      </div>
-    </ion-list>
+        <ion-checkbox slot="start" class="checkbox" [(ngModel)]="entry.isChecked"></ion-checkbox>
+      </ion-item>
+    </ion-list> -->
 </div>
 <div class="flex-container">
   <ion-button class="newbutton" shape="round" (click)="startapp()">Start Using App</ion-button>

@@ -74,7 +74,7 @@
   <ion-label class="label">Doors Dressing</ion-label>
 </div> -->
 <ion-list>
-  <div *ngFor="let entry of form">
+  <div *ngFor="let entry of form" class="outerdiv">
     <ion-checkbox slot="start" class="checkbox" disabled="true" [(ngModel)]="entry.isChecked"></ion-checkbox>
     <ion-label class="label">{{entry.val}}</ion-label>
     <hr class="hr">

@@ -48,11 +48,13 @@ hr {
     margin-top: 0.1em;
     // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+  .outerdiv{
+margin-left: -0.7em;
+  }
 .label{
     margin-left: 1em;
     color: #6E6E6E !important;
-    
-}
+    }
 .checkbox{
     margin-left: 1em;
     --background-checked:#60D924;

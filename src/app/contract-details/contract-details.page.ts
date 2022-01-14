@@ -10,6 +10,7 @@ import { NotificationService } from '../../services/notification.service'
   templateUrl: './contract-details.page.html',
   styleUrls: ['./contract-details.page.scss'],
 })
+
 export class ContractDetailsPage implements OnInit {
   stops=''
   doortype=''
@@ -47,6 +48,9 @@ export class ContractDetailsPage implements OnInit {
 
   ngOnInit() {
   }
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Logged In Successfully !!", "")
+}
   contract_data=[]
   notifications(){
     this.router.navigateByUrl('tabs/notifications');
@@ -65,6 +69,7 @@ export class ContractDetailsPage implements OnInit {
     else{
       localStorage.setItem('accepted','true');
       this.router.navigateByUrl('menu-tabs/tab1');
+      this.showToasterSuccess()
     }
   }
   public form = [

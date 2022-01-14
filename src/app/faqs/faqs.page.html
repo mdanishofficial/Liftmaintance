@@ -19,38 +19,42 @@
 
     <div class="tabs">
       <ion-tab-bar slot="top">
-          <button type="button" class="btn btn-primary" id="solved-button"  (click)="faqs()" >FAQ</button>
-      <div class="divider"></div>
-          <button type="button" class="btn btn-secondary" id="pending-button"(click)="inquiries()" >Inquiries</button>
+        <button type="button" class="btn btn-primary" id="solved-button" (click)="faqs()">FAQ</button>
+        <div class="divider"></div>
+        <button type="button" class="btn btn-secondary" id="pending-button" (click)="inquiries()">Inquiries</button>
       </ion-tab-bar>
     </div>
     <br>
     <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
+      <div class="accordion-item" *ngFor="let result of faqs_data let i=index" (click)=changeselected(i)>
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Question #1
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            {{result?.question}}
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <ion-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vero numquam. Dolor pariatur numquam facilis officia impedit, et autem. Sed necessitatibus doloremque esse temporibus ducimus suscipit accusamus in obcaecati quam!</ion-text>
+        <div *ngIf="this.selected[i]==true">
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ion-text> {{result?.answer}}</ion-text>
+            </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item">
+      <!-- <div class="accordion-item" *ngFor="let result of faqs_data let i=index">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-           Question #2
+            {{result?.question}}
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            <ion-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vero numquam. Dolor pariatur numquam facilis officia impedit, et autem. Sed necessitatibus doloremque esse temporibus ducimus suscipit accusamus in obcaecati quam!</ion-text>
+            <ion-text> {{result?.answer}}</ion-text>
           </div>
         </div>
-      </div>
-      <div class="accordion-item">
+      </div> -->
+      <!-- <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             Question #3
@@ -61,7 +65,7 @@
             <ion-text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, vero numquam. Dolor pariatur numquam facilis officia impedit, et autem. Sed necessitatibus doloremque esse temporibus ducimus suscipit accusamus in obcaecati quam!</ion-text>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-</div>
+  </div>
 </ion-content>

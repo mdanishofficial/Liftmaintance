@@ -157,6 +157,17 @@ height: 30px;
             .flex-container{
                 justify-content: center;
             }
+            ion-item{
+                margin-left: -1em;
+                .input-wrapper{
+                    flex:none;
+                    margin-left: auto;
+                }
+                ion-checkbox.checkbox{
+                    margin-right: auto !important;
+                }
+            }
+            
             @media only screen and (max-height: 670px) {
               .newbutton{
                   --background:#194E78;

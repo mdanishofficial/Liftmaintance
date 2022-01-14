@@ -28,7 +28,7 @@ password=''
       }
       else{
         console.log('User Logged In')
-        this.router.navigateByUrl('menu-tabs/tab1');
+        this.router.navigateByUrl('tabs/contract_details');
       }
     }
  catch{
@@ -58,7 +58,7 @@ login(){
       var decoded:any={}
       decoded = jwt_decode(res.token);
       this.router.navigateByUrl('tabs/contract_details');
-      this.showToasterSuccess();
+      // this.showToasterSuccess();
     }
        },(err)=>{
           if(err.error=="INCORRECT PASSWORD"||err.error=="INCORRECT EMAIL"){

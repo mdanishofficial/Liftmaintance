@@ -262,6 +262,26 @@ export class InstallationService {
                                             return response;
                                               })
                                         )}
+                                        public addfaq(data): Observable<any> {
+                                          const url = PCconfig.getPath() + '/faqs/addfaq';
+                                          // return this.http.post(url, data);
+                                          return this.http
+                                          .post(url, data)
+                                          .pipe(
+                                            map((response: any) => {
+                                              return response;
+                                                })
+                                          )}
+                                          public getfaqs(): Observable<any> {
+                                            const url = PCconfig.getPath() + '/faqs/getfaqs';
+                                            // return this.http.post(url, data);
+                                            return this.http
+                                            .get(url)
+                                            .pipe(
+                                              map((response: any) => {
+                                                return response;
+                                                  })
+                                            )}
                                     private _listeners=new Subject<any>();
                                     listen():Observable<any>{
                                       return this._listeners.asObservable();

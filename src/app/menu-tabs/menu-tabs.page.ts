@@ -27,6 +27,6 @@ inquiries(){
   this.router.navigateByUrl('tabs/inquiries');
 }
 home(){
-  this.router.navigateByUrl('menu-tabs/home');
+  this.router.navigateByUrl('menu-tabs/tab1');
 }
 }
