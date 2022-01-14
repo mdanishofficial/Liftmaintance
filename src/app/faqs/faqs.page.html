@@ -41,6 +41,19 @@
             </div>
           </div>
         </div>
+        <!-- <p>
+          <button type="button" class="btn btn-outline-primary" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="collapseExample">
+            {{result?.question}}
+          </button>
+        </p>
+        <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+          <div class="card">
+            <div class="card-body">
+              <ion-text> {{result?.answer}}</ion-text>
+            </div>
+          </div>
+        </div> -->
       </div>
       <!-- <div class="accordion-item" *ngFor="let result of faqs_data let i=index">
         <h2 class="accordion-header" id="headingTwo">
@@ -67,5 +80,5 @@
         </div>
       </div> -->
     </div>
-  </div>
+   </div>
 </ion-content>

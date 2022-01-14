@@ -9,7 +9,7 @@ import { InstallationService } from '../../services/main.service';
 
 })
 export class FaqsPage implements OnInit {
-
+  public isCollapsed = false;
   constructor(private service: InstallationService, private platform: Platform, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('menu-tabs/tab1');
