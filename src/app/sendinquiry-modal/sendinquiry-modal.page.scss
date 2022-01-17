@@ -20,37 +20,31 @@
     // border-radius: 2em;
 }
 
-.attach-button{
-    width: 0px auto; 
-    height: 8em;
-    --background:white;
-}
 .tick{
     align-items: center;
     margin-top: 0em;
     height: 7em;
     width: 15em;
 }
-.btn-primary{
-    background-color:#194E78;
-    width:10em;
-    height: 3.4em;
-    border-color:#194E78;
-    margin-top: 0em;
-    font-family:'Roboto';
-}
 .btn-secondary{
+    width: 8em;
     background-color:#6E6E6E;
-    width:10em;
-    height: 3.4em;
-    margin-top: 0em;
-    font-family:'Roboto';
-}
-.divider{
-    width:3em;
+    color: white;
+    border: #6E6E6E;
+ }
+  .btn-primary{
+    width: 8em;
+    background-color: #194E78;
+    border: #194E78;
+  }
+  .divider{
+    width:1em;
     height:auto;
     display:inline-block;
-}
+  }
+  #buttonsdiv{
+      margin-top: 1.7em;
+  }
 
 .flex-container{
     justify-content: center;

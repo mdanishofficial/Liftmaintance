@@ -9,13 +9,13 @@ import { InstallationService } from '../../services/main.service';
 
 })
 export class FaqsPage implements OnInit {
-  public isCollapsed = false;
+  public isCollapsed: boolean[] = [];
+
   constructor(private service: InstallationService, private platform: Platform, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('menu-tabs/tab1');
     });
-
-    this.call_api()
+ this.call_api()
   }
 
   ngOnInit() {
@@ -24,10 +24,10 @@ export class FaqsPage implements OnInit {
     this.service.getfaqs().subscribe(res => {
       this.faqs_data = res
       console.log(res)
+      for (var i = 0; i < this.faqs_data.length; i++) {
+        this.isCollapsed[i] = true
+      }
     })
-    for (var i = 0; i < this.faqs_data.length; i++) {
-      this.selected[i] = true
-    }
   }
   faqs_data = []
 

@@ -6,19 +6,24 @@ import { InstallationService } from '../../services/main.service';
 import { ModalController } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
+import { NotificationService } from '../../services/notification.service'
+// import { SendinquiryModalPage } from '../sendinquiry-modal/sendinquiry-modal.page';
 @Component({
   selector: 'app-newinquiries',
   templateUrl: './newinquiries.page.html',
   styleUrls: ['./newinquiries.page.scss'],
 })
 export class NewinquiriesPage implements OnInit {
-  inquirydetail=''
+  inquiry_detail=''
   inquiry_type=''
-  constructor(private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
+  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/installation_stages');
     });
   }
+  showToasterError(){
+    this.notifyService.showError("Please Fill out All the Fields",'')
+}
   notifications(){
     this.router.navigateByUrl('tabs/notifications');
   }
@@ -32,15 +37,27 @@ export class NewinquiriesPage implements OnInit {
  
     let payload={
       user_id:decoded.user_id,
-      inquiry_detail:this.inquirydetail,
+      inquiry_details:this.inquiry_detail,
       inquiry_type:this.inquiry_type,
       inquiry_date:date,
       inquiry_status:'pending'
           }
-         this.service.addinquiry(payload).subscribe(res => {
-          this.inquiry_data=res
-          console.log(this.inquiry_data)
-        })
+          if(this.inquiry_detail!=''&&this.inquiry_type!=''){
+            this.service.addinquiry(payload).subscribe(res => {
+              this.inquiry_data=res
+              console.log(this.inquiry_data)
+              if(res.message=="New Inquiry Added Successfully"){
+                this.presentModalsendInquiry()
+              }
+              else{
+                console.log('Error in Adding Inquiry')
+              }
+            })
+          }
+          else{
+this.showToasterError()
+          }
+      
   }
       
   inquiry_data

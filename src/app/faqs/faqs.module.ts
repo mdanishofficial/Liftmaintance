@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,6 +19,7 @@ import { FaqsPage } from './faqs.page';
     // NzCollapseModule,
     // NzTabsModule
     ],
-  declarations: [FaqsPage]
+  declarations: [FaqsPage],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class FaqsPageModule {}
