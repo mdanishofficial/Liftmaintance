@@ -18,7 +18,7 @@
     height: 86px;
   }
   .container{
-      margin: 0.5em;
+      margin: 0.2em;
   }
   h1{
       text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
@@ -30,21 +30,25 @@
   .date{
     font-size: 16px;
     color: #6E6E6E;
-    margin-left: -0.5em;
 }
 .client{
     font-size: 20px;
     font-family:'Roboto';
     color: #194E78;
     margin-top: 0.5em;
-    margin-left: -0.4em;
  }
 .hr{
-    width: 94%;
+    width: 98%;
 }
 .ion-icon{
     color: white;
     float: right;
+}
+.textarea{
+  color: #6E6E6E;
+  height: 2.7em;
+  margin-left: -0.5em;
+  border: 1px solid #DFDFDF;
 }
 .update{
     display: flex;
@@ -125,14 +129,8 @@
          margin-left: -0.5em;
        }
        ::ng-deep .malfunctiontype .modal-wrapper {
-        height: 21em!important;
-        --border-radius:10px;
+        height: 451px!important;
+        width: 318px;
+        --border-radius:20px;
         margin: 1em;
        }
-       @media only screen and (max-width: 321px) {
-        ::ng-deep .malfunctiontype .modal-wrapper {
-            height: 25em!important;
-            --border-radius:10px;
-            margin: 1em;
-           }
-    }

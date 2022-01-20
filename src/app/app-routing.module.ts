@@ -335,8 +335,8 @@ const routes: Routes = [
     loadChildren: () => import('./Admin Roles/Installation Manager/updatepayment-modal/updatepayment-modal.module').then( m => m.UpdatepaymentModalPageModule)
   },
   {
-    path: 'installation-stage',
-    loadChildren: () => import('./Admin Roles/Installation Manager/installation-stage/installation-stage.module').then( m => m.InstallationStagePageModule)
+    path: 'railanddoor-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/railanddoor-stage/railanddoor-stage.module').then( m => m.RailanddoorStagePageModule)
   },
   {
     path: 'task-details',
@@ -469,6 +469,22 @@ const routes: Routes = [
   {
     path: 'installation',
     loadChildren: () => import('./Admin Roles/Installation Manager/installation/installation.module').then( m => m.InstallationPageModule)
+  },
+  {
+    path: 'engine-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/engine-stage/engine-stage.module').then( m => m.EngineStagePageModule)
+  },
+  {
+    path: 'liftcar-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/liftcar-stage/liftcar-stage.module').then( m => m.LiftcarStagePageModule)
+  },
+  {
+    path: 'control-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/control-stage/control-stage.module').then( m => m.ControlStagePageModule)
+  },
+  {
+    path: 'railanddoor-stage',
+    loadChildren: () => import('./Admin Roles/Installation Manager/railanddoor-stage/railanddoor-stage.module').then( m => m.RailanddoorStagePageModule)
   },
  ];
 @NgModule({

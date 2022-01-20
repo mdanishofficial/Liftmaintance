@@ -291,10 +291,6 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
   },  
   {
-    path: 'adminroles/installationmanager/installationstage',
-    loadChildren: () => import('../Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
-  },  
-  {
     path: 'adminroles/installationmanager/unpaidbills',
     loadChildren: () => import('../Admin Roles/Installation Manager/unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
   },  

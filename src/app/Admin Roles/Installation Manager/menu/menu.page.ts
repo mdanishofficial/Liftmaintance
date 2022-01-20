@@ -14,6 +14,9 @@ export class MenuPage implements OnInit {
 
   ngOnInit() {
   }
+  async installation(){
+    this.router.navigateByUrl('installation_manager/installation');
+  }
 async maintenance(){
   this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
@@ -9,7 +10,7 @@ import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-mod
 })
 export class InstallationPagePage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController) {}
+  constructor(public alertController: AlertController,public modalController: ModalController,private router: Router) {}
 
   ngOnInit() {
   }
@@ -19,5 +20,8 @@ async update(){
     cssClass: 'malfunctiontype'
   });
   return await modal.present();
+}
+async startstage(){
+  this.router.navigateByUrl('installation_manager/installation_stage');
 }
 }

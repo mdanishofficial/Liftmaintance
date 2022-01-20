@@ -21,8 +21,24 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/installation/installation.module').then(m => m.InstallationPageModule)
       },
       {
-        path: 'installation_stage',
-        loadChildren: () => import('../Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
+        path: 'installation_page',
+        loadChildren: () => import('../Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
+      },
+      {
+        path: 'railanddoor_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/railanddoor-stage/railanddoor-stage.module').then(m => m.RailanddoorStagePageModule)
+      },
+      {
+        path: 'engine_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/engine-stage/engine-stage.module').then(m => m.EngineStagePageModule)
+      },
+      {
+        path: 'liftcar_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/liftcar-stage/liftcar-stage.module').then(m => m.LiftcarStagePageModule)
+      },
+      {
+        path: 'control_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/control-stage/control-stage.module').then(m => m.ControlStagePageModule)
       },
       {
         path: 'currentmalfunctionslist',

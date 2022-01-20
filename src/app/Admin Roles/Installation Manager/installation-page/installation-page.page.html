@@ -36,23 +36,21 @@
 <hr class="hr">
 <h6 class="client">Installation Status</h6>
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
   <option value="electrical" class="options">Progressing</option>
   <option value="mechanical" class="options">Waiting for next stage payment</option>
-
 </select>
+ <h6 class="client">Stage Payment</h6>
+  <ion-textarea class="textarea"></ion-textarea>
 <h6 class="client">Payment</h6>
     <div class="ion-text-center">
       <ion-chip class="update" (click)="update()">
-    <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
-    <ion-label class="itemcenter">Update</ion-label>
+   <ion-label class="itemcenter">Pending</ion-label>
    <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
       </ion-chip>
   </div>
   <hr class="hr">
 <h6 class="client">Installation Stage Status</h6>
 <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <!-- <option disabled selected hidden style="color:   #DCDCDC;">Select City</option> -->
   <option value="electrical" class="options">New</option>
   <option value="mechanical" class="options">Mechanical</option>
   <option value="other" class="options">Other Type</option>
