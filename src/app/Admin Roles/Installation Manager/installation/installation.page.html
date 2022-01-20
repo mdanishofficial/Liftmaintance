@@ -1,0 +1,36 @@
+<!-- "node_modules/ng-zorro-antd/src/ng-zorro-antd.min.css",
+"node_modules/ng-zorro-antd/resizable/style/index.min.css" -->
+<div class="container">
+  <h1 class="h1">Malfunction Level</h1>
+  <ion-list>
+    <ion-radio-group allow-empty-selection = "false" value="radio" (ionChange)="radioGroupChange($event)"
+    >
+    <ion-item>
+        <ion-label>Normal</ion-label>
+        <ion-radio slot="start" value="normal" class="radio" #normal></ion-radio>
+        <div class="rightcolyellow">
+        </div>
+      </ion-item>
+       <ion-item>
+        <ion-label>Affective</ion-label>
+        <ion-radio slot="start" value="affective" class="radio" #affective></ion-radio>
+        <div class="rightcolorange">
+        </div>
+      </ion-item>
+      <ion-item>
+        <ion-label>Dangerous</ion-label>
+        <ion-radio slot="start" value="dangerous" class="radio" #dangerous></ion-radio>
+        <div class="rightcolbrown">
+        </div>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+  <div class="ion-text-center">
+  <button type="button" class="btn btn-primary" (click)="update()">Update</button>
+  <div class="divider"></div>
+  <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
+</div>
+    </div>
+  <ion-content>
+  </ion-content>

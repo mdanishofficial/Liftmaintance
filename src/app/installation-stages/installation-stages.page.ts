@@ -4,6 +4,7 @@ import { InstallationService } from '../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 import { ActivatedRoute } from '@angular/router';
+import { NgxSpinnerService } from "ngx-spinner";
 @Component({
   selector: 'app-installation-stages',
   templateUrl: './installation-stages.page.html',
@@ -11,10 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class InstallationStagesPage implements OnInit {
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
+  constructor(private spinner: NgxSpinnerService,public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
+    // this.spinner.show();
+  
     this.call_api();
+    // console.log('after')
+    // this.spinner.hide()
+    // console.log('hide')
    }
   ngOnInit() {
+  
+
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 2000);
     console.log('Inside Ng On INit')
       this.sub = this.activatedRoute.params.subscribe(params => {
         this.refresh = params['refresh'];
@@ -28,6 +40,8 @@ export class InstallationStagesPage implements OnInit {
       sub
       refresh
   call_api(){
+    console.log('Inside Call Api')
+    this.spinner.show();
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('menu-tabs/tab1');
     });
@@ -55,8 +69,10 @@ export class InstallationStagesPage implements OnInit {
     this.service.getcontroldelivery(payload).subscribe(res => {
       this.controldelivery_data = res;
     })
+    // this.spinner.hide();
+    this.spinner.hide();
+    console.log('End Of Call Api')
   }
- 
   railanddoor(){
     this.router.navigateByUrl('raildoor');
   }
@@ -64,7 +80,7 @@ export class InstallationStagesPage implements OnInit {
     this.router.navigateByUrl('cabin');
   }
   machine(){
-    this.router.navigateByUrl('machine');
+    this.router.navigateByUrl('installation-stages-details');
   }
   controldelivery(){
     this.router.navigateByUrl('controldelivery');

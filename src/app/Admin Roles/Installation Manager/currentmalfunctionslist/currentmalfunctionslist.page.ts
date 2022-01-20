@@ -18,4 +18,7 @@ async solved(){
 async current(){
   this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
 }
+malfunction_details(){
+  this.router.navigateByUrl('installation_manager/malfunction_details');
+}
 }

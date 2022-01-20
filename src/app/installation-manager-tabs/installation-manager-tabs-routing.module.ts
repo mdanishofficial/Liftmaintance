@@ -17,12 +17,88 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/menu/menu.module').then(m => m.MenuPageModule)
       },
       {
+        path: 'installation',
+        loadChildren: () => import('../Admin Roles/Installation Manager/installation/installation.module').then(m => m.InstallationPageModule)
+      },
+      {
+        path: 'installation_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/installation-stage/installation-stage.module').then(m => m.InstallationStagePageModule)
+      },
+      {
         path: 'currentmalfunctionslist',
         loadChildren: () => import('../Admin Roles/Installation Manager/currentmalfunctionslist/currentmalfunctionslist.module').then(m => m.CurrentmalfunctionslistPageModule)
       },
       {
         path: 'solvedmalfunctionslist',
         loadChildren: () => import('../Admin Roles/Installation Manager/solvedmalfunctionslist/solvedmalfunctionslist.module').then(m => m.SolvedmalfunctionslistPageModule)
+      },
+      {
+        path: 'malfunction_details',
+        loadChildren: () => import('../Admin Roles/Installation Manager/malfunctionsdetails/malfunctionsdetails.module').then(m => m.MalfunctionsdetailsPageModule)
+      },
+      {
+        path: 'myclient',
+        loadChildren: () => import('../Admin Roles/Installation Manager/myclient/myclient.module').then(m => m.MyclientPageModule)
+      },
+      {
+        path: 'clientlisting',
+        loadChildren: () => import('../Admin Roles/Installation Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
+      },
+      {
+        path: 'contracts',
+        loadChildren: () => import('../Admin Roles/Installation Manager/contracts/contracts.module').then(m => m.ContractsPageModule)
+      },
+      {
+        path: 'curmonthexpiring',
+        loadChildren: () => import('../Admin Roles/Installation Manager/curmonthexpiring/curmonthexpiring.module').then(m => m.CurmonthexpiringPageModule)
+      },
+      {
+        path: 'expired',
+        loadChildren: () => import('../Admin Roles/Installation Manager/expired/expired.module').then(m => m.ExpiredPageModule)
+      },
+      {
+        path: 'contractdetails',
+        loadChildren: () => import('../Admin Roles/Installation Manager/contractdetails/contractdetails.module').then(m => m.ContractdetailsPageModule)
+      },
+      {
+        path: 'paidbills',
+        loadChildren: () => import('../Admin Roles/Installation Manager/paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
+      },
+      {
+        path: 'unpaidbills',
+        loadChildren: () => import('../Admin Roles/Installation Manager/unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
+      },
+      {
+        path: 'pendingcomplain/:refresh',
+        loadChildren: () => import('../Admin Roles/Installation Manager/pendingcomplain/pendingcomplain.module').then(m => m.PendingcomplainPageModule)
+      },
+      {
+        path: 'solvedcomplain/:refresh',
+        loadChildren: () => import('../Admin Roles/Installation Manager/solvedcomplain/solvedcomplain.module').then(m => m.SolvedcomplainPageModule)
+      },
+      {
+        path: 'newpendingcomplain',
+        loadChildren: () => import('../Admin Roles/Installation Manager/newpendingcomplain/newpendingcomplain.module').then(m => m.NewpendingcomplainPageModule)
+      },
+      {
+        path: 'pendingemergencycomplain/:refresh',
+        loadChildren: () => import('../Admin Roles/Installation Manager/pendingemergencycomplain/pendingemergencycomplain.module').then(m => m.PendingemergencycomplainPageModule)
+      },
+      {
+        path: 'solvedemergencycomplain/:refresh',
+        loadChildren: () => import('../Admin Roles/Installation Manager/solvedemergencycomplain/solvedemergencycomplain.module').then(m => m.SolvedemergencycomplainPageModule)
+      },
+      {
+        path: 'newemergencycomplain',
+        loadChildren: () => import('../Admin Roles/Installation Manager/newemergencycomplain/newemergencycomplain.module').then(m => m.NewemergencycomplainPageModule)
+      },
+      {
+        path: 'repair_technicians',
+        loadChildren: () => import('../Admin Roles/Installation Manager/repair-technicians/repair-technicians.module').then(m => m.RepairTechniciansPageModule)
+      },
+      {
+        path: 'maintenance_technicians',
+        loadChildren: () => import('../Admin Roles/Installation Manager/maintenance-technicians/maintenance-technicians.module').then(m => m.MaintenanceTechniciansPageModule)
       },
       {
         path: '',

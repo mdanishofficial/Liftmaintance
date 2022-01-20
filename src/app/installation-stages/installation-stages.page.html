@@ -1,3 +1,5 @@
+<ngx-spinner>
+</ngx-spinner>
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">Installation</h1>
@@ -5,10 +7,10 @@
       <h2 class="h3">Installation Stages</h2>
       <br>
       <br>
-      <div *ngFor="let result of railanddoor_data" (click)="railanddoor()">
+     <div *ngFor="let result of railanddoor_data" (click)="railanddoor()">
         <ion-card class="colorcard1" >
           <div class="flex-container">
-            <div style="float: left;">
+            <div class="leftdiv">
               <div [ngClass]='result?.railanddoor_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
@@ -29,7 +31,7 @@
       <div *ngFor="let result of cab_data" (click)="cabin()">
         <ion-card class="colorcard1" >
           <div class="flex-container">
-            <div style="float: left;">
+            <div class="leftdiv">
               <div [ngClass]='result?.cabin_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
@@ -50,13 +52,12 @@
       <div *ngFor="let result of machine_data" (click)="machine()">
         <ion-card class="colorcard1" >
           <div class="flex-container">
-            <div style="float: left;">
+            <div class="leftdiv">
               <div [ngClass]='result?.machine_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
               <h6 class="stage">Machine Supply</h6>
-              <!-- <h6 class="stage">{{i}}</h6> -->
-              <div class="flex-container3">
+             <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.machine_date}}</ion-text>
                 </div>
@@ -71,12 +72,11 @@
       <div *ngFor="let result of controldelivery_data" (click)="controldelivery()">
         <ion-card class="colorcard1" >
           <div class="flex-container">
-            <div style="float: left;">
+            <div class="leftdiv">
               <div [ngClass]='result.controldelivery_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
               <h6 class="stage">Control Delivery</h6>
-              <!-- <h6 class="stage">{{i}}</h6> -->
               <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.controldelivery_date}}</ion-text>

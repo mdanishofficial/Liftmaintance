@@ -23,7 +23,23 @@
  
   .flex-container{
   justify-content: center;
+  display: grid;
+  margin-top: 5em;
   }
-  .cards{
-      margin-top: 8em;
-  }
+  .card{
+    width: 288px;
+    height: 105px;
+  background-color: #194E78;
+  border-radius: 20px;
+}
+.card-img-top{
+    width: 42px;
+    height: 34px;
+     margin-top: 1em;
+}
+
+.card-title{
+    font-size: 20px;
+    color:white;
+    font-weight: bold;
+}

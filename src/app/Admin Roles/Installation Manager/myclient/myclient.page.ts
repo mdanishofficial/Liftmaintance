@@ -12,9 +12,9 @@ export class MyclientPage implements OnInit {
   ngOnInit() {
   }
   clientlisting(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancemanager/clientlisting');
+    this.router.navigateByUrl('installation_manager/clientlisting');
   }
   contracts(){
-    this.router.navigateByUrl('tabs/adminroles/maintenancemanager/contracts');
+    this.router.navigateByUrl('installation_manager/contracts');
   }
 }

@@ -17,4 +17,21 @@ export class MenuPage implements OnInit {
 async maintenance(){
   this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
 }
+myclient(){
+  this.router.navigateByUrl('installation_manager/myclient');
+}
+bills(){
+  this.router.navigateByUrl('installation_manager/unpaidbills');
+}
+complain(){
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/pendingcomplain/'+refresh);
+}
+emergencycomplain(){
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/pendingemergencycomplain/'+refresh);
+}
+myteam(){
+  this.router.navigateByUrl('installation_manager/repair_technicians');
+}
 }

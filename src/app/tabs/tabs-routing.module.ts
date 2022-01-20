@@ -182,10 +182,6 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance Manager/maintenancevisitsnotvisits/maintenancevisitsnotvisits.module').then(m => m.MaintenancevisitsnotvisitsPageModule)
   },
   {
-    path: 'adminroles/maintenancemanager/myclient',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/myclient/myclient.module').then(m => m.MyclientPageModule)
-  },
-  {
     path: 'adminroles/maintenancemanager/myteam-maintenance-technicians',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/myteam-maintenance-technicians/myteam-maintenance-technicians.module').then(m => m.MyteamMaintenanceTechniciansPageModule)
   },
@@ -193,10 +189,7 @@ const routes: Routes = [
     path: 'adminroles/maintenancemanager/myteam-repair-technicians',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/myteam-repair-technicians/myteam-repair-technicians.module').then(m => m.MyteamRepairTechniciansPageModule)
   },
-  {
-    path: 'adminroles/maintenancemanager/clientlisting',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
-  },
+ 
   {
     path: 'adminroles/Mobile_Supervisor/contracts',
     loadChildren: () => import('../Admin Roles/Mobile_Supervisor/contracts/contracts.module').then(m => m.ContractsPageModule)
@@ -209,10 +202,7 @@ const routes: Routes = [
     path: 'adminroles/Mobile_Supervisor/expired',
     loadChildren: () => import('../Admin Roles/Mobile_Supervisor/expired/expired.module').then(m => m.ExpiredPageModule)
   },
-  {
-    path: 'adminroles/maintenancemanager/contractdetails',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/contractdetails/contractdetails.module').then(m => m.ContractdetailsPageModule)
-  },
+  
   {
     path: 'adminroles/maintenancemanager/updatepricecontractdetails',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then(m => m.UpdatepricecontractdetailsPageModule)
@@ -229,11 +219,7 @@ const routes: Routes = [
     path: 'adminroles/maintenancemanager/clientinquiries',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/clientinquiries/clientinquiries.module').then(m => m.ClientinquiriesPageModule)
   },
-  {
-    path: 'adminroles/maintenancemanager/malfunctionsdetails',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/malfunctionsdetails/malfunctionsdetails.module').then(m => m.MalfunctionsdetailsPageModule)
-  },
-  {
+{
     path: 'adminroles/maintenancemanager/solvedmalfunctionsdetails',
     loadChildren: () => import('../Admin Roles/Maintenance Manager/solvedmalfunctionsdetails/solvedmalfunctionsdetails.module').then(m => m.SolvedmalfunctionsdetailsPageModule)
   },

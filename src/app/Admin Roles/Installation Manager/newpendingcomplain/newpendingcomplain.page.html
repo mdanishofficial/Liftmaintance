@@ -1,0 +1,51 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<div class="white"></div>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <!-- <br> -->
+    <h1 class="ion-text-center">New Complain</h1>
+    <div>
+      <h2 class="h3">Malfunction Type</h2>
+      <br>
+      <br>
+      <br>
+      <ion-card class="card">
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="malfunction_type">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);" value=''>Please Select Type</option>
+          <option value="electrical" class="options">Electrical</option>
+          <option value="mechanical" class="options">Mechanical</option>
+          <option value="other" class="options">Other Type</option>
+          <option value="someother" class="options">Some Other Type</option>
+        </select>
+     </ion-card>
+     <h2 class="h3">Details</h2>
+     <br>
+     <ion-card class="cardinput">
+        <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
+        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false" [(ngModel)]="complaindetail"></textarea>
+   </ion-card>
+ </div>
+ <div class="ion-text-center">
+    <div class="flex-container">
+   <button type="button" class="btn btn-primary btn-lg" id="language" (click)="send_complain()">Send Complain</button>
+   <div class="divider"></div>
+   <button type="button" class="btn btn-secondary btn-lg" (click)="back()">Back</button>
+ </div>
+</div>
+</div>
+  </ion-content>  

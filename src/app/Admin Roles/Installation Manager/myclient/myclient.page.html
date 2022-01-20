@@ -1,0 +1,48 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    
+    <h1 class="ion-text-center">My Client</h1>
+    <div class="ion-text-center">
+    <div class="flex-container">
+      <div class="card" (click)="clientlisting()">
+        <div class="ion-text-center">
+        <img class="card-img-top" src="../../assets/myclient.svg" alt="Installation">
+      </div>
+        <div class="card-body">
+          <div class="ion-text-center">
+          <h6 class="card-title">My Client</h6>
+        </div>
+        </div>
+      </div>
+      &nbsp;
+      &nbsp;
+      <div class="card" (click)="contracts()">
+        <div class="ion-text-center">
+        <img class="card-img-top" src="../../assets/contracts.svg" alt="Maintenance">
+      </div>
+        <div class="card-body">
+          <div class="ion-text-center">
+          <h6 class="card-title">Contracts</h6>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </ion-content>

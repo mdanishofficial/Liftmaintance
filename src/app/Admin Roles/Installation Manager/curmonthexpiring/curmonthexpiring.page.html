@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Contract</h1>
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+          <button type="button" class="btn btn-secondary" (click)="contract()" >Contract</button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-primary" (click)="curmonth()">Cur Month</button>
+          <div class="divider"></div>
+          <button type="button" class="btn btn-secondary" (click)="expired()">Expired</button>
+      </ion-tab-bar>
+   </div>
+   <div class="flex-container0">
+    <ion-card class="searcbar-card"><ion-searchbar class="searchbar" placeholder="Search..."></ion-searchbar></ion-card>
+    <ion-card class="select-card">
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+        <option disabled selected hidden style="color:   #DCDCDC;">Select City</option>
+        <option value="electrical" class="options">Electrical</option>
+        <option value="mechanical" class="options">Mechanical</option>
+        <option value="other" class="options">Other Type</option>
+        <option value="someother" class="options">Some Other Type</option>
+      </select>
+     </ion-card>
+    </div>
+    <ion-card class="card">
+      <div class="flex-container">
+     <div class="flex-container2">
+          <h6 class="client">Client: Ahmad Gul</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Lifts Number : 6</ion-text><br>
+              <ion-text>Contract price : 2300 Riyals</ion-text>
+            </div>
+            <div class="colordiv1">
+              <ion-text class="enddate">Contract End Date :22-3-2010</ion-text>
+            </div>
+         </div>
+        </div>
+      </div>
+    </ion-card>
+    <ion-card class="card">
+      <div class="flex-container">
+     <div class="flex-container2">
+          <h6 class="client">Client: Ahmad Gul</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Lifts Number : 6</ion-text><br>
+              <ion-text>Contract price : 2300 Riyals</ion-text>
+            </div>
+            <div class="colordiv1">
+              <ion-text class="enddate">Contract End Date :22-3-2010</ion-text>
+            </div>
+         </div>
+        </div>
+      </div>
+    </ion-card>
+    <div class="ion-text-center">
+      <button type="button" class="btn btn-info" (click)="back()">Back</button>  </div>
+    </div>
+    </ion-content>

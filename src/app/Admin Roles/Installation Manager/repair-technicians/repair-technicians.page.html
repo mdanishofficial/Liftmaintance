@@ -1,0 +1,142 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">My Team</h1>
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+          <button type="button" class="btn btn-secondary" (click)="maintenancetechnician()" >Maintenance Technicians</button>
+      <div class="divider"></div>
+          <button type="button" class="btn btn-primary" (click)="repairtechnician()">Repair Technician</button>
+      </ion-tab-bar>
+      <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="avatar" src="../../assets/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="name">Technician: Imran Barnawi</h2>
+         <!-- <div class="stars">
+              <ionic5-star-rating #rating
+              activeIcon = "star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "#C99F66" 
+              defaultColor = "#f4f4f4"
+              readonly="false"
+              rating="5"
+              fontSize = "15px"
+              (ratingChanged)="logRatingChange($event)"
+               >
+          </ionic5-star-rating>
+            </div> -->
+       </ion-label>
+      </ion-item> 
+    </ion-card> 
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="avatar" src="../../assets/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="name">Technician: Imran Barnawi</h2>
+         <!-- <div class="stars">
+              <ionic5-star-rating #rating
+              activeIcon = "star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "#C99F66" 
+              defaultColor = "#f4f4f4"
+              readonly="false"
+              rating="5"
+              fontSize = "15px"
+              (ratingChanged)="logRatingChange($event)"
+               >
+          </ionic5-star-rating>
+            </div> -->
+       </ion-label>
+      </ion-item> 
+    </ion-card> 
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="avatar" src="../../assets/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="name">Technician: Imran Barnawi</h2>
+         <!-- <div class="stars">
+              <ionic5-star-rating #rating
+              activeIcon = "star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "#C99F66" 
+              defaultColor = "#f4f4f4"
+              readonly="false"
+              rating="5"
+              fontSize = "15px"
+              (ratingChanged)="logRatingChange($event)"
+               >
+          </ionic5-star-rating>
+            </div> -->
+       </ion-label>
+      </ion-item> 
+    </ion-card> 
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="avatar" src="../../assets/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="name">Technician: Imran Barnawi</h2>
+         <!-- <div class="stars">
+              <ionic5-star-rating #rating
+              activeIcon = "star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "#C99F66" 
+              defaultColor = "#f4f4f4"
+              readonly="false"
+              rating="5"
+              fontSize = "15px"
+              (ratingChanged)="logRatingChange($event)"
+               >
+          </ionic5-star-rating>
+            </div> -->
+       </ion-label>
+      </ion-item> 
+    </ion-card> 
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img class="avatar" src="../../assets/avatar.svg">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="name">Technician: Imran Barnawi</h2>
+         <!-- <div class="stars">
+              <ionic5-star-rating #rating
+              activeIcon = "star"
+              defaultIcon = "ios-star-outline"
+              activeColor = "#C99F66" 
+              defaultColor = "#f4f4f4"
+              readonly="false"
+              rating="5"
+              fontSize = "15px"
+              (ratingChanged)="logRatingChange($event)"
+               >
+          </ionic5-star-rating>
+            </div> -->
+       </ion-label>
+      </ion-item> 
+    </ion-card> 
+    </div>
+    </div></ion-content>

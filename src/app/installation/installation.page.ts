@@ -6,7 +6,7 @@ import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
-import { MalfunctionTypeModalPageRoutingModule } from '../Admin Roles/Maintenance Manager/malfunction-type-modal/malfunction-type-modal-routing.module';
+import { NgxSpinnerService } from "ngx-spinner";
 @Component({
   selector: 'app-installation',
   templateUrl: './installation.page.html',
@@ -22,12 +22,13 @@ export class InstallationPage implements OnInit {
   elevatortype=''
   startdate=''
   enddate=''
-  constructor(private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(private spinner: NgxSpinnerService,private platform: Platform,private service: InstallationService,private router: Router){
     console.log('In Constructor')
     this.platform.backButton.subscribeWithPriority(10, () => {
       var refresh=true
       this.router.navigateByUrl('tabs/installation_stages/'+refresh);
     });
+    spinner.show()
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
@@ -40,6 +41,7 @@ export class InstallationPage implements OnInit {
           this.installation_data[0]=res
           console.log(this.installation_data)
         })
+        spinner.hide()
         }
   ngOnInit() {
   }

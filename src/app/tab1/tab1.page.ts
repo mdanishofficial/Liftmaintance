@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { IonicSwiper } from '@ionic/angular';
 // import { HttpClient } from '@angular/common/http';
 import {Router} from "@angular/router";
+import { NgxSpinnerService } from "ngx-spinner";
 SwiperCore.use([IonicSwiper]);
 
 @Component({
@@ -10,8 +11,19 @@ SwiperCore.use([IonicSwiper]);
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
-  constructor(private router: Router) { }
+export class Tab1Page implements OnInit {
+  constructor(private spinner: NgxSpinnerService,private router: Router) { 
+    this.spinner.show();
+  }
+  ngOnInit() {
+      /** spinner starts on init */
+      this.spinner.show();
+
+      setTimeout(() => {
+        /** spinner ends after 5 seconds */
+        this.spinner.hide();
+      }, 100);
+  }
   installation_stages(){
 var refresh=false    
 this.router.navigateByUrl('tabs/installation_stages/'+refresh);
