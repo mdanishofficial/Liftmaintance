@@ -22,6 +22,6 @@ async update(){
   return await modal.present();
 }
 async startstage(){
-  this.router.navigateByUrl('installation_manager/installation_stage');
+  this.router.navigateByUrl('installation_manager/railanddoor_stage');
 }
 }

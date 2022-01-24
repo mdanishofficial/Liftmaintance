@@ -284,7 +284,7 @@ const routes: Routes = [
   },
   {
     path: 'clientdetails',
-    loadChildren: () => import('./Admin Roles/Maintenance_Technician/clientdetails/clientdetails.module').then( m => m.ClientdetailsPageModule)
+    loadChildren: () => import('./Admin Roles/Maintenance Manager/clientdetails/clientdetails.module').then( m => m.ClientdetailsPageModule)
   },
   {
     path: 'visitreport',
@@ -485,6 +485,10 @@ const routes: Routes = [
   {
     path: 'railanddoor-stage',
     loadChildren: () => import('./Admin Roles/Installation Manager/railanddoor-stage/railanddoor-stage.module').then( m => m.RailanddoorStagePageModule)
+  },
+  {
+    path: 'clientdetails',
+    loadChildren: () => import('./Admin Roles/Installation Manager/clientdetails/clientdetails.module').then( m => m.ClientdetailsPageModule)
   },
  ];
 @NgModule({

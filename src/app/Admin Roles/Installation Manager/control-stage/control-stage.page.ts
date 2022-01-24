@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-control-stage',
   templateUrl: './control-stage.page.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlStagePage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+  async next(){
+    this.router.navigateByUrl('installation_manager/liftcar_stage');
   }
 
 }

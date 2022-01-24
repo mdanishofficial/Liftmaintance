@@ -241,10 +241,6 @@ const routes: Routes = [
     loadChildren: () => import('../Admin Roles/Maintenance_Technician/previousvisits/previousvisits.module').then(m => m.PreviousvisitsPageModule)
   },
   {
-    path: 'adminroles/maintenancetechnician/clientdetails',
-    loadChildren: () => import('../Admin Roles/Maintenance_Technician/clientdetails/clientdetails.module').then(m => m.ClientdetailsPageModule)
-  },
-  {
     path: 'adminroles/maintenancetechnician/visitreport',
     loadChildren: () => import('../Admin Roles/Maintenance_Technician/visitreport/visitreport.module').then(m => m.VisitreportPageModule)
   },

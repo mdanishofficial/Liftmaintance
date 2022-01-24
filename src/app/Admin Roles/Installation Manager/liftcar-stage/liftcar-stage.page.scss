@@ -1,0 +1,194 @@
+.header{
+    height: 40px;
+  background-color: #194E78;
+  }
+  .bell{
+  margin-left: 0.5em;
+  position: absolute;
+  top: 5px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
+  }
+  .logo{
+    position: absolute ;
+    top: -4px;
+    right: 0px;
+    width: 66px;
+    height: 86px;
+  }
+  .container{
+      margin: 0.5em;
+  }
+  .flex-container{
+    flex-direction: row;
+  }
+  .flex-container0{
+    // flex-direction: column;
+    float: left;
+  }
+  .flex-container1{
+    float: right;
+  }
+  // .flex-container2{
+  //   justify-content: center;
+  // }
+  .flex-container5{
+   display: flex;
+   justify-content: space-evenly;
+   margin-left: -1em;
+  }
+  h1{
+      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+  }
+  .date{
+    font-size: 16px;
+    color: #6E6E6E;
+    margin-left: -0.5em;
+}
+.client{
+    font-size: 20px;
+    font-family:'Roboto';
+    color: #194E78;
+    margin-left: -0.4em;
+ }
+ .name{
+  font-size: 20px;
+  font-family:'Roboto';
+  color: #194E78;
+  margin-left: 0.5em;
+  display: inline-block;
+}
+ .blockbutton{
+    display: flex;
+    justify-content: flex-start;   /* adjustment */
+    position: relative;            
+    width: 100%;
+    --background: #194E78;
+    height: 3em;
+border-radius: 0em;
+   color: white;
+   margin-top: 1em;
+   margin-left: 0em;
+}
+.update{
+  display: flex;
+  justify-content: flex-start;   /* adjustment */
+  position: relative;            
+  width: 94%;
+  --background: #194E78;
+  height: 3em;
+  border-radius: 0.7em;
+ color: white;
+ margin-top: 1em;
+}
+.itemcenter{
+  flex: 0 1 auto;
+  width: fit-content;
+  height: 17px; 
+  position: absolute;             /* new */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+.itemleft {
+    flex: 0 1 auto;
+    width: fit-content;
+    height: 17px; 
+    position: absolute;             /* new */
+    left: 20%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .itemright {
+    flex: 0 1 auto;
+    width: 30px;
+    height: 25px;
+    margin-left: auto;              /* new */
+  }
+  .card-detailed{
+    // margin-left: -0.5em;
+    margin-right: 0.5em;
+    height: 36px;
+    width: 325px;
+  }
+  #textarea{
+    height: 36px;
+    width: 325px;
+    border: 0px;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    background: white;
+     }
+     .section {
+      border: 1px solid gray;
+      display: flex;
+      align-items: center ;
+      justify-content: space-between;
+      padding: 0 1rem;
+      max-width: 300px;
+      width: 103%;
+      background: white;
+    }
+    
+    .ion-datetime {
+      width: 100%;
+      padding-left: 0em;
+    }
+    .icon{
+      width: 15px;
+      height: 157px;
+    }
+     .background{
+      background: #F5F5F5;
+      width: 374px;
+     margin-right: 0.5em;
+     }
+  .searchbar{
+    width: 152px;
+    height: 36px;
+    margin-top: 0em;
+    margin-left: 0em;
+    padding: 0em;
+    --border-radius: 0px;
+    --background: white;
+    --placeholder-color: #6E6E6E;
+  }
+  .options{
+    color: #194E78;
+    font-size: 18px;
+   }
+  .form-select-sm{
+    color: #6E6E6E;
+    width: 152px;
+    height: 36px;
+   }
+   select{
+    width: 13em;
+    color: #6E6E6E;
+ }
+ .searcbar-card{
+  width: 13em;
+  height: 3em;
+    }
+    ::ng-deep .searchbar-input{
+      padding-left: 1em !important;
+  }
+  .newbutton{
+    --background:#FF6932;
+  //   position: fixed;
+       bottom: 10%;
+     width: 220px;
+    height: 49px;
+    margin-top:1em
+    }
+   .backbutton{
+        --background:#6E6E6E;
+        //   position: fixed;
+             bottom: 10%;
+           width: 155px;
+          height: 42px;
+    }
+  

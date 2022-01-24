@@ -21,7 +21,7 @@
     height: 86px;
   }
   h1{
-      text-decoration: underline;color:#194E78 ; font-weight: bold;margin-top: 1em;
+      text-decoration: underline;color:#194E78 ;font-size: 24px; font-weight: bold;margin-top: 1em;
   }
   .client{
     font-size: 20px;
@@ -54,23 +54,30 @@
      margin-right: 1em;
  }
  .newbutton{
-    --background:#FF6932;
-  //   position: fixed;
-       bottom: 10%;
-     width: 220px;
+    --background:#F5F5F5;
+    width: 220px;
     height: 49px;
-    margin-top:8em
+    margin-top:1em;
+    color: #194E78;
+    font-weight: bold;
     }
-    .btn-secondary{
-width: 6em;
-    }
+       .btn-secondary{
+        width: 8em;
+        background-color: #6E6E6E;
+        height: 3em;
+        color: white;
+        border: #6E6E6E;
+        margin-top: 1em;
+     }
     @media only screen and (max-height: 670px) {
       .newbutton{
-          --background:#FF6932;
+          --background:#F5F5F5;
         //   position: fixed;
-             bottom: 10%;
+            //  bottom: 10%;
            width: 220px;
           height: 49px;
-          margin-top:1em
+          margin-top:1em;
+          color: #194E78;
+          font-weight: bold;
           }
     }

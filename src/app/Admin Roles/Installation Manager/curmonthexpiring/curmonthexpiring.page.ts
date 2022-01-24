@@ -15,6 +15,9 @@ export class CurmonthexpiringPage implements OnInit {
   contract(){
     this.router.navigateByUrl('installation_manager/contracts');
   }
+  contractdetails(){
+    this.router.navigateByUrl('installation_manager/contractdetails');
+  }
   curmonth(){
     this.router.navigateByUrl('installation_manager/curmonthexpiring');
   }

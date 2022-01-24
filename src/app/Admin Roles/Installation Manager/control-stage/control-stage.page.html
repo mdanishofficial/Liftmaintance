@@ -1,9 +1,89 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>control_stage</ion-title>
-  </ion-toolbar>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
 </ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Installation</h1>
+    <br>
+    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
+    <h6 class="client">Client : Ahmad Gul</h6>
+    <hr class="hr">
+    <div class="background">
+    <div class="ion-text-center">
+      <ion-chip class="blockbutton" (click)="block()">
+   <ion-label class="itemcenter">Fourth Stage - Control</ion-label>
+    </ion-chip>
+    </div>
+    <br>
+    <h6 class="name">Control Type</h6>
+ <ion-card class="card-detailed">
+     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Control Type"></textarea>
+  </ion-card>
+   <h6 class="name">Control Speed</h6>
+  <ion-card class="card-detailed">
+       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Control Speed"></textarea>
+   </ion-card>
+   <h6 class="name">Control Features</h6>
+   <br>
+   <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+   <ion-label class="label">Feature 1</ion-label>
+   <br>
+   <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+   <ion-label class="label">Feature 2</ion-label>
+   <br>
+   <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+   <ion-label class="label">Feature 3</ion-label>
+   <br>
+   <ion-checkbox class="checkbox" disabled="true" checked="true"></ion-checkbox>
+   <ion-label class="label">Feature 4</ion-label>
+   <br>
+   <br>
+   <div class="flex-container">
+      <div class="flex-container5">
+      <div class="flex-container0">
+      <h6 class="name"> Start Date</h6>
+      <section class="section">
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-icon src="assets/calendar.svg"></ion-icon>  
+      </section>
+     </div>
+     <div class="flex-container0">
+      <h6 class="name"> End Date</h6>
+      <section class="section">
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-icon src="assets/calendar.svg"></ion-icon>  
+      </section>
+      </div>
+    </div>
+    <br>
+    
+         <h6 class="name">More Information or Detail</h6>
+      <ion-card class="card-detailed">
+           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter More Information or Detail"></textarea>
+       </ion-card>
+      <br>
+      <br>
+    </div>
+    </div>
+      <div class="ion-text-center">
+        <ion-button class="newbutton" shape="round" (click)="next()">Send</ion-button>
+      </div>
+      <br>
+      <div class="ion-text-center">
+        <ion-button class="backbutton"(click)="newcomplain()">Back</ion-button>
+      </div>
+  </div> 
+    </ion-content>

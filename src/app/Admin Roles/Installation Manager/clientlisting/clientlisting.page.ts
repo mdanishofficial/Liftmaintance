@@ -14,4 +14,7 @@ export class ClientlistingPage implements OnInit {
   back(){
       this.router.navigateByUrl('installation_manager/myclient');
   }
+  clientdetails(){
+    this.router.navigateByUrl('installation_manager/clientdetails');
+  }
 }

@@ -29,12 +29,12 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/railanddoor-stage/railanddoor-stage.module').then(m => m.RailanddoorStagePageModule)
       },
       {
-        path: 'engine_stage',
-        loadChildren: () => import('../Admin Roles/Installation Manager/engine-stage/engine-stage.module').then(m => m.EngineStagePageModule)
-      },
-      {
         path: 'liftcar_stage',
         loadChildren: () => import('../Admin Roles/Installation Manager/liftcar-stage/liftcar-stage.module').then(m => m.LiftcarStagePageModule)
+      },
+      {
+        path: 'engine_stage',
+        loadChildren: () => import('../Admin Roles/Installation Manager/engine-stage/engine-stage.module').then(m => m.EngineStagePageModule)
       },
       {
         path: 'control_stage',
@@ -59,6 +59,10 @@ const routes: Routes = [
       {
         path: 'clientlisting',
         loadChildren: () => import('../Admin Roles/Installation Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
+      },
+      {
+        path: 'clientdetails',
+        loadChildren: () => import('../Admin Roles/Installation Manager/clientdetails/clientdetails.module').then(m => m.ClientdetailsPageModule)
       },
       {
         path: 'contracts',
