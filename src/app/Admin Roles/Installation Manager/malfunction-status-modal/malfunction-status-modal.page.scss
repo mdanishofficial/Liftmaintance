@@ -1,6 +1,6 @@
 
  .container{
-    margin: 1em;
+    margin: 0.5em;
 }
 .h1{
     color: #194E78;
@@ -33,4 +33,9 @@ margin-top: 1em;
     width:1em;
     height:auto;
     display:inline-block;
+  }
+  @media only screen and (max-width: 320px) {
+    .container{
+      margin-left: -1em;
+  }
   }

@@ -18,7 +18,7 @@ export class NewpendingcomplainPage implements OnInit {
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);
+      this.router.navigateByUrl('installation_manager/pendingcomplain/'+refresh);
     });
   }
 
@@ -63,10 +63,10 @@ user_id:decoded.user_id,
   // this.parentfunc.call_api()
   }
   notifications(){
-    this.router.navigateByUrl('tabs/notifications');
+    this.router.navigateByUrl('installation_manager/notifications');
   }
   back(){
     var refresh=true
-    this.router.navigateByUrl('tabs/pendingcomplain/'+refresh);
+    this.router.navigateByUrl('installation_manager/pendingcomplain/'+refresh);
   }
 }

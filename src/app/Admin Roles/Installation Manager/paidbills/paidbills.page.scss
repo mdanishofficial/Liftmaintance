@@ -22,7 +22,7 @@ height: 30px;
     height: 2em;
 }
 h1{
-    text-decoration: underline;color:#194E78 ; font-weight: bold; margin-top: 2em;
+    text-decoration: underline;color:#194E78 ; font-weight: bold; margin-top: 1em;
 }
 .flex-container{
     justify-content: center;
@@ -134,14 +134,16 @@ display: flex;
     border-radius: 0px;
     padding: 1em;
     margin-top: 1em;
+    width: 145px;
+    justify-content: center;
 }
 .ion-chip-right{
     --background:#194E78;
     color: white;
     border-radius: 0px;
     padding: 1em;
-    font-size: 16px;
-    margin-top: 0.8em;
+  margin-top: 1em;
+  justify-content: center;
 }
 .ion-icon{
     color: white;

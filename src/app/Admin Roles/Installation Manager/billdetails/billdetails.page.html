@@ -1,0 +1,75 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/logo.svg" class="logo">
+      </div>
+    </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+<div class="white"></div>
+<ion-content overflow-scroll="true">
+<div class="container">
+  <div *ngIf="bill_data">
+  <h1 class="ion-text-center">Bill #{{bill_data[id]?.bill_id}}</h1>
+  <ion-text class="date">Date: {{bill_data[id]?.bill_date}}</ion-text>
+  <br>
+  <br>
+    <h2 class="h2">Bill Details </h2>
+    <br> 
+    <!-- </div> -->
+ <ion-text class="text">{{bill_data[id]?.bill_detail}}</ion-text> <br> 
+ <br> 
+ <div>
+    <div class="leftcol">
+      <h2 class="h2">Amount </h2>
+    </div>
+    <div class="rightcol">
+      <ion-text class="textright1">{{bill_data[id]?.bill_amount}}</ion-text>
+    </div>
+   </div>
+   <hr class="hr">
+  <div>
+    <div class="leftcol">
+      <h2 class="h2">Payment Status</h2>
+    </div>
+    <div class="rightcol">
+      <ion-text class="textright2">{{bill_data[id]?.bill_status}}</ion-text>
+    </div>
+  </div>
+  <hr class="hr">
+  <div class="leftcol">
+    <h2 class="h2">Receipt Status</h2>
+  </div>
+  <div class="rightcol">
+    <ion-text class="textright3">{{bill_data[id]?.bill_receipt_status}}</ion-text>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <!-- <div class="ion-text-center">
+    <div class="flex-container">
+   <button type="button" class="btn btn-primary btn-lg" id="language"(click)="presentModalUpdatePayment()">Update Payment</button>
+   <div class="divider"></div>
+   <ion-back-button type="button" defaultHref="/tabs/paidbills" icon="none" class="btn btn-secondary btn-lg">Back</ion-back-button>
+ </div>
+</div> -->
+<div class="ion-text-center">
+  <div class="flex-container">
+ <button type="button" class="btn btn-primary btn-lg" id="language" (click)="presentModalUpdatePayment()">Update Payment</button>
+ <div class="divider"></div>
+<button type="button" class="btn btn-secondary btn-lg" (click)="back()">Back</button>
+</div>
+</div>
+</div>
+</div>
+
+</ion-content>

@@ -49,12 +49,14 @@
           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Engine Warranty"></textarea>
       </ion-card>
        <h6 class="name">Engine Image</h6>
-       <div class="ion-text-center">
-        <ion-chip class="update" (click)="update()">
-     <ion-label class="itemleft">Upload Image</ion-label>
-     <ion-icon src="../../assets/uploadimage.svg" class="itemright"></ion-icon>
-        </ion-chip>
-    </div>
+      <div class="ion-text-center">
+      <ion-chip class="update" (click)="inputFile.click()">
+        <ion-label class="itemleft">Upload Image</ion-label>
+        <ion-icon src="../../assets/uploadimage.svg" class="itemright"></ion-icon>
+           </ion-chip>
+      <input #inputFile id="input-file"  style="opacity:0" type="file" (change)="uploadFiles($event)"
+      multiple/>
+      </div>
      <div class="flex-container">
       <div class="flex-container5">
       <div class="flex-container0">
@@ -87,7 +89,7 @@
       </div>
       <br>
       <div class="ion-text-center">
-        <ion-button class="backbutton"(click)="newcomplain()">Back</ion-button>
+        <ion-button class="backbutton"(click)="back()">Back</ion-button>
       </div>
   </div> 
     </ion-content>

@@ -34,7 +34,7 @@ export class PendingemergencycomplainPage implements OnInit {
       sub
       refresh
       notifications(){
-        this.router.navigateByUrl('tabs/notifications');
+        this.router.navigateByUrl('installation_manager/notifications');
       }
   call_api(){
     var decoded:any={}

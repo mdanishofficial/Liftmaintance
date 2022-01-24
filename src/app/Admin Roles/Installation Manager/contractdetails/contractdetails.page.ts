@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-contractdetails',
   templateUrl: './contractdetails.page.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContractdetailsPage implements OnInit {
 
-  constructor() { }
+ 
+  constructor(private platform: Platform,private router: Router) { 
+
+  }
 
   ngOnInit() {
   }
-
+  async back(){
+    this.router.navigateByUrl('installation_manager/curmonthexpiring');
+  }
 }

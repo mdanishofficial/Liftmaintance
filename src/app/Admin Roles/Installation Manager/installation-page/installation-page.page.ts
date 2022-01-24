@@ -24,4 +24,7 @@ async update(){
 async startstage(){
   this.router.navigateByUrl('installation_manager/railanddoor_stage');
 }
+back(){
+  this.router.navigateByUrl('installation_manager/installation');
+}
 }

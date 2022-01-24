@@ -192,11 +192,11 @@ const routes: Routes = [
   },
   {
     path: 'updatepricecontractdetails',
-    loadChildren: () => import('./Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then( m => m.UpdatepricecontractdetailsPageModule)
+    loadChildren: () => import('./Admin Roles/Installation Manager/updatepricecontractdetails/updatepricecontractdetails.module').then( m => m.UpdatepricecontractdetailsPageModule)
   },
   {
     path: 'updateprice-modal',
-    loadChildren: () => import('./Admin Roles/Maintenance Manager/updateprice-modal/updateprice-modal.module').then( m => m.UpdatepriceModalPageModule)
+    loadChildren: () => import('./Admin Roles/Installation Manager/updateprice-modal/updateprice-modal.module').then( m => m.UpdatepriceModalPageModule)
   },
   {
     path: 'maintenancevisitsassigned',
@@ -489,6 +489,14 @@ const routes: Routes = [
   {
     path: 'clientdetails',
     loadChildren: () => import('./Admin Roles/Installation Manager/clientdetails/clientdetails.module').then( m => m.ClientdetailsPageModule)
+  },
+  {
+    path: 'billdetails/:id',
+    loadChildren: () => import('./Admin Roles/Installation Manager/billdetails/billdetails.module').then( m => m.BilldetailsPageModule)
+  },
+  {
+    path: 'updatebill-modal',
+    loadChildren: () => import('./Admin Roles/Installation Manager/updatebill-modal/updatebill-modal.module').then( m => m.UpdatebillModalPageModule)
   },
  ];
 @NgModule({

@@ -101,7 +101,7 @@ const routes: Routes = [
     loadChildren: () => import('../paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
   },
   {
-    path: 'billdetails',
+    path: 'billdetails/:id',
     loadChildren: () => import('../billdetails/billdetails.module').then(m => m.BilldetailsPageModule)
   },
   {
@@ -201,11 +201,6 @@ const routes: Routes = [
   {
     path: 'adminroles/Mobile_Supervisor/expired',
     loadChildren: () => import('../Admin Roles/Mobile_Supervisor/expired/expired.module').then(m => m.ExpiredPageModule)
-  },
-  
-  {
-    path: 'adminroles/maintenancemanager/updatepricecontractdetails',
-    loadChildren: () => import('../Admin Roles/Maintenance Manager/updatepricecontractdetails/updatepricecontractdetails.module').then(m => m.UpdatepricecontractdetailsPageModule)
   },
   {
     path: 'adminroles/maintenancemanager/report',

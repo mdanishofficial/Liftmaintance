@@ -13,5 +13,7 @@ export class LiftcarStagePage implements OnInit {
   async next(){
     this.router.navigateByUrl('installation_manager/engine_stage');
   }
-
+  back(){
+    this.router.navigateByUrl('installation_manager/railanddoor_stage');
+  }
 }

@@ -81,12 +81,28 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/contractdetails/contractdetails.module').then(m => m.ContractdetailsPageModule)
       },
       {
-        path: 'paidbills',
+        path: 'updatepricecontractdetails',
+        loadChildren: () => import('../Admin Roles/Installation Manager/updatepricecontractdetails/updatepricecontractdetails.module').then(m => m.UpdatepricecontractdetailsPageModule)
+      },
+      {
+        path: 'updateprice-modal',
+        loadChildren: () => import('../Admin Roles/Installation Manager/updateprice-modal/updateprice-modal.module').then(m => m.UpdatepriceModalPageModule)
+      },
+      {
+        path: 'paidbills/:refresh',
         loadChildren: () => import('../Admin Roles/Installation Manager/paidbills/paidbills.module').then(m => m.PaidbillsPageModule)
       },
       {
-        path: 'unpaidbills',
+        path: 'unpaidbills/:refresh',
         loadChildren: () => import('../Admin Roles/Installation Manager/unpaidbills/unpaidbills.module').then(m => m.UnpaidbillsPageModule)
+      },
+      {
+        path: 'billdetails/:id',
+        loadChildren: () => import('../Admin Roles/Installation Manager/billdetails/billdetails.module').then( m => m.BilldetailsPageModule)
+      },
+      {
+        path: 'updatebill-modal',
+        loadChildren: () => import('../Admin Roles/Installation Manager/updatebill-modal/updatebill-modal.module').then( m => m.UpdatebillModalPageModule)
       },
       {
         path: 'pendingcomplain/:refresh',

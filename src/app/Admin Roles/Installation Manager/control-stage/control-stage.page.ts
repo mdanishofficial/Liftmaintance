@@ -14,5 +14,8 @@ export class ControlStagePage implements OnInit {
   async next(){
     this.router.navigateByUrl('installation_manager/liftcar_stage');
   }
+  back(){
+    this.router.navigateByUrl('installation_manager/engine_stage');
+  }
 
 }

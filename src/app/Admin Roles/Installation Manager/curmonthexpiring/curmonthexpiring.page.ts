@@ -24,4 +24,7 @@ export class CurmonthexpiringPage implements OnInit {
   expired(){
     this.router.navigateByUrl('installation_manager/expired');
   }
+  async back(){
+    this.router.navigateByUrl('installation_manager/myclient');
+  }
 }

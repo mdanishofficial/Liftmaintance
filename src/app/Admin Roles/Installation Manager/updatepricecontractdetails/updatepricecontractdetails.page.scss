@@ -61,6 +61,13 @@
     height: 49px;
     margin-top:1em;
     color: #194E78;
+    font-weight: bold;
+    }
+    .btn-info{
+      width: 6em;
+      background-color:#6E6E6E;
+      border:#6E6E6E; 
+      color: white;
     }
     ::ng-deep .updateprice .modal-wrapper {
         height: 18em!important;
@@ -77,5 +84,6 @@
           height: 49px;
           margin-top:1em;
           color: #194E78;
+          font-weight: bold;
           }
     }

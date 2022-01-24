@@ -20,4 +20,10 @@ export class ExpiredPage implements OnInit {
   expired(){
     this.router.navigateByUrl('installation_manager/expired');
   }
+  updatepricecontractdetails(){
+    this.router.navigateByUrl('installation_manager/updatepricecontractdetails');
+  }
+  async back(){
+    this.router.navigateByUrl('installation_manager/myclient');
+  }
 }
