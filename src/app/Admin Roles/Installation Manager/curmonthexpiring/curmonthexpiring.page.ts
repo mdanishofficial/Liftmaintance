@@ -12,6 +12,32 @@ export class CurmonthexpiringPage implements OnInit {
 
   ngOnInit() {
   }
+  contracts=[
+   
+    {
+      client_name:'Shadab Khan',
+      lift_number:'6',
+      contract_price:'23000 Riyals',
+      contract_end_date:'22-3-2010'
+    },  {
+      client_name:'Shadab Khan',
+      lift_number:'6',
+      contract_price:'23000 Riyals',
+      contract_end_date:'22-3-2010'
+    },
+    {
+      client_name:'Shadab Khan',
+      lift_number:'6',
+      contract_price:'23000 Riyals',
+      contract_end_date:'22-3-2010'
+    },
+    {
+      client_name:'Shadab Khan',
+      lift_number:'6',
+      contract_price:'23000 Riyals',
+      contract_end_date:'22-3-2010'
+    }
+  ]
   contract(){
     this.router.navigateByUrl('installation_manager/contracts');
   }

@@ -38,17 +38,17 @@
       </select>
      </ion-card>
     </div>
-    <ion-card class="card" (click)="contractdetails()">
+    <ion-card class="card" *ngFor="let result of contracts" (click)="contractdetails()">
       <div class="flex-container">
      <div class="flex-container2">
-          <h6 class="client">Client: Ahmad Gul</h6>
+          <h6 class="client">Client: {{result?.client_name}}</h6>
           <div class="flex-container3">
             <div class="date">
-              <ion-text>Lifts Number : 6</ion-text><br>
-              <ion-text>Contract price : 2300 Riyals</ion-text>
+              <ion-text>Lifts Number :{{result?.lift_number}}</ion-text><br>
+              <ion-text>Contract price : {{result?.contract_price}}</ion-text>
             </div>
             <div class="colordiv1">
-              <ion-text class="enddate">Contract End Date :22-3-2010</ion-text>
+              <ion-text class="enddate">Contract End Date :{{result?.contract_end_date}}</ion-text>
             </div>
          </div>
         </div>

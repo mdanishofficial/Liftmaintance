@@ -20,7 +20,7 @@ export class UnpaidbillsPage implements OnInit {
   }
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/tab1');
+      this.router.navigateByUrl('installation_manager/menu');
     });
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""

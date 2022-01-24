@@ -14,7 +14,7 @@ export class PendingemergencycomplainPage implements OnInit {
 
   constructor(public activatedRoute: ActivatedRoute,private cdr:ChangeDetectorRef,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/tab1');
+      this.router.navigateByUrl('installation_manager/menu');
     });
     this.call_api()
     }
@@ -62,7 +62,7 @@ export class PendingemergencycomplainPage implements OnInit {
   }
   newemergencycomplain(){
     console.log('inside new emergency complain')
-    this.router.navigateByUrl('/newemergencycomplain');
+    this.router.navigateByUrl('/installation_manager/newemergencycomplain');
   }
 
 }

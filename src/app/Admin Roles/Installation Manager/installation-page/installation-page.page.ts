@@ -14,6 +14,19 @@ export class InstallationPagePage implements OnInit {
 
   ngOnInit() {
   }
+  installation_data=[
+    {
+      installation_date:'Sunday, 3/26/2021 13:00',
+      client_name:'Ahmad Gul',
+       type_of_building:'Residential',
+       client_city:'Dubai',
+      location:'World Trade Center',
+      no_of_stops:'6',
+      machine_type:'Chinese',
+       door_type:'Automatic',
+       lift_type:'Passenger',
+  },
+  ]
 async update(){
   const modal = await this.modalController.create({
     component: UpdatepaymentModalPage ,

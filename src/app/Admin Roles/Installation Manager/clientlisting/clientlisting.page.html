@@ -38,67 +38,22 @@
   </div>
 </ion-card> -->
 <!--  -->
-    <ion-card class="card" (click)="clientdetails()">
+    <ion-card class="card" *ngFor="let result of clients" (click)="clientdetails()">
       <div class="flex-container">
         <div style="float: left;">
           <!-- <div class="colordiv1"></div> -->
         </div>
         <div class="flex-container2">
-          <h6 class="client">Client : Ahmad Gul</h6>
+          <h6 class="client">Client : {{result?.client_name}}</h6>
           <div class="flex-container3">
             <div class="location">
-              <ion-text>Location : New City</ion-text>
+              <ion-text>Location :{{result?.location}}</ion-text>
             </div>
           </div>
         </div>
       </div>
     </ion-card>
-    <ion-card class="card" (click)="clientdetails()">
-      <div class="flex-container">
-        <div style="float: left;">
-          <!-- <div class="colordiv2"></div> -->
-        </div>
-        <div class="flex-container2">
-          <h6 class="client">Client : Ahmad Gul</h6>
-          <div class="flex-container3">
-            <div class="location">
-              <ion-text>Location : New City</ion-text>
-            </div>
-          </div>
-        </div>
-      </div>
-    </ion-card>
-    <ion-card class="card" (click)="clientdetails()">
-      <div class="flex-container">
-        <div style="float: left;">
-          <!-- <div class="colordiv3"></div> -->
-        </div>
-        <div class="flex-container2">
-          <h6 class="client">Client : Ahmad Gul</h6>
-          <div class="flex-container3">
-            <div class="location">
-              <ion-text>Location : New City</ion-text>
-            </div>
-         </div>
-        </div>
-      </div>
-    </ion-card>
-    <ion-card class="card">
-      <div class="flex-container">
-        <div style="float: left;">
-          <!-- <div class="colordiv4"></div> -->
-        </div>
-        <div class="flex-container2">
-          <h6 class="client">Client : Ahmad Gul</h6>
-          <div class="flex-container3">
-            <div class="location">
-              <ion-text class="textleft">Location : New City</ion-text>
-            </div>
-         </div>
-        </div>
-      </div>
-    </ion-card>
-    <br>
+       <br>
     <div class="ion-text-center">
     <button type="button" class="btn btn-secondary" id="language"(click)="back()">Back</button>
   </div>

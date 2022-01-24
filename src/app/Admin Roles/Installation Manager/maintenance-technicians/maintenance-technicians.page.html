@@ -23,120 +23,15 @@
       <div class="divider"></div>
           <button type="button" class="btn btn-secondary" (click)="repairtechnician()">Repair Technician</button>
       </ion-tab-bar>
-      <ion-card>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img class="avatar" src="../../assets/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2 class="name">Technician: Imran Barnawi</h2>
-         <!-- <div class="stars">
-              <ionic5-star-rating #rating
-              activeIcon = "star"
-              defaultIcon = "ios-star-outline"
-              activeColor = "#C99F66" 
-              defaultColor = "#f4f4f4"
-              readonly="false"
-              rating="5"
-              fontSize = "15px"
-              (ratingChanged)="logRatingChange($event)"
-               >
-          </ionic5-star-rating>
-            </div> -->
-       </ion-label>
-      </ion-item> 
-    </ion-card> 
-    <ion-card>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img class="avatar" src="../../assets/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2 class="name">Technician: Imran Barnawi</h2>
-         <!-- <div class="stars">
-              <ionic5-star-rating #rating
-              activeIcon = "star"
-              defaultIcon = "ios-star-outline"
-              activeColor = "#C99F66" 
-              defaultColor = "#f4f4f4"
-              readonly="false"
-              rating="5"
-              fontSize = "15px"
-              (ratingChanged)="logRatingChange($event)"
-               >
-          </ionic5-star-rating>
-            </div> -->
-       </ion-label>
-      </ion-item> 
-    </ion-card> 
-    <ion-card>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img class="avatar" src="../../assets/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2 class="name">Technician: Imran Barnawi</h2>
-         <!-- <div class="stars">
-              <ionic5-star-rating #rating
-              activeIcon = "star"
-              defaultIcon = "ios-star-outline"
-              activeColor = "#C99F66" 
-              defaultColor = "#f4f4f4"
-              readonly="false"
-              rating="5"
-              fontSize = "15px"
-              (ratingChanged)="logRatingChange($event)"
-               >
-          </ionic5-star-rating>
-            </div> -->
-       </ion-label>
-      </ion-item> 
-    </ion-card> 
-    <ion-card>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img class="avatar" src="../../assets/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2 class="name">Technician: Imran Barnawi</h2>
-         <!-- <div class="stars">
-              <ionic5-star-rating #rating
-              activeIcon = "star"
-              defaultIcon = "ios-star-outline"
-              activeColor = "#C99F66" 
-              defaultColor = "#f4f4f4"
-              readonly="false"
-              rating="5"
-              fontSize = "15px"
-              (ratingChanged)="logRatingChange($event)"
-               >
-          </ionic5-star-rating>
-            </div> -->
-       </ion-label>
-      </ion-item> 
-    </ion-card> 
-    <ion-card>
-      <ion-item>
-        <ion-avatar slot="start">
-          <img class="avatar" src="../../assets/avatar.svg">
-        </ion-avatar>
-        <ion-label>
-          <h2 class="name">Technician: Imran Barnawi</h2>
-         <!-- <div class="stars">
-              <ionic5-star-rating #rating
-              activeIcon = "star"
-              defaultIcon = "ios-star-outline"
-              activeColor = "#C99F66" 
-              defaultColor = "#f4f4f4"
-              readonly="false"
-              rating="5"
-              fontSize = "15px"
-              (ratingChanged)="logRatingChange($event)"
-               >
-          </ionic5-star-rating>
-            </div> -->
-       </ion-label>
-      </ion-item> 
-    </ion-card> 
+      <ion-card *ngFor="let result of maintenance_technicians">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img class="avatar" src="{{result?.technician_avatar}}">
+          </ion-avatar>
+          <ion-label>
+            <h2 class="name">Technician: {{result?.technician_name}}</h2>
+           </ion-label>
+        </ion-item> 
+      </ion-card> 
     </div>
     </div></ion-content>

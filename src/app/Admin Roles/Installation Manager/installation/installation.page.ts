@@ -17,4 +17,24 @@ export class InstallationPage implements OnInit {
   installation_page(){
     this.router.navigateByUrl('installation_manager/installation_page');
   }
+  installation_data=[
+    {
+      client_name:'Ahmad Gul',
+       location:'New City',
+       installation_level:'Level-1',
+       installation_status:'Pending Payment'
+  },
+  {
+    client_name:'Shadab Khan',
+     location:'New City',
+     installation_level:'Level-2',
+     installation_status:'Pending Payment'
+},
+{
+  client_name:'Hassan Ali',
+   location:'New City',
+   installation_level:'Level-3',
+   installation_status:'Installing'
+}
+  ]
 }

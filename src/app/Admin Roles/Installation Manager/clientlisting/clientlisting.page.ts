@@ -17,4 +17,22 @@ export class ClientlistingPage implements OnInit {
   clientdetails(){
     this.router.navigateByUrl('installation_manager/clientdetails');
   }
+  clients=[
+   
+    {
+      client_name:'Shadab Khan',
+      location:'New City'
+    },  {
+      client_name:'Shadab Khan',
+      location:'New City'
+    },
+    {
+      client_name:'Shadab Khan',
+      location:'New City'
+    },
+    {
+      client_name:'Shadab Khan',
+      location:'New City'
+    }
+  ]
 }

@@ -19,4 +19,30 @@ export class SolvedmalfunctionslistPage implements OnInit {
   async current(){
     this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
   }
+  malfunction_data=[
+    {
+      client_name:'Ahmad Gul',
+       malfunction_date:'Sunday, 23-03-2020',
+      malfunction_status:'New',
+      technician_assigned:'Hassan Ali',
+      malfunction_type:'Mechanical',
+      malfunction_level:'Danger'
+  },
+  {
+    client_name:'Hassan Ali',
+     malfunction_date:'Sunday, 23-03-2020',
+    malfunction_status:'New',
+    technician_assigned:'Hassan Ali',
+    malfunction_type:'Mechanical',
+    malfunction_level:'Danger'
+  },
+  {
+    client_name:'Shadab Khan',
+     malfunction_date:'Sunday, 23-03-2020',
+    malfunction_status:'New',
+    technician_assigned:'Hassan Ali',
+    malfunction_type:'Mechanical',
+    malfunction_level:'Danger'
+  },
+  ]
 }
