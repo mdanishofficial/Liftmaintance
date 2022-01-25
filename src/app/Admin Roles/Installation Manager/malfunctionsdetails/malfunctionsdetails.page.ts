@@ -18,6 +18,34 @@ export class MalfunctionsdetailsPage implements OnInit {
 
   ngOnInit() {
   }
+  malfunctions_data=[
+    {
+      malfunctions_date:'Sunday, 3/26/2021 13:00',
+      client_name:'Ahmad Gul',
+      assigned_technician:'Hassan',
+      lift_no:'03',
+      complain_notes:'How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell',
+       }
+  ]
+  bill_data=[
+    {
+      cost:'700 Riyals',
+      item_name:'Some item Name',
+   },
+   {
+    cost:'700 Riyals',
+    item_name:'Some item Name',
+ },
+ {
+  cost:'7800 Riyals',
+  item_name:'Some item Name',
+}
+  ]
+  payment_complain=[
+    {
+      cost:'700 Riyals',
+   },
+  ]
 async malfunctiontypemodal(){
   console.log('emod property is accessible')
   const modal = await this.modalController.create({

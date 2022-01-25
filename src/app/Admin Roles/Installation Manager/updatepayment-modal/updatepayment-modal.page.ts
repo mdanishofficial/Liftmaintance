@@ -1,21 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-updatepayment-modal',
   templateUrl: './updatepayment-modal.page.html',
   styleUrls: ['./updatepayment-modal.page.scss'],
 })
 export class UpdatepaymentModalPage implements OnInit {
-
-  constructor(public modalController: ModalController) { }
-
-
-  ngOnInit() {
+  amount=''
+payment_receipt=''
+ constructor(public modalController: ModalController) { }
+ngOnInit() {
   }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')
      this.modalController.dismiss({
        'dismissed': true
      });
+   }
+   postbill(){
+    var decoded: any = {}
+    var retrievedtoken = localStorage.getItem('token') || ""
+    decoded = jwt_decode(retrievedtoken);
+    let payload = {
+      user_id: decoded.user_id,
+      amount: this.amount,
+      image:this.payment_receipt
+    }
+    console.log(payload)
    }
 }

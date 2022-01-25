@@ -3,11 +3,11 @@
   <h1 class="h1">Renewal Price</h1>
   <h6 class="h6">Cost</h6>
   <ion-card class="card">
-   <ion-input placeholder="Input Cost" id="text"></ion-input>
+   <ion-input placeholder="Input Cost" id="text" [(ngModel)]="cost"></ion-input>
   </ion-card>
   <h6 class="h6">Item Name</h6>
   <ion-card class="card">
-   <ion-input placeholder="Input Item" id="text"></ion-input>
+   <ion-input placeholder="Input Item" id="text" [(ngModel)]="item"></ion-input>
   </ion-card>
   <div class="ion-text-center" id="buttonsdiv">
     <button type="button" class="btn btn-primary" (click)="update()">Update</button>

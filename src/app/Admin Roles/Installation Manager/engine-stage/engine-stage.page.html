@@ -30,23 +30,23 @@
     <br>
     <h6 class="name">Engine Name</h6>
  <ion-card class="card-detailed">
-     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Engine Name "></textarea>
+     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Engine Name " [(ngModel)]="engine_name"></textarea>
   </ion-card>
    <h6 class="name">Engine Type</h6>
   <ion-card class="card-detailed">
-       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Engine Type"></textarea>
+       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Engine Type" [(ngModel)]="engine_type"></textarea>
    </ion-card>
    <h6 class="name">Engine Weight Capacity</h6>
    <ion-card class="card-detailed">
-        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Engine Weight Capacity"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Engine Weight Capacity" [(ngModel)]="engine_capacity"></textarea>
     </ion-card>
     <h6 class="name">Engine Speed</h6>
     <ion-card class="card-detailed">
-        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter  Engine Speed"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter  Engine Speed" [(ngModel)]="engine_speed"></textarea>
      </ion-card>
      <h6 class="name">Engine Warranty</h6>
      <ion-card class="card-detailed">
-          <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Engine Warranty"></textarea>
+          <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Engine Warranty" [(ngModel)]="engine_warranty"></textarea>
       </ion-card>
        <h6 class="name">Engine Image</h6>
       <div class="ion-text-center">
@@ -54,22 +54,25 @@
         <ion-label class="itemleft">Upload Image</ion-label>
         <ion-icon src="../../assets/uploadimage.svg" class="itemright"></ion-icon>
            </ion-chip>
-      <input #inputFile id="input-file"  style="opacity:0" type="file" (change)="uploadFiles($event)"
-      multiple/>
-      </div>
+           <input #inputFile id="input-file"  style="opacity:0" type="file"  [(ngModel)]="image" (change)="uploadFiles($event)"
+           multiple accept="image/png, image/jpeg"/>
+           <div *ngIf="image !== ''" class="pathname">
+            {{image}}
+            </div>
+          </div>
      <div class="flex-container">
       <div class="flex-container5">
       <div class="flex-container0">
       <h6 class="name"> Start Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="start_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
      </div>
      <div class="flex-container0">
       <h6 class="name"> End Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="end_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
       </div>
@@ -78,7 +81,7 @@
     
          <h6 class="name">More Information or Detail</h6>
       <ion-card class="card-detailed">
-           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter More Information or Detail"></textarea>
+           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please enter More Information or Detail" [(ngModel)]="more_information"></textarea>
        </ion-card>
       <br>
       <br>

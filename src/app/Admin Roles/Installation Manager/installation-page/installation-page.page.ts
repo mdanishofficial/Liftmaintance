@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
+import jwt_decode from "jwt-decode";
 @Component({
   selector: 'app-installation-page',
   templateUrl: './installation-page.page.html',
@@ -14,6 +15,9 @@ export class InstallationPagePage implements OnInit {
 
   ngOnInit() {
   }
+  installation_status='progressing'
+  stage_payment=''
+  installation_stage_status='progressing'
   installation_data=[
     {
       installation_date:'Sunday, 3/26/2021 13:00',
@@ -35,6 +39,16 @@ async update(){
   return await modal.present();
 }
 async startstage(){
+  var decoded:any={}
+  var retrievedtoken = localStorage.getItem('token') || ""
+  decoded = jwt_decode(retrievedtoken);
+  let payload = {
+   user_id:decoded.user_id,
+   installation_status:this.installation_status,
+   stage_payment:this.stage_payment,
+   installation_stage_status:this.installation_stage_status
+}
+console.log(payload)
   this.router.navigateByUrl('installation_manager/railanddoor_stage');
 }
 back(){

@@ -3,16 +3,16 @@
 <div class="container">
   <h1 class="h1">Malfunction Type</h1>
   <ion-list>
-    <ion-radio-group allow-empty-selection = "false" value="radio" (ionChange)="radioGroupChange($event)"
+    <ion-radio-group allow-empty-selection = "false" value="radio" [(ngModel)]="malfunctions_type" (ionChange)="radioGroupChange($event)"
     >
     <ion-item>
         <ion-label>Mechanical</ion-label>
-        <ion-radio slot="start" value="creditcard" class="radio" #mechanical></ion-radio>
+        <ion-radio slot="start" value="mechanical" class="radio" #mechanical></ion-radio>
       </ion-item>
   
       <ion-item>
         <ion-label>Electrical</ion-label>
-        <ion-radio slot="start" value="banktransfer" class="radio" #electrical></ion-radio>
+        <ion-radio slot="start" value="electrical" class="radio" #electrical></ion-radio>
       </ion-item>
   
     </ion-radio-group>

@@ -18,16 +18,17 @@
   <div class="container">
     <h1 class="ion-text-center">Malfunction Details</h1>
     <br>
-    <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
-    <h6 class="client">Client : Ahmad Gul</h6>
+    <div *ngFor="let result of malfunctions_data">
+    <ion-text class="date">{{result?.malfunctions_date}}</ion-text>
+    <h6 class="client">Client : {{result?.client_name}}</h6>
     <hr class="hr">
-    <h6 class="client">Assigned Technician: Technician Name</h6>
+    <h6 class="client">Assigned Technician: {{result?.assigned_technician}}</h6>
     <hr class="hr">
-    <h6 class="client">Lift number : 03</h6>
+    <h6 class="client">Lift number : {{result?.lift_no}}</h6>
     <hr class="hr">
  <h6 class="client">Complain Notes</h6>
-    <ion-text class="date">How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell </ion-text>
-   
+    <ion-text class="date">{{result?.complain_notes}}s</ion-text>
+  </div>
     <h6 class="client">Malfunction Type</h6>
     <div class="ion-text-center">
       <ion-chip class="mechanical-chip" (click)="malfunctiontypemodal()">
@@ -56,6 +57,19 @@
 </div>
 <hr class="hr">
 <h6 class="client">Issue a Bill</h6>
+<div *ngFor="let result of bill_data">
+<div class="flex-container" style="justify-content: space-evenly;">
+  <ion-text class="bill">Cost : {{result?.cost}}<br></ion-text>
+  <div class="ion-text-right">
+    <ion-chip class="ion-chip-right">
+      <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
+      <ion-label>Resend Receipt</ion-label>
+    </ion-chip>
+  </div>
+</div>
+<ion-text class="item">Item Name: {{result?.item_name}}</ion-text>
+<hr class="hr">
+<!-- <h6 class="client">Issue a Bill</h6>
 <div class="flex-container" style="justify-content: space-evenly;">
   <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
   <div class="ion-text-right">
@@ -66,28 +80,17 @@
   </div>
 </div>
 <ion-text class="item">Item Name: Some Item Name</ion-text>
-<hr class="hr">
-<h6 class="client">Issue a Bill</h6>
-<div class="flex-container" style="justify-content: space-evenly;">
-  <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
-  <div class="ion-text-right">
-    <ion-chip class="ion-chip-right">
-      <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon>
-      <ion-label>Resend Receipt</ion-label>
-    </ion-chip>
-  </div>
+<hr class="hr"> -->
 </div>
-<ion-text class="item">Item Name: Some Item Name</ion-text>
-<hr class="hr">
 <div class="ion-text-center">
   <ion-button class="newbutton" shape="round" (click)="newbillmodal()">New Bill</ion-button>
 </div>
-<h6 class="client">Payment</h6>
-<div class="flex-container" style="justify-content: space-evenly;">
-  <ion-text class="bill">Cost : 720 Riyals<br></ion-text>
+<h6 class="client">Payment Complain</h6>
+<div class="flex-container" style="justify-content: space-evenly;" *ngFor="let result of payment_complain">
+  <ion-text class="bill">Cost :{{result?.cost}}<br></ion-text>
   <div class="ion-text-right">
-    <ion-chip class="ion-chip-right">
-      <ion-icon src="../../assets/updateicon.svg" class="ion-icon"></ion-icon>
+    <ion-chip class="ion-chip-right" id="updatebutton">
+      <ion-icon src="../../assets/updatebill.svg" class="ion-icon"></ion-icon>
       <ion-label>Update</ion-label>
     </ion-chip>
   </div>

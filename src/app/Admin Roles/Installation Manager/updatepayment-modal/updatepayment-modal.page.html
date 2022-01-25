@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="h1">Bank Transfer</h1>
+  <h1 class="h1">Payment Receipt Update</h1>
   
   <div class="ion-text-center">
     <ion-input placeholder="Enter the amount transferred" class="text" [(ngModel)]="amount"></ion-input>
@@ -10,9 +10,12 @@
     <div class="ion-text-center" (click)="inputFile.click()" class="#194E78-button">
           <img src="../../assets/attach.svg" class="attach"/>
     </div>
-    <input #inputFile id="input-file"  style="opacity:0" type="file"  [(ngModel)]="image" (change)="uploadFiles($event)"
+    <input #inputFile id="input-file"  style="opacity:0" type="file"  [(ngModel)]="payment_receipt" (change)="uploadFiles($event)"
     multiple accept="image/png, image/jpeg"/>
 <!-- </ion-item> -->
+<div *ngIf="payment_receipt !== ''" class="pathname">
+  {{payment_receipt}}
+  </div>
   <!-- </div> -->
 <!-- </div> -->
 <div class="ion-text-center" id="buttonsdiv">

@@ -30,15 +30,15 @@
     <br>
     <h6 class="name">Lift Car Type</h6>
  <ion-card class="card-detailed">
-     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Lift Car Type"></textarea>
+     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Lift Car Type" [(ngModel)]="liftcar_type"></textarea>
   </ion-card>
    <h6 class="name">Lift Car Dimension</h6>
   <ion-card class="card-detailed">
-       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Door Lift Car Dimension"></textarea>
+       <textarea class="native-textarea sc-ion-textarea-ios" id="textarea"  placeholder="Please Enter Door Lift Car Dimension" [(ngModel)]="liftcar_dimension"></textarea>
    </ion-card>
    <h6 class="name">Lift Car Roof Design</h6>
    <ion-card class="card-detailed">
-        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Lift Car Roof Design"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Lift Car Roof Design " [(ngModel)]="liftcar_roof_design"></textarea>
     </ion-card>
     <h6 class="name"> Lift Car Image</h6>
   <div class="ion-text-center">
@@ -46,22 +46,25 @@
       <ion-label class="itemleft">Upload Image</ion-label>
       <ion-icon src="../../assets/uploadimage.svg" class="itemright"></ion-icon>
          </ion-chip>
-    <input #inputFile id="input-file"  style="opacity:0" type="file" (change)="uploadFiles($event)"
-    multiple/>
-    </div>
+         <input #inputFile id="input-file"  style="opacity:0" type="file"  [(ngModel)]="image" (change)="uploadFiles($event)"
+         multiple accept="image/png, image/jpeg"/>
+         <div *ngIf="image !== ''" class="pathname">
+          {{image}}
+          </div>
+        </div>
      <div class="flex-container">
       <div class="flex-container5">
       <div class="flex-container0">
       <h6 class="name"> Start Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="start_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
      </div>
      <div class="flex-container0">
       <h6 class="name"> End Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="end_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
       </div>
@@ -70,7 +73,7 @@
     
          <h6 class="name">More Information or Detail</h6>
       <ion-card class="card-detailed">
-           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter More Information or Detail"></textarea>
+           <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter More Information or Detail" [(ngModel)]="more_information"></textarea>
        </ion-card>
       <br>
       <br>

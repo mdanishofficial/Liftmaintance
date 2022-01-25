@@ -3,7 +3,7 @@
 <div class="container">
   <h1 class="h1">Malfunction Level</h1>
   <ion-list>
-    <ion-radio-group allow-empty-selection = "false" value="radio" (ionChange)="radioGroupChange($event)"
+    <ion-radio-group allow-empty-selection = "false" value="radio" [(ngModel)]="malfunctions_level" (ionChange)="radioGroupChange($event)"
     >
     <ion-item>
         <ion-label>Normal</ion-label>

@@ -1,20 +1,17 @@
 <div class="container">
   <div class="flex-container">
   <h1 class="h1">Forward Malfunctions</h1>
-  <h6 class="h6">Select Installation Manager</h6>
+  <h6 class="h6">Select Installation Technician</h6>
   <ion-card class="card">
-    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-      <option disabled selected hidden style="color:   #DCDCDC;">Installation Manager</option>
-      <option value="electrical" class="options">Electrical</option>
-      <option value="mechanical" class="options">Mechanical</option>
-      <option value="other" class="options">Other Type</option>
-      <option value="someother" class="options">Some Other Type</option>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_technician">
+      <option disabled selected hidden style="color:   #DCDCDC;">Installation Technician</option>
+      <option value='' class="options" *ngFor="let result of instaallation_technicians">{{result?.technician_name}}</option>
     </select>
    </ion-card>
   <h6 class="h6">Detail about malfunction</h6>
   <ion-card class="card-detailed">
     <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
-    <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please input detail!"></textarea>
+    <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please input detail!" [(ngModel)]="details"></textarea>
 </ion-card>
   <div class="ion-text-center" id="buttonsdiv">
     <button type="button" class="btn btn-primary" (click)="update()">Update</button>

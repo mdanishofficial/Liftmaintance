@@ -37,12 +37,12 @@
 <h6 class="client">Lift type : {{result?.lift_type}}</h6>
 <hr class="hr">
 <h6 class="client">Installation Status</h6>
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option value="electrical" class="options">Progressing</option>
-  <option value="mechanical" class="options">Waiting for next stage payment</option>
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_status">
+  <option value="progressing" class="options" selected>Progressing</option>
+  <option value="waiting" class="options">Waiting for next stage payment</option>
 </select>
- <h6 class="client">Stage Payment</h6>
-  <ion-textarea class="textarea"></ion-textarea>
+ <h6 class="client"  >Stage Payment</h6>
+  <ion-textarea class="textarea" [(ngModel)]="stage_payment"></ion-textarea>
 <h6 class="client">Payment</h6>
     <div class="ion-text-center">
       <ion-chip class="update" (click)="update()">
@@ -52,11 +52,9 @@
   </div>
   <hr class="hr">
 <h6 class="client">Installation Stage Status</h6>
-<select class="form-select form-select-sm" aria-label=".form-select-sm example">
-  <option value="electrical" class="options">New</option>
-  <option value="mechanical" class="options">Mechanical</option>
-  <option value="other" class="options">Other Type</option>
-  <option value="someother" class="options">Some Other Type</option>
+<select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_stage_status">
+  <option value="progressing" class="options" selected>Progressing</option>
+  <option value="waiting" class="options">Waiting for next stage payment</option>
 </select>
 <div class="ion-text-center">
   <ion-button class="newbutton" shape="round" (click)="startstage()">Start Stage</ion-button>
