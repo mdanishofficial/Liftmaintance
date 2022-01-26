@@ -16,6 +16,24 @@ export class UpdatepricecontractdetailsPage implements OnInit {
 
   ngOnInit() {
   }
+  new_contract_data=[
+    {
+client_name:'Shadab Khan',
+lift_number:'6',
+start_date:'10-10-2022',
+end_date:'10-10-2022',
+price:'1600 Riyals'
+    }
+  ]
+  previous_contract_data=[
+    {
+client_name:'Shadab Khan',
+lift_number:'6',
+start_date:'10-10-2022',
+end_date:'10-10-2022',
+price:'1600 Riyals'
+    }
+  ]
   async updateprice(){
     
     console.log('emod property is accessible')
