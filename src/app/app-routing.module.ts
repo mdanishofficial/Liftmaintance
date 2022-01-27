@@ -415,7 +415,7 @@ const routes: Routes = [
     loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
   },
   {
-    path: 'contract-details',
+    path: 'contract_details',
     loadChildren: () => import('./contract-details/contract-details.module').then( m => m.ContractDetailsPageModule)
   },
   {
