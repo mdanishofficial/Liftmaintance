@@ -48,3 +48,25 @@
   #buttonsdiv{
       margin-top: 1em;
   }
+  @media only screen and (max-width: 321px) {
+    .btn-primary{
+        margin-top: 0.1em;
+        width: 8em;
+        background-color: #194E78;
+        border: #194E78;
+      }
+       .divider{
+        width:0.2em;
+        height:auto;
+        display:inline-block;
+      }
+      #buttonsdiv{
+        margin-top: -1em;
+    }
+    .attach{
+        align-items: center;
+        margin-top: -1em;
+        height: 7em;
+        width: 15em;
+    }
+  }

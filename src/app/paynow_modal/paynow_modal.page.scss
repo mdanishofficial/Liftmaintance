@@ -8,9 +8,6 @@
      font-size: 16pt;
      font-family:'Roboto';
  }
- .label{
-     margin: 1em;
- }
  .checkbox-square{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     --border-width:2px;
@@ -19,6 +16,11 @@
     --background-checked:white;
     --border-radius:2px
  }
+ ion-item {
+
+    --border-width: 0;
+    --inner-border-width: 0;
+}
  .radio{
     --border-radius:0px;
     --inner-border-radius:0px;

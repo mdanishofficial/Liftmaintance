@@ -40,15 +40,16 @@ display: flex;
 }
 .greendiv{
     background-color: #60D924; width: 35px;height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(116, 253, 111, 0.2), 0 6px 20px 0 rgba(30, 247, 102, 0.19);
 }
 .colordiv2{
-    background-color: #60D924; width: 35px;height: 100%;
+    background-color: #60D924; width: 35px;height: 100%;box-shadow: 0 4px 2px -2px #60D924;
 }
 .colordiv3{
     background-color: #60D924; width: 35px;height: 100%;
 }
 .reddiv{
-    background-color: #60D924; width: 35px;height: 100%;
+    background-color: #60D924; width: 35px;height: 100%;box-shadow: 0 4px 2px -2px #60D924;
 }
 .type{
     font-size: 18pt;

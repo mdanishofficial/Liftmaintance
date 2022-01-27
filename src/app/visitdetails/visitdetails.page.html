@@ -7,7 +7,7 @@
  <div>
   <ion-text class="date">Date:  {{maintenance_data[id]?.maintenance_date}}</ion-text>
 </div>
-  <ion-item>
+  <ion-item class="techniciandiv">
     <ion-avatar slot="start">
       <img class="avatar" src="../../assets/avatar.svg">
     </ion-avatar>
@@ -18,25 +18,11 @@
       <div class="title">
       <p>Maintenance Technician</p>
         </div>
-        <div class="stars">
-          <ionic5-star-rating #rating
-          activeIcon = "star"
-          defaultIcon = "ios-star-outline"
-          activeColor = "#C99F66" 
-          defaultColor = "#f4f4f4"
-          readonly="false"
-          rating="{{5}}"
-          fontSize = "15px"
-          (ratingChanged)="logRatingChange($event)"
-           >
-      </ionic5-star-rating>
-      <!-- rating="{{technician_data.technician_rating}}" -->
-        </div>
    </ion-label>
   </ion-item>   
   <br>
   <br>
-  <h2 class="h2">Status</h2>
+  <!-- <h2 class="h2">Status</h2>
   <br>
  <div>
   <div>
@@ -45,9 +31,9 @@
       </div>
     </div>
     <div [ngClass]='maintenance_data[id]?.maintenance_status == "completed" ?"greendiv":maintenance_data[id]?.maintenance_status == "this month"? "graydiv":"yellowdiv"'></div>
-  </div>
-  <br>
-  <hr class="hr">
+  </div> -->
+  <!-- <br>
+  <hr class="hr"> -->
   <h6 class="h2">Notes</h6>
   <br>
   <ion-card class="card-detailed">

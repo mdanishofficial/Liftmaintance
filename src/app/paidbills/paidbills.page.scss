@@ -147,7 +147,8 @@ display: flex;
     color: white;
 }
 ::ng-deep .updatePayment .modal-wrapper{
-    height: 22em!important;
+    height: 384px!important;
+    height: 318px;
     margin: 1em;
-    --border-radius:10px;
+    --border-radius:30px;
 }

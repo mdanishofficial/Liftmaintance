@@ -119,19 +119,10 @@ outline:none;
     margin: 1em;
     --border-radius:10px;
 }
-@media only screen and (max-width: 320px) {
-    .btn-primary{
-    margin-left: 1.6em;
-  }
-    .btn-secondary{
-       margin-top: 1em;
-    }
-  }
-  @media only screen and (max-width: 280px) {
-    .btn-primary{
-    margin-left: 1.5em;
-  }
-    .btn-secondary{
-       margin-top: 1em;
+@media only screen and (max-width: 321px) {
+    .divider{
+        width: 1em;
+        height:auto;
+        display:inline-block;
     }
   }

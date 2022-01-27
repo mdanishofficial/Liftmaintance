@@ -24,15 +24,11 @@ height: 30px;
 h1{
     text-decoration: underline;color:#194E78 ; font-weight: bold;
 }
-hr{
-    border-top: 1px solid #cacaca;
-    width: 330px;
+.techniciandiv{
+    margin-left: -1em;
 }
 .parts-button{
     width: 200px;
-}
-.stars{
-    margin-left: 10em;
 }
 .title{
     float: left;
@@ -42,7 +38,7 @@ hr{
     width: 46px;
 }
 .h2{
-    margin-left: 0.7em;
+    margin-left: 0.1em;
     color:#194E78 ; font-weight: bold; float: left;
     margin-top: 0em;
     font-size: 18px;
@@ -50,7 +46,7 @@ hr{
     margin-bottom: 0em;
 }
 #payment{
-    margin-left: 0.7em;
+    margin-left: 0.1em;
     color:#194E78 ; font-weight: bold; float: left;
     margin-top: 0em;
     font-size: 18px;
@@ -64,10 +60,11 @@ hr{
   }
 .leftcol{
     float: left;
-    }
+    margin-left: -0.7em;
+  }
     .rightcolbrown{
         float: right;
-        margin-right: 1em;
+        margin-right: 0.6em;
         border-radius: 100px;
         height: 21px;
         width: 21px;
@@ -75,7 +72,7 @@ hr{
     }
     .rightcolorange{
         float: right;
-        margin-right: 1em;
+        margin-right: 0.6em;
         border-radius: 100px;
         height: 21px;
         width: 21px;
@@ -84,7 +81,7 @@ hr{
     
     .rightcolyellow{
         float: right;
-        margin-right: 1em;
+        margin-right: 0.6em;
         border-radius: 100px;
         height: 21px;
         width: 21px;
@@ -92,7 +89,7 @@ hr{
     }
     .rightcol{
         float: right;
-        margin-right: 1em;
+        margin-right: 0.6em;
         font-size: 16px;
         color: #6E6E6E;
       
@@ -110,7 +107,7 @@ hr{
         color: #7A0001;
         margin-left: 1em;
        float: right;
-        margin-right: 1em;
+       margin-right: 0.6em;
     }
     .hr{
         margin-top: 0em;
@@ -137,20 +134,46 @@ hr{
          --background:#7A0001;
          --background-activated: #7A0001;
     }
-
+    @media only screen and (max-width: 321px) {
+        .parts-button{
+            width: 120px;
+        }
+        .btn-primary{
+            // width: 227px;
+           color: #194E78;
+            background-color:#F5F5F5;
+            border:#F5F5F5;
+            font-weight: bold;
+            width: 120px;
+           }
+           .btn-secondary{
+            background-color:#60D924;
+            border:#60D924;
+            font-weight: bold;
+            width: 120px;
+           }
+           .divider{
+            width:0.2em;
+            height:auto;
+            display:inline-block;
+          }
+      }
 ::ng-deep .parts-class .modal-wrapper {
-    height: 21em!important;
-    --border-radius:10px;
+    height: 384px!important;
+    width: 318px;
+    --border-radius:30px;
     margin: 1em;
    }
 ::ng-deep .payment-class .modal-wrapper{
-    height: 20em!important;
+    height: 361px!important;
+    width: 318px;
     margin: 1em;
-    --border-radius:10px;
+    --border-radius:30px;
 }
 
 ::ng-deep .ratings-class .modal-wrapper {
-    height: 20em!important;
+    height: 384px!important;
+    width: 318px;
     margin: 1em;
-    --border-radius:10px;
+    --border-radius:30px;
  }

@@ -24,7 +24,7 @@
     </div>
     <br>
  <ion-alert-controller></ion-alert-controller>
- <ion-item>
+ <ion-item class="techniciandiv">
   <ion-avatar slot="start">
     <img class="avatar" src="../../assets/avatar.svg">
   </ion-avatar>
@@ -32,20 +32,6 @@
     <h2>Technician: {{malfunction_data[id]?.technician_assigned}}</h2>
     <div class="title">
     <p>Maintenance Technician</p>
-      </div>
-      <div class="stars">
-        <ionic5-star-rating #rating
-        activeIcon = "star"
-        defaultIcon = "ios-star-outline"
-        activeColor = "#C99F66" 
-        defaultColor = "#f4f4f4"
-        readonly="false"
-        rating="{{technician_data.technician_rating}}"
-        fontSize = "15px"
-        disabled="true"
-        (ratingChanged)="logRatingChange($event)"
-         >
-    </ionic5-star-rating>
       </div>
  </ion-label>
 </ion-item>
@@ -65,23 +51,6 @@
     <hr class="hr">
   </div>
   </div>
- 
-  <!-- <div>
-    <div class="leftcol">
-      <ion-text class="date">Too Loud in the Elevator</ion-text>
-    </div>
-    <div class="rightcolorange">
-    </div>
-  </div>
-  <br>
-  <hr class="hr">
-  <div>
-    <div class="leftcol">
-      <ion-text class="date">The Lights are not Working</ion-text>
-    </div>
-    <div class="rightcolyellow">
-    </div>
-  </div> -->
   <br>
    </div>
    <br> 
@@ -138,9 +107,9 @@
 </div>
 <br>
 <div>
-  <div class="leftcol">
+  <!-- <div class="leftcol"> -->
     <ion-text class="h2">Payment Status</ion-text>
-  </div>
+  <!-- </div> -->
   <div class="rightcol">
     {{malfunction_data[id]?.bill_payment_status}}
   </div>
