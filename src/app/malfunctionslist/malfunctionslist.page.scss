@@ -4,6 +4,7 @@
    .header{
     height: 40px;
 background-color: #194E78;
+position: initial;
 }
 .bell{
 margin-left: 0.5em;
@@ -39,17 +40,17 @@ display: flex;
     text-decoration: underline;color:#194E78 ; font-weight: bold; margin-top: 3em;
 }
 .greendiv{
-    background-color: #60D924; width: 35px;height: 100%;
-    box-shadow: 0 4px 8px 0 rgba(116, 253, 111, 0.2), 0 6px 20px 0 rgba(30, 247, 102, 0.19);
+    background-color: #60D924; width: 35px;height: 150%;
+    float: left;
 }
 .colordiv2{
-    background-color: #60D924; width: 35px;height: 100%;box-shadow: 0 4px 2px -2px #60D924;
+    background-color: #60D924; width: 35px;height: 150%;float: left;
 }
 .colordiv3{
-    background-color: #60D924; width: 35px;height: 100%;
+    background-color: #60D924; width: 35px;height: 150%;float: left;
 }
 .reddiv{
-    background-color: #60D924; width: 35px;height: 100%;box-shadow: 0 4px 2px -2px #60D924;
+    background-color: #60D924; width: 35px;height: 150%;float: left;
 }
 .type{
     font-size: 18pt;

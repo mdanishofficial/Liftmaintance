@@ -5,7 +5,7 @@
 <br>
     <ion-card class="card" *ngFor="let result of maintenance_data let i=index" (click)="visitdetails(i)">
       <div class="flex-container">
-        <div style="float: left;">
+        <div style="float: left;height: 65px;">
           <div [ngClass]='result?.maintenance_status == "completed" ?"greendiv":result?.maintenance_status == "this month"? "graydiv":"yellowdiv"'></div>
         </div>
         <div class="flex-container2">

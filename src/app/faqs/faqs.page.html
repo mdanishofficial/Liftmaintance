@@ -70,9 +70,17 @@
       </div> -->
     <!-- </div> -->
   <div *ngFor="let result of faqs_data; let i = index" class="accordion-item">
-      <button type="button" class="accordion-button" (click)="isCollapsed[i] = !isCollapsed[i]">
+    <div class="flex-container">
+      <button type="button" class="card" (click)="isCollapsed[i] = !isCollapsed[i]">
         {{result?.question}}
+        <div *ngIf="isCollapsed[i]">
+          <ion-icon name="chevron-down-sharp"></ion-icon>
+          </div>
+          <div *ngIf="!isCollapsed[i]">
+            <ion-icon name="chevron-up-sharp"></ion-icon>
+            </div>
       </button>
+    </div>
       <div class="accordion-collapse" [ngbCollapse]="isCollapsed[i]">
        {{result?.answer}}
       </div>

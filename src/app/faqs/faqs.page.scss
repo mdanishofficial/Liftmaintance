@@ -50,11 +50,15 @@ height: 30px;
     margin-left: -1em;
     margin-right: -1em;;
   }
-  .accordion-button{
+  .card{
     background-color: #F5F5F5;
     color: #6E6E6E;
     height: 40px;
     padding-left: 0.7em;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.5em;
   }
   .accordion-item{
 margin-top: 0.5em;
@@ -64,4 +68,7 @@ margin-top: 0.5em;
     color: #6E6E6E;
     padding: 0.8em;
   }
- 
+  .icon{
+height: 200px;
+color: #000;
+  }
