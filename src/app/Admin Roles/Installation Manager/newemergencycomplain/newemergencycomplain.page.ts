@@ -18,7 +18,7 @@ export class NewemergencycomplainPage implements OnInit {
      // this.router.navigateByUrl('installation_manager/pendingemergencycomplain/'+refresh);
     this.platform.backButton.subscribeWithPriority(10, () => {
       var refresh=true
-      this.router.navigateByUrl('installation_manager/pendingemergencycomplain/'+refresh);
+    this.router.navigateByUrl('installation_manager/pendingemergencycomplain/'+refresh);
     });
     }
   showToasterSuccess(){

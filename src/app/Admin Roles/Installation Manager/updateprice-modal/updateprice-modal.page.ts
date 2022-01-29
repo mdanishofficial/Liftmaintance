@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-updateprice-modal',
   templateUrl: './updateprice-modal.page.html',
@@ -8,8 +10,13 @@ import jwt_decode from "jwt-decode";
 })
 export class UpdatepriceModalPage implements OnInit {
 price=''
-  constructor(public modalController: ModalController) { }
-
+constructor(private platform: Platform,private router: Router,public modalController: ModalController) { 
+  this.platform.backButton.subscribeWithPriority(10, () => {
+    this.modalController.dismiss({
+      'dismissed': true
+    });
+  });
+ }
   ngOnInit() {
   }
   dismiss() {

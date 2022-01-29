@@ -36,7 +36,7 @@ malfunction_data=[
   malfunction_status:'New',
   technician_assigned:'Hassan Ali',
   malfunction_type:'Mechanical',
-  malfunction_level:'Danger'
+  malfunction_level:'Effective'
 },
 {
   client_name:'Shadab Khan',
@@ -44,7 +44,7 @@ malfunction_data=[
   malfunction_status:'New',
   technician_assigned:'Hassan Ali',
   malfunction_type:'Mechanical',
-  malfunction_level:'Danger'
+  malfunction_level:'Normal'
 },
 ]
 }

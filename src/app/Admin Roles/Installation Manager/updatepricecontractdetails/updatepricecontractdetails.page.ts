@@ -12,7 +12,11 @@ import { Platform } from '@ionic/angular';
 })
 export class UpdatepricecontractdetailsPage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController,private platform: Platform,private router: Router) {}
+  constructor(public alertController: AlertController,public modalController: ModalController,private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/contracts');
+    });
+  }
 
   ngOnInit() {
   }

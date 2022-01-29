@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-maintenance-technicians',
   templateUrl: './maintenance-technicians.page.html',
   styleUrls: ['./maintenance-technicians.page.scss'],
 })
 export class MaintenanceTechniciansPage implements OnInit {
-  constructor(private router: Router) { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
+   }
 
   ngOnInit() {
   }

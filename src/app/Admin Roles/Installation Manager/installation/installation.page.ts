@@ -8,9 +8,11 @@ import { Platform } from '@ionic/angular';
 })
 export class InstallationPage implements OnInit {
 
-  constructor(private platform: Platform,private router: Router) { 
-
-  }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
+   }
 
   ngOnInit() {
   }

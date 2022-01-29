@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import jwt_decode from "jwt-decode";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-engine-stage',
   templateUrl: './engine-stage.page.html',
@@ -16,7 +17,11 @@ export class EngineStagePage implements OnInit {
   end_date = ''
   more_information = ''
   image
-  constructor(private router: Router) { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/liftcar_stage');
+    });
+   }
 
   ngOnInit() {
   }

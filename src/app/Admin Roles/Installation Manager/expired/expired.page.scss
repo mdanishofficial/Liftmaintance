@@ -44,19 +44,20 @@
     display: flex;
 }
 .searchbar{
-  width: 13em;
-  height: 3em;
+  width: 173px;
+  height: 36px;
   margin-top: 0em;
   margin-left: 0em;
   padding-left: 1em;
   --border-radius: 0px;
   --background: white;
   --placeholder-color: #6E6E6E;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 
 }
 ::ng-deep .searchbar-input{
-    padding-left: 0em !important;
+    padding-left: 0.5em !important;
+    width: 173px;
+    height: 36px;
 }
   .options{
     color: #194E78;
@@ -64,22 +65,23 @@
    }
    .form-select-sm{
     color: #6E6E6E;
-     height: 3em;
-    // font-weight: bold;
+    width: 173px;
+    height: 36px;
    }
   select{
-     width: 13em;
+     width: 173px;
+     height: 36px;
      color: #6E6E6E;
   }
-  .searcbar-card{
-    width: 13em;
-    height: 3em;
-      }
-      .select-card{
-        width: 13em;
-        height: 3em; 
-        margin-left: -0.5em;
-      }
+  // .searcbar-card{
+  //   width: 13em;
+  //   height: 3em;
+  //     }
+      // .select-card{
+      //   width: 13em;
+      //   height: 3em; 
+      //   // margin-left: -0.5em;
+      // }
       .flex-container{
         display: flex;
        }

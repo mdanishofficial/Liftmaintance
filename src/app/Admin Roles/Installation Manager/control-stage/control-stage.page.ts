@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import jwt_decode from "jwt-decode";
-import { NotificationService } from '../../../../services/notification.service'
+import { NotificationService } from '../../../../services/notification.service';
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-control-stage',
   templateUrl: './control-stage.page.html',
@@ -13,7 +14,12 @@ export class ControlStagePage implements OnInit {
   start_date = ''
   end_date = ''
   more_information = ''
-  constructor (private notifyService : NotificationService,private router: Router) { }
+  constructor (private platform: Platform,private notifyService : NotificationService,private router: Router) {
+
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/engine_stage');
+    });
+   }
 
   ngOnInit() {
   }

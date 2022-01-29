@@ -16,9 +16,9 @@ export class NewpendingcomplainPage implements OnInit {
   complaindetail=''
   
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
-   var refresh=true
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/pendingcomplain/'+refresh);
+   this.platform.backButton.subscribeWithPriority(10, () => {
+      var refresh=true
+    this.router.navigateByUrl('installation_manager/pendingcomplain/'+refresh);
     });
   }
 

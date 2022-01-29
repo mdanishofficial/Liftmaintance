@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { InstallationService } from '../../../../services/main.service';
+import { Platform } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import jwt_decode from "jwt-decode";
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-clientlisting',
   templateUrl: './clientlisting.page.html',
@@ -7,7 +12,11 @@ import {Router} from "@angular/router";
 })
 export class ClientlistingPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, private router: Router, public modalController: ModalController) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/myclient');
+    });
+  }
 
   ngOnInit() {
   }

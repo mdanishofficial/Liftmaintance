@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import jwt_decode from "jwt-decode";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-railanddoor-stage',
   templateUrl: './railanddoor-stage.page.html',
@@ -14,7 +15,11 @@ export class RailanddoorStagePage implements OnInit {
   start_date=''
   end_date=''
   more_information=''
-  constructor(private router: Router) { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/installation_page');
+    });
+   }
 
   ngOnInit() {
   }

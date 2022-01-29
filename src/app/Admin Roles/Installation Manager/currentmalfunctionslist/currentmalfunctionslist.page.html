@@ -30,7 +30,7 @@
       <div class="square">
         <div>
           <div class="complain"><h3 class="h3">Client: {{result?.client_name}}</h3></div>
-          <div class="buttondiv"><ion-button class="statusbutton1" shape="round">{{result?.malfunction_level}}</ion-button></div>
+          <div class="buttondiv"><ion-button [ngClass]='result?.malfunction_level == "Danger" ?"statusbutton1":result?.malfunction_level == "Effective"? "statusbutton2":"statusbutton3"' shape="round">{{result?.malfunction_level}}</ion-button></div>
           <br>
           <br>
       </div>

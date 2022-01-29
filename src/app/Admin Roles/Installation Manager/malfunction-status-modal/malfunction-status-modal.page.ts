@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-malfunction-status-modal',
   templateUrl: './malfunction-status-modal.page.html',
@@ -8,7 +9,13 @@ import jwt_decode from "jwt-decode";
 })
 export class MalfunctionStatusModalPage implements OnInit {
   malfunctions_status=''
-  constructor(public modalController: ModalController) { }
+  constructor(private platform: Platform,public modalController: ModalController) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.modalController.dismiss({
+        'dismissed': true
+      });
+    });
+  }
   ngOnInit() {
   }
   radioValue;

@@ -10,7 +10,9 @@ export class ContractdetailsPage implements OnInit {
 
  
   constructor(private platform: Platform,private router: Router) { 
-
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/curmonthexpiring');
+    });
   }
 
   ngOnInit() {

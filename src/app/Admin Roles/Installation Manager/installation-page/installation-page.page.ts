@@ -4,6 +4,7 @@ import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
 import jwt_decode from "jwt-decode";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-installation-page',
   templateUrl: './installation-page.page.html',
@@ -11,7 +12,11 @@ import jwt_decode from "jwt-decode";
 })
 export class InstallationPagePage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController,private router: Router) {}
+  constructor(private platform: Platform,public alertController: AlertController,public modalController: ModalController,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/installation');
+    });
+  }
 
   ngOnInit() {
   }

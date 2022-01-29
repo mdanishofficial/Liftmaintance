@@ -9,6 +9,9 @@ import { Platform } from '@ionic/angular';
 export class SolvedmalfunctionslistPage implements OnInit {
 
   constructor(private platform: Platform,private router: Router) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
   }
 
   ngOnInit() {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
+import {Router} from "@angular/router";
 import { MalfunctionTypeModalPage } from '../malfunction-type-modal/malfunction-type-modal.page';
 import { MalfunctionLevelModalPage } from '../malfunction-level-modal/malfunction-level-modal.page';
 import { MalfunctionStatusModalPage } from '../malfunction-status-modal/malfunction-status-modal.page';
@@ -14,8 +16,12 @@ import { ForwardmalfunctionsModalPage } from '../forwardmalfunctions-modal/forwa
 })
 export class MalfunctionsdetailsPage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController) {}
-
+  constructor(private platform: Platform,public modalController: ModalController,private router: Router) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
+    });
+  }
+  
   ngOnInit() {
   }
   malfunctions_data=[

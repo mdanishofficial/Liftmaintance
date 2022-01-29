@@ -18,9 +18,10 @@
 
     <h1 class="ion-text-center">Client Detail</h1>
     <div class="container">
-    <h6 class="client">Client : Ahmad Gul</h6>
+      <div *ngFor="let result of previous_contract_data">
+    <h6 class="client">Client : {{result?.client_name}}</h6>
     <hr class="hr">
-    <h6 class="client">Lift Number : 6</h6>
+    <h6 class="client">Lift Number : {{result?.lift_number}}</h6>
     <hr class="hr">
     <h6 class="client">Previous Contract</h6>
     <div class="details">
@@ -28,7 +29,7 @@
         <ion-text class="textleft">Start Date</ion-text>
       </div>
       <div class="rightcol">
-        <ion-text class="textright">10-10-2020</ion-text>
+        <ion-text class="textright">{{result?.start_date}}</ion-text>
       </div>
      </div>
     <br>
@@ -37,7 +38,7 @@
         <ion-text class="textleft">End Date</ion-text>
       </div>
       <div class="rightcol">
-        <ion-text class="textright">10-10-2022</ion-text>
+        <ion-text class="textright">{{result?.end_date}}</ion-text>
       </div>
      </div>
      <br>
@@ -46,9 +47,10 @@
         <ion-text class="textleft">Price</ion-text>
       </div>
       <div class="rightcol">
-        <ion-text class="textright">2400 Riyals</ion-text>
+        <ion-text class="textright">{{result?.price}}</ion-text>
       </div>
      </div> 
+     </div>
      <br>
      <hr class="hr">
       <br>

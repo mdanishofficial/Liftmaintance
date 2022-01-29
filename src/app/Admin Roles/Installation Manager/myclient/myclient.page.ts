@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-myclient',
   templateUrl: './myclient.page.html',
@@ -7,7 +8,11 @@ import {Router} from "@angular/router";
 })
 export class MyclientPage implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private platform: Platform,private router: Router) {
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
+   }
 
   ngOnInit() {
   }
