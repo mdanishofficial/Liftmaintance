@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import jwt_decode from "jwt-decode";
 import { Platform } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-railanddoor-stage',
   templateUrl: './railanddoor-stage.page.html',
@@ -15,13 +16,31 @@ export class RailanddoorStagePage implements OnInit {
   start_date=''
   end_date=''
   more_information=''
-  constructor(private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) {
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/installation_page');
+      this.router.navigateByUrl('installation_manager/installation_page/'+refresh);
     });
    }
 
-  ngOnInit() {
+   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/installation_page/'+refresh);
+    });
   }
   async next(){
     var decoded:any={}
@@ -38,9 +57,11 @@ export class RailanddoorStagePage implements OnInit {
      more_information:this.more_information,
   }
   console.log(payload)
-    this.router.navigateByUrl('installation_manager/liftcar_stage');
+  var refresh=false
+    this.router.navigateByUrl('installation_manager/liftcar_stage/'+refresh);
   }
   back(){
-    this.router.navigateByUrl('installation_manager/installation_page');
+    var refresh=true
+    this.router.navigateByUrl('installation_manager/installation_page/'+refresh);
   }
 }

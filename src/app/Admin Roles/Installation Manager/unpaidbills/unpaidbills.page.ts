@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { InstallationService } from '../../../../services/main.service';
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
@@ -9,7 +9,7 @@ import jwt_decode from "jwt-decode";
   styleUrls: ['./unpaidbills.page.scss'],
 })
 export class UnpaidbillsPage implements OnInit {
-  constructor(private platform: Platform,private service: InstallationService, private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationService, private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
     });
@@ -17,7 +17,18 @@ export class UnpaidbillsPage implements OnInit {
   }
   bill_data = []
   ngOnInit() {
-  }
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
   call_api(){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');

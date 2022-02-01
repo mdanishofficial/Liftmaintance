@@ -3,6 +3,7 @@ import {Router} from "@angular/router";
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../../../services/notification.service';
 import { Platform } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-control-stage',
   templateUrl: './control-stage.page.html',
@@ -14,14 +15,31 @@ export class ControlStagePage implements OnInit {
   start_date = ''
   end_date = ''
   more_information = ''
-  constructor (private platform: Platform,private notifyService : NotificationService,private router: Router) {
+  constructor (public activatedRoute: ActivatedRoute,private platform: Platform,private notifyService : NotificationService,private router: Router) {
 
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/engine_stage');
+      this.router.navigateByUrl('installation_manager/engine_stage/'+refresh);
     });
    }
-
-  ngOnInit() {
+   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/engine_stage/'+refresh);
+    });
   }
   showToasterSuccess(){
     this.notifyService.showSuccess("New Stages Added Successfully !!", "")
@@ -43,7 +61,8 @@ export class ControlStagePage implements OnInit {
     // this.router.navigateByUrl('installation_manager/liftcar_stage');
   }
   back(){
-    this.router.navigateByUrl('installation_manager/engine_stage');
+    var refresh=true
+    this.router.navigateByUrl('installation_manager/engine_stage/'+refresh);
   }
 
 }

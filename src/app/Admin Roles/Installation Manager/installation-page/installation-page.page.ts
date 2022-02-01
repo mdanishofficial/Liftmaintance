@@ -5,6 +5,7 @@ import { AlertController } from '@ionic/angular';
 import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-modal.page';
 import jwt_decode from "jwt-decode";
 import { Platform } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-installation-page',
   templateUrl: './installation-page.page.html',
@@ -12,14 +13,31 @@ import { Platform } from '@ionic/angular';
 })
 export class InstallationPagePage implements OnInit {
 
-  constructor(private platform: Platform,public alertController: AlertController,public modalController: ModalController,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,public alertController: AlertController,public modalController: ModalController,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/installation');
+      var refresh=true
+      this.router.navigateByUrl('installation_manager/installation/'+refresh);
     });
   }
-
-  ngOnInit() {
-  }
+ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+      call_api(){
+        this.platform.backButton.subscribeWithPriority(10, () => {
+          var refresh=true
+          this.router.navigateByUrl('installation_manager/installation/'+refresh);
+        });
+      }
   installation_status='progressing'
   stage_payment=''
   installation_stage_status='progressing'
@@ -54,9 +72,11 @@ async startstage(){
    installation_stage_status:this.installation_stage_status
 }
 console.log(payload)
-  this.router.navigateByUrl('installation_manager/railanddoor_stage');
+var refresh=false
+  this.router.navigateByUrl('installation_manager/railanddoor_stage/'+refresh);
 }
 back(){
-  this.router.navigateByUrl('installation_manager/installation');
+  var refresh=true
+  this.router.navigateByUrl('installation_manager/installation/'+refresh);
 }
 }

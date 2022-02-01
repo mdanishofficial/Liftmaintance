@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 @Component({
   selector: 'app-contracts',
@@ -8,13 +8,31 @@ import { Platform } from '@ionic/angular';
 })
 export class ContractsPage implements OnInit {
 
-  constructor( private platform: Platform,private router: Router) { 
+  constructor( public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) { 
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/myclient');
+      this.router.navigateByUrl('installation_manager/myclient/'+refresh);
     });
   }
 
   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/myclient/'+refresh);
+    });
   }
   contracts=[
    
@@ -43,19 +61,24 @@ export class ContractsPage implements OnInit {
     }
   ]
   contract(){
-    this.router.navigateByUrl('installation_manager/contracts');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/contracts/'+refresh);
   }
   curmonth(){
-    this.router.navigateByUrl('installation_manager/curmonthexpiring');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/curmonthexpiring/'+refresh);
   }
   expired(){
-    this.router.navigateByUrl('installation_manager/expired');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/expired/'+refresh);
   }
   updatepricecontractdetails(){
-    this.router.navigateByUrl('installation_manager/updatepricecontractdetails');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/updatepricecontractdetails/'+refresh);
   }
   async back(){
-    this.router.navigateByUrl('installation_manager/myclient');
+    var refresh=true
+    this.router.navigateByUrl('installation_manager/myclient/'+refresh);
   }
 
 }

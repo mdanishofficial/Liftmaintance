@@ -17,9 +17,11 @@ export class MyclientPage implements OnInit {
   ngOnInit() {
   }
   clientlisting(){
-    this.router.navigateByUrl('installation_manager/clientlisting');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/clientlisting/'+refresh);
   }
   contracts(){
-    this.router.navigateByUrl('installation_manager/contracts');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/contracts/'+refresh);
   }
 }

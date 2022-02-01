@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { UpdatepriceModalPage } from '../updateprice-modal/updateprice-modal.page';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 @Component({
 
@@ -12,13 +12,31 @@ import { Platform } from '@ionic/angular';
 })
 export class UpdatepricecontractdetailsPage implements OnInit {
 
-  constructor(public alertController: AlertController,public modalController: ModalController,private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,public alertController: AlertController,public modalController: ModalController,private platform: Platform,private router: Router) {
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/contracts');
+      this.router.navigateByUrl('installation_manager/contracts/'+refresh);
     });
   }
 
   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/contracts/'+refresh);
+    });
   }
   new_contract_data=[
     {
@@ -45,9 +63,13 @@ price:'1600 Riyals'
       component: UpdatepriceModalPage ,
       cssClass: 'updateprice'
     });
+    modal.onDidDismiss().then((data) => {
+      this.call_api()
+   });
     return await modal.present();
   }
   async back(){
-    this.router.navigateByUrl('installation_manager/contracts');
+    var refresh=true
+    this.router.navigateByUrl('installation_manager/contracts/'+refresh);
   }
 }

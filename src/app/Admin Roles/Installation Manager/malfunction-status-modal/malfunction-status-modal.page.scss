@@ -15,6 +15,11 @@
    --border-radius:0px;
    --inner-border-radius:0px;
 }
+ion-item {
+
+  --border-width: 0;
+  --inner-border-width: 0;
+}
 .ion-text-center{
 margin-top: 1em;
 }
@@ -34,8 +39,8 @@ margin-top: 1em;
     height:auto;
     display:inline-block;
   }
-  @media only screen and (max-width: 320px) {
-    .container{
-      margin-left: -1em;
-  }
-  }
+  // @media only screen and (max-width: 320px) {
+  //   .container{
+  //     margin-left: -1em;
+  // }
+  // }

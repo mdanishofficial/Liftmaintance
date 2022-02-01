@@ -15,13 +15,16 @@ export class MenuPage implements OnInit {
   ngOnInit() {
   }
   async installation(){
-    this.router.navigateByUrl('installation_manager/installation');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/installation/'+refresh);
   }
 async malfunction(){
-  this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
 }
 myclient(){
-  this.router.navigateByUrl('installation_manager/myclient');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/myclient/'+refresh);
 }
 bills(){
   var refresh=false
@@ -36,6 +39,7 @@ emergencycomplain(){
   this.router.navigateByUrl('installation_manager/pendingemergencycomplain/'+refresh);
 }
 myteam(){
-  this.router.navigateByUrl('installation_manager/repair_technicians');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/repair_technicians/'+refresh);
 }
 }

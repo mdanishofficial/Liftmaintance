@@ -17,10 +17,12 @@ export class RepairTechniciansPage implements OnInit {
   ngOnInit() {
   }
   maintenancetechnician(){
-    this.router.navigateByUrl('installation_manager/maintenance_technicians');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/maintenance_technicians/'+refresh);
   }
   repairtechnician(){
-    this.router.navigateByUrl('installation_manager/repair_technicians');
+    var refresh=false
+    this.router.navigateByUrl('installation_manager/repair_technicians/'+refresh);
   }
   repair_technicians=[
     {

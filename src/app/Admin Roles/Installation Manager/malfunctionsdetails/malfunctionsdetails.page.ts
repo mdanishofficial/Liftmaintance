@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { MalfunctionTypeModalPage } from '../malfunction-type-modal/malfunction-type-modal.page';
 import { MalfunctionLevelModalPage } from '../malfunction-level-modal/malfunction-level-modal.page';
 import { MalfunctionStatusModalPage } from '../malfunction-status-modal/malfunction-status-modal.page';
@@ -16,13 +16,31 @@ import { ForwardmalfunctionsModalPage } from '../forwardmalfunctions-modal/forwa
 })
 export class MalfunctionsdetailsPage implements OnInit {
 
-  constructor(private platform: Platform,public modalController: ModalController,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,public modalController: ModalController,private router: Router) { 
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
+      this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
     });
   }
   
   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
+    });
   }
   malfunctions_data=[
     {
@@ -58,6 +76,9 @@ async malfunctiontypemodal(){
     component: MalfunctionTypeModalPage ,
     cssClass: 'malfunctiontype'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async malfunctionlevelmodal(){
@@ -66,6 +87,9 @@ async malfunctionlevelmodal(){
     component: MalfunctionLevelModalPage ,
     cssClass: 'malfunctionlevel'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async malfunctionstatusmodal(){
@@ -74,6 +98,9 @@ async malfunctionstatusmodal(){
     component: MalfunctionStatusModalPage ,
     cssClass: 'malfunctionstatus'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async newbillmodal(){
@@ -82,6 +109,9 @@ async newbillmodal(){
     component: IssuebillmodalPage ,
     cssClass: 'issuebill'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async forwardmodal(){
@@ -90,6 +120,9 @@ async forwardmodal(){
     component: ForwardmalfunctionsModalPage,
     cssClass: 'forwardmodal'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async uploadpaymentmodal(){
@@ -98,6 +131,9 @@ async uploadpaymentmodal(){
     component: UploadpaymentModalPage,
     cssClass: 'uploadpayment'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 }

@@ -10,14 +10,22 @@ export class ContractdetailsPage implements OnInit {
 
  
   constructor(private platform: Platform,private router: Router) { 
+    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/curmonthexpiring');
+      this.router.navigateByUrl('installation_manager/curmonthexpiring/'+refresh);
     });
   }
 
   ngOnInit() {
   }
+  call_api(){
+var refresh=true
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/curmonthexpiring/'+refresh);
+    });
+  }
   async back(){
-    this.router.navigateByUrl('installation_manager/curmonthexpiring');
+    var refresh=true
+    this.router.navigateByUrl('installation_manager/curmonthexpiring/'+refresh);
   }
 }

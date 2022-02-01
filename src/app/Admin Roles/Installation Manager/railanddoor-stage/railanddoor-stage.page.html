@@ -21,7 +21,7 @@
     <ion-text class="date">Sunday, 3/26/2021 13:00</ion-text>
     <h6 class="client">Client : Ahmad Gul</h6>
     <hr class="hr">
-    <div class="background">
+    <div class="flex-container1">
     <div class="ion-text-center">
       <ion-chip class="blockbutton" (click)="block()">
    <ion-label class="itemcenter">Stage First - Rail and Doors</ion-label>
@@ -49,14 +49,14 @@
       <div class="flex-container0">
       <h6 class="name"> Start Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="start_date"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="start_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
      </div>
      <div class="flex-container0">
       <h6 class="name"> End Date</h6>
       <section class="section">
-        <ion-datetime class="ion-datetime" placeholder="Select a date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="end_date"></ion-datetime>
+        <ion-datetime class="ion-datetime" placeholder="Select date" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2012-12-09" [(ngModel)]="end_date"></ion-datetime>
         <ion-icon src="assets/calendar.svg"></ion-icon>  
       </section>
       </div>

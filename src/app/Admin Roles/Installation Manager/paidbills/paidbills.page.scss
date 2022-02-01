@@ -135,19 +135,25 @@ display: flex;
     border-radius: 0px;
     padding: 1em;
     margin-top: 1em;
-    width: 145px;
-    justify-content: center;
+   justify-content: center;
 }
 .ion-chip-right{
     --background:#194E78;
     color: white;
     border-radius: 0px;
-    padding: 1em;
+    // padding: 1em;
   margin-top: 1em;
   justify-content: center;
 }
-.ion-icon{
+.ion-icon1{
     color: white;
+}
+.ion-icon2{
+    color: white;
+ 
+}
+.label{
+    width: 100px;
 }
 ::ng-deep .updatePayment .modal-wrapper{
     height: 22em!important;

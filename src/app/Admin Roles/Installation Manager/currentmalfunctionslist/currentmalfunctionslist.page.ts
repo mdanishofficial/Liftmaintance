@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-currentmalfunctionslist',
   templateUrl: './currentmalfunctionslist.page.html',
@@ -8,18 +9,40 @@ import { Platform } from '@ionic/angular';
 })
 export class CurrentmalfunctionslistPage implements OnInit {
 
-  constructor(private platform: Platform,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
   }
   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+  call_api(){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
   }
 async solved(){
-  this.router.navigateByUrl('installation_manager/solvedmalfunctionslist');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/solvedmalfunctionslist/'+refresh);
 }
 async current(){
-  this.router.navigateByUrl('installation_manager/currentmalfunctionslist');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
 }
 malfunction_details(){
-  this.router.navigateByUrl('installation_manager/malfunction_details');
+  var refresh=false
+  this.router.navigateByUrl('installation_manager/malfunction_details/'+refresh);
 }
 malfunction_data=[
   {
