@@ -32,11 +32,11 @@ export class SolvedmalfunctionslistPage implements OnInit {
     });
   }
   async solved(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/solvedmalfunctionslist/'+refresh);
   }
   async current(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
   }
   malfunction_data=[

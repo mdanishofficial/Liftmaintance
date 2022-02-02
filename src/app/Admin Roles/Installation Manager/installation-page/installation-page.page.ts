@@ -59,6 +59,9 @@ async update(){
     component: UpdatepaymentModalPage ,
     cssClass: 'malfunctiontype'
   });
+  modal.onDidDismiss().then((data) => {
+    this.call_api()
+ });
   return await modal.present();
 }
 async startstage(){
@@ -72,7 +75,7 @@ async startstage(){
    installation_stage_status:this.installation_stage_status
 }
 console.log(payload)
-var refresh=false
+var refresh=true
   this.router.navigateByUrl('installation_manager/railanddoor_stage/'+refresh);
 }
 back(){

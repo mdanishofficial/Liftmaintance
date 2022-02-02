@@ -30,8 +30,8 @@ export class ContractDetailsPage implements OnInit {
     var accepted=localStorage.getItem('accepted')
     console.log(accepted)
     if(accepted=='true'){
-      // this.router.navigateByUrl('menu-tabs/tab1');
-      this.router.navigateByUrl('installation_manager/menu');
+      this.router.navigateByUrl('menu-tabs/tab1');
+      // this.router.navigateByUrl('installation_manager/menu');
     }
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
@@ -69,8 +69,8 @@ export class ContractDetailsPage implements OnInit {
     }
     else{
       localStorage.setItem('accepted','true');
-      // this.router.navigateByUrl('menu-tabs/tab1');
-      this.router.navigateByUrl('installation_manager/menu');
+      this.router.navigateByUrl('menu-tabs/tab1');
+      // this.router.navigateByUrl('installation_manager/menu');
       
       this.showToasterSuccess()
     }

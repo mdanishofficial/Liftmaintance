@@ -61,7 +61,7 @@ export class EngineStagePage implements OnInit {
       image:this.image
     }
     console.log(payload)
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/control_stage/'+refresh);
   }
   async back(){

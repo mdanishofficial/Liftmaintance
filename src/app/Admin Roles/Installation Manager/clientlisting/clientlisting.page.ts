@@ -38,11 +38,11 @@ export class ClientlistingPage implements OnInit {
     });
   }
   back(){
-    var refresh=false
+    var refresh=true
       this.router.navigateByUrl('installation_manager/myclient/'+refresh);
   }
   clientdetails(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/clientdetails/'+refresh);
   }
   clients=[

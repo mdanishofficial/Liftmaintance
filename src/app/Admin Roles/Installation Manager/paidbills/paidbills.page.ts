@@ -50,11 +50,11 @@ export class PaidbillsPage implements OnInit {
      })
    }
    async unpaid(){
-     var refresh=false
+     var refresh=true
      this.router.navigateByUrl('/installation_manager/unpaidbills/'+refresh);
    }
    async paid(){
-     var refresh=false
+     var refresh=true
      this.router.navigateByUrl('/installation_manager/paidbills/'+refresh);
    }
    async presentModalUpdatePayment(){

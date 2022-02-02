@@ -57,7 +57,7 @@ export class RailanddoorStagePage implements OnInit {
      more_information:this.more_information,
   }
   console.log(payload)
-  var refresh=false
+  var refresh=true
     this.router.navigateByUrl('installation_manager/liftcar_stage/'+refresh);
   }
   back(){

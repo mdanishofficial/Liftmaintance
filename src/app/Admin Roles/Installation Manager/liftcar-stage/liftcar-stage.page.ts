@@ -56,7 +56,7 @@ export class LiftcarStagePage implements OnInit {
       image:this.image
     }
     console.log(payload)
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/engine_stage/'+refresh);
   }
   back() {

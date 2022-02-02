@@ -33,15 +33,15 @@ export class CurrentmalfunctionslistPage implements OnInit {
     });
   }
 async solved(){
-  var refresh=false
+  var refresh=true
   this.router.navigateByUrl('installation_manager/solvedmalfunctionslist/'+refresh);
 }
 async current(){
-  var refresh=false
+  var refresh=true
   this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
 }
 malfunction_details(){
-  var refresh=false
+  var refresh=true
   this.router.navigateByUrl('installation_manager/malfunction_details/'+refresh);
 }
 malfunction_data=[

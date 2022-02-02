@@ -61,19 +61,19 @@ export class ExpiredPage implements OnInit {
     }
   ]
   contract(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/contracts/'+refresh);
   }
   curmonth(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/curmonthexpiring/'+refresh);
   }
   expired(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/expired/'+refresh);
   }
   updatepricecontractdetails(){
-    var refresh=false
+    var refresh=true
     this.router.navigateByUrl('installation_manager/updatepricecontractdetails/'+refresh);
   }
   async back(){
