@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import {BanktransferModalPage } from '../banktransfer-modal/banktransfer-modal.page';
 import {PosModalPage } from '../pos-modal/pos-modal.page';
 import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+// import { Stripe } from '@awesome-cordova-plugins/stripe/ngx';
+// import { StripeJavaScriptPage } from '../stripe-java-script/stripe-java-script.page';
 @Component({
   selector: 'app-paynow_modal',
   templateUrl: './paynow_modal.page.html',
   styleUrls: ['./paynow_modal.page.scss'],
 })
 export class paynow_modalPage implements OnInit {
-
+  // private stripe: Stripe,
   constructor(private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
@@ -79,7 +81,19 @@ async buttonClick(){
     // return await modal.present();
     this.modalController.dismiss()
   }
-  else{
+
+  if(this.radioValue=='creditcard'){
+//     this.stripe.setPublishableKey('pk_test_51KOyLXA1k9SVF7HQ6arkRw0seToLzFtZ7J4Wq6MV9UgLmcTeCjh1k4fGYN7Ysq0jenZD7xYG94pyHexAoc0Nm3yC0074F9eiVN');
+//    let card = {
+//  number: '4242424242424242',
+//  expMonth: 12,
+//  expYear: 2020,
+//  cvc: '220'
+// }
+// this.stripe.createCardToken(card)
+//    .then(token => console.log(token.id+'is token id'))
+//    .catch(error => console.error(error));
+//   console.log('Credit Card Selected')
     this.modalController.dismiss()
   }
 }

@@ -27,6 +27,12 @@ h1{
     width: 100%;
     height: 2em;
 }
+.scroll-content {
+    padding-bottom: 0 !important;
+ }
+ ion-content{
+    padding-bottom: 0 !important;
+ }
 .flex-container{
     justify-content: center;
     margin-top: 1em;
