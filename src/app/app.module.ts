@@ -15,6 +15,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import jwt_decode from "jwt-decode";
 // import { NzButtonModule } from 'ng-zorro-antd/button';
 // import { NzCollapseModule } from 'ng-zorro-antd/collapse';
+import { Stripe } from '@awesome-cordova-plugins/stripe/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,9 +27,10 @@ import jwt_decode from "jwt-decode";
   HttpClientModule,
   NgxSpinnerModule,
   ToastrModule.forRoot(),
- 
+  
  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
+    Stripe
   ],
   
   bootstrap: [AppComponent],

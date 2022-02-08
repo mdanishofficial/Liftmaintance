@@ -498,6 +498,14 @@ const routes: Routes = [
     path: 'updatebill-modal',
     loadChildren: () => import('./Admin Roles/Installation Manager/updatebill-modal/updatebill-modal.module').then( m => m.UpdatebillModalPageModule)
   },
+  {
+    path: 'stripe-modal',
+    loadChildren: () => import('./stripe-modal/stripe-modal.module').then( m => m.StripeModalPageModule)
+  },
+  {
+    path: 'cash-modal',
+    loadChildren: () => import('./cash-modal/cash-modal.module').then( m => m.CashModalPageModule)
+  },
  ];
 @NgModule({
   imports: [

@@ -1,13 +1,23 @@
 
  .container{
-    margin-top: 1em;
+    margin-right: 1em;
 }
 .h1{
     color: #194E78;
     text-align: center;
-    font-size: 16pt;
+    font-size: 24px;
     font-family:'Roboto';
-    margin-top: 0em;
+    margin-left: -1em;
+    margin-top: 1em;
+
+  }
+#text{
+    --placeholder-color: #6E6E6E;
+ font-size: 16px;
+}
+.buttons{
+    margin-top: 5em;
+    margin-left: -1em;
 }
 .btn-secondary{
     width: 8em;
@@ -26,26 +36,15 @@
     display:inline-block;
   }
   #buttonsdiv{
-      margin-top: 10em;
+margin-top: 2em;
   }
-.codeinput{
-    --item-height: 3.375em;
-   width: 12em;
-   --item-spacing: 1em;
-   --item-border-radius: 10px;
-   --item-border-bottom: 8px solid #ddd;
-   
-
-}
-.text{
-    color:#6E6E6E;
-}
-.thanksLine{
-    color: #7A0001;
-    text-align: center;
-    font-size: 16pt;
+  .card{
+margin-left: 3em;
+margin-right: 3em;
+  }
+  .h6{
+    font-size: 18px;
     font-family:'Roboto';
-}
-.ratings{
-    margin-left: 5em;
-}
+    color: #194E78;
+    margin-left: 2.1em;
+ }

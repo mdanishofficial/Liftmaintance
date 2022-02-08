@@ -1,7 +1,6 @@
-<div class="container">
+<!-- <div class="container">
   <h1 class="h1">Online Payment</h1>
   <h1 class="thanksLine">* After Paying the technician</h1>
-  <!-- <ion-item> -->
     <ion-text class="text">
       <h6>Please Enter the online payment confirmation code sent to your phone number</h6>
     </ion-text>
@@ -14,32 +13,24 @@
               (codeCompleted)="onCodeCompleted($event)">
   </code-input>
 </div>
-  <!-- <form [formGroup]="codeForm" #formCtrl="ngForm" (keydown.enter)="$event.preventDefault()">
-    <input [(ngModel)]="codeInput[0]" formControlName="codeInput1" placeholder="3" (keyup)="updateList($event)" type="number" maxlength="1" name="input1" ngControl="input1" required>
-    <input [(ngModel)]="codeInput[1]" (keyup)="updateList($event)" formControlName="codeInput2" placeholder="3" type="number" maxlength="1" name="input2" ngControl="input2" required>
-    <input [(ngModel)]="codeInput[2]" (keyup)="updateList($event)" formControlName="codeInput3" placeholder="3" type="number" maxlength="1" name="input3" ngControl="input3" required>
-    <input [(ngModel)]="codeInput[3]" (keyup)="updateList($event)" formControlName="codeInput" placeholder="3" type="number" maxlength="1" name="input4" ngControl="input4" required>
-</form> -->
 <div class="ion-text-center" id="buttonsdiv">
   <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
   <div class="divider"></div>
   <button type="button" class="btn btn-primary" (click)="buttonClick()">Provided</button>
 </div>
-    <!-- <div style="margin-top: 1.8em;">
-      <ion-row>
-          <ion-col col-6> 
-            <div>
-              <ion-button  class="provided-button" (click)="buttonClick()">Provided</ion-button>
-              </div>
-          </ion-col>
-         <ion-col col-6>
-            <div>
-              <ion-button class="cancel-button" (click)="dismiss()">Cancel</ion-button>
-              </div>
-          </ion-col>
-        </ion-row>
-      </div> -->
+      </div>
     </div>
   <ion-content>
   </ion-content>
+   -->
+   
+<div class="container">
+  <h1 class="h1">POS Payment</h1>
+  <br>
+  <br>
+  <h6 class="ion-text-center">Kindly Ask The Technician To Pay and Upload Receipt</h6>
+  <div class="ion-text-center" id="buttonsdiv">
+    <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
+ </div>
+  </div>
   
