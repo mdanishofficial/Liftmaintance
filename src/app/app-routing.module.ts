@@ -506,6 +506,22 @@ const routes: Routes = [
     path: 'cash-modal',
     loadChildren: () => import('./cash-modal/cash-modal.module').then( m => m.CashModalPageModule)
   },
+  {
+    path: 'stage-one',
+    loadChildren: () => import('./stage-one/stage-one.module').then( m => m.StageOnePageModule)
+  },
+  {
+    path: 'stage-two',
+    loadChildren: () => import('./stage-two/stage-two.module').then( m => m.StageTwoPageModule)
+  },
+  {
+    path: 'stage-three',
+    loadChildren: () => import('./stage-three/stage-three.module').then( m => m.StageThreePageModule)
+  },
+  {
+    path: 'stage-four',
+    loadChildren: () => import('./stage-four/stage-four.module').then( m => m.StageFourPageModule)
+  },
  ];
 @NgModule({
   imports: [

@@ -4,6 +4,7 @@ import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../../../services/notification.service';
 import { Platform } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-control-stage',
   templateUrl: './control-stage.page.html',
@@ -15,7 +16,7 @@ export class ControlStagePage implements OnInit {
   start_date = ''
   end_date = ''
   more_information = ''
-  constructor (public activatedRoute: ActivatedRoute,private platform: Platform,private notifyService : NotificationService,private router: Router) {
+  constructor (public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService,private platform: Platform,private notifyService : NotificationService,private router: Router) {
 
     var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -57,6 +58,9 @@ export class ControlStagePage implements OnInit {
       more_information: this.more_information,
     }
     console.log(payload)
+    this.service.addinstallationstage(payload).subscribe(res => {
+      console.log(res)
+    })
     this.showToasterSuccess()
     // this.router.navigateByUrl('installation_manager/liftcar_stage');
   }

@@ -21,9 +21,7 @@ export class InstallationStagesPage implements OnInit {
     // console.log('hide')
    }
   ngOnInit() {
-  
-
-    // setTimeout(() => {
+  // setTimeout(() => {
     //   /** spinner ends after 5 seconds */
     //   this.spinner.hide();
     // }, 2000);
@@ -56,23 +54,30 @@ export class InstallationStagesPage implements OnInit {
       // machine_id: '4852e1',
       // controldelivery_id: "1a5eec",
     }
-    this.service.getrailanddoor(payload).subscribe(res => {
+    // this.service.getrailanddoor(payload).subscribe(res => {
+    //   console.log(res)
+    //   this.railanddoor_data = res;
+    // })
+    // this.service.getcabin(payload).subscribe(res => {
+    //   this.cab_data = res;
+    // })
+    // this.service.getmachine(payload).subscribe(res => {
+    //   this.machine_data = res;
+    // })
+    // this.service.getcontroldelivery(payload).subscribe(res => {
+    //   this.controldelivery_data = res;
+    // })
+    
+      this.service.getinstallationstage(payload).subscribe(res => {
       console.log(res)
-      this.railanddoor_data = res;
+      this.stages_data = res;
     })
-    this.service.getcabin(payload).subscribe(res => {
-      this.cab_data = res;
-    })
-    this.service.getmachine(payload).subscribe(res => {
-      this.machine_data = res;
-    })
-    this.service.getcontroldelivery(payload).subscribe(res => {
-      this.controldelivery_data = res;
-    })
+   
     // this.spinner.hide();
     this.spinner.hide();
     console.log('End Of Call Api')
   }
+  stages_data=[]
   railanddoor(){
     this.router.navigateByUrl('raildoor');
   }
@@ -84,6 +89,20 @@ export class InstallationStagesPage implements OnInit {
   }
   controldelivery(){
     this.router.navigateByUrl('controldelivery');
+  }
+  stagedetails(id){
+if(id==0){
+  this.router.navigateByUrl('stage-one');
+}
+if(id==1){
+  this.router.navigateByUrl('stage-two');
+}
+if(id==2){
+  this.router.navigateByUrl('stage-three');
+}
+if(id==3){
+  this.router.navigateByUrl('stage-four');
+}
   }
   installation() {
   this.router.navigateByUrl('installation');

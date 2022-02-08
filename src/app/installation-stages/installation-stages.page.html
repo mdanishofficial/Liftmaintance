@@ -1,5 +1,3 @@
-<ngx-spinner>
-</ngx-spinner>
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">Installation</h1>
@@ -7,14 +5,14 @@
       <h2 class="h3">Installation Stages</h2>
       <br>
       <br>
-     <div *ngFor="let result of railanddoor_data" (click)="railanddoor()">
+     <!-- <div *ngFor="let result of railanddoor_data" (click)="railanddoor()">
         <ion-card class="colorcard1" >
           <div class="flex-container">
             <div class="leftdiv">
               <div [ngClass]='result?.railanddoor_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
-              <h6 class="stage">Rail and the Door</h6>
+              <h6 class="stage">Stage 1</h6>
              <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.railanddoor_date}}</ion-text>
@@ -35,9 +33,8 @@
               <div [ngClass]='result?.cabin_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
-              <h6 class="stage">Cab Supply</h6>
-              <!-- <h6 class="stage">{{i}}</h6> -->
-              <div class="flex-container3">
+              <h6 class="stage">Stage 2</h6>
+             <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.cabin_date}}</ion-text>
                 </div>
@@ -56,7 +53,7 @@
               <div [ngClass]='result?.machine_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
-              <h6 class="stage">Machine Supply</h6>
+              <h6 class="stage">Stage 3</h6>
              <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.machine_date}}</ion-text>
@@ -76,7 +73,7 @@
               <div [ngClass]='result.controldelivery_status == "Done" ?"greendiv":"reddiv"'></div>
             </div>
             <div class="flex-container2">
-              <h6 class="stage">Control Delivery</h6>
+              <h6 class="stage">Stage 4</h6>
               <div class="flex-container3">
                 <div class="date">
                   <ion-text>{{result?.controldelivery_date}}</ion-text>
@@ -88,8 +85,29 @@
             </div>
           </div>
         </ion-card>
+      </div> -->
+     <!--  -->
+      <div *ngFor="let result of stages_data let i=index" (click)="stagedetails(i)">
+        <ion-card class="colorcard1" >
+          <div class="flex-container">
+            <div class="leftdiv">
+              <div [ngClass]='result.stage_status == "Done" ?"greendiv":"reddiv"'></div>
+            </div>
+            <div class="flex-container2">
+              <h6 class="stage">{{result?.stage_name}}</h6>
+              <div class="flex-container3">
+                <div class="date">
+                  <ion-text>{{result?.stage_start_date}}</ion-text>
+                </div>
+                <div class="status">
+                  <ion-text> Status : {{result?.stage_status}}</ion-text>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-card>
       </div>
-     
+      <!--  -->
       <div class="ion-text-center">
         <button type="button" class="btn btn-primary" (click)="installation()">Lift Detail</button>
       </div>

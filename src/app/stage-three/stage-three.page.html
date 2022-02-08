@@ -1,0 +1,97 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <ion-title>
+   <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+    </ion-icon>
+    <div class="ion-text-right">
+      <img src="../../assets/logo.svg" class="logo">
+    </div>
+  </ion-title>
+</ion-header>
+<div class="white"></div>
+<h1 class="ion-text-center">Third Stage</h1>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <div *ngIf="installation_data">
+    <div>
+      <h2 class="h3">Engine Name</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{installation_data.engine_name}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Engine Type</h2>
+      <br>
+      <br>
+      <br> 
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{installation_data.engine_type}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Engine Weight Capacity</h2>
+      <br>
+      <br>
+      <br> 
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{installation_data.engine_weight_capacity}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Engine Speed</h2>
+      <br>
+      <br>
+      <br> 
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{installation_data.engine_speed}}</ion-textarea>
+    </div>
+    <div>
+      <h2 class="h3">Engine Warranty</h2>
+      <br>
+      <br>
+      <br>
+      <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{installation_data.engine_warranty}}</ion-textarea>
+     <br>
+     <div>
+      <h2 class="h3">Engine Image</h2>
+      <br>
+      <br>
+     <div class="flex-container" style="display: flex;
+     justify-content: center;">
+   <img src="../../assets/machine.svg">
+     </div>
+     </div>
+      <div class="flex-container5">
+        <div class="flex-container0">
+        <h6 class="name"> Start Date</h6>
+        <section class="section">
+          <ion-datetime disabled class="ion-datetime" placeholder="{{installation_data.stage_start_date}}" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2030-12-09" [(ngModel)]="start_date"></ion-datetime>
+          <ion-icon src="assets/calendar.svg"></ion-icon>  
+        </section>
+       </div>
+       <div class="flex-container0">
+        <h6 class="name"> End Date</h6>
+        <section class="section">
+          <ion-datetime disabled class="ion-datetime" placeholder="{{installation_data.stage_end_date}}" displayFormat="MM/DD/YYYY" min="1994-03-14" max="2030-12-09" [(ngModel)]="end_date"></ion-datetime>
+          <ion-icon src="assets/calendar.svg"></ion-icon>  
+        </section>
+        </div>
+      </div>
+      <div>
+        <h2 class="h3">More Information or Detail</h2>
+        <br>
+        <br>
+        <br> 
+        <ion-textarea class="textarea" [(ngModel)]="time" disabled readonly>{{installation_data.more_information}}</ion-textarea>
+      </div>
+     </div>
+    <br>
+    <div class="ion-text-center" id="buttonsdiv">
+      <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+     </div>
+</div>
+</div>
+  <br>
+  <br>
+  <br>
+</ion-content>

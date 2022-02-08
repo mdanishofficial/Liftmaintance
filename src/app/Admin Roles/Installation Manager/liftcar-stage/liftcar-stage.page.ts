@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import jwt_decode from "jwt-decode";
 import { Platform } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-liftcar-stage',
   templateUrl: './liftcar-stage.page.html',
@@ -16,7 +17,7 @@ export class LiftcarStagePage implements OnInit {
   end_date = ''
   more_information = ''
   image
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService,private platform: Platform,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       var refresh=true
       this.router.navigateByUrl('installation_manager/railanddoor_stage/'+refresh);
@@ -56,6 +57,9 @@ export class LiftcarStagePage implements OnInit {
       image:this.image
     }
     console.log(payload)
+    this.service.addinstallationstage(payload).subscribe(res => {
+      console.log(res)
+    })
     var refresh=true
     this.router.navigateByUrl('installation_manager/engine_stage/'+refresh);
   }
