@@ -4,6 +4,7 @@ import { IonicSwiper } from '@ionic/angular';
 // import { HttpClient } from '@angular/common/http';
 import {Router} from "@angular/router";
 import { NgxSpinnerService } from "ngx-spinner";
+import { Platform } from '@ionic/angular';
 SwiperCore.use([IonicSwiper]);
 
 @Component({
@@ -12,8 +13,10 @@ SwiperCore.use([IonicSwiper]);
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit {
-  constructor(private spinner: NgxSpinnerService,private router: Router) { 
-    this.spinner.show();
+  constructor(private platform: Platform,private spinner: NgxSpinnerService,private router: Router) { 
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('menu-tabs/tab1');
+    });
   }
   ngOnInit() {
       /** spinner starts on init */

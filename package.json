@@ -37,6 +37,7 @@
     "@ionic-super-tabs/angular": "^7.0.8",
     "@ionic/angular": "^5.5.2",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
+    "@ngx-translate/core": "^14.0.0",
     "@types/stripe-checkout": "^1.0.4",
     "angular-code-input": "^1.6.0",
     "bootstrap": "^5.1.3",

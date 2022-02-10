@@ -38,7 +38,8 @@ export class StageTwoPage implements OnInit {
     this.router.navigateByUrl('tabs/notifications');
   }
   back(){
+    console.log('In Back')
     var refresh=true
-    this.router.navigateByUrl('tabs/installation_stages/'+refresh);
+      this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }
 }

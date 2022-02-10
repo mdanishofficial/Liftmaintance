@@ -23,10 +23,9 @@ export class ContractDetailsPage implements OnInit {
   enddate=''
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     console.log('In Constructor')
-    // this.platform.backButton.subscribeWithPriority(10, () => {
-    //   var refresh=true
-    //   this.router.navigateByUrl('tabs/installation_stages/'+refresh);
-    // });
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('contract_details');
+    });
     var accepted=localStorage.getItem('accepted')
     console.log(accepted)
     if(accepted=='true'){

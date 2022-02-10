@@ -22,6 +22,10 @@ export class InstallationService {
     const url = PCconfig.getPath() + '/installations/getinstallation';
     return this.http.post(url, data);
   }
+  public getoneinstallation(data): Observable<any> {
+    const url = PCconfig.getPath() + '/installations/getoneinstallation';
+    return this.http.post(url, data);
+  }
   public getinstallationstage(data): Observable<any> {
     const url = PCconfig.getPath() + '/installations/getinstallationstage';
     return this.http.post(url, data);

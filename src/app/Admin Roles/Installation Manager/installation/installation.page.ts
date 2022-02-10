@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-installation',
   templateUrl: './installation.page.html',
@@ -9,10 +10,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InstallationPage implements OnInit {
 
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService,private platform: Platform,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
      this.router.navigateByUrl('installation_manager/menu');
     });
+    this.call_api()
    }
 
    ngOnInit() {
@@ -32,29 +34,32 @@ export class InstallationPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
     });
+    this.service.getinstallation().subscribe(res => {
+      this.installation_data=res
+    })
   }
-  installation_page(){
-    var refresh=true
-    this.router.navigateByUrl('installation_manager/installation_page/'+refresh);
+  installation_page(id){
+   this.router.navigateByUrl('installation_manager/installation_page/'+id);
   }
-  installation_data=[
-    {
-      client_name:'Ahmad Gul',
-       location:'New City',
-       installation_level:'Level-1',
-       installation_status:'Pending Payment'
-  },
-  {
-    client_name:'Shadab Khan',
-     location:'New City',
-     installation_level:'Level-2',
-     installation_status:'Pending Payment'
-},
-{
-  client_name:'Hassan Ali',
-   location:'New City',
-   installation_level:'Level-3',
-   installation_status:'Installing'
-}
-  ]
+  installation_data=[]
+//   installation_data=[
+//     {
+//       client_name:'Ahmad Gul',
+//        location:'New City',
+//        installation_level:'Level-1',
+//        installation_status:'Pending Payment'
+//   },
+//   {
+//     client_name:'Shadab Khan',
+//      location:'New City',
+//      installation_level:'Level-2',
+//      installation_status:'Pending Payment'
+// },
+// {
+//   client_name:'Hassan Ali',
+//    location:'New City',
+//    installation_level:'Level-3',
+//    installation_status:'Installing'
+// }
+//   ]
 }

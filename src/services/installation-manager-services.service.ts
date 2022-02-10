@@ -15,4 +15,8 @@ export class InstallationManagerServicesService {
     const url = PCconfig.getPath() + '/installations/addinstallationstage';
     return this.http.put(url, data);
   }
+  public getinstallation(): Observable<any> {
+    const url = PCconfig.getPath() + '/installations/getinstallation';
+    return this.http.get(url);
+  }
 }

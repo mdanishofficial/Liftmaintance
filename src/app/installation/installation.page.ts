@@ -37,7 +37,7 @@ export class InstallationPage implements OnInit {
      user_id:decoded.user_id,
     }
   
-         this.service.getinstallation(payload).subscribe(res => {
+         this.service.getoneinstallation(payload).subscribe(res => {
           this.installation_data[0]=res
           console.log(this.installation_data)
         })

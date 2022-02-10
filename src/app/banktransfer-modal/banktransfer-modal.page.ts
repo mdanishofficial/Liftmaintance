@@ -26,7 +26,7 @@ export class BanktransferModalPage implements OnInit {
     });
    }
    showToasterSuccess(){
-    this.notifyService.showSuccess("Logged In Successfully !!", "")
+    this.notifyService.showSuccess("Submitted Successfully !!", "")
 }
  
 showToasterError(){
@@ -49,6 +49,7 @@ showToasterError(){
       this.service.updatebill(formData).subscribe(res => {
        console.log(res)
          })
+         this.showToasterSuccess()
          this.modalController.dismiss()
    }
     }

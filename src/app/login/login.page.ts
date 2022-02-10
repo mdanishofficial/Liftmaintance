@@ -14,9 +14,9 @@ export class LoginPage implements OnInit {
 email=''
 password=''
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
-    // this.platform.backButton.subscribeWithPriority(10, () => {
-    //   this.router.navigateByUrl('tabs/installation_stages');
-    // });
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('login');
+    });
     var decoded:any={}
     try{
       var retrievedtoken = localStorage.getItem('token') || ""
@@ -28,7 +28,12 @@ password=''
       }
       else{
         console.log('User Logged In')
-        this.router.navigateByUrl('contract_details');
+        if(decoded.user_role=='client'){
+          this.router.navigateByUrl('contract_details');
+        }
+        if(decoded.user_role=='installation_manager'){
+          this.router.navigateByUrl('installation_manager/menu');
+        }
       }
     }
  catch{
@@ -56,8 +61,14 @@ login(){
     if(res.message=='Login successful'){
       localStorage.setItem('token', res.token);
       var decoded:any={}
-      decoded = jwt_decode(res.token);
-      this.router.navigateByUrl('contract_details');
+        var retrievedtoken = localStorage.getItem('token') || ""
+        decoded = jwt_decode(retrievedtoken);
+      if(decoded.user_role=='client'){
+        this.router.navigateByUrl('contract_details');
+      }
+      if(decoded.user_role=='installation_manager'){
+        this.router.navigateByUrl('installation_manager/menu');
+      }
       // this.showToasterSuccess();
     }
        },(err)=>{

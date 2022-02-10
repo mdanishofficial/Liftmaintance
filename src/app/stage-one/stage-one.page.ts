@@ -38,6 +38,7 @@ export class StageOnePage implements OnInit {
     this.router.navigateByUrl('tabs/notifications');
   }
   back(){
+    console.log('In Back')
     var refresh=true
     this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   }

@@ -24,7 +24,7 @@
     <div class="flex-container">
     <!-- <div class="rectangle"> -->
 
-      <ion-card class="card" *ngFor="let result of installation_data" (click)="installation_page()">
+      <ion-card class="card" *ngFor="let result of installation_data let i=index" (click)="installation_page(i)">
       <div class="square">
         <div>
           <div class="complain"><h3 class="h3">Client: {{result?.client_name}}</h3></div>

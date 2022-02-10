@@ -21,7 +21,7 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/installation/installation.module').then(m => m.InstallationPageModule)
       },
       {
-        path: 'installation_page/:refresh',
+        path: 'installation_page/:id',
         loadChildren: () => import('../Admin Roles/Installation Manager/installation-page/installation-page.module').then(m => m.InstallationPagePageModule)
       },
       {

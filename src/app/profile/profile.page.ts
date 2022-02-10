@@ -26,6 +26,9 @@ lifts=[{code:'lift1231',Lift_Type:'Food Lift',Door_Type:'Auto Door', Total_Stops
 no_of_lifts=this.lifts.length
 maintenance_start_date='20-12-2020'
 maintenance_end_date='20-12-2020'
-
+logout(){
+  localStorage.removeItem('token');
+  this.router.navigateByUrl('/login');
+}
 
 }

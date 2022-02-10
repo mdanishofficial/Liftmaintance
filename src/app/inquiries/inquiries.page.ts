@@ -40,7 +40,7 @@ export class InquiriesPage implements OnInit {
     this.router.navigateByUrl('/tabs/faqs');
   }
   newinquiry(){
-    this.router.navigateByUrl('/tabs/newinquiries');
+    this.router.navigateByUrl('/newinquiries');
   }
 }
 
