@@ -61,7 +61,7 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/clientlisting/clientlisting.module').then(m => m.ClientlistingPageModule)
       },
       {
-        path: 'clientdetails/:refresh',
+        path: 'clientdetails/:id',
         loadChildren: () => import('../Admin Roles/Installation Manager/clientdetails/clientdetails.module').then(m => m.ClientdetailsPageModule)
       },
       {

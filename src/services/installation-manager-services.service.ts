@@ -19,4 +19,17 @@ export class InstallationManagerServicesService {
     const url = PCconfig.getPath() + '/installations/getinstallation';
     return this.http.get(url);
   }
+  public getclients(): Observable<any> {
+    const url = PCconfig.getPath() + '/clients/getclients';
+    return this.http.get(url);
+  }
+  public getMaintenanceTechnicians(): Observable<any> {
+    const url = PCconfig.getPath() + '/technicians/getMaintenanceTechnicians';
+    return this.http.get(url);
+  }
+  public getMaintenanceRepairTechnicians(): Observable<any> {
+    const url = PCconfig.getPath() + '/technicians/getMaintenanceRepairTechnicians';
+    return this.http.get(url);
+  }
+
 }

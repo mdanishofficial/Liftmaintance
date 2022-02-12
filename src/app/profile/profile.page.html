@@ -17,21 +17,21 @@
 <div class="white"></div>
 <ion-content overflow-scroll="true">
   <div class="container">
-     <h6 class="client">Client:{{client_name}}</h6>
+     <h6 class="client">Client:{{profile_data.client_name}}</h6>
     <hr class="hr">
-    <h6 class="client">Contact Number :{{contact}}</h6>
+    <h6 class="client">Contact Number :{{profile_data.client_phoneno}}</h6>
     <hr class="hr">
     <h6 class="client">City : {{city}}</h6>
     <hr class="hr">
-    <h6 class="client">Location GPS</h6>
+    <h6 class="client">Location :{{profile_data.client_location}}</h6>
     <!-- <ion-icon src="assets/eye.svg" class="eye"></ion-icon> -->
     <hr class="hr">
-    <h6 class="client">Building Type : {{building_type}}</h6>
+    <h6 class="client">Building Type : {{profile_data.building_type}}</h6>
     <hr class="hr">
-    <h6 class="client">Number of Lifts : {{no_of_lifts}}</h6>
-    <div *ngFor="let result of lifts;let i=index">
+    <h6 class="client">Number of Lifts : {{profile_data.no_of_lifts}}</h6>
+    <!-- <div *ngFor="let result of lifts;let i=index">
     <ion-text class="date">Code:{{lifts[i].code}} Type:{{lifts[i].Lift_Type}} Door Type:{{lifts[i].Door_Type}} Total Stops:{{lifts[i].Total_Stops}} <br></ion-text>
-  </div>
+  </div> -->
     <hr class="hr">
     <h6 class="client">Building Photo</h6>
   <!-- <br>
@@ -40,9 +40,9 @@
   justify-content: center;margin-left: -1em;">
 <img src="../../assets/cabin.svg" class="machine">
   </div>
-  <h6 class="client">Maintenance Start Date:{{maintenance_start_date}}</h6>
+  <h6 class="client">Maintenance Start Date:{{profile_data.maintenance_start_date}}</h6>
   <hr class="hr">
-  <h6 class="client">Maintenance End Date:{{maintenance_end_date}}</h6>
+  <h6 class="client">Maintenance End Date:{{profile_data.maintenance_end_date}}</h6>
   <hr class="hr">
   <div class="flex-container0">
   <h6 class="client">Completed Maintenance Visit</h6>

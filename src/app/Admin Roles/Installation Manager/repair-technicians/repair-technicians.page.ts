@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-repair-technicians',
   templateUrl: './repair-technicians.page.html',
@@ -8,14 +9,26 @@ import { Platform } from '@ionic/angular';
 })
 export class RepairTechniciansPage implements OnInit {
 
-  constructor(private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationManagerServicesService,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
-    });
+      });
+    this.call_api()
    }
 
-  ngOnInit() {
-  }
+   ngOnInit() {
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
   maintenancetechnician(){
     var refresh=true
     this.router.navigateByUrl('installation_manager/maintenance_technicians/'+refresh);
@@ -24,19 +37,15 @@ export class RepairTechniciansPage implements OnInit {
     var refresh=true
     this.router.navigateByUrl('installation_manager/repair_technicians/'+refresh);
   }
-  repair_technicians=[
-    {
-      technician_name:'Shadab Khan',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    },
-    {
-      technician_name:'Hassan Ali',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    },
-    {
-      technician_name:'Ahmad Gul',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    }
-  ]
+  call_api(){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
+    this.service.getMaintenanceRepairTechnicians().subscribe(res => {
+      this.repair_technicians=res
+      console.log(this.repair_technicians)
+    })
+  }
+  repair_technicians=[]
 
 }

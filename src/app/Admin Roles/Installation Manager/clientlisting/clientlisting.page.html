@@ -38,7 +38,7 @@
   </div>
 </ion-card> -->
 <!--  -->
-    <ion-card class="card" *ngFor="let result of clients" (click)="clientdetails()">
+    <ion-card class="card" *ngFor="let result of clients let i=index" (click)="clientdetails(i)">
       <div class="flex-container">
         <div style="float: left;">
           <!-- <div class="colordiv1"></div> -->
@@ -47,7 +47,7 @@
           <h6 class="client">Client : {{result?.client_name}}</h6>
           <div class="flex-container3">
             <div class="location">
-              <ion-text>Location :{{result?.location}}</ion-text>
+              <ion-text>Location :{{result?.client_location}}</ion-text>
             </div>
           </div>
         </div>

@@ -30,6 +30,7 @@ export class InstallationService {
     const url = PCconfig.getPath() + '/installations/getinstallationstage';
     return this.http.post(url, data);
   }
+
   public getrailanddoor(data): Observable<any> {
     const url = PCconfig.getPath() + '/railanddoors/getrailanddoor';
     // return this.http.post(url, data);
@@ -290,6 +291,16 @@ export class InstallationService {
                                                 return response;
                                                   })
                                             )}
+                                            public getprofile(data): Observable<any> {
+                                              const url = PCconfig.getPath() + '/clients/getprofile';
+                                              // return this.http.post(url, data);
+                                              return this.http
+                                              .post(url, data)
+                                              .pipe(
+                                                map((response: any) => {
+                                                  return response;
+                                                    })
+                                              )}
                                     private _listeners=new Subject<any>();
                                     listen():Observable<any>{
                                       return this._listeners.asObservable();

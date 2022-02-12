@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-maintenance-technicians',
   templateUrl: './maintenance-technicians.page.html',
   styleUrls: ['./maintenance-technicians.page.scss'],
 })
 export class MaintenanceTechniciansPage implements OnInit {
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private service: InstallationManagerServicesService,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
-    });
+      });
+    this.call_api()
    }
+
 
    ngOnInit() {
     console.log('Inside Ng On INit')
@@ -26,11 +29,6 @@ export class MaintenanceTechniciansPage implements OnInit {
      }
       sub
       refresh
-  call_api(){
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/menu');
-    });
-  }
   maintenancetechnician(){
     var refresh=true
     this.router.navigateByUrl('installation_manager/maintenance_technicians/'+refresh);
@@ -39,18 +37,14 @@ export class MaintenanceTechniciansPage implements OnInit {
     var refresh=true
     this.router.navigateByUrl('installation_manager/repair_technicians/'+refresh);
   }
-  maintenance_technicians=[
-    {
-      technician_name:'Shadab Khan',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    },
-    {
-      technician_name:'Hassan Ali',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    },
-    {
-      technician_name:'Ahmad Gul',
-      technician_avatar:'https://forum.processmaker.com/download/file.php?avatar=93310_1550846185.png'
-    }
-  ]
+  call_api(){
+    this.platform.backButton.subscribeWithPriority(10, () => {
+      this.router.navigateByUrl('installation_manager/menu');
+    });
+    this.service.getMaintenanceTechnicians().subscribe(res => {
+      this.maintenance_technicians=res
+      console.log(this.maintenance_technicians)
+    })
+  }
+  maintenance_technicians=[]
 }

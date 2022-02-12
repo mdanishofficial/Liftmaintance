@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import { InstallationService } from '../../../../services/main.service';
 import { Platform } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-clientlisting',
   templateUrl: './clientlisting.page.html',
@@ -12,11 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ClientlistingPage implements OnInit {
 
-  constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationService, private router: Router, public modalController: ModalController) {
+  constructor(public activatedRoute: ActivatedRoute, private platform: Platform, private service: InstallationManagerServicesService, private router: Router, public modalController: ModalController) {
   var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/myclient/'+refresh);
     });
+    this.call_api()
   }
   ngOnInit() {
     console.log('Inside Ng On INit')
@@ -36,31 +37,36 @@ export class ClientlistingPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/myclient/'+refresh);
     });
+    this.service.getclients().subscribe(res => {
+      this.clients=res
+      console.log(this.clients)
+
+    })
   }
+  clients
   back(){
     var refresh=true
       this.router.navigateByUrl('installation_manager/myclient/'+refresh);
   }
-  clientdetails(){
-    var refresh=true
-    this.router.navigateByUrl('installation_manager/clientdetails/'+refresh);
+  clientdetails(id){
+    this.router.navigateByUrl('installation_manager/clientdetails/'+id);
   }
-  clients=[
+  // clients=[
    
-    {
-      client_name:'Shadab Khan',
-      location:'New City'
-    },  {
-      client_name:'Shadab Khan',
-      location:'New City'
-    },
-    {
-      client_name:'Shadab Khan',
-      location:'New City'
-    },
-    {
-      client_name:'Shadab Khan',
-      location:'New City'
-    }
-  ]
+  //   {
+  //     client_name:'Shadab Khan',
+  //     location:'New City'
+  //   },  {
+  //     client_name:'Shadab Khan',
+  //     location:'New City'
+  //   },
+  //   {
+  //     client_name:'Shadab Khan',
+  //     location:'New City'
+  //   },
+  //   {
+  //     client_name:'Shadab Khan',
+  //     location:'New City'
+  //   }
+  // ]
 }

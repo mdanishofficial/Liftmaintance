@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-clientdetails',
   templateUrl: './clientdetails.page.html',
@@ -10,31 +11,33 @@ import { ActivatedRoute } from '@angular/router';
 export class ClientdetailsPage implements OnInit {
 
  
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService, private platform: Platform,private router: Router) { 
     var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/clientlisting/'+refresh);
     });
+    this.call_api()
   }
   ngOnInit() {
-    console.log('Inside Ng On INit')
-      this.sub = this.activatedRoute.params.subscribe(params => {
-        this.refresh = params['refresh'];
-        console.log(this.refresh)
-        if(this.refresh=='true'){
-          console.log('Refresh is True')
-          this.call_api()
-        }
-      });
-     }
-      sub
-      refresh
+    this.sub = this.activatedRoute.params.subscribe(params => {
+      this.id = params['id'];
+      console.log(this.id)
+    });
+  }
+  sub
+  id
   call_api(){
     var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/clientlisting/'+refresh);
     });
+    this.service.getclients().subscribe(res => {
+      this.clients=res
+      console.log(this.clients)
+
+    })
   }
+  clients=[]
   previous_contract_data=[
     {
 client_name:'Shadab Khan',
