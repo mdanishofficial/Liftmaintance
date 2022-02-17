@@ -4,7 +4,7 @@ import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../services/notification.service'
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-contract-details',
   templateUrl: './contract-details.page.html',
@@ -21,17 +21,20 @@ export class ContractDetailsPage implements OnInit {
   elevatortype=''
   startdate=''
   enddate=''
-  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
+  sub
+  controlled
+  constructor(public activatedRoute: ActivatedRoute, private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     console.log('In Constructor')
     this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('contract_details');
+  if(this.controlled=='false'){
+    this.router.navigateByUrl('contract_details/'+this.controlled);
+  }
+  else{
+    this.router.navigateByUrl('tabs/settings');
+  }
+    
     });
-    var accepted=localStorage.getItem('accepted')
-    console.log(accepted)
-    if(accepted=='true'){
-      this.router.navigateByUrl('menu-tabs/tab1');
-      // this.router.navigateByUrl('installation_manager/menu');
-    }
+   
     var decoded:any={}
     var retrievedtoken = localStorage.getItem('token') || ""
     decoded = jwt_decode(retrievedtoken);
@@ -46,8 +49,24 @@ export class ContractDetailsPage implements OnInit {
         })
         }
 
-  ngOnInit() {
-  }
+        ngOnInit() {
+          this.sub = this.activatedRoute.params.subscribe(params => {
+            this.controlled = params['controlled'];
+            var accepted=localStorage.getItem('accepted')
+   
+            console.log(this.controlled)
+              console.log('this.controlled')
+            if(accepted=='true'){
+              console.log('accepted is true')
+              if(this.controlled=='false'){
+                console.log('controlled is false')
+                this.router.navigateByUrl('menu-tabs/tab1');
+              }
+              // this.router.navigateByUrl('installation_manager/menu');
+            }
+          });
+        }
+       
   showToasterSuccess(){
     this.notifyService.showSuccess("Logged In Successfully !!", "")
 }
@@ -56,8 +75,7 @@ export class ContractDetailsPage implements OnInit {
     this.router.navigateByUrl('tabs/notifications');
   }
   back(){
-    var refresh=true
-    this.router.navigateByUrl('tabs/installation_stages/'+refresh);
+   this.router.navigateByUrl('tabs/settings');
   }
   showToasterError(){
     this.notifyService.showError("Kindly Accept Terms and Conditions",'')

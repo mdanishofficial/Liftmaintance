@@ -22,4 +22,8 @@ export class SettingsPage implements OnInit {
   contact_us(){
     this.router.navigateByUrl('tabs/contact_us');
   }
+  contract_details(){
+    var controlled=true
+    this.router.navigateByUrl('contract_details/'+controlled);
+  }
 }

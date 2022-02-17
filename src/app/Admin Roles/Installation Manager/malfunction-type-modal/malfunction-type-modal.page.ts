@@ -1,24 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input  } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import jwt_decode from "jwt-decode";
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 import { Platform } from '@ionic/angular';
+import { NotificationService } from '../../../../services/notification.service';
 @Component({
   selector: 'app-malfunction-type-modal',
   templateUrl: './malfunction-type-modal.page.html',
   styleUrls: ['./malfunction-type-modal.page.scss'],
 })
 export class MalfunctionTypeModalPage implements OnInit {
-
-  constructor(private platform: Platform,public modalController: ModalController) { 
+  @Input() malfunction_id: string;
+  constructor(private notifyService : NotificationService,private platform: Platform,public modalController: ModalController,private service: InstallationManagerServicesService) { 
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
       });
     });
+    
   }
   ngOnInit() {
+    console.log(this.malfunction_id)
   }
-  malfunctions_type=''
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Malfunction Type Updated Successfully !!", "")
+}
+ 
+showToasterError(){
+    this.notifyService.showError("Please Select Malfunction Type",'')
+}
+  malfunction_type=''
   radioValue;
   radioGroupChange(e){
    
@@ -26,14 +36,23 @@ export class MalfunctionTypeModalPage implements OnInit {
     this.radioValue=e.detail.value
   }
   update(){
-    var decoded:any={}
-    var retrievedtoken = localStorage.getItem('token') || ""
-    decoded = jwt_decode(retrievedtoken);
-    let payload = {
-     user_id:decoded.user_id,
-     malfunctions_type:this.malfunctions_type,
+let payload = {
+     malfunction_id:this.malfunction_id,
+     malfunction_type:this.malfunction_type,
   }
-  console.log(payload)
+  if(this.malfunction_type==''){
+    this.showToasterError();
+  }
+  else{
+    this.service.update_malfunction_type(payload).subscribe(res => {
+      console.log(res)
+        })
+        this.showToasterSuccess();
+        this.modalController.dismiss({
+          'dismissed': true
+        });
+  }
+
   }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')

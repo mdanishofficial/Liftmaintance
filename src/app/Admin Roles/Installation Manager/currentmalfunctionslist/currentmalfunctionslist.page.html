@@ -25,21 +25,22 @@
       </ion-tab-bar>
     </div>
     <div class="flex-container">
-    <!-- <div class="rectangle"> -->
-      <ion-card class="card" *ngFor="let result of malfunction_data" (click)="malfunction_details()">
+    <div *ngIf="malfunction_data">
+      <ion-card class="card" *ngFor="let result of malfunction_data let i=index" (click)="malfunction_details(i)">
       <div class="square">
         <div>
-          <div class="complain"><h3 class="h3">Client: {{result?.client_name}}</h3></div>
+          <div class="complain"><h3 class="h3">Client: {{result?.result[0].client_name}}</h3></div>
           <div class="buttondiv"><ion-button [ngClass]='result?.malfunction_level == "Danger" ?"statusbutton1":result?.malfunction_level == "Effective"? "statusbutton2":"statusbutton3"' shape="round">{{result?.malfunction_level}}</ion-button></div>
           <br>
           <br>
       </div>
-      <ion-text class="date">{{result?.malfunction_date}}<br></ion-text>
+      <ion-text class="date">Date: {{result?.malfunction_date}}<br></ion-text>
       <ion-text class="date">Status : {{result?.malfunction_status}}<br></ion-text>
       <ion-text class="date">Technician assigned : {{result?.technician_assigned}}<br></ion-text>
       <ion-text class="date">Type: {{result?.malfunction_type}}<br></ion-text>
   </div>
 </ion-card>
+</div>
 </div>
 </div>
 </ion-content>

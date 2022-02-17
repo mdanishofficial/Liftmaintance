@@ -49,7 +49,7 @@ const routes: Routes = [
         loadChildren: () => import('../Admin Roles/Installation Manager/solvedmalfunctionslist/solvedmalfunctionslist.module').then(m => m.SolvedmalfunctionslistPageModule)
       },
       {
-        path: 'malfunction_details/:refresh',
+        path: 'malfunction_details/:id/:status',
         loadChildren: () => import('../Admin Roles/Installation Manager/malfunctionsdetails/malfunctionsdetails.module').then(m => m.MalfunctionsdetailsPageModule)
       },
       {

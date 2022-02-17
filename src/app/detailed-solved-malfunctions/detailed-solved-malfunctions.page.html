@@ -54,7 +54,7 @@
   <br>
    </div>
    <br> 
-   <h2 class="h2">Malfunctions</h2>
+   <h2 class="h2">Level of Danger</h2>
    <br>
    <br>
      <div *ngFor="let result of malfunction_danger_level; let i = index;">
@@ -100,9 +100,9 @@
   <br>     
   <br>
     <div class="ion-text-center">
-      <button type="button" class="btn btn-primary" id="solved-button" (click)="presentAlertParts()">I will Provide Parts</button>
+      <button type="button" class="btn btn-primary disabled" id="solved-button" (click)="presentAlertParts()">I will Provide Parts</button>
       <div class="divider"></div>
-          <button type="button" class="btn btn-secondary" id="pending-button">Provided Parts</button>
+          <button type="button" class="btn btn-secondary disabled" id="pending-button">Provided Parts</button>
   <!-- <ion-button class="lightbutton" (click)="presentAlertParts()">I Will Provide parts</ion-button> -->
 </div>
 <br>
@@ -118,7 +118,7 @@
 <br>
 <br>
   <div class="ion-text-center">
-<button class="btn btn-primary btn-lg btn-block" (click)="presentModalPayment()">Pay Now</button>
+<button class="btn btn-primary btn-lg btn-block disabled" (click)="presentModalPayment()">Pay Now</button>
 </div>
 <br>
 <hr class="hr"/>

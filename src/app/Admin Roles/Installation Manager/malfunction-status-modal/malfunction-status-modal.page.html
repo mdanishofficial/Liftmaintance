@@ -3,38 +3,38 @@
 <div class="container">
   <h1 class="h1">Malfunction Status</h1>
   <ion-list>
-    <ion-radio-group allow-empty-selection = "false" value="radio" [(ngModel)]="malfunctions_status" (ionChange)="radioGroupChange($event)"
+    <ion-radio-group allow-empty-selection = "false" value="radio" [(ngModel)]="malfunction_status" (ionChange)="radioGroupChange($event)"
     >
     <ion-item>
         <ion-label>Solved</ion-label>
-        <ion-radio slot="start" value="solved" class="radio" #solved></ion-radio>
+        <ion-radio slot="start" value="Solved" class="radio" #solved></ion-radio>
       </ion-item>
   
       <ion-item>
         <ion-label>Solved permanently</ion-label>
-        <ion-radio slot="start" value="permanently" class="radio" #permanently></ion-radio>
+        <ion-radio slot="start" value="Solved permanently" class="radio" #permanently></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Need installation commitment</ion-label>
-        <ion-radio slot="start" value="installationcommitment" class="radio" #installationcommitment></ion-radio>
+        <ion-radio slot="start" value="Need installation commitment" class="radio" #installationcommitment></ion-radio>
       </ion-item>
   
       <ion-item>
         <ion-label>Not solved </ion-label>
-        <ion-radio slot="start" value="notsolved" class="radio" #notsolved></ion-radio>
+        <ion-radio slot="start" value="Not solved" class="radio" #notsolved></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Waiting for payment</ion-label>
-        <ion-radio slot="start" value="waitingpayment" class="radio" #waitingpayment></ion-radio>
+        <ion-radio slot="start" value="Waiting for payment" class="radio" #waitingpayment></ion-radio>
       </ion-item>
   
       <ion-item>
         <ion-label>Waiting for a part</ion-label>
-        <ion-radio slot="start" value="waitingpart" class="radio" #waitingpart></ion-radio>
+        <ion-radio slot="start" value="Waiting for a part" class="radio" #waitingpart></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Waiting for a part by client</ion-label>
-        <ion-radio slot="start" value="waitingpartbyclient" class="radio" #waitingpartbyclient></ion-radio>
+        <ion-radio slot="start" value="Waiting for a part by client" class="radio" #waitingpartbyclient></ion-radio>
       </ion-item>
   
     </ion-radio-group>

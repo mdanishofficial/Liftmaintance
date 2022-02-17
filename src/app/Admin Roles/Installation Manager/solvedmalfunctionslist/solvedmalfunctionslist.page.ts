@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-solvedmalfunctionslist',
   templateUrl: './solvedmalfunctionslist.page.html',
@@ -8,7 +9,7 @@ import { Platform } from '@ionic/angular';
 })
 export class SolvedmalfunctionslistPage implements OnInit {
 
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService,private platform: Platform,private router: Router) { 
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
     });
@@ -26,11 +27,16 @@ export class SolvedmalfunctionslistPage implements OnInit {
      }
       sub
       refresh
-  call_api(){
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('installation_manager/menu');
-    });
-  }
+      call_api(){
+        this.platform.backButton.subscribeWithPriority(10, () => {
+          this.router.navigateByUrl('installation_manager/menu');
+        });
+        this.service.getsolvedmalfunctions().subscribe(res => {
+          this.malfunction_data=res
+          console.log(this.malfunction_data)
+        })
+      }
+      malfunction_data=[]
   async solved(){
     var refresh=true
     this.router.navigateByUrl('installation_manager/solvedmalfunctionslist/'+refresh);
@@ -39,30 +45,30 @@ export class SolvedmalfunctionslistPage implements OnInit {
     var refresh=true
     this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
   }
-  malfunction_data=[
-    {
-      client_name:'Ahmad Gul',
-       malfunction_date:'Sunday, 23-03-2020',
-      malfunction_status:'New',
-      technician_assigned:'Hassan Ali',
-      malfunction_type:'Mechanical',
-      malfunction_level:'Danger'
-  },
-  {
-    client_name:'Hassan Ali',
-     malfunction_date:'Sunday, 23-03-2020',
-    malfunction_status:'New',
-    technician_assigned:'Hassan Ali',
-    malfunction_type:'Mechanical',
-    malfunction_level:'Danger'
-  },
-  {
-    client_name:'Shadab Khan',
-     malfunction_date:'Sunday, 23-03-2020',
-    malfunction_status:'New',
-    technician_assigned:'Hassan Ali',
-    malfunction_type:'Mechanical',
-    malfunction_level:'Danger'
-  },
-  ]
+  // malfunction_data=[
+  //   {
+  //     client_name:'Ahmad Gul',
+  //      malfunction_date:'Sunday, 23-03-2020',
+  //     malfunction_status:'New',
+  //     technician_assigned:'Hassan Ali',
+  //     malfunction_type:'Mechanical',
+  //     malfunction_level:'Danger'
+  // },
+  // {
+  //   client_name:'Hassan Ali',
+  //    malfunction_date:'Sunday, 23-03-2020',
+  //   malfunction_status:'New',
+  //   technician_assigned:'Hassan Ali',
+  //   malfunction_type:'Mechanical',
+  //   malfunction_level:'Danger'
+  // },
+  // {
+  //   client_name:'Shadab Khan',
+  //    malfunction_date:'Sunday, 23-03-2020',
+  //   malfunction_status:'New',
+  //   technician_assigned:'Hassan Ali',
+  //   malfunction_type:'Mechanical',
+  //   malfunction_level:'Danger'
+  // },
+  // ]
 }

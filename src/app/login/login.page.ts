@@ -29,7 +29,8 @@ password=''
       else{
         console.log('User Logged In')
         if(decoded.user_role=='client'){
-          this.router.navigateByUrl('contract_details');
+          var controlled=false
+          this.router.navigateByUrl('contract_details/'+controlled);
         }
         if(decoded.user_role=='installation_manager'){
           this.router.navigateByUrl('installation_manager/menu');
@@ -39,10 +40,7 @@ password=''
  catch{
    console.log('Error');
    this.router.navigateByUrl('login');
- }
-    
-   
-   }
+ }  }
    showToasterSuccess(){
     this.notifyService.showSuccess("Logged In Successfully !!", "")
 }
@@ -53,8 +51,9 @@ showToasterError(){
   ngOnInit() {
   }
 login(){
+  var lowercaseemail=this.email.toLowerCase()
   let payload={
-    user_email:this.email,
+    user_email:lowercaseemail,
     password:this.password
         }
        this.service.login(payload).subscribe(res => {
@@ -64,7 +63,8 @@ login(){
         var retrievedtoken = localStorage.getItem('token') || ""
         decoded = jwt_decode(retrievedtoken);
       if(decoded.user_role=='client'){
-        this.router.navigateByUrl('contract_details');
+        var controlled=false
+          this.router.navigateByUrl('contract_details/'+controlled);
       }
       if(decoded.user_role=='installation_manager'){
         this.router.navigateByUrl('installation_manager/menu');

@@ -18,22 +18,22 @@
   <div class="container">
     <h1 class="ion-text-center">Malfunction Details</h1>
     <br>
-    <div *ngFor="let result of malfunctions_data">
-    <ion-text class="date">{{result?.malfunctions_date}}</ion-text>
-    <h6 class="client">Client : {{result?.client_name}}</h6>
+    <div *ngIf="malfunction_data">
+    <ion-text class="date">{{malfunction_data[id]?.malfunction_date}}</ion-text>
+    <h6 class="client">Client : {{malfunction_data[id]?.result[0]?.client_name}}</h6>
     <hr class="hr">
-    <h6 class="client">Assigned Technician: {{result?.assigned_technician}}</h6>
+    <h6 class="client">Assigned Technician: {{malfunction_data[id]?.technician_assigned}}</h6>
     <hr class="hr">
-    <h6 class="client">Lift number : {{result?.lift_no}}</h6>
+    <h6 class="client">Lift number : {{malfunction_data[id]?.result[0]?.no_of_lifts}}</h6>
     <hr class="hr">
  <h6 class="client">Complain Notes</h6>
-    <ion-text class="date">{{result?.complain_notes}}s</ion-text>
+    <ion-text class="date">{{malfunction_data[id]?.malfunction_notes}}</ion-text>
   </div>
     <h6 class="client">Malfunction Type</h6>
     <div class="ion-text-center">
       <ion-chip class="mechanical-chip" (click)="malfunctiontypemodal()">
     <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
-    <ion-label class="itemcenter">Mechanical </ion-label>
+    <ion-label class="itemcenter">{{malfunction_data[id]?.malfunction_type}} </ion-label>
    <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
       </ion-chip>
   </div>
@@ -42,7 +42,7 @@
   <div class="ion-text-center">
     <ion-chip class="normal-chip"  (click)="malfunctionlevelmodal()">
   <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
-  <ion-label class="itemcenter">Normal </ion-label>
+  <ion-label class="itemcenter">{{malfunction_data[id]?.malfunction_level}} </ion-label>
  <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
     </ion-chip>
 </div>
@@ -51,7 +51,7 @@
 <div class="ion-text-center">
   <ion-chip class="mechanical-chip" (click)="malfunctionstatusmodal()">
 <!-- <ion-icon src="../../assets/receipticon.svg" class="ion-icon"></ion-icon> -->
-<ion-label class="itemcenter">Not Solved </ion-label>
+<ion-label class="statuscenter">{{malfunction_data[id]?.malfunction_status}} </ion-label>
 <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
   </ion-chip>
 </div>

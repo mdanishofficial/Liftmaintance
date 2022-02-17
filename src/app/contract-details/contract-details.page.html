@@ -122,23 +122,24 @@
       <br>
      <ion-textarea class="textarea" maxlength="2" [(ngModel)]="time" disabled readonly>{{result?.no_of_lifts}}</ion-textarea>
     </div>
+  </div>
     <br>
+    <div *ngIf="this.controlled !== 'true'">
     <ion-list>
       <ion-item *ngFor="let entry of form">
         <ion-checkbox slot="start" class="checkbox" [(ngModel)]="entry.isChecked"></ion-checkbox>
          <ion-label class="label">{{entry.val}}</ion-label>
         </ion-item>
      </ion-list>
-     <!-- <ion-list>
-      <ion-item *ngFor="let entry of form">
-        <ion-label class="label">{{entry.val}}</ion-label>
-        <ion-checkbox slot="start" class="checkbox" [(ngModel)]="entry.isChecked"></ion-checkbox>
-      </ion-item>
-    </ion-list> -->
-</div>
+
 <div class="flex-container">
   <ion-button class="newbutton" shape="round" (click)="startapp()">Start Using App</ion-button>
-  <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+</div>
+</div>
+<div *ngIf="this.controlled == 'true'">
+  <div class="ion-text-center">
+    <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+    </div>
 </div>
 </div>
   <br>

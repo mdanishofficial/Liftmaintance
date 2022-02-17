@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import jwt_decode from "jwt-decode";
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 import { Platform } from '@ionic/angular';
+import { NotificationService } from '../../../../services/notification.service';
 @Component({
   selector: 'app-forwardmalfunctions-modal',
   templateUrl: './forwardmalfunctions-modal.page.html',
   styleUrls: ['./forwardmalfunctions-modal.page.scss'],
 })
 export class ForwardmalfunctionsModalPage implements OnInit {
-
-  constructor(private platform: Platform,public modalController: ModalController) { 
+  @Input() malfunction_id: string;
+  constructor(private notifyService : NotificationService,private platform: Platform,public modalController: ModalController,private service: InstallationManagerServicesService) { 
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.modalController.dismiss({
         'dismissed': true
@@ -17,7 +18,14 @@ export class ForwardmalfunctionsModalPage implements OnInit {
     });
   }
   installation_technician=''
-  details=''
+  malfunction_details=''
+  showToasterSuccess(){
+    this.notifyService.showSuccess("Malfunction Type Updated Successfully !!", "")
+}
+ 
+showToasterError(){
+    this.notifyService.showError("Please Select Technician To Assign Malfunction",'')
+}
   ngOnInit() {
   }
   radioValue;
@@ -35,16 +43,25 @@ export class ForwardmalfunctionsModalPage implements OnInit {
     },
   ]
   update(){
-    var decoded:any={}
-    var retrievedtoken = localStorage.getItem('token') || ""
-    decoded = jwt_decode(retrievedtoken);
     let payload = {
-     user_id:decoded.user_id,
-     installation_technician:this.installation_technician,
-     details:this.details,
-  }
-  console.log(payload)
-  }
+         malfunction_id:this.malfunction_id,
+         technician_assigned:this.installation_technician,
+         malfunction_details:this.malfunction_details
+      }
+      if(this.installation_technician==''){
+        this.showToasterError();
+      }
+      else{
+        this.service.assign_technician(payload).subscribe(res => {
+          console.log(res)
+            })
+            this.showToasterSuccess();
+            this.modalController.dismiss({
+              'dismissed': true
+            });
+      }
+    
+      }
   dismiss() {
     console.log('Modal Dismissed!!!!!!!!!!!!')
      this.modalController.dismiss({

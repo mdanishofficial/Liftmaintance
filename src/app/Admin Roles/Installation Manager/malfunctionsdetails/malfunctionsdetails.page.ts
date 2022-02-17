@@ -8,6 +8,7 @@ import { MalfunctionLevelModalPage } from '../malfunction-level-modal/malfunctio
 import { MalfunctionStatusModalPage } from '../malfunction-status-modal/malfunction-status-modal.page';
 import { IssuebillmodalPage } from '../issuebillmodal/issuebillmodal.page';
 import { UploadpaymentModalPage } from '../uploadpayment-modal/uploadpayment-modal.page';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 import { ForwardmalfunctionsModalPage } from '../forwardmalfunctions-modal/forwardmalfunctions-modal.page';
 @Component({
   selector: 'app-malfunctionsdetails',
@@ -16,41 +17,60 @@ import { ForwardmalfunctionsModalPage } from '../forwardmalfunctions-modal/forwa
 })
 export class MalfunctionsdetailsPage implements OnInit {
 
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,public modalController: ModalController,private router: Router) { 
+  constructor(public activatedRoute: ActivatedRoute,private service: InstallationManagerServicesService,private platform: Platform,public modalController: ModalController,private router: Router) { 
     var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
     });
+   
   }
   
   ngOnInit() {
-    console.log('Inside Ng On INit')
-      this.sub = this.activatedRoute.params.subscribe(params => {
-        this.refresh = params['refresh'];
-        console.log(this.refresh)
-        if(this.refresh=='true'){
-          console.log('Refresh is True')
-          this.call_api()
-        }
-      });
-     }
-      sub
-      refresh
+    this.sub = this.activatedRoute.params.subscribe(params => {
+      this.id = params['id'];
+      this.status=params['status']
+      console.log(this.status)
+    });
+    this.call_api()
+  }
+  sub
+  status
+  id
   call_api(){
+    console.log('inside call api')
+    console.log(this.status)
     var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/currentmalfunctionslist/'+refresh);
     });
+
+    if(this.status=='current'){
+      console.log('inside current api')
+      this.service.getcurrentmalfunctions().subscribe(res => {
+        this.malfunction_data=res
+        console.log(this.malfunction_data)
+      })
+      }
+      else{
+        if(this.status=='solved'){
+          console.log('inside solved api')
+          this.service.getsolvedmalfunctions().subscribe(res => {
+            this.malfunction_data=res
+            console.log(this.malfunction_data)
+          })
+          }
+      }
   }
-  malfunctions_data=[
-    {
-      malfunctions_date:'Sunday, 3/26/2021 13:00',
-      client_name:'Ahmad Gul',
-      assigned_technician:'Hassan',
-      lift_no:'03',
-      complain_notes:'How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell',
-       }
-  ]
+  malfunction_data=[]
+  // malfunctions_data=[
+  //   {
+  //     malfunctions_date:'Sunday, 3/26/2021 13:00',
+  //     client_name:'Ahmad Gul',
+  //     assigned_technician:'Hassan',
+  //     lift_no:'03',
+  //     complain_notes:'How to stop the bell  How to stop the bell How to stop the bell How to stop the bell How to stop the bell',
+  //      }
+  // ]
   bill_data=[
     {
       cost:'700 Riyals',
@@ -71,10 +91,13 @@ export class MalfunctionsdetailsPage implements OnInit {
    },
   ]
 async malfunctiontypemodal(){
-  console.log('emod property is accessible')
+  console.log(this.malfunction_data[this.id].malfunction_id)
   const modal = await this.modalController.create({
     component: MalfunctionTypeModalPage ,
-    cssClass: 'malfunctiontype'
+    cssClass: 'malfunctiontype',
+    componentProps: {
+      'malfunction_id': this.malfunction_data[this.id].malfunction_id
+    }
   });
   modal.onDidDismiss().then((data) => {
     this.call_api()
@@ -85,7 +108,10 @@ async malfunctionlevelmodal(){
   console.log('emod property is accessible')
   const modal = await this.modalController.create({
     component: MalfunctionLevelModalPage ,
-    cssClass: 'malfunctionlevel'
+    cssClass: 'malfunctionlevel',
+    componentProps: {
+      'malfunction_id': this.malfunction_data[this.id].malfunction_id
+    }
   });
   modal.onDidDismiss().then((data) => {
     this.call_api()
@@ -96,7 +122,10 @@ async malfunctionstatusmodal(){
   console.log('emod property is accessible')
   const modal = await this.modalController.create({
     component: MalfunctionStatusModalPage ,
-    cssClass: 'malfunctionstatus'
+    cssClass: 'malfunctionstatus',
+    componentProps: {
+      'malfunction_id': this.malfunction_data[this.id].malfunction_id
+    }
   });
   modal.onDidDismiss().then((data) => {
     this.call_api()
@@ -107,7 +136,10 @@ async newbillmodal(){
   console.log('emod property is accessible')
   const modal = await this.modalController.create({
     component: IssuebillmodalPage ,
-    cssClass: 'issuebill'
+    cssClass: 'issuebill',
+    componentProps: {
+      'malfunction_id': this.malfunction_data[this.id].malfunction_id
+    }
   });
   modal.onDidDismiss().then((data) => {
     this.call_api()
@@ -118,7 +150,10 @@ async forwardmodal(){
   console.log('emod property is accessible')
   const modal = await this.modalController.create({
     component: ForwardmalfunctionsModalPage,
-    cssClass: 'forwardmodal'
+    cssClass: 'forwardmodal',
+    componentProps: {
+      'malfunction_id': this.malfunction_data[this.id].malfunction_id
+    }
   });
   modal.onDidDismiss().then((data) => {
     this.call_api()
