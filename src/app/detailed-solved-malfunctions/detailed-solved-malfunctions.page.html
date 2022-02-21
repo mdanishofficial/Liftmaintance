@@ -53,27 +53,23 @@
   </div>
   <br>
    </div>
-   <br> 
    <h2 class="h2">Level of Danger</h2>
    <br>
    <br>
-     <div *ngFor="let result of malfunction_danger_level; let i = index;">
-   <div *ngIf='result?.danger=="red"'>
-   <div class="leftcol">
-       <ion-text class="date"> {{result?.level}}</ion-text>
-     </div>
-      <div class="rightcolbrown">
+   <div *ngFor="let result of malfunction_danger_level; let i = index;">
+    <div *ngIf='result?.danger=="red"'>
+    <div class="leftcol">
+        <ion-text class="date"> {{result?.level}}</ion-text>
       </div>
-      <br>
-      <hr class="hr"/>
-   </div>
-   </div>
-   
-<Text  class="ion-text-left" id="dangertext">
- * This malfunction is considered very serious
-</Text>
-<hr class="hr"/>
-<!-- <br> -->
+       <div class="rightcolbrown">
+       </div>
+       <br>
+       <hr class="hr"/>
+          <ion-text  class="ion-text-left" id="dangertext">
+   * This malfunction is considered very serious
+  </ion-text>
+    </div>
+    </div>
 <br> 
    <h2 class="h2">Bill</h2>
    <br>

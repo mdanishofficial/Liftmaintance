@@ -53,7 +53,6 @@
   </div>
   <br>
    </div>
-   <br> 
    <h2 class="h2">Level of Danger</h2>
    <br>
    <br>
@@ -66,13 +65,12 @@
       </div>
       <br>
       <hr class="hr"/>
+         <ion-text  class="ion-text-left" id="dangertext">
+  * This malfunction is considered very serious
+ </ion-text>
    </div>
    </div>
-   
-<Text  class="ion-text-left" id="dangertext">
- * This malfunction is considered very serious
-</Text>
-<hr class="hr"/>
+
 <!-- <br> -->
 <br> 
    <h2 class="h2">Bill</h2>
@@ -102,7 +100,7 @@
     <div class="ion-text-center">
       <button type="button" class="btn btn-primary" id="solved-button" (click)="presentAlertParts()">I will Provide Parts</button>
       <div class="divider"></div>
-          <button type="button" class="btn btn-secondary" id="pending-button">Provided Parts</button>
+          <button type="button" class="btn btn-secondary" id="pending-button" (click)="providedparts()">Provided Parts</button>
   <!-- <ion-button class="lightbutton" (click)="presentAlertParts()">I Will Provide parts</ion-button> -->
 </div>
 <br>

@@ -63,6 +63,16 @@ export class InstallationManagerServicesService {
         const url = PCconfig.getPath() + '/malfunctions/update_malfunction_status';
         return this.http.put(url, data);
       }
+      public get_all_technicians(): Observable<any> {
+        const url = PCconfig.getPath() + '/technicians/get_all_technicians';
+        // return this.http.post(url, data);
+        return this.http
+        .get(url)
+        .pipe(
+          map((response: any) => {
+            return response;
+              })
+        )}
       public assign_technician(data): Observable<any> {
         const url = PCconfig.getPath() + '/malfunctions/assign_technician';
         return this.http.put(url, data);

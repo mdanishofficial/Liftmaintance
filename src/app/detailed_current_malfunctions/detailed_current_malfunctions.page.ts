@@ -1,18 +1,15 @@
 import { Component, OnInit,SimpleChanges } from '@angular/core';
-// slides.component.ts
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { ModalController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { paynow_modalPage } from '../paynow_modal/paynow-modal.page';
 import { PartsModalPage } from '../parts-modal/parts-modal.page';
+import { ProvidedPartsModalPage } from '../provided-parts-modal/provided-parts-modal.page';
 import { InstallationService } from '../../services/main.service';
 import { Router } from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 import { RatingsModalPage } from '../ratings-modal/ratings-modal.page';
 import { ActivatedRoute } from '@angular/router';
-// install Swiper modules
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 @Component({
   selector: 'app-detailed_current_malfunctions',
   templateUrl: 'detailed_current_malfunctions.page.html',
@@ -153,6 +150,20 @@ export class detailed_current_malfunctionsPage implements OnInit {
     console.log('emod property is accessible')
     const modal = await this.modalController.create({
       component: paynow_modalPage,
+      cssClass: 'payment-class'
+    });
+    modal.onDidDismiss().then((data) => {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+        var refresh=true
+        this.router.navigateByUrl('tabs/currentmalfunctionslist/'+refresh);
+      });
+    });
+    return await modal.present();
+  }
+  async providedparts() {
+    console.log('emod property is accessible')
+    const modal = await this.modalController.create({
+      component: ProvidedPartsModalPage,
       cssClass: 'payment-class'
     });
     modal.onDidDismiss().then((data) => {

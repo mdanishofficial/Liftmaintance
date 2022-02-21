@@ -42,7 +42,7 @@ export class PendingcomplainPage implements OnInit {
      decoded = jwt_decode(retrievedtoken);
    let payload = {
       user_id:decoded.user_id,
-      complain_type:'normal'
+      complain_type:'Normal'
      }
     this.service.getpendingcomplains(payload).subscribe(res => {
      this.complain_data = res;

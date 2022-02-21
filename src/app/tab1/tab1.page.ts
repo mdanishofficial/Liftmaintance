@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,HostListener, OnDestroy  } from '@angular/core';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { IonicSwiper } from '@ionic/angular';
 // import { HttpClient } from '@angular/common/http';
@@ -12,7 +12,7 @@ SwiperCore.use([IonicSwiper]);
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page implements OnInit {
+export class Tab1Page implements OnInit,OnDestroy  {
   constructor(private platform: Platform,private spinner: NgxSpinnerService,private router: Router) { 
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('menu-tabs/tab1');
@@ -59,4 +59,9 @@ this.router.navigateByUrl('tabs/installation_stages/'+refresh);
   notifications(){
     this.router.navigateByUrl('tabs/notifications');
   }
+  @HostListener('unloaded')
+  ngOnDestroy() {
+    console.log('Items destroyed');
+  }
+
 }

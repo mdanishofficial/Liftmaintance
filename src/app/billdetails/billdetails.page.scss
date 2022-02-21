@@ -69,17 +69,10 @@ h1{
     margin-right: 0.6em;
     font-size: 18px;
 }
-hr {
-    // border: 2px solid red !important;
-    height: 1px !important;
-    width: 99% !important;
-    background: #6E6E6E !important;
-    display: block !important;
-    font-size: 2em !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+.hr{
+    margin-top: 0em;
+    width: 99%;
+}
   .btn-primary{
     background-color:#194E78;
     // width:9em;

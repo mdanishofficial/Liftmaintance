@@ -16,6 +16,7 @@ export class ForwardmalfunctionsModalPage implements OnInit {
         'dismissed': true
       });
     });
+    this.call_api()
   }
   installation_technician=''
   malfunction_details=''
@@ -34,14 +35,13 @@ showToasterError(){
     // console.log(e.detail.value)
     this.radioValue=e.detail.value
   }
-  installation_technicians=[
-    {
-      technician_name:'Hassan Ali'
-    },
-    {
-      technician_name:'Shadab Khan'
-    },
-  ]
+  installation_technicians=[]
+  call_api(){
+    this.service.get_all_technicians().subscribe(res => {
+      this.installation_technicians=res
+        })
+
+  }
   update(){
     let payload = {
          malfunction_id:this.malfunction_id,

@@ -43,7 +43,7 @@ export class PendingemergencycomplainPage implements OnInit {
     console.log(decoded)
     let payload = {
      user_id:decoded.user_id,
-     complain_type:'emergency'
+     complain_type:'Emergency'
     }
 
     this.service.getpendingcomplains(payload).subscribe(res => {

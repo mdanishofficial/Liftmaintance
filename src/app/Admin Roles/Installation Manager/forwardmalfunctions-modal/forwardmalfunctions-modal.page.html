@@ -5,7 +5,7 @@
   <ion-card class="card">
     <select class="form-select form-select-sm" aria-label=".form-select-sm example"  [(ngModel)]="installation_technician">
      <option disabled selected hidden style="color: rgb(87, 87, 90);"value=''>Please Select Technician</option>
-      <option value="electrical" class="options" *ngFor="let result of installation_technicians">{{result?.technician_name}}</option></select>
+      <option value="{{result?.technician_name}}" class="options" *ngFor="let result of installation_technicians">{{result?.technician_name}}</option></select>
    </ion-card>
   <h6 class="h6">Detail about malfunction</h6>
   <ion-card class="card-detailed">

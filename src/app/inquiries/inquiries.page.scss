@@ -1,11 +1,19 @@
 .container{
     margin-top: 1px;
    }
-.flex-container{
-display: flex;
+   .flex-container{
+    justify-content: center;
+    display: flex;
+}
+.colorcard1{
+  margin-top: 0em;
+}
+.leftdiv{
+  float: left;
 }
 .flex-container2{
  width: 100%;
+ background: #F5F5F5;
  }
     .flex-container3{
         display: flex;
@@ -94,7 +102,7 @@ margin-right: 0.7em;
        bottom: 10%;
      width: 220px;
     height: 49px;
-    margin-top:5em
+    margin-top:1em
     }
     @media only screen and (max-height: 670px) {
       .newbutton{

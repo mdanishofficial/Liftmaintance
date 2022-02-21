@@ -5,26 +5,29 @@
     <!-- <br> -->
     <h6 class="name">Client Name</h6>
  <ion-card class="card">
-     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Name"></textarea>
+     <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Name" [(ngModel)]="client_name"></textarea>
   </ion-card>
   <!-- <br> -->
     <h6 class="name">Client Email</h6>
  <ion-card class="card">
-      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Email"></textarea>
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Email"[(ngModel)]="client_email"></textarea>
   </ion-card>
-  <br>
+  <!-- <br> -->
     <h6 class="name">Client Contact Number</h6>
  <ion-card class="card">
-      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Contact Number"></textarea>
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Contact Number" [(ngModel)]="contact"></textarea>
   </ion-card>
-  <br>
+  <!-- <br> -->
     <h6 class="name">Message</h6>
  <ion-card class="card-detailed">
-      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Message"></textarea>
+      <textarea class="native-textarea sc-ion-textarea-ios" id="textarea" placeholder="Please Enter Message"[(ngModel)]="message"></textarea>
   </ion-card>
-  <br>
+  <!-- <br> -->
   <h6 class="name">Office Phone Number:01231234567</h6>
   <h6 class="name">Office Email: info@liftcompany.com</h6>
-  <br>
+  <!-- <br> -->
+  <div class="ion-text-center">
+    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+  </div>
     </div>
     </ion-content>

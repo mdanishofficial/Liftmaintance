@@ -24,10 +24,10 @@
         <button type="button" class="btn btn-secondary" (click)="inquiries()" >Inquiries</button>
     </ion-tab-bar>
     </div>
-
-    <ion-card class="card" *ngFor="let result of inquiry_data let i=index">
+<br>
+    <ion-card class="colorcard1" *ngFor="let result of inquiry_data let i=index">
       <div class="flex-container">
-        <div style="float: left;">
+        <div class="leftdiv">
           <div [ngClass]='result?.inquiry_status == "Done" ?"greendiv":"reddiv"'></div>
         </div>
         <div class="flex-container2">

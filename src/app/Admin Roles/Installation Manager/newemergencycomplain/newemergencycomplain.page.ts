@@ -43,8 +43,8 @@ showToasterError(){
     let payload={
 malfunction_type:this.malfunction_type,
 complain_detail:this.complaindetail,
-complain_type:'emergency',
-complain_status:'pending',
+complain_type:'Emergency',
+complain_status:'Pending',
 complain_date:date,
 user_id:decoded.user_id,
   }

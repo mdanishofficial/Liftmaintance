@@ -1,18 +1,15 @@
 <div class="container">
-  <h1 class="h1">Select the items you want to Provide</h1>
+  <h1 class="h1">Provided Parts</h1>
   
 <ion-content overflow-scroll="true" class="content">
-  
     <ion-radio-group [(ngModel)]="radiovalue">
 <ion-item *ngFor="let entry of form">
   <ion-label>{{entry.part_name}}</ion-label>
-  <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  <ion-checkbox slot="start" disabled="true" [(ngModel)]="entry.isChecked"></ion-checkbox>
 </ion-item>
   </ion-radio-group>
 </ion-content>
   <div class="ion-text-center" id="buttonsdiv">
     <button type="button" class="btn btn-secondary" (click)="dismiss()">Cancel</button>
-    <div class="divider"></div>
-    <button type="button" class="btn btn-primary" (click)="addparts()">Provide</button>
   </div>
     </div>  

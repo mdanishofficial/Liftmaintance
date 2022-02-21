@@ -10,9 +10,9 @@
       </ion-tab-bar>
     </div>
     <br>
-    <ion-card class="card" *ngFor="let result of malfunction_data let i=index" (click)="currentmalfunction_details(i)">
+    <ion-card class="colorcard1" *ngFor="let result of malfunction_data let i=index" (click)="currentmalfunction_details(i)">
       <div class="flex-container">
-        <div style="float: left; height: 71px;">
+        <div class="leftdiv">
           <div [ngClass]='result?.malfunction_status == "Solved" ?"greendiv":"reddiv"'></div>
         </div>
         <div class="flex-container2">

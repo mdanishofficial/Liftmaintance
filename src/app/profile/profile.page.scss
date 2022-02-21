@@ -18,8 +18,7 @@
     height: 86px;
   }
   .container{
-      margin-left: 0.5em;
-      margin-left: 0.5em;
+      margin-left: 0.1em;
   }
   h1{
       text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1.5em;
@@ -55,20 +54,30 @@
     font-family:'Roboto';
     color: #194E78;
     margin-top: 0.5em;
-    margin-left: -0.4em;
+    font-weight: bold;
  }
+ .value{
+  font-size: 20px;
+  font-family:'Roboto';
+  color: #194E78;
+  margin-top: 0.5em;
+  margin-left: 0.3em;
+}
  .logout{
   font-size: 20px;
   font-family:'Roboto';
   color: red;
   margin-top: 0.5em;
-  margin-left: -0.4em;
 }
 .hr{
-    width: 94%;
+    width: 99%;
+    margin-top: 0em;
 }
 .flex-container0{
    display: flex;
+}
+.flex-container1{
+  display: flex;
 }
 .icon{
 // float: right;

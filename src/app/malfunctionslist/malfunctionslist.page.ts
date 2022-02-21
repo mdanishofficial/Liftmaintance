@@ -50,7 +50,7 @@ console.log(this.malfunction_data)
     this.router.navigateByUrl('/tabs/malfunctionslist/'+refresh);
   }
   async currentmalfunctions(){
-    var refresh
+    var refresh=false
     this.router.navigateByUrl('/tabs/currentmalfunctionslist/'+refresh);
   }
   malfunction_details(id){

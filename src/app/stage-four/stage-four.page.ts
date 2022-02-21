@@ -37,9 +37,9 @@ export class StageFourPage implements OnInit {
   }
   installation_data
   public form = [
-    { val: 'Other Feature' },
-    { val: 'Other Feature'},
-    { val: 'Other Feature',isChecked: false},
+    { val: 'Fan' },
+    { val: 'Auto Door'},
+    { val: 'Fast Speed',isChecked: false},
   ];
   notifications(){
     this.router.navigateByUrl('tabs/notifications');

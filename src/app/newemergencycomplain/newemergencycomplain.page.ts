@@ -13,7 +13,6 @@ import { NotificationService } from '../../services/notification.service'
 export class NewemergencycomplainPage implements OnInit {
   malfunction_type=''
   complaindetail=''
-  
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
      // this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -43,8 +42,8 @@ showToasterError(){
     let payload={
 malfunction_type:this.malfunction_type,
 complain_detail:this.complaindetail,
-complain_type:'emergency',
-complain_status:'pending',
+complain_type:'Emergency',
+complain_status:'Pending',
 complain_date:date,
 user_id:decoded.user_id,
   }
@@ -74,4 +73,5 @@ user_id:decoded.user_id,
     var refresh=true
     this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
   }
+  
 }

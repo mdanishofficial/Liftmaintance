@@ -5,11 +5,11 @@ import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
 @Component({
-  selector: 'app-parts-modal',
-  templateUrl: './parts-modal.page.html',
-  styleUrls: ['./parts-modal.page.scss'],
+  selector: 'app-provided-parts-modal',
+  templateUrl: './provided-parts-modal.page.html',
+  styleUrls: ['./provided-parts-modal.page.scss'],
 })
-export class PartsModalPage implements OnInit {
+export class ProvidedPartsModalPage implements OnInit {
 
   constructor(private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -28,7 +28,7 @@ export class PartsModalPage implements OnInit {
       user_id:decoded.user_id,
     }
 
-    this.service.getparts(payload).subscribe(res => {
+    this.service.getprovidedparts(payload).subscribe(res => {
       this.parts_data = res;
          console.log(this.parts_data)
          for(var i=0;i<this.parts_data.length;i++){
@@ -80,5 +80,4 @@ console.log(this.parts)
    parts=[]
    public form = [];
 
-  }
-
+}

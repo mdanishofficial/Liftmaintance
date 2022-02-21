@@ -522,6 +522,10 @@ const routes: Routes = [
     path: 'stage-four',
     loadChildren: () => import('./stage-four/stage-four.module').then( m => m.StageFourPageModule)
   },
+  {
+    path: 'provided-parts-modal',
+    loadChildren: () => import('./provided-parts-modal/provided-parts-modal.module').then( m => m.ProvidedPartsModalPageModule)
+  },
  ];
 @NgModule({
   imports: [

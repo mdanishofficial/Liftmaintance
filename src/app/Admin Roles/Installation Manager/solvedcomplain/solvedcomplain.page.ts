@@ -42,7 +42,7 @@ export class SolvedcomplainPage implements OnInit {
     console.log(decoded)
     let payload = {
      user_id:decoded.user_id,
-     complain_type:'normal'
+     complain_type:'Normal'
     }
     this.service.getsolvedcomplains(payload).subscribe(res => {
      this.complain_data = res;

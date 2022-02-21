@@ -3,7 +3,8 @@ import { InstallationService } from '../../services/main.service';
 import {Router} from "@angular/router";
 import { Platform } from '@ionic/angular';
 import jwt_decode from "jwt-decode";
-import { NotificationService } from '../../services/notification.service'
+import { NotificationService } from '../../services/notification.service';
+import { LoadingController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -13,10 +14,11 @@ import { NotificationService } from '../../services/notification.service'
 export class LoginPage implements OnInit {
 email=''
 password=''
-  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
+  constructor(public loadingController: LoadingController,private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('login');
     });
+    
     var decoded:any={}
     try{
       var retrievedtoken = localStorage.getItem('token') || ""
@@ -48,7 +50,19 @@ password=''
 showToasterError(){
     this.notifyService.showError("Invalid Password or Email",'')
 }
+async presentLoading() {
+  const loading = await this.loadingController.create({
+    cssClass: 'my-custom-class',
+    message: 'Please wait...',
+    // duration: 5000
+  });
+  await loading.present();
+  await loading.dismiss();
+  const { role, data } = await loading.onDidDismiss();
+  console.log('Loading dismissed!');
+}
   ngOnInit() {
+    this.presentLoading()
   }
 login(){
   var lowercaseemail=this.email.toLowerCase()
