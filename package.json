@@ -36,6 +36,7 @@
     "@ionic-native/stripe": "^4.20.0",
     "@ionic-super-tabs/angular": "^7.0.8",
     "@ionic/angular": "^5.5.2",
+    "@ionic/storage": "^3.0.6",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "@ngx-translate/core": "^14.0.0",
     "@types/stripe-checkout": "^1.0.4",
