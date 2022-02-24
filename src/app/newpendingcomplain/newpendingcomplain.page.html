@@ -24,28 +24,70 @@
       <br>
       <br>
       <ion-card class="card">
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="malfunction_type">
-          <option disabled selected hidden style="color: rgb(87, 87, 90);" value=''>Please Select Type</option>
-          <option value="Electrical" class="options">Electrical</option>
-          <option value="Mechanical" class="options">Mechanical</option>
-          <option value="Other" class="options">Other Type</option>
-          <option value="Someother" class="options">Some Other Type</option>
-        </select>
-     </ion-card>
+        <!-- <select class="form-select form-select-sm" id="newdropdown" aria-label=".form-select-sm example"  [(ngModel)]="malfunction_type">
+          <option disabled selected hidden style="color: rgb(87, 87, 90);"value=''>Please Select Type</option>
+          <option value="Electrical" class="selection">Electrical</option>
+          <option value="Mechanical" class="selection">Mechanical</option>
+          <option value="Other" class="selection">Other Type</option>
+          <option value="Someother" class="selection">Some Other Type</option>
+        </select> -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button (click)="collapsetrue()" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+         <div *ngIf="malfunction_type==''"><ion-text color="secondary">Please Select Malfunction Type</ion-text></div> 
+         <div *ngIf="malfunction_type!==''"><ion-text color="secondary">{{malfunction_type}}</ion-text></div>
+            </button>
+          </h2>
+          <div *ngIf="collapse==false">
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ion-list>
+                <ion-item>
+                  <ion-label class="selection" (click)="passvalue('Electrical')">Electrical</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="selection" (click)="passvalue('Mechanical')">Mechanical</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="selection" (click)="passvalue('Other')">Other Type</ion-label>
+                </ion-item>
+                <ion-item>
+                  <ion-label class="selection" (click)="passvalue('Someother')">Some Other Type</ion-label>
+                </ion-item>
+              </ion-list>
+            </div>
+          </div>
+        </div>
+        </div>
+       </ion-card>
      <h2 class="h3">Details</h2>
      <br>
      <br>
      <ion-card class="cardinput">
         <!-- <ion-textarea placeholder="Please input detail!" class="textarea"></ion-textarea> -->
-        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please input detail!" spellcheck="false" [(ngModel)]="complaindetail"></textarea>
+        <textarea class="native-textarea sc-ion-textarea-ios" autocapitalize="none" name="ion-textarea-0" placeholder="Please Input Detail!" spellcheck="false"  [(ngModel)]="complaindetail"></textarea>
    </ion-card>
- </div>
+ <!-- <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
+    <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
+    <ion-checkbox class="checkbox" disabled="true"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label>
+    <br>
+    <ion-checkbox class="checkbox" disabled="true" checked="true"></ion-checkbox>
+    <ion-label class="emergencydetails">Emergency Detail</ion-label> -->
+    <br>
+   </div>
+   <br>
  <div class="ion-text-center">
     <div class="flex-container">
    <button type="button" class="btn btn-primary" id="language" (click)="send_complain()">Send Complain</button>
    <div class="divider"></div>
-   <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+<button type="button" class="btn btn-secondary" (click)="back()">Back</button>
  </div>
 </div>
 </div>
   </ion-content>  
+ 

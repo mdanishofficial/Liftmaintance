@@ -5,7 +5,10 @@ import { Platform } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../services/notification.service'
-import { ThisReceiver } from '@angular/compiler';
+// import * as $ from 'jquery'
+declare let $ : any;
+
+
 @Component({
   selector: 'app-newpendingcomplain',
   templateUrl: './newpendingcomplain.page.html',
@@ -14,7 +17,7 @@ import { ThisReceiver } from '@angular/compiler';
 export class NewpendingcomplainPage implements OnInit {
 malfunction_type=''
   complaindetail=''
-  
+  collapse=false
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
    var refresh=true
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -61,6 +64,15 @@ user_id:decoded.user_id,
   }
 }
   // this.parentfunc.call_api()
+  }
+  passvalue(value){
+    $("#collapseTwo").collapse('hide');
+    this.malfunction_type=value
+    console.log(this.malfunction_type)
+  }
+  collapsetrue(){
+    console.log('Inside Collapse True')
+    this.collapse=false
   }
   notifications(){
     this.router.navigateByUrl('tabs/notifications');

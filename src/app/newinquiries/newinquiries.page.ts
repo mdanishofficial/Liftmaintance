@@ -8,6 +8,7 @@ import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../services/notification.service'
 // import { SendinquiryModalPage } from '../sendinquiry-modal/sendinquiry-modal.page';
+declare let $ : any;
 @Component({
   selector: 'app-newinquiries',
   templateUrl: './newinquiries.page.html',
@@ -16,6 +17,7 @@ import { NotificationService } from '../../services/notification.service'
 export class NewinquiriesPage implements OnInit {
   inquiry_detail=''
   inquiry_type=''
+  collapse=false
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/installation_stages');
@@ -63,6 +65,15 @@ this.showToasterError()
   inquiry_data
   ngOnInit() {
   }
+  passvalue(value){
+    $("#collapseTwo").collapse('hide');
+    this.inquiry_type=value
+    console.log(this.inquiry_type)
+  }
+  collapsetrue(){
+    console.log('Inside Collapse True')
+    this.collapse=false
+  }
   async presentModalsendInquiry(){
     
     console.log('emod property is accessible')
@@ -73,6 +84,7 @@ this.showToasterError()
     return await modal.present();
   }
   cancel(){
-    this.router.navigateByUrl('tabs/inquiries');
+    var refresh=true
+    this.router.navigateByUrl('/tabs/inquiries/'+refresh);
   }
 }

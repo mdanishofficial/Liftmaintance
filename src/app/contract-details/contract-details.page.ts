@@ -52,18 +52,17 @@ export class ContractDetailsPage implements OnInit {
         ngOnInit() {
           this.sub = this.activatedRoute.params.subscribe(params => {
             this.controlled = params['controlled'];
-            var accepted=localStorage.getItem('accepted')
+            // var accepted=localStorage.getItem('accepted')
    
-            console.log(this.controlled)
-              console.log('this.controlled')
-            if(accepted=='true'){
-              console.log('accepted is true')
+            // console.log(this.controlled)
+            //   console.log('this.controlled')
+            // if(accepted=='true'){
+            //   console.log('accepted is true')
               if(this.controlled=='false'){
                 console.log('controlled is false')
                 this.router.navigateByUrl('menu-tabs/tab1');
               }
-              // this.router.navigateByUrl('installation_manager/menu');
-            }
+            // }
           });
         }
        

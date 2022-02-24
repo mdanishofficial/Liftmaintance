@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
-
+import { AutoactivateLoginGuard } from 'src/guards/autoactivate-login.guard';
 const routes: Routes = [
   {
     path: 'tabs',
@@ -9,7 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'login',
-        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule), canActivate: [AutoactivateLoginGuard]
       },
       {
         path: 'tab1',
@@ -109,7 +109,7 @@ const routes: Routes = [
     loadChildren: () => import('../visitdetails/visitdetails.module').then(m => m.VisitdetailsPageModule)
   },
   {
-    path: 'inquiries',
+    path: 'inquiries/:refresh',
     loadChildren: () => import('../inquiries/inquiries.module').then(m => m.InquiriesPageModule)
   },
   {

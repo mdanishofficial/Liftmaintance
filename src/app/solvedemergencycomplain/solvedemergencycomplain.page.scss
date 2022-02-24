@@ -115,6 +115,7 @@ display: inline-block;
     height: 24px;
          --background:#4F8B31;
          padding-top: 0.2em;
+         margin-bottom: 1em;
   }
   .newbutton{
       --background:#FF6932;
@@ -122,7 +123,7 @@ display: inline-block;
          bottom: 10%;
        width: 220px;
       height: 49px;
-      margin-top:2em
+      margin-top:1em
       }
       @media only screen and (max-height: 670px) {
         .newbutton{

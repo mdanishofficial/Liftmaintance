@@ -98,7 +98,6 @@ h1{
     width: 79px;
       height: 24px;
          --background:#AB0506;
-         padding-top: 0.2em;
   }
   .newbutton{
       --background:#FF6932;
@@ -106,7 +105,7 @@ h1{
          bottom: 10%;
        width: 220px;
       height: 49px;
-      margin-top:2em
+      margin-top:1em
       }
       @media only screen and (max-height: 670px) {
         .newbutton{

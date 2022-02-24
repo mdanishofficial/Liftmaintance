@@ -110,13 +110,14 @@ h1{
       height: 24px;
          --background:#AB0506;
          padding-top: 0.2em;
+         margin-bottom: 1em;
   }
   .newbutton{
       --background:#FF6932;
      bottom: 10%;
        width: 220px;
       height: 49px;
-      margin-top:2em
+      margin-top:1em
       }
       @media only screen and (max-height: 670px) {
         .newbutton{

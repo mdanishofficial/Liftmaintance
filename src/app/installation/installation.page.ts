@@ -73,10 +73,10 @@ export class InstallationPage implements OnInit {
 
 
 
-  ngAfterInit(){
-     $('.datepicker').datepicker({
-      inline: true
-    });
-  }
+  // ngAfterInit(){
+  //    $('.datepicker').datepicker({
+  //     inline: true
+  //   });
+  // }
  
 }

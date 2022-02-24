@@ -19,30 +19,31 @@ password=''
       this.router.navigateByUrl('login');
     });
     
-    var decoded:any={}
-    try{
-      var retrievedtoken = localStorage.getItem('token') || ""
-      decoded = jwt_decode(retrievedtoken);
-      console.log(retrievedtoken)
+//     var decoded:any={}
+//     try{
+//       var retrievedtoken = localStorage.getItem('token') || ""
+//       decoded = jwt_decode(retrievedtoken);
+//       console.log(retrievedtoken)
   
-      if(retrievedtoken=='' ){
-        console.log('User Not Logged In')
-      }
-      else{
-        console.log('User Logged In')
-        if(decoded.user_role=='client'){
-          var controlled=false
-          this.router.navigateByUrl('contract_details/'+controlled);
-        }
-        if(decoded.user_role=='installation_manager'){
-          this.router.navigateByUrl('installation_manager/menu');
-        }
-      }
-    }
- catch{
-   console.log('Error');
-   this.router.navigateByUrl('login');
- }  }
+//       if(retrievedtoken=='' ){
+//         console.log('User Not Logged In')
+//       }
+//       else{
+//         console.log('User Logged In')
+//         if(decoded.user_role=='client'){
+//           var controlled=false
+//           this.router.navigateByUrl('contract_details/'+controlled);
+//         }
+//         if(decoded.user_role=='installation_manager'){
+//           this.router.navigateByUrl('installation_manager/menu');
+//         }
+//       }
+//     }
+//  catch{
+//    console.log('Error');
+//    this.router.navigateByUrl('login');
+//  } 
+ }
    showToasterSuccess(){
     this.notifyService.showSuccess("Logged In Successfully !!", "")
 }
@@ -50,19 +51,19 @@ password=''
 showToasterError(){
     this.notifyService.showError("Invalid Password or Email",'')
 }
-async presentLoading() {
-  const loading = await this.loadingController.create({
-    cssClass: 'my-custom-class',
-    message: 'Please wait...',
-    // duration: 5000
-  });
-  await loading.present();
-  await loading.dismiss();
-  const { role, data } = await loading.onDidDismiss();
-  console.log('Loading dismissed!');
-}
+// async presentLoading() {
+//   const loading = await this.loadingController.create({
+//     cssClass: 'my-custom-class',
+//     message: 'Please wait...',
+//     // duration: 5000
+//   });
+//   await loading.present();
+//   await loading.dismiss();
+//   const { role, data } = await loading.onDidDismiss();
+//   console.log('Loading dismissed!');
+// }
   ngOnInit() {
-    this.presentLoading()
+    // this.presentLoading()
   }
 login(){
   var lowercaseemail=this.email.toLowerCase()

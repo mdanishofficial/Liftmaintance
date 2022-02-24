@@ -24,7 +24,8 @@ export class MenuTabsPage implements OnInit {
   this.router.navigateByUrl('tabs/settings');
 }
 inquiries(){
-  this.router.navigateByUrl('tabs/inquiries');
+  var refresh=true
+    this.router.navigateByUrl('/tabs/inquiries/'+refresh);
 }
 home(){
   this.router.navigateByUrl('menu-tabs/tab1');

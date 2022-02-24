@@ -10,13 +10,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxSpinnerModule } from "ngx-spinner";
-// import { Stripe } from '@ionic-native/stripe/ngx';
-// import { StripeJavaScriptPage } from './stripe-java-script/stripe-java-script.page';
 import jwt_decode from "jwt-decode";
-// import { NzButtonModule } from 'ng-zorro-antd/button';
-// import { NzCollapseModule } from 'ng-zorro-antd/collapse';
 import { Stripe } from '@awesome-cordova-plugins/stripe/ngx';
-
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -30,7 +27,8 @@ import { Stripe } from '@awesome-cordova-plugins/stripe/ngx';
   
  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy, },
-    Stripe
+    Stripe,  StatusBar,
+    SplashScreen,
   ],
   
   bootstrap: [AppComponent],

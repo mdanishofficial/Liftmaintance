@@ -17,16 +17,20 @@
       <ion-text class="details">{{result?.complain_detail}}  </ion-text> 
   <div>
     <div class="complain"><h3 class="h3">Complain # :{{result?.complain_id}}</h3></div>
-    <div class="buttondiv"><ion-button class="statusbutton" shape="round">{{result?.complain_status}}</ion-button></div>
     <br>
     <br>
 </div>
+<div>
    <h3 class="status">Status: <h3 class="emergency">Emergency</h3></h3>
+   <div class="buttondiv"><ion-button class="statusbutton" shape="round">{{result?.complain_status}}</ion-button></div>
+  </div>
  </div>
 </div>
 </div>
 <div class="ion-text-center" style="width: 0px auto;">
   <ion-button class="newbutton" shape="round"(click)="newcomplain()">New Complain</ion-button>
 </div>
+<br>
+<br>
 </div>
 </ion-content>
