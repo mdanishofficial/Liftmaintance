@@ -56,7 +56,8 @@ export class InquiriesPage implements OnInit {
     this.router.navigateByUrl('/tabs/faqs');
   }
   newinquiry(){
-    this.router.navigateByUrl('/newinquiries');
+    var refresh=true
+    this.router.navigateByUrl('/newinquiries/'+refresh);
   }
 }
 

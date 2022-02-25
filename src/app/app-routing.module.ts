@@ -140,7 +140,7 @@ const routes: Routes = [
     loadChildren: () => import('./faqs/faqs.module').then( m => m.FaqsPageModule)
   },
   {
-    path: 'newinquiries',
+    path: 'newinquiries/:refresh',
     loadChildren: () => import('./newinquiries/newinquiries.module').then( m => m.NewinquiriesPageModule)
   },
   {

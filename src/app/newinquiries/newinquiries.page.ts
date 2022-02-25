@@ -7,6 +7,7 @@ import { ModalController } from '@ionic/angular';
 import {formatDate} from '@angular/common';
 import jwt_decode from "jwt-decode";
 import { NotificationService } from '../../services/notification.service'
+import { ActivatedRoute } from '@angular/router';
 // import { SendinquiryModalPage } from '../sendinquiry-modal/sendinquiry-modal.page';
 declare let $ : any;
 @Component({
@@ -18,7 +19,7 @@ export class NewinquiriesPage implements OnInit {
   inquiry_detail=''
   inquiry_type=''
   collapse=false
-  constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
+  constructor(public activatedRoute: ActivatedRoute,private notifyService : NotificationService,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('tabs/installation_stages');
     });
@@ -64,10 +65,27 @@ this.showToasterError()
       
   inquiry_data
   ngOnInit() {
-  }
+    console.log('Inside Ng On INit')
+      this.sub = this.activatedRoute.params.subscribe(params => {
+        this.refresh = params['refresh'];
+        console.log(this.refresh)
+        if(this.refresh=='true'){
+          console.log('Refresh is True')
+          this.call_api()
+        }
+      });
+     }
+      sub
+      refresh
+      call_api(){
+        this.platform.backButton.subscribeWithPriority(10, () => {
+          this.router.navigateByUrl('tabs/inquiries');
+        });
+      }
   passvalue(value){
     $("#collapseTwo").collapse('hide');
     this.inquiry_type=value
+    this.call_api()
     console.log(this.inquiry_type)
   }
   collapsetrue(){
