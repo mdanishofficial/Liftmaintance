@@ -6,6 +6,7 @@ import { UpdatepaymentModalPage } from '../updatepayment-modal/updatepayment-mod
 import jwt_decode from "jwt-decode";
 import { Platform } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { InstallationManagerServicesService } from '../../../../services/installation-manager-services.service';
 @Component({
   selector: 'app-installation-page',
   templateUrl: './installation-page.page.html',
@@ -13,47 +14,47 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InstallationPagePage implements OnInit {
 
-  constructor(public activatedRoute: ActivatedRoute,private platform: Platform,public alertController: AlertController,public modalController: ModalController,private router: Router) {
+  constructor(private service: InstallationManagerServicesService,public activatedRoute: ActivatedRoute,private platform: Platform,public alertController: AlertController,public modalController: ModalController,private router: Router) {
     this.platform.backButton.subscribeWithPriority(10, () => {
       var refresh=true
       this.router.navigateByUrl('installation_manager/installation/'+refresh);
     });
+    this.call_api()
   }
 ngOnInit() {
-    console.log('Inside Ng On INit')
+ console.log('Inside ngOnInit')
       this.sub = this.activatedRoute.params.subscribe(params => {
-        this.refresh = params['refresh'];
-        console.log(this.refresh)
-        if(this.refresh=='true'){
-          console.log('Refresh is True')
-          this.call_api()
-        }
+        this.id = params['id'];
+        console.log(this.id)
       });
      }
       sub
-      refresh
+      id
       call_api(){
         this.platform.backButton.subscribeWithPriority(10, () => {
           var refresh=true
           this.router.navigateByUrl('installation_manager/installation/'+refresh);
         });
+        console.log('Inside Call api')
+        this.service.getallinstallations().subscribe(res => {
+          this.installation_data[0]=res
+          console.log(this.installation_data[0])
+        })
       }
   installation_status='progressing'
   stage_payment=''
   installation_stage_status='progressing'
-  installation_data=[
-    {
-      installation_date:'Sunday, 3/26/2021 13:00',
-      client_name:'Ahmad Gul',
-       type_of_building:'Residential',
-       client_city:'Dubai',
-      location:'World Trade Center',
-      no_of_stops:'6',
-      machine_type:'Chinese',
-       door_type:'Automatic',
-       lift_type:'Passenger',
-  },
-  ]
+  installation_data=[]
+  
+  // installation_date:'Sunday, 3/26/2021 13:00',
+  // client_name:'Ahmad Gul',
+  //  type_of_building:'Residential',
+  //  client_city:'Dubai',
+  // location:'World Trade Center',
+  // no_of_stops:'6',
+  // machine_type:'Chinese',
+  //  door_type:'Automatic',
+  //  lift_type:'Passenger',
 async update(){
   const modal = await this.modalController.create({
     component: UpdatepaymentModalPage ,

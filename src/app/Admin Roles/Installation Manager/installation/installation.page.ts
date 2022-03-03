@@ -34,7 +34,7 @@ export class InstallationPage implements OnInit {
     this.platform.backButton.subscribeWithPriority(10, () => {
       this.router.navigateByUrl('installation_manager/menu');
     });
-    this.service.getinstallation().subscribe(res => {
+    this.service.getallinstallations().subscribe(res => {
       this.installation_data=res
     })
   }

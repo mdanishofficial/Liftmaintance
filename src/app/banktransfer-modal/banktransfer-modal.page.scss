@@ -15,7 +15,6 @@
     --placeholder-color:#6E6E6E;
     margin-top: 2em;
 }
-
 .attach-button{
     width: 0px auto; 
     height: 8em;
@@ -26,6 +25,21 @@
     margin-top: 0em;
     height: 7em;
     width: 15em;
+}
+.pathname{
+color: Green;
+margin-bottom: 0.5em;
+font-weight: bold;
+}
+.btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
 }
 .btn-secondary{
     width: 8em;

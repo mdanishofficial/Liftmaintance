@@ -4,44 +4,42 @@
   <title>Select</title>
 </head>
 <ion-header class="header">
-  <!-- <ion-navbar class="navbar"> -->
-    <ion-title>
-     <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
-      </ion-icon>
-      <div class="ion-text-right">
-        <img src="../../assets/logo.svg" class="logo">
-      </div>
-    </ion-title>
-  <!-- </ion-navbar> -->
+  <ion-title>
+   <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+    </ion-icon>
+    <div class="ion-text-right">
+      <img src="../../assets/logo.svg" class="logo">
+    </div>
+  </ion-title>
 </ion-header>
 <ion-content overflow-scroll="true">
   <div class="container">
     <h1 class="ion-text-center">Installation</h1>
     <br>
     <div *ngFor="let result of installation_data">
-    <ion-text class="date">{{result?.installation_date}}</ion-text>
-    <h6 class="client">Client : {{result?.client_name}}</h6>
+    <ion-text class="date">{{result[id]?.installation_start_date}}</ion-text>
+    <h6 class="client">Client : {{result[id]?.client_name}}</h6>
     <hr class="hr">
-    <h6 class="client">Type of Building :{{result?.type_of_building}}</h6>
+    <h6 class="client">Type of Building :{{result[id]?.result[0].building_type}}</h6>
     <hr class="hr">
-    <h6 class="client">City : {{result?.client_city}}</h6>
+    <h6 class="client">City : {{result[id]?.result[0].client_city}}</h6>
     <hr class="hr">
-  <h6 class="client">Location : {{result?.location}}</h6>
+  <h6 class="client">Location : {{result[id]?.result[0].client_location}}</h6>
   <hr class="hr">
-  <h6 class="client">Number of Stops :{{result?.no_of_stops}}</h6>
+  <h6 class="client">Number of Stops :{{result[id]?.installation_stops}}</h6>
   <hr class="hr">
-  <h6 class="client">Machine type : {{result?.machine_type}}</h6>
+  <h6 class="client">Machine type : {{result[id]?.installation_machinetype}}</h6>
   <hr class="hr">
-  <h6 class="client">Door type : {{result?.door_type}}</h6>
+  <h6 class="client">Door type : {{result[id]?.installation_doortype}}</h6>
   <hr class="hr">
-<h6 class="client">Lift type : {{result?.lift_type}}</h6>
+<h6 class="client">Lift type : {{result[id]?.lift_type}}</h6>
 <hr class="hr">
 <h6 class="client">Installation Status</h6>
 <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_status">
   <option value="progressing" class="options" selected>Progressing</option>
   <option value="waiting" class="options">Waiting for next stage payment</option>
 </select>
- <h6 class="client"  >Stage Payment</h6>
+ <h6 class="client">Stage Payment</h6>
   <ion-textarea class="textarea" [(ngModel)]="stage_payment"></ion-textarea>
 <h6 class="client">Payment</h6>
     <div class="ion-text-center">

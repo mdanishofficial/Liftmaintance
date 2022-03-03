@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "IonicApp",
+	"appName": "Lift App",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

@@ -26,6 +26,16 @@
     --inner-border-radius:0px;
     border-color: chartreuse !important;
 }
+.btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
+}
 .btn-secondary{
     width: 8em;
     background-color:#6E6E6E;

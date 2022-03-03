@@ -9,6 +9,12 @@
     font-family:'Roboto';
     margin-top: 0em;
 }
+.image{
+    align-items: center;
+    margin-top: 3em;
+    height: 7em;
+    width: 15em;
+}
 .btn-secondary{
     width: 8em;
     background-color:#6E6E6E;
@@ -25,8 +31,21 @@
     height:auto;
     display:inline-block;
   }
+  .btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
+}
+.ion-text-center{
+    color: #194E78;
+} 
   #buttonsdiv{
-      margin-top: 10em;
+      margin-top: 4em;
   }
 .codeinput{
     --item-height: 3.375em;
@@ -34,8 +53,6 @@
    --item-spacing: 1em;
    --item-border-radius: 10px;
    --item-border-bottom: 8px solid #ddd;
-   
-
 }
 .text{
     color:#6E6E6E;

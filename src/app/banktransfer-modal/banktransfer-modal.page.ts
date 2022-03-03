@@ -12,7 +12,7 @@ import { NotificationService } from 'src/services/notification.service';
 })
 export class BanktransferModalPage implements OnInit {
   amount;
-  bill_receipt
+  bill_receipt=''
   billdata:any={};
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router,public modalController: ModalController) {
     this.platform.backButton.subscribeWithPriority(10, () => {

@@ -130,6 +130,16 @@ h1{
        .btn-block{
            width: 8em;
        }
+       .btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
+}
     .dangerbutton{
         width: 227px;
         color: white;

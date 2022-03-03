@@ -50,10 +50,11 @@ h1{
     // height: 175px;
     margin:5%;
     // margin-right: 5%;
-    border-style: solid;
-    border-width: 1px;
-    border-color:#AB0506;
+    // border-style: solid;
+    // border-width: 1px;
+    // border-color:#AB0506;
     // text-align: center;
+    padding: 0.5em;
     margin-top: 5%;
     overflow: hidden;
     background: #F5F5F5;
@@ -102,16 +103,16 @@ h1{
  color: #7A0001;
  display: inline-block
    }
-  .buttondiv{
-    float: right;
-  }
-  .statusbutton{
-    width: 79px;
-      height: 24px;
-         --background:#AB0506;
-         padding-top: 0.2em;
-         margin-bottom: 1em;
-  }
+  // .buttondiv{
+  //   float: right;
+  // }
+  // .statusbutton{
+  //   width: 79px;
+  //     height: 24px;
+  //        --background:#AB0506;
+  //        padding-top: 0.2em;
+  //        margin-bottom: 1em;
+  // }
   .newbutton{
       --background:#FF6932;
      bottom: 10%;

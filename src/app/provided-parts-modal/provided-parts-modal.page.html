@@ -2,6 +2,9 @@
   <h1 class="h1">Provided Parts</h1>
   
 <ion-content overflow-scroll="true" class="content">
+  <div class="ion-text-center" id="text" *ngIf="form==''">
+No parts to show
+  </div>
     <ion-radio-group [(ngModel)]="radiovalue">
 <ion-item *ngFor="let entry of form">
   <ion-label>{{entry.part_name}}</ion-label>

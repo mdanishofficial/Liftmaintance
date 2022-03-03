@@ -28,6 +28,16 @@ height: 12em;
     --border-radius:0px;
     --inner-border-radius:0px;
 }
+.btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
+}
 .btn-secondary{
     width: 8em;
     background-color:#6E6E6E;
@@ -47,3 +57,8 @@ height: 12em;
   #buttonsdiv{
       margin-top: 1.7em;
   }
+  #text{
+    margin-top: 2em;
+    color:  #194E78;
+    font-size: 18px;
+}

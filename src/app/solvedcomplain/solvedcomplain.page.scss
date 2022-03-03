@@ -49,10 +49,11 @@ h1{
 }
    .rectangle {
     margin:5%;
-    border-style: solid;
-    border-width: 1px;
-    border-color:#4F8B31;
+    // border-style: solid;
+    // border-width: 1px;
+    // border-color:#4F8B31;
     // text-align: center;
+    padding: 0.5em;
     margin-top: 5%;
     overflow: hidden;
     background: #F5F5F5;
@@ -88,16 +89,16 @@ h1{
   .complain{
       float: left;
   }
-  .buttondiv{
-    float: right;
-    padding-bottom: 0.7em;
-  }
-  .statusbutton{
-    width: 79px;
-    height: 24px;
-         --background:#4F8B31;
-         padding-top: 0.2em;
-  }
+  // .buttondiv{
+  //   float: right;
+  //   padding-bottom: 0.7em;
+  // }
+  // .statusbutton{
+  //   width: 79px;
+  //   height: 24px;
+  //        --background:#4F8B31;
+  //        padding-top: 0.2em;
+  // }
   .newbutton{
       --background:#FF6932;
     //   position: fixed;

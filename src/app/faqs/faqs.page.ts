@@ -43,7 +43,8 @@ export class FaqsPage implements OnInit {
     this.router.navigateByUrl('tabs/notifications');
   }
   async inquiries() {
-    this.router.navigateByUrl('/tabs/inquiries');
+    var refresh=true
+    this.router.navigateByUrl('/tabs/inquiries/'+refresh);
   }
   async faqs() {
     this.router.navigateByUrl('/tabs/faqs');

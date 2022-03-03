@@ -32,6 +32,16 @@ h1{
 .parts-button{
     width: 200px;
 }
+.btn
+{
+    box-shadow: none;
+    outline: none;
+}
+.btn:active
+{
+    box-shadow: none;
+    outline: none;
+}
 .title{
     float: left;
 }

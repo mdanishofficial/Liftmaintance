@@ -20,9 +20,7 @@ export class NewinquiriesPage implements OnInit {
   inquiry_type=''
   collapse=false
   constructor(public activatedRoute: ActivatedRoute,private notifyService : NotificationService,private platform: Platform,private service: InstallationService,public modalController: ModalController,private router: Router) {
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.router.navigateByUrl('tabs/installation_stages');
-    });
+this.call_api()
   }
   showToasterError(){
     this.notifyService.showError("Please Fill out All the Fields",'')
@@ -78,8 +76,9 @@ this.showToasterError()
       sub
       refresh
       call_api(){
-        this.platform.backButton.subscribeWithPriority(10, () => {
-          this.router.navigateByUrl('tabs/inquiries');
+        var refresh=true
+       this.platform.backButton.subscribeWithPriority(10, () => {
+          this.router.navigateByUrl('/tabs/inquiries/'+refresh);
         });
       }
   passvalue(value){
