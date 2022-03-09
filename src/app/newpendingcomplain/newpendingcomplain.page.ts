@@ -34,7 +34,7 @@ malfunction_type=''
 showToasterError(){
     this.notifyService.showError("Please Fill Out Both Fields",'')
 }
-  send_complain(){
+  send_complain(event){
     if(this.malfunction_type==''|| this.complaindetail==''){
       this.showToasterError();
     }
@@ -57,6 +57,7 @@ user_id:decoded.user_id,
     this.service.addcomplain(payload).subscribe(res => {
       console.log(res)
       this.showToasterSuccess();
+      event.target.disabled = true;
       })
   }
   catch{

@@ -15,6 +15,7 @@ export class NewemergencycomplainPage implements OnInit {
   malfunction_type=''
   complaindetail=''
   collapse=false
+  clicked=false
   constructor(private notifyService : NotificationService,private platform: Platform,private service: InstallationService,private router: Router){
      // this.router.navigateByUrl('tabs/pendingemergencycomplain/'+refresh);
     this.platform.backButton.subscribeWithPriority(10, () => {
@@ -29,7 +30,7 @@ export class NewemergencycomplainPage implements OnInit {
 showToasterError(){
     this.notifyService.showError("Please Fill Out Both The fields",'')
 }
-  send_complain(){
+  send_complain(event){
     if(this.malfunction_type==''|| this.complaindetail==''){
       this.showToasterError();
     }
@@ -53,6 +54,7 @@ user_id:decoded.user_id,
     this.service.addcomplain(payload).subscribe(res => {
       console.log(res)
       this.showToasterSuccess();
+      event.target.disabled = true;
          })
   }
   catch{

@@ -28,7 +28,7 @@ this.call_api()
   notifications(){
     this.router.navigateByUrl('tabs/notifications');
   }
-  sendinquiry(){
+  sendinquiry(event){
     var date =formatDate(new Date(), 'yyyy-MM-dd', 'en');
     console.log(date)
     var decoded:any={}
@@ -48,6 +48,7 @@ this.call_api()
               this.inquiry_data=res
               console.log(this.inquiry_data)
               if(res.message=="New Inquiry Added Successfully"){
+                event.target.disabled = true;
                 this.presentModalsendInquiry()
               }
               else{
