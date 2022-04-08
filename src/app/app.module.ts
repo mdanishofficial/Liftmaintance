@@ -14,6 +14,7 @@ import jwt_decode from "jwt-decode";
 import { Stripe } from '@awesome-cordova-plugins/stripe/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { initialize } from '@ionic/core';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -37,3 +38,4 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppModule {
 }
+
