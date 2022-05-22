@@ -26,4 +26,7 @@ collapse=false;
     console.log('Inside Collapse True')
     this.collapse=false
   }
+  public selectLanguage(event: any){
+    this.translateService.use(event.target.value);
+  }
 }
