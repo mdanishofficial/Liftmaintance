@@ -27,6 +27,6 @@ collapse=false;
     this.collapse=false
   }
   public selectLanguage(event: any){
-    this.translateService.use(event.target.value);
+    // this.translateService.use(event.target.value);
   }
 }

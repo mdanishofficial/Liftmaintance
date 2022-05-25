@@ -1,6 +1,7 @@
 import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { RouteReuseStrategy } from '@angular/router';
 import { CommonModule } from '@angular/common';
 // import { SwiperModule } from 'swiper/angular';
@@ -20,7 +21,7 @@ import { initialize } from '@ionic/core';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     // NzButtonModule,
-  BrowserAnimationsModule,
+  // BrowserAnimationsModule,
   CommonModule,
   HttpClientModule,
   NgxSpinnerModule,
