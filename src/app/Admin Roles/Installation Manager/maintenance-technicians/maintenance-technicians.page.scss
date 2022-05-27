@@ -1,53 +1,57 @@
-.header{
-    height: 40px;
-  background-color: #194E78;
-  }
-  .bell{
-  margin-left: 0.5em;
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
+}
+.bell {
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 0.5em;
   width: 24px;
   height: 30px;
-  }
-  .logo{
-    position: absolute ;
-    top: -4px;
-    right: 0px;
-    width: 66px;
-    height: 86px;
-  }
-  h1{
-      text-decoration: underline;color:#194E78 ; font-weight: bold;margin-top: 1em;
-  }
-  .tabs{
-margin-top: 1em;
-  }
-  .btn-primary{
-   font-size:  12px;
-    background-color: #194E78;
-    border: #194E78;
-  }
-  .btn-secondary{
-    font-size:  12px;
-    background-color: #F5F5F5;
-    color: #6E6E6E;
-    border: #6E6E6E;
-  }
-  .divider{
-    width:1em;
-    height:auto;
-    display:inline-block;
-  }
-  .stars{
-    margin-left: 0em;
 }
-.avatar{
-    height: 46px;
-    width: 46px;
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
 }
-.name{
-    color: #194E78;
-    font-size: 20px;
-    font-weight: bold;
+h1 {
+  text-decoration: underline;
+  color: #194e78;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+.tabs {
+  margin-top: 1em;
+}
+.btn-primary {
+  font-size: 12px;
+  background-color: #194e78;
+  border: #194e78;
+}
+.btn-secondary {
+  font-size: 12px;
+  background-color: #f5f5f5;
+  color: #6e6e6e;
+  border: #6e6e6e;
+}
+.divider {
+  width: 1em;
+  height: auto;
+  display: inline-block;
+}
+.stars {
+  margin-left: 0em;
+}
+.avatar {
+  height: 46px;
+  width: 46px;
+}
+.name {
+  color: #194e78;
+  font-size: 20px;
+  font-weight: bold;
 }

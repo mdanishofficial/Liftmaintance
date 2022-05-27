@@ -1,24 +1,26 @@
-.header{
-    height: 40px;
-  background-color: #194E78;
-  }
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
+}
   .container{
       margin-top: 2em;
   }
-  .bell{
-  margin-left: 0.5em;
-  position: absolute;
-  top: 5px;
-  left: 0.5em;
-  width: 24px;
-  height: 30px;
+
+  .bell {
+    position: absolute;
+    top: 15px;
+    left: 0.5em;
+    width: 24px;
+    height: 30px;
   }
-  .logo{
-    position: absolute ;
-    top: -4px;
+  .logo {
+    position: absolute;
+    top: 10px;
     right: 0px;
-    width: 66px;
+    width: 66pt;
     height: 86px;
+    justify-content: center;
   }
   h1{
       text-decoration: underline;color:#194E78 ;font-size: 24px; font-weight: bold;margin-top: 1em;

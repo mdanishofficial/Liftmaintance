@@ -1,23 +1,22 @@
-.bell{
-  margin-left: 0.5em;
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
+}
+.bell {
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 0.5em;
   width: 24px;
   height: 30px;
-  }
-  .logo{
-      position: relative ;
-      top: -4px;
-      right: -16px;
-      width: 66pt;
-      height: 86px;
-      justify-content: center;
-  }
-  .header{
-    height: 40px;
-background-color: #194E78;
-position: initial;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
 }
 ion-tab-bar, ion-tab-button{
     background-color: #194E78;

@@ -1,175 +1,176 @@
-h1{
-    text-decoration: underline;
-    color:#194E78 ; 
-    font-weight: bold;
-    margin-top: -3em;
+h1 {
+  text-decoration: underline;
+  color: #194e78;
+  font-weight: bold;
+  margin-top: -2.5em;
 }
-.header{
-    height: 40px;
-background-color: #194E78;
-position: initial;
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
 }
-.bell{
-margin-left: 0.5em;
-position: absolute;
-top: 5px;
-left: 0.5em;
-width: 24px;
-height: 30px;
+.bell {
+  position: absolute;
+  top: 15px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
 }
-.logo{
-    position: absolute ;
-    top: -11px;
-    right: 0px;
-    width: 66px;
-    height: 86px;
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
 }
-.white{
-    width: 100%;
-    height: 2em;
+.white {
+  width: 100%;
+  height: 2em;
 }
-.flex-container{
-    justify-content: center;
-    display: flex;
+.flex-container {
+  justify-content: center;
+  display: flex;
 }
-.placeholder{
-    color: rgb(87, 87, 90);
+.placeholder {
+  color: rgb(87, 87, 90);
 }
-.h3{
-     color:#194E78 ;
-    // font-weight: bold; 
-    float: left;
-    margin-top: 0.5em;
-    font-size: 18px;
+.h3 {
+  color: #194e78;
+  // font-weight: bold;
+  float: left;
+  margin-top: 0.5em;
+  font-size: 18px;
 }
-.card{
-    margin-top: -3em;
-   
+.card {
+  margin-top: -3em;
 }
-.textleft{
-    color:#6E6E6E;
-    float: left;
-    margin-left: 1em;
+.textleft {
+  color: #6e6e6e;
+  float: left;
+  margin-left: 1em;
 }
-.textright{
-    color:#6E6E6E;
-    float: right;
-    margin-right: 1em;
+.textright {
+  color: #6e6e6e;
+  float: right;
+  margin-right: 1em;
 }
-.options{
-    color: #194E78;
-    font-size: 18px;
-   }
-   
-.form-select-sm{
-   height: 3em;
-   width: 100%;
-   }
- select{
-     width: auto;
-     color: #6E6E6E;
- }
- .cardinput{
-    padding-left: 1em;
-    padding-top: 0em;
-    margin-left: 0em;
-    height: 3em;
-    font-size: 14px;
-    margin-top: -2em;
-    --background: #e9ecef;
-    align-items: center;
-    width: 100%;
-    color: #8d8d8e
-   }
-   .picker{
-    padding-left: 0em;
-    padding-top: 0.7em;
-    align-items: center;
-    width: 100%;
+.options {
+  color: #194e78;
+  font-size: 18px;
 }
-   .textarea{
-    height: 3em;
-    margin: 0em;
-    padding-left: 0.7em;
-    padding-top: 0.7em;
-    margin-top: -2em;
-   --background: #e9ecef;
-    font-size: 14px;
-    width: 100%;
-  color: #8d8d8e
+
+.form-select-sm {
+  height: 3em;
+  width: 100%;
 }
-.flex-container2{
-    width: 100%;
-    }
-       .flex-container3{
-           display: flex;
-        justify-content: space-between;
-        width: 100%;
-          }
-          .colordiv1{
-            background-color: #60D924; 
-            width: 35px;
-            height: 100%;
-        }
-        .colordiv4{
-            background-color: #E12121; 
-            width: 35px; height: 100%;    height: 60px;
-        }
-        .date{
-            font-size: 10pt;
-            margin-top: 0px;
-            font-family: "Roboto";
-            color: #6E6E6E;
-            margin-left: 0.7em;
-        }
-        .status{
-        margin-right: 0.7em;
-        }
-        .visit{
-            font-size: 15pt;
-            font-family:'Roboto';
-            color: #194E78;
-            margin-top: 0px;
-            margin-left: 0.2em;
-            padding-left: 0.3em;
-            padding-top: 0.3em;
-         }
-         .colorcard1{
-             margin-top: -3em;
-         }
-         .colorcard{
-            margin-top: 1em;
-        }
-      
-        .calendar{
-            height: 10em;
-        }
-        section {
-            // border: 1px solid gray;
-            display: flex;
-            align-items: center ;
-            justify-content: space-between;
-           padding-left: 0em;
-           padding-right: 1em;
-            // max-width: 300px;
-            width: 100%;
-          }
-          .btn-secondary{
-            width: 8em;
-            background-color:#6E6E6E;
-            color: white;
-            border: #6E6E6E;
-         }
-          .btn-primary{
-            width: 8em;
-            background-color: #194E78;
-            border: #194E78;
-          }
-          .divider{
-            width:1em;
-            height:auto;
-            display:inline-block;
-          }
-          #buttonsdiv{
-              margin-top: 2em;
-          }
+select {
+  width: auto;
+  color: #6e6e6e;
+}
+.cardinput {
+  padding-left: 1em;
+  padding-top: 0em;
+  margin-left: 0em;
+  height: 3em;
+  font-size: 14px;
+  margin-top: -2em;
+  --background: #e9ecef;
+  align-items: center;
+  width: 100%;
+  color: #8d8d8e;
+}
+.picker {
+  padding-left: 0em;
+  padding-top: 0.7em;
+  align-items: center;
+  width: 100%;
+}
+.textarea {
+  height: 3em;
+  margin: 0em;
+  padding-left: 0.7em;
+  padding-top: 0.7em;
+  margin-top: -2em;
+  --background: #e9ecef;
+  font-size: 14px;
+  width: 100%;
+  color: #8d8d8e;
+}
+.flex-container2 {
+  width: 100%;
+}
+.flex-container3 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.colordiv1 {
+  background-color: #60d924;
+  width: 35px;
+  height: 100%;
+}
+.colordiv4 {
+  background-color: #e12121;
+  width: 35px;
+  height: 100%;
+  height: 60px;
+}
+.date {
+  font-size: 10pt;
+  margin-top: 0px;
+  font-family: "Roboto";
+  color: #6e6e6e;
+  margin-left: 0.7em;
+}
+.status {
+  margin-right: 0.7em;
+}
+.visit {
+  font-size: 15pt;
+  font-family: "Roboto";
+  color: #194e78;
+  margin-top: 0px;
+  margin-left: 0.2em;
+  padding-left: 0.3em;
+  padding-top: 0.3em;
+}
+.colorcard1 {
+  margin-top: -3em;
+}
+.colorcard {
+  margin-top: 1em;
+}
+
+.calendar {
+  height: 10em;
+}
+section {
+  // border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0em;
+  padding-right: 1em;
+  // max-width: 300px;
+  width: 100%;
+}
+.btn-secondary {
+  width: 8em;
+  background-color: #6e6e6e;
+  color: white;
+  border: #6e6e6e;
+}
+.btn-primary {
+  width: 8em;
+  background-color: #194e78;
+  border: #194e78;
+}
+.divider {
+  width: 1em;
+  height: auto;
+  display: inline-block;
+}
+#buttonsdiv {
+  margin-top: 2em;
+}

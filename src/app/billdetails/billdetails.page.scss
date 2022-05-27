@@ -1,98 +1,102 @@
-.container{
-    margin-top: 1px;
-   }
-   .bell{
-    margin-left: 0.5em;
-    position: absolute;
-    top: 5px;
-    left: 0.5em;
-    width: 24px;
-    height: 30px;
-    }
-    .logo{
-        position: relative ;
-        top: -4px;
-        right: -16px;
-        width: 66pt;
-        height: 86px;
-        justify-content: center;
-    }
-    .header{
-      height: 40px;
-  background-color: #194E78;
+.container {
+  margin-top: 1px;
+}
+.header {
+  height: 60px;
+  background-color: #194e78;
   position: initial;
-  }
-.firstcol{
-float: left;
 }
-.h2{
-    color:#194E78 ; font-weight: bold; float: left;
-    margin-top: 0em;
-    font-size: 18px;
-    white-space: pre-line;
-    margin-bottom: 0em;
+.bell {
+  position: absolute;
+  top: 15px;
+  left: 0.5em;
+  width: 24px;
+  height: 30px;
 }
-.date{
-    font-size: 12px;
-    color: #6E6E6E;
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
 }
-.text{
-    font-size: 12px;
-    color: #6E6E6E;
-    margin-top: 0em
+.firstcol {
+  float: left;
 }
-h1{
-    text-decoration: underline;color:#194E78 ; font-weight: bold;
+.h2 {
+  color: #194e78;
+  font-weight: bold;
+  float: left;
+  margin-top: 0em;
+  font-size: 18px;
+  white-space: pre-line;
+  margin-bottom: 0em;
 }
-.secondcol{
-   float: right; 
-  }
+.date {
+  font-size: 12px;
+  color: #6e6e6e;
+}
+.text {
+  font-size: 12px;
+  color: #6e6e6e;
+  margin-top: 0em;
+}
+h1 {
+  text-decoration: underline;
+  color: #194e78;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+.secondcol {
+  float: right;
+}
 
-.textright1{
-    color:#7A0001;
-    float: right;
-    margin-right: 0.6em;
-    font-size: 18px;
+.textright1 {
+  color: #7a0001;
+  float: right;
+  margin-right: 0.6em;
+  font-size: 18px;
 }
-.textright2{
-    color:#7A0001;
-    float: right;
-    margin-right: 0.6em;
-    font-size: 18px;
+.textright2 {
+  color: #7a0001;
+  float: right;
+  margin-right: 0.6em;
+  font-size: 18px;
 }
-.textright3{
-    color:#FABE11;
-    float: right;
-    margin-right: 0.6em;
-    font-size: 18px;
+.textright3 {
+  color: #fabe11;
+  float: right;
+  margin-right: 0.6em;
+  font-size: 18px;
 }
-.hr{
-    margin-top: 0em;
-    width: 99%;
+.hr {
+  margin-top: 0em;
+  width: 99%;
 }
-  .btn-primary{
-    background-color:#194E78;
-    // width:9em;
-    border-color:#194E78;
+.btn-primary {
+  background-color: #194e78;
+  // width:9em;
+  border-color: #194e78;
 }
-.btn-secondary{
-    background-color:#6E6E6E;
-    width:6em;
+.btn-secondary {
+  background-color: #6e6e6e;
+  width: 6em;
 }
-.divider{
-    width:2em;
-    height:auto;
-    display:inline-block;
+.divider {
+  width: 2em;
+  height: auto;
+  display: inline-block;
 }
 @media only screen and (max-width: 321px) {
-    .divider{
-        width:0.2em;
-        height:auto;
-        display:inline-block;
-      }
+  .divider {
+    width: 0.2em;
+    height: auto;
+    display: inline-block;
   }
-::ng-deep .updatePayment .modal-wrapper{
-    height: 20em!important;
-    margin: 1em;
-    --border-radius:10px;
+}
+::ng-deep .updatePayment .modal-wrapper {
+  height: 20em !important;
+  margin: 1em;
+  --border-radius: 10px;
 }

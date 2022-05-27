@@ -1,196 +1,200 @@
-.header{
-    height: 40px;
-  background-color: #194E78;
-  }
-  .bell{
-  margin-left: 0.5em;
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
+}
+.bell {
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 0.5em;
   width: 24px;
   height: 30px;
-  }
-  .logo{
-    position: absolute ;
-    top: -4px;
-    right: 0px;
-    width: 66px;
-    height: 86px;
-  }
-  .container{
-      margin-left: 0.2em;
-  }
-  h1{
-      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
-  }
-  .buttondiv{
-    float: right;
-    margin-right: 2em;
-  }
-  .date{
-    font-size: 16px;
-    color: #6E6E6E;
 }
-.client{
-    font-size: 20px;
-    font-family:'Roboto';
-    color: #194E78;
-    margin-top: 0.5em;
- }
-.hr{
-    width: 98%;
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
 }
-.ion-icon{
-    color: white;
-    float: right;
+.container {
+  margin-left: 0.2em;
 }
-.mechanical-chip{
-    display: flex;
-    justify-content: flex-start;   /* adjustment */
-    position: relative;            
-    width: 94%;
-    --background: #194E78;
-    height: 3em;
-    border-radius: 0.7em;
-   color: white;
-   margin-top: 1em;
+h1 {
+  text-decoration: underline;
+  color: #194e78;
+  font-weight: bold;
+  margin-top: 1.5em;
 }
-.normal-chip{
-    display: flex;
-    justify-content: flex-start;   /* adjustment */
-    position: relative;            
-    width: 94%;
-    --background:#FABE11;
-    height: 3em;
-    border-radius: 0.7em;
-   color: white;
-   margin-top: 1em;
+.buttondiv {
+  float: right;
+  margin-right: 2em;
+}
+.date {
+  font-size: 16px;
+  color: #6e6e6e;
+}
+.client {
+  font-size: 20px;
+  font-family: "Roboto";
+  color: #194e78;
+  margin-top: 0.5em;
+}
+.hr {
+  width: 98%;
+}
+.ion-icon {
+  color: white;
+  float: right;
+}
+.mechanical-chip {
+  display: flex;
+  justify-content: flex-start; /* adjustment */
+  position: relative;
+  width: 94%;
+  --background: #194e78;
+  height: 3em;
+  border-radius: 0.7em;
+  color: white;
+  margin-top: 1em;
+}
+.normal-chip {
+  display: flex;
+  justify-content: flex-start; /* adjustment */
+  position: relative;
+  width: 94%;
+  --background: #fabe11;
+  height: 3em;
+  border-radius: 0.7em;
+  color: white;
+  margin-top: 1em;
 }
 
 .itemcenter {
-    flex: 0 1 auto;
-    width: 200px;
-    height: 17px; 
-    position: absolute;             /* new */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .statuscenter{
-    flex: 0 1 auto;
-    width: 200px;
-    height: 17px; 
-    position: absolute;             /* new */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 16px;
-    font-weight: bold;
-  }
+  flex: 0 1 auto;
+  width: 200px;
+  height: 17px;
+  position: absolute; /* new */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+.statuscenter {
+  flex: 0 1 auto;
+  width: 200px;
+  height: 17px;
+  position: absolute; /* new */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  font-weight: bold;
+}
 .itemright {
-    flex: 0 1 auto;
-    width: 30px;
-    height: 25px;
-    margin-left: auto;              /* new */
-  }
-  .bill{
-    font-size: 16px;
-    color: #6E6E6E;
-   font-weight: bold;
-    float: left;
+  flex: 0 1 auto;
+  width: 30px;
+  height: 25px;
+  margin-left: auto; /* new */
 }
-.item{
-    font-size: 16px;
-    color: #6E6E6E;
-    font-weight: bold;
-    float: left;
-    margin-top: 0em;
+.bill {
+  font-size: 16px;
+  color: #6e6e6e;
+  font-weight: bold;
+  float: left;
 }
-.ion-chip-right{
-    --background:#194E78;
-    color: white;
-    // border-radius: 0px;
-    // padding: 1em;
-    // font-size: 16px;
+.item {
+  font-size: 16px;
+  color: #6e6e6e;
+  font-weight: bold;
+  float: left;
+  margin-top: 0em;
 }
-#updatebutton{
-  --background:#194E78;
+.ion-chip-right {
+  --background: #194e78;
+  color: white;
+  // border-radius: 0px;
+  // padding: 1em;
+  // font-size: 16px;
+}
+#updatebutton {
+  --background: #194e78;
   color: white;
   border-radius: 0px;
   padding: 1em;
   font-size: 16px;
 }
-.newbutton{
-    --background:#FF6932;
+.newbutton {
+  --background: #ff6932;
   //   position: fixed;
-       bottom: 10%;
-     width: 220px;
-    height: 49px;
-    margin-top:1em
-    }
-   .closedbutton{
-        --background:#6E6E6E;
-        //   position: fixed;
-             bottom: 10%;
-           width: 220px;
-          height: 49px;
-          margin-top:1em
-    }
-    .danger-text{
-color: #7A0001;
-    }
-    ::ng-deep .malfunctiontype .modal-wrapper {
-        height: 16em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
-       ::ng-deep .malfunctionlevel .modal-wrapper {
-        height: 20em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
-       ::ng-deep .malfunctionstatus .modal-wrapper {
-        height: 31em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
-       ::ng-deep .issuebill .modal-wrapper {
-        height: 21em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
-      ::ng-deep .forwardmodal .modal-wrapper {
-        height: 25em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
-       ::ng-deep .uploadpayment .modal-wrapper {
-        height: 21em!important;
-        --border-radius:30px;
-        margin: 1em;
-       }
+  bottom: 10%;
+  width: 220px;
+  height: 49px;
+  margin-top: 1em;
+}
+.closedbutton {
+  --background: #6e6e6e;
+  //   position: fixed;
+  bottom: 10%;
+  width: 220px;
+  height: 49px;
+  margin-top: 1em;
+}
+.danger-text {
+  color: #7a0001;
+}
+::ng-deep .malfunctiontype .modal-wrapper {
+  height: 16em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
+::ng-deep .malfunctionlevel .modal-wrapper {
+  height: 20em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
+::ng-deep .malfunctionstatus .modal-wrapper {
+  height: 31em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
+::ng-deep .issuebill .modal-wrapper {
+  height: 21em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
+::ng-deep .forwardmodal .modal-wrapper {
+  height: 25em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
+::ng-deep .uploadpayment .modal-wrapper {
+  height: 21em !important;
+  --border-radius: 30px;
+  margin: 1em;
+}
 @media only screen and (max-width: 321px) {
-    .item{
-        font-size: 16px;
-        color: #6E6E6E;
-        margin-left: -0.5em;
-        font-weight: bold;
-        float: left;
-        margin-top: 0.1em;
-    }
-    .statuscenter {
-      flex: 0 1 auto;
-      width: 188px;
-      height: 17px; 
-      position: absolute;             /* new */
-      left: 45%;
-      transform: translateX(-50%);
-      font-size: 16px;
-      font-weight: bold;
-    }
-    ::ng-deep .forwardmodal .modal-wrapper {
-        height: 30em!important;
-        --border-radius:10px;
-        margin: 1em;
-       }
+  .item {
+    font-size: 16px;
+    color: #6e6e6e;
+    margin-left: -0.5em;
+    font-weight: bold;
+    float: left;
+    margin-top: 0.1em;
+  }
+  .statuscenter {
+    flex: 0 1 auto;
+    width: 188px;
+    height: 17px;
+    position: absolute; /* new */
+    left: 45%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    font-weight: bold;
+  }
+  ::ng-deep .forwardmodal .modal-wrapper {
+    height: 30em !important;
+    --border-radius: 10px;
+    margin: 1em;
+  }
 }

@@ -1,117 +1,117 @@
-.bell{
-  margin-left: 0.5em;
+.header {
+  height: 60px;
+  background-color: #194e78;
+  position: initial;
+}
+.bell {
   position: absolute;
-  top: 5px;
+  top: 15px;
   left: 0.5em;
   width: 24px;
   height: 30px;
-  }
-  .logo{
-      position: relative ;
-      top: -4px;
-      right: -16px;
-      width: 66pt;
-      height: 86px;
-      justify-content: center;
-  }
-  .header{
-    height: 40px;
-background-color: #194E78;
-position: initial;
 }
-  h1{
-      text-decoration: underline;color: #194E78 ; font-weight: bold;margin-top: 1em;
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 66pt;
+  height: 86px;
+  justify-content: center;
+}
+h1 {
+  text-decoration: underline;
+  color: #194e78;
+  font-weight: bold;
+  margin-top: 1٫5em;
+}
+.flex-container {
+  justify-content: center;
+}
+.btn-primary {
+  width: 118px;
+  height: 22px;
+  font-size: 12px;
+  padding: 0px;
+  border-radius: 12px;
+  margin-right: 1em;
+  background-color: #194e78;
+  border: #194e78;
+}
+.btn-secondary {
+  width: 8em;
+  background-color: #194e78;
+  border: #194e78;
+}
+.divider {
+  width: 3em;
+  height: auto;
+  display: inline-block;
+}
+.h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  margin-top: 0.5em;
+  margin-left: 0em;
+  margin-bottom: 0em;
+  color: #194e78;
+  text-align: left;
+}
+.date {
+  color: #6e6e6e;
+  font-family: "Roboto";
+  font-size: 12px;
+  margin-top: 0em;
+  margin-left: 0em;
+  text-align: left;
+}
+.details {
+  color: #6e6e6e;
+  font-family: "Roboto";
+  font-size: 12px;
+  margin-top: 0em;
+  margin-left: 0em;
+}
+.complain {
+  float: left;
+}
+.status {
+  font-family: "Roboto";
+  font-size: 20px;
+  margin-top: 0em;
+  margin-left: 0em;
+  margin-bottom: 0em;
+  color: #194e78;
+  text-align: left;
+}
+.card {
+  --background: #fcfcfc;
+  padding: 1em;
+  padding-top: 0.5em;
+  //   margin-top: 0.5em;
+}
+@media only screen and (min-height: 1000px) {
+  .details {
+    color: #6e6e6e;
+    font-family: "Roboto";
+    font-size: 25px;
+    margin-top: 0em;
+    margin-left: 0em;
   }
-  .flex-container{
-      justify-content: center;
+  .date {
+    color: #6e6e6e;
+    font-family: "Roboto";
+    font-size: 25px;
+    margin-top: 0em;
+    margin-left: 0em;
+    text-align: left;
   }
-  .btn-primary{
-    width: 118px;
-    height: 22px;
-    font-size: 12px;
-    padding: 0px;
-    border-radius: 12px;
-    margin-right: 1em;
-   background-color: #194E78;
-    border: #194E78;
-  
+  .h3 {
+    font-family: "Roboto";
+    font-size: 30px;
+    margin-top: 0.5em;
+    margin-left: 0em;
+    margin-bottom: 0em;
+    color: #194e78;
+    text-align: left;
   }
-  .btn-secondary{
-    width: 8em;
-    background-color: #194E78;
-    border: #194E78;
-  }
-  .divider{
-    width:3em;
-    height:auto;
-    display:inline-block;
-  }
-    .h3{
-      font-family:'Roboto';
-      font-size: 18px;
-      margin-top: 0.5em;
-      margin-left: 0em;
-      margin-bottom: 0em;
-      color: #194E78;
-      text-align: left;
-      }
-    .date{
-        color: #6E6E6E;
-        font-family:'Roboto';
-        font-size: 12px;
-        margin-top: 0em;
-        margin-left: 0em;
-        text-align: left;
-    }
-    .details{
-      color: #6E6E6E;
-      font-family:'Roboto';
-      font-size: 12px;
-      margin-top: 0em;
-      margin-left: 0em;
-    }
-    .complain{
-        float: left;
-    }
-    .status{
-     font-family:'Roboto';
-          font-size: 20px;
-          margin-top: 0em;
-          margin-left: 0em;
-          margin-bottom: 0em;
-          color: #194E78;
-          text-align: left;
-         }
-  .card{
-      --background:#FCFCFC;
-      padding: 1em;
-      padding-top: 0.5em;
-    //   margin-top: 0.5em;
-  }
-     @media only screen and (min-height: 1000px) {
-          .details{
-              color: #6E6E6E;
-              font-family:'Roboto';
-              font-size: 25px;
-              margin-top: 0em;
-              margin-left: 0em;
-            }
-            .date{
-              color: #6E6E6E;
-              font-family:'Roboto';
-              font-size: 25px;
-              margin-top: 0em;
-              margin-left: 0em;
-              text-align: left;
-          }
-          .h3{
-              font-family:'Roboto';
-              font-size: 30px;
-              margin-top: 0.5em;
-              margin-left: 0em;
-              margin-bottom: 0em;
-              color: #194E78;
-              text-align: left;
-            }
-        }
-  
+}
