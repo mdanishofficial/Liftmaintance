@@ -13,7 +13,7 @@ import { MenuTabsPage } from './menu-tabs.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    MenuTabsPageRoutingModule
+    MenuTabsPageRoutingModule 
   ],
   declarations: [MenuTabsPage]
 })

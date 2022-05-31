@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AutoactivateLoginGuard } from 'src/guards/autoactivate-login.guard';
 const routes: Routes = [
+  //InstallationManagerTabsPageModule
   {
     path: '',
     loadChildren: () =>
@@ -877,6 +878,27 @@ const routes: Routes = [
         (m) => m.ProvidedPartsModalPageModule
       ),
   },
+  {
+    path: 'installation-manager-setting',
+    loadChildren: () => import('./installation-manager-setting/installation-manager-setting.module').then( m => m.InstallationManagerSettingPageModule)
+  },
+  {
+    path: 'installation-manager-profile',
+    loadChildren: () => import('./installation-manager-profile/installation-manager-profile.module').then( m => m.InstallationManagerProfilePageModule)
+  },
+  {
+    path: 'installation-manager-notification',
+    loadChildren: () => import('./installation-manager-notification/installation-manager-notification.module').then( m => m.InstallationManagerNotificationPageModule)
+  },
+  {
+    path: 'installation-manager-language',
+    loadChildren: () => import('./installation-manager-language/installation-manager-language.module').then( m => m.InstallationManagerLanguagePageModule)
+  },
+  {
+    path: 'installation-manager-inquiries',
+    loadChildren: () => import('./installation-manager-inquiries/installation-manager-inquiries.module').then( m => m.InstallationManagerInquiriesPageModule)
+  },
+
 ];
 @NgModule({
   imports: [

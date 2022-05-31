@@ -5,7 +5,7 @@
 </head>
 <ion-header class="header">
   <ion-title>
-   <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
+    <ion-icon src="../../assets/bell.svg" (click)="notifications()" class="bell">
     </ion-icon>
     <div class="ion-text-right">
       <img src="../../assets/logo.svg" class="logo">
@@ -17,52 +17,53 @@
     <h1 class="ion-text-center">Installation</h1>
     <br>
     <div *ngFor="let result of installation_data">
-    <ion-text class="date">{{result[id]?.installation_start_date}}</ion-text>
-    <h6 class="client">Client : {{result[id]?.client_name}}</h6>
-    <hr class="hr">
-    <h6 class="client">Type of Building :{{result[id]?.result[0].building_type}}</h6>
-    <hr class="hr">
-    <h6 class="client">City : {{result[id]?.result[0].client_city}}</h6>
-    <hr class="hr">
-  <h6 class="client">Location : {{result[id]?.result[0].client_location}}</h6>
-  <hr class="hr">
-  <h6 class="client">Number of Stops :{{result[id]?.installation_stops}}</h6>
-  <hr class="hr">
-  <h6 class="client">Machine type : {{result[id]?.installation_machinetype}}</h6>
-  <hr class="hr">
-  <h6 class="client">Door type : {{result[id]?.installation_doortype}}</h6>
-  <hr class="hr">
-<h6 class="client">Lift type : {{result[id]?.lift_type}}</h6>
-<hr class="hr">
-<h6 class="client">Installation Status</h6>
-<select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_status">
-  <option value="progressing" class="options" selected>Progressing</option>
-  <option value="waiting" class="options">Waiting for next stage payment</option>
-</select>
- <h6 class="client">Stage Payment</h6>
-  <ion-textarea class="textarea" [(ngModel)]="stage_payment"></ion-textarea>
-<h6 class="client">Payment</h6>
-    <div class="ion-text-center">
-      <ion-chip class="update" (click)="update()">
-   <ion-label class="itemcenter">Update</ion-label>
-   <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
-      </ion-chip>
+      <ion-text class="date">{{result[id]?.installation_start_date}}</ion-text>
+      <h6 class="client">Client : {{result[id]?.client_name}}</h6>
+      <hr class="hr">
+      <h6 class="client">Type of Building :{{result[id]?.result[0].building_type}}</h6>
+      <hr class="hr">
+      <h6 class="client">City : {{result[id]?.result[0].client_city}}</h6>
+      <hr class="hr">
+      <h6 class="client">Location : {{result[id]?.result[0].client_location}}</h6>
+      <hr class="hr">
+      <h6 class="client">Number of Stops :{{result[id]?.installation_stops}}</h6>
+      <hr class="hr">
+      <h6 class="client">Machine type : {{result[id]?.installation_machinetype}}</h6>
+      <hr class="hr">
+      <h6 class="client">Door type : {{result[id]?.installation_doortype}}</h6>
+      <hr class="hr">
+      <h6 class="client">Lift type : {{result[id]?.lift_type}}</h6>
+      <hr class="hr">
+      <h6 class="client">Installation Status</h6>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_status">
+        <option value="progressing" class="options" selected>Progressing</option>
+        <option value="waiting" class="options">Waiting for next stage payment</option>
+      </select>
+      <h6 class="client">Stage Payment</h6>
+      <ion-textarea class="textarea" [(ngModel)]="stage_payment"></ion-textarea>
+      <h6 class="client">Payment</h6>
+      <div class="ion-text-center">
+        <ion-chip class="update" (click)="update()">
+          <ion-label class="itemcenter">Update</ion-label>
+          <ion-icon src="../../assets/edit.svg" class="itemright"></ion-icon>
+        </ion-chip>
+      </div>
+      <hr class="hr">
+      <h6 class="client">Installation Stage Status</h6>
+      <select class="form-select form-select-sm" aria-label=".form-select-sm example"
+        [(ngModel)]="installation_stage_status">
+        <option value="progressing" class="options" selected>Progressing</option>
+        <option value="waiting" class="options">Waiting for next stage payment</option>
+      </select>
+      <div class="ion-text-center">
+        <ion-button class="newbutton" shape="round" (click)="startstage()">Start Stage</ion-button>
+      </div>
+      <br>
+      <div class="ion-text-center">
+        <ion-button class="backbutton" (click)="back()">Back</ion-button>
+      </div>
+      <br>
+      <br>
+    </div>
   </div>
-  <hr class="hr">
-<h6 class="client">Installation Stage Status</h6>
-<select class="form-select form-select-sm" aria-label=".form-select-sm example" [(ngModel)]="installation_stage_status">
-  <option value="progressing" class="options" selected>Progressing</option>
-  <option value="waiting" class="options">Waiting for next stage payment</option>
-</select>
-<div class="ion-text-center">
-  <ion-button class="newbutton" shape="round" (click)="startstage()">Start Stage</ion-button>
-</div>
-<br>
-<div class="ion-text-center">
-  <ion-button class="backbutton"(click)="back()">Back</ion-button>
-</div>
-<br>
-<br>
-</div>
-</div>
 </ion-content>

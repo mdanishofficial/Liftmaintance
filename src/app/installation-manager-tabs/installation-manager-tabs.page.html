@@ -1,32 +1,32 @@
 <ion-tabs>
-  <div class="white"></div>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="menu-tabs/tab1">
-      <ion-icon src="../../assets/profile.svg"></ion-icon>
-</ion-tab-button>
-
-    <ion-tab-button tab="menu-tabs/tab1">
-      <ion-icon src="../../assets/language.svg"></ion-icon>
-  </ion-tab-button>
-  <ion-tab-button tab="detailed_current_malfunctions">
-    <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button">
-      <ion-fab-button>
-        <ion-icon src="../../assets/home.svg"></ion-icon>
-      </ion-fab-button>
-    </ion-fab>
-</ion-tab-button>
-
-  <ion-tab-button tab="tab4">
-    <ion-icon src="../../assets/settings.svg"></ion-icon>
+    <ion-tab-button>
+      <ion-icon src="../../assets/profile.svg" (click)="profile()"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab5">
-      <ion-icon src="../../assets/questionmark.svg"></ion-icon>
+    <ion-tab-button>
+      <ion-icon src="../../assets/language.svg" (click)="language()"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button>
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button">
+        <ion-fab-button>
+          <ion-icon src="../../assets/home.svg"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-icon src="../../assets/settings.svg" (click)="settings()"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-icon src="../../assets/questionmark.svg" (click)="inquiries()"></ion-icon>
     </ion-tab-button>
   </ion-tab-bar>
 
 </ion-tabs>
-<ion-fab vertical="bottom" horizontal="center" slot="fixed"  style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;"  (click)="home()">
+<ion-fab vertical="bottom" horizontal="center" slot="fixed"
+  style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
   <ion-fab-button class="fab-button">
     <ion-icon name="home"></ion-icon>
   </ion-fab-button>
